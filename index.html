@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Football TV</title>
+
+<style>
+body {
+    margin:0;
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial;
+}
+.header {
+    text-align:center;
+    font-size:50px;
+    padding:30px;
+}
+.day {
+    color:#00ff88;
+    font-size:28px;
+    margin:20px;
+}
+.match {
+    background:#1e1e1e;
+    margin:10px auto;
+    padding:20px;
+    max-width:900px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    font-size:26px;
+}
+.league { color:#aaa; font-size:18px; }
+.time { color:#00ff88; font-weight:bold; }
+</style>
+</head>
+
+<body>
+
+<div class="header">⚽ Football TV</div>
+<div id="content">Loading...</div>
+
+<script>
+async function load() {
+    const res = await fetch("matches.json");
+    const data = await res.json();
+
+    let html = "";
+
+    for (let day in data) {
+        html += `<div class="day">${day}</div>`;
+
+        data[day].forEach(m => {
+            html += `
+            <div class="match">
+                <div>
+                    ${m.home} – ${m.away}
+                    <div class="league">${m.league}</div>
+                </div>
+                <div class="time">${m.time}</div>
+            </div>`;
+        });
+    }
+
+    document.getElementById("content").innerHTML = html;
+}
+
+load();
+setInterval(load, 60000);
+</script>
+
+</body>
+</html>
