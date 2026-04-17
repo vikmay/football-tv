@@ -11,16 +11,19 @@ body {
     color:white;
     font-family:Arial;
 }
+
 .header {
     text-align:center;
     font-size:50px;
     padding:30px;
 }
+
 .day {
     color:#00ff88;
     font-size:28px;
     margin:20px;
 }
+
 .match {
     background:#1e1e1e;
     margin:10px auto;
@@ -31,8 +34,15 @@ body {
     justify-content:space-between;
     font-size:26px;
 }
+
 .league { color:#aaa; font-size:18px; }
 .time { color:#00ff88; font-weight:bold; }
+
+#error {
+    text-align:center;
+    color:red;
+    font-size:22px;
+}
 </style>
 </head>
 
@@ -43,8 +53,10 @@ body {
 
 <script>
 async function load() {
+    const content = document.getElementById("content");
+
     try {
-        const res = await fetch("./matches.json");
+        const res = await fetch("./matches.json?cache=" + Date.now());
 
         if (!res.ok) {
             throw new Error("HTTP " + res.status);
@@ -52,12 +64,14 @@ async function load() {
 
         const data = await res.json();
 
+        console.log("DATA LOADED:", data);
+
         let html = "";
 
-        for (let day in data) {
+        Object.keys(data).forEach(day => {
             html += `<div class="day">${day}</div>`;
 
-            data[day].forEach(m => {
+            (data[day] || []).forEach(m => {
                 html += `
                 <div class="match">
                     <div>
@@ -67,14 +81,14 @@ async function load() {
                     <div class="time">${m.time}</div>
                 </div>`;
             });
-        }
+        });
 
-        document.getElementById("content").innerHTML = html;
+        content.innerHTML = html || "<div id='error'>❌ Немає матчів</div>";
 
     } catch (err) {
-        document.getElementById("content").innerHTML =
-            "❌ JSON error: " + err.message;
         console.log(err);
+        content.innerHTML =
+            "<div id='error'>❌ JSON error: " + err.message + "</div>";
     }
 }
 
