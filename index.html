@@ -43,27 +43,39 @@ body {
 
 <script>
 async function load() {
-    const res = await fetch("./matches.json");
-    const data = await res.json();
+    try {
+        const res = await fetch("./matches.json");
 
-    let html = "";
+        if (!res.ok) {
+            throw new Error("HTTP " + res.status);
+        }
 
-    for (let day in data) {
-        html += `<div class="day">${day}</div>`;
+        const data = await res.json();
 
-        data[day].forEach(m => {
-            html += `
-            <div class="match">
-                <div>
-                    ${m.home} – ${m.away}
-                    <div class="league">${m.league}</div>
-                </div>
-                <div class="time">${m.time}</div>
-            </div>`;
-        });
+        let html = "";
+
+        for (let day in data) {
+            html += `<div class="day">${day}</div>`;
+
+            data[day].forEach(m => {
+                html += `
+                <div class="match">
+                    <div>
+                        ${m.home} – ${m.away}
+                        <div class="league">${m.league}</div>
+                    </div>
+                    <div class="time">${m.time}</div>
+                </div>`;
+            });
+        }
+
+        document.getElementById("content").innerHTML = html;
+
+    } catch (err) {
+        document.getElementById("content").innerHTML =
+            "❌ JSON error: " + err.message;
+        console.log(err);
     }
-
-    document.getElementById("content").innerHTML = html;
 }
 
 load();
