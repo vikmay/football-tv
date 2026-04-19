@@ -70,63 +70,63 @@
 
             @media (max-width: 600px) {
                 .header {
-                    font-size: 180px;
-                    padding: 34px 12px;
+                    font-size: 32px;
+                    padding: 16px 12px;
                 }
 
                 .day {
-                    font-size: 120px;
-                    margin: 28px 12px;
+                    font-size: 20px;
+                    margin: 12px 12px;
                 }
 
                 .match {
-                    font-size: 100px;
-                    padding: 34px;
-                    margin: 18px 10px;
+                    font-size: 16px;
+                    padding: 14px;
+                    margin: 8px 10px;
                 }
 
                 .league {
-                    font-size: 72px;
+                    font-size: 11px;
                 }
 
                 .time,
                 .score {
-                    font-size: 96px;
+                    font-size: 14px;
                 }
 
                 #error {
-                    font-size: 80px;
+                    font-size: 16px;
                 }
             }
 
             @media (max-width: 900px) and (orientation: portrait) {
                 .header {
-                    font-size: 240px;
-                    padding: 40px 14px;
+                    font-size: 38px;
+                    padding: 18px 14px;
                 }
 
                 .day {
-                    font-size: 156px;
-                    margin: 32px 12px;
+                    font-size: 24px;
+                    margin: 14px 12px;
                 }
 
                 .match {
-                    font-size: 136px;
-                    padding: 36px 18px;
-                    margin: 20px 12px;
+                    font-size: 18px;
+                    padding: 16px 14px;
+                    margin: 10px 12px;
                 }
 
                 .league {
-                    font-size: 92px;
+                    font-size: 12px;
                 }
 
                 .time,
                 .score {
-                    font-size: 130px;
+                    font-size: 16px;
                 }
 
                 #error {
-                    font-size: 90px;
+                    font-size: 16px;
                 }
             }
         </style>
@@ -138,6 +138,8 @@
         <div id="content">Loading...</div>
 
         <script>
+            let hasScrolledToToday = false;
+
             async function load() {
                 const content = document.getElementById("content");
 
@@ -202,8 +204,9 @@
                     content.innerHTML = html;
 
                     const todayElement = document.querySelector(".day--today");
-                    if (todayElement) {
+                    if (todayElement && !hasScrolledToToday) {
                         todayElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                        hasScrolledToToday = true;
                     }
 
                 } catch (err) {
@@ -214,7 +217,6 @@
             }
 
             load();
-            setInterval(load, 60000);
         </script>
 
     </body>
