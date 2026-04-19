@@ -116,7 +116,7 @@
                     // Виводимо групи по датах у хронологічному порядку
                     Object.keys(matchesByDate).forEach(date => {
                         const dayClass = date.startsWith("Сьогодні") ? "day day--today" : "day";
-                        html += `<div class="${dayClass}">${date}</div>`;
+                        html += `<div class="${dayClass}" data-day="${date}">${date}</div>`;
 
                         matchesByDate[date].forEach(m => {
                             // Показуємо рахунок якщо матч завершений, інакше час
@@ -136,6 +136,11 @@
                     });
 
                     content.innerHTML = html;
+
+                    const todayElement = document.querySelector(".day--today");
+                    if (todayElement) {
+                        todayElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
 
                 } catch (err) {
                     console.log(err);
