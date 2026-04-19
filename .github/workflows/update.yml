@@ -21,11 +21,7 @@ jobs:
         node-version: 18
 
     - name: Generate matches
-      run: |
-        curl -s "https://v3.football.api-sports.io/fixtures?date=$(date +%Y-%m-%d)" \
-        -H "x-apisports-key: ${{ secrets.API_KEY }}" > raw.json
-
-        node parse.js
+      run: node parse.js
 
     - name: Commit
       run: |

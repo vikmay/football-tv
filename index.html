@@ -1,100 +1,152 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-<meta charset="UTF-8">
-<title>Football TV</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Football TV</title>
 
-<style>
-body {
-    margin:0;
-    background:#0f0f0f;
-    color:white;
-    font-family:Arial;
-}
+        <style>
+            body {
+                margin: 0;
+                background: #0f0f0f;
+                color: white;
+                font-family: Arial;
+            }
 
-.header {
-    text-align:center;
-    font-size:50px;
-    padding:30px;
-}
+            .header {
+                text-align: center;
+                font-size: 50px;
+                padding: 30px;
+            }
 
-.day {
-    color:#00ff88;
-    font-size:28px;
-    margin:20px;
-}
+            .day {
+                color: #00ff88;
+                font-size: 28px;
+                margin: 20px;
+                text-align: center;
+            }
 
-.match {
-    background:#1e1e1e;
-    margin:10px auto;
-    padding:20px;
-    max-width:900px;
-    border-radius:12px;
-    display:flex;
-    justify-content:space-between;
-    font-size:26px;
-}
+            .day--today {
+                color: #ff3b30;
+            }
 
-.league { color:#aaa; font-size:18px; }
-.time { color:#00ff88; font-weight:bold; }
+            .match {
+                background: #1e1e1e;
+                margin: 10px auto;
+                padding: 20px;
+                max-width: 900px;
+                border-radius: 12px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 26px;
+            }
 
-#error {
-    text-align:center;
-    color:red;
-    font-size:22px;
-}
-</style>
-</head>
+            .league {
+                color: #aaa;
+                font-size: 18px;
+            }
 
-<body>
+            .time {
+                color: #00ff88;
+                font-weight: bold;
+            }
 
-<div class="header">⚽ Football TV</div>
-<div id="content">Loading...</div>
+            .score {
+                color: #ffcc00;
+                font-weight: bold;
+            }
 
-<script>
-async function load() {
-    const content = document.getElementById("content");
+            #error {
+                text-align: center;
+                color: red;
+                font-size: 22px;
+            }
 
-    try {
-        const res = await fetch("./matches.json?cache=" + Date.now());
+            .empty {
+                margin: 10px;
+                color: #777;
+            }
+        </style>
+    </head>
 
-        if (!res.ok) {
-            throw new Error("HTTP " + res.status);
-        }
+    <body>
 
-        const data = await res.json();
+        <div class="header">⚽ Football TV</div>
+        <div id="content">Loading...</div>
 
-        console.log("DATA LOADED:", data);
+        <script>
+            async function load() {
+                const content = document.getElementById("content");
 
-        let html = "";
+                try {
+                    const res = await fetch("./matches.json?cache=" + Date.now());
 
-        Object.keys(data).forEach(day => {
-            html += `<div class="day">${day}</div>`;
+                    if (!res.ok) {
+                        throw new Error("HTTP " + res.status);
+                    }
 
-            (data[day] || []).forEach(m => {
-                html += `
+                    const data = await res.json();
+                    console.log("DATA LOADED:", data);
+
+                    let html = "";
+
+                    const allMatches = Object.values(data)
+                        .filter(Array.isArray)
+                        .flat()
+                        .sort((a, b) => {
+                            const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
+                            const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
+                            return new Date(aDate) - new Date(bDate);
+                        });
+
+                    if (!allMatches.length) {
+                        content.innerHTML = "<div id='error'>❌ Немає даних</div>";
+                        return;
+                    }
+
+                    // Групуємо всі матчі по даті незалежно від ліги
+                    const matchesByDate = {};
+                    allMatches.forEach(m => {
+                        const dateKey = m.date || "Інша дата";
+                        if (!matchesByDate[dateKey]) {
+                            matchesByDate[dateKey] = [];
+                        }
+                        matchesByDate[dateKey].push(m);
+                    });
+
+                    // Виводимо групи по датах у хронологічному порядку
+                    Object.keys(matchesByDate).forEach(date => {
+                        const dayClass = date.startsWith("Сьогодні") ? "day day--today" : "day";
+                        html += `<div class="${dayClass}">${date}</div>`;
+
+                        matchesByDate[date].forEach(m => {
+                            // Показуємо рахунок якщо матч завершений, інакше час
+                            const scoreOrTime = m.score
+                                ? `<span class="score">${m.score}</span>`
+                                : m.time;
+
+                            html += `
                 <div class="match">
                     <div>
-                        ${m.home} – ${m.away}
-                        <div class="league">${m.league}</div>
+                        ${m?.home || "?"} – ${m?.away || "?"}
+                        <div class="league">${m?.league || ""}</div>
                     </div>
-                    <div class="time">${m.time}</div>
+                    <div class="time">${scoreOrTime}</div>
                 </div>`;
-            });
-        });
+                        });
+                    });
 
-        content.innerHTML = html || "<div id='error'>❌ Немає матчів</div>";
+                    content.innerHTML = html;
 
-    } catch (err) {
-        console.log(err);
-        content.innerHTML =
-            "<div id='error'>❌ JSON error: " + err.message + "</div>";
-    }
-}
+                } catch (err) {
+                    console.log(err);
+                    content.innerHTML =
+                        "<div id='error'>❌ JSON error: " + err.message + "</div>";
+                }
+            }
 
-load();
-setInterval(load, 60000);
-</script>
+            load();
+            setInterval(load, 60000);
+        </script>
 
-</body>
+    </body>
 </html>

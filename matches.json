@@ -1,12 +1,255 @@
 {
-  "Сьогодні": [
+  "УПЛ": [
     {
-      "home": "Динамо",
-      "away": "Шахтар",
+      "home": "ЛНЗ Черкаси",
+      "away": "Шахтар Донецьк",
       "league": "УПЛ",
-      "time": "22:00"
+      "time": "00:00",
+      "date": "понеділок, 13 квітня",
+      "dateIso": "2026-04-13",
+      "status": "Match Finished",
+      "score": "2 - 2"
+    },
+    {
+      "home": "Металіст 1925 Харків",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "середа, 15 квітня",
+      "dateIso": "2026-04-15",
+      "status": "Match Finished",
+      "score": "4 - 0"
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Зоря Луганськ",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "пʼятниця, 17 квітня",
+      "dateIso": "2026-04-17",
+      "status": "Match Finished",
+      "score": "3 - 1"
+    },
+    {
+      "home": "Оболонь Київ",
+      "away": "Полтава",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "пʼятниця, 17 квітня",
+      "dateIso": "2026-04-17",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
+      "home": "Колос Ковалівка",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "субота, 18 квітня",
+      "dateIso": "2026-04-18",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Металіст 1925 Харків",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "субота, 18 квітня",
+      "dateIso": "2026-04-18",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Кривбас",
+      "away": "Рух Львів",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "неділя, 19 квітня",
+      "dateIso": "2026-04-19",
+      "status": "Match Finished",
+      "score": "3 - 0"
+    },
+    {
+      "home": "Епіцентр",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "неділя, 19 квітня",
+      "dateIso": "2026-04-19",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Олександрія",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 20 квітня",
+      "dateIso": "2026-04-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Полісся Житомир",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "Сьогодні, 20 квітня",
+      "dateIso": "2026-04-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Зоря Луганськ",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "четвер, 23 квітня",
+      "dateIso": "2026-04-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Колос Ковалівка",
+      "away": "Полтава",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "субота, 25 квітня",
+      "dateIso": "2026-04-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Рух Львів",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "субота, 25 квітня",
+      "dateIso": "2026-04-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кривбас",
+      "away": "Динамо Київ",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 26 квітня",
+      "dateIso": "2026-04-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ЛНЗ Черкаси",
+      "away": "Металіст 1925 Харків",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "неділя, 26 квітня",
+      "dateIso": "2026-04-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "неділя, 26 квітня",
+      "dateIso": "2026-04-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Полісся Житомир",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "неділя, 26 квітня",
+      "dateIso": "2026-04-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Епіцентр",
+      "away": "Олександрія",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "понеділок, 27 квітня",
+      "dateIso": "2026-04-27",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Зоря Луганськ",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "понеділок, 27 квітня",
+      "dateIso": "2026-04-27",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
-  "Завтра": [],
-  "Вчора": []
+  "Ліга чемпіонів": [
+    {
+      "home": "Liverpool",
+      "away": "Paris Saint-Germain",
+      "league": "Ліга чемпіонів",
+      "time": "23:00",
+      "date": "вівторок, 14 квітня",
+      "dateIso": "2026-04-14",
+      "status": "Match Finished",
+      "score": "0 - 2"
+    },
+    {
+      "home": "Atletico Madrid",
+      "away": "Barcelona",
+      "league": "Ліга чемпіонів",
+      "time": "23:00",
+      "date": "вівторок, 14 квітня",
+      "dateIso": "2026-04-14",
+      "status": "Match Finished",
+      "score": "1 - 2"
+    },
+    {
+      "home": "Bayern Munich",
+      "away": "Real Madrid",
+      "league": "Ліга чемпіонів",
+      "time": "22:00",
+      "date": "середа, 15 квітня",
+      "dateIso": "2026-04-15",
+      "status": "Match Finished",
+      "score": "4 - 3"
+    },
+    {
+      "home": "Arsenal",
+      "away": "Sporting CP",
+      "league": "Ліга чемпіонів",
+      "time": "23:00",
+      "date": "середа, 15 квітня",
+      "dateIso": "2026-04-15",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    }
+  ],
+  "Ліга Європи": [],
+  "Ліга конференцій": [],
+  "Суперкубок УЄФА": [],
+  "Ліга націй УЄФА": [],
+  "Чемпіонат світу": [],
+  "Чемпіонат Європи": [],
+  "Українські клуби в Європі": [
+    {
+      "home": "AZ Alkmaar",
+      "away": "Шахтар Донецьк",
+      "league": "Ліга конференцій",
+      "time": "23:00",
+      "date": "четвер, 16 квітня",
+      "dateIso": "2026-04-16",
+      "status": "Match Finished",
+      "score": "2 - 2"
+    }
+  ],
+  "Збірна України": []
 }
