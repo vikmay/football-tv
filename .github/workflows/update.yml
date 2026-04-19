@@ -2,20 +2,28 @@ name: Update matches
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # кожен день 06:00
+    - cron: "0 6 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
 
     - name: Generate matches
       run: |
         curl -s "https://v3.football.api-sports.io/fixtures?date=$(date +%Y-%m-%d)" \
-        -H "x-apisports-key: 62b022a67541a98d6a3ed1ac49921ec6" > raw.json
+        -H "x-apisports-key: ${{ secrets.API_KEY }}" > raw.json
 
         node parse.js
 
