@@ -1,1 +1,80 @@
-# football-tv
+# ⚽ Football TV
+
+Проста веб-апка для перегляду футбольних матчів із групуванням по лігах і датах. Працює на GitHub Pages.
+
+## 📁 Структура проєкту
+
+- `index.html` — фронтенд, який відображає `matches.json`
+- `matches.json` — згенеровані дані матчів
+- `matches.meta.json` — метадані кешу для генератора
+- `parse.js` — збирає дані з джерел і оновлює `matches.json`
+- `.github/workflows/update.yml` — GitHub Actions workflow для автооновлення
+
+## 🚀 Як це працює
+
+### Локально
+
+1. Згенеруй свіжі дані:
+   ```bash
+   node parse.js
+   ```
+
+2. Якщо треба примусово оновити дані, навіть коли кеш ще свіжий:
+   ```bash
+   node parse.js --force
+   ```
+
+3. Відкрий `index.html` у браузері або через Live Server у VS Code.
+
+### GitHub Pages
+
+- GitHub Pages показує вже згенерований `matches.json`
+- Автооновлення виконує GitHub Actions за розкладом
+- Після кожного успішного запуску workflow комітить оновлені `matches.json` і `matches.meta.json`
+
+## 🔄 Автооновлення даних
+
+Workflow запускається:
+- за розкладом кілька разів на добу
+- вручну через `workflow_dispatch`
+
+`parse.js` використовує TTL-кеш:
+- стандартний TTL — 120 хвилин
+- якщо є матчі на сьогодні або завтра — TTL зменшується до 10 хвилин
+- можна примусово обійти кеш через `--force`, `--refresh`, `--refresh-now` або `FORCE_REFRESH=1`
+
+## 📝 Формат `matches.json`
+
+```json
+{
+  "Nazwa Ligi": [
+    {
+      "home": "Zespół domowy",
+      "away": "Zespół wyjazdowy",
+      "league": "Nazwa Ligi",
+      "time": "HH:MM",
+      "date": "dzień, DD miesiąca",
+      "dateIso": "YYYY-MM-DD",
+      "status": "Match Finished" | "Scheduled",
+      "score": "X - Y" | ""
+    }
+  ]
+}
+```
+
+## ✨ Можливості
+
+- Підтримка кількох турнірів: УПЛ, Ліга чемпіонів, Кубок України, єврокубки
+- Групування матчів по датах
+- Показ рахунку або часу початку
+- Актуальні дані без окремого backend-сервера
+- Робота на GitHub Pages
+- Автоматичне оновлення через GitHub Actions
+
+## 🔧 Оновлення даних вручну
+
+Якщо хочеш оновити дані прямо зараз, запусти:
+
+```bash
+node parse.js --force
+```

@@ -34,12 +34,40 @@
             .match {
                 background: #1e1e1e;
                 margin: 10px auto;
-                padding: 20px;
+                padding: 18px 20px 16px;
                 max-width: 900px;
                 border-radius: 12px;
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                gap: 10px;
                 font-size: 26px;
+            }
+
+            .match__league {
+                color: #ffcc00;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+            }
+
+            .match__body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .match__teams {
+                flex: 1;
+                text-align: left;
+                line-height: 1.25;
+            }
+
+            .match__teams-main {
+                display: block;
             }
 
             .league {
@@ -50,6 +78,7 @@
             .time {
                 color: #00ff88;
                 font-weight: bold;
+                white-space: nowrap;
             }
 
             .score {
@@ -81,12 +110,17 @@
 
                 .match {
                     font-size: 16px;
-                    padding: 14px;
+                    padding: 14px 12px 12px;
                     margin: 8px 10px;
+                    gap: 8px;
                 }
 
-                .league {
+                .match__league {
                     font-size: 11px;
+                }
+
+                .match__body {
+                    gap: 12px;
                 }
 
                 .time,
@@ -112,12 +146,17 @@
 
                 .match {
                     font-size: 18px;
-                    padding: 16px 14px;
+                    padding: 16px 14px 14px;
                     margin: 10px 12px;
+                    gap: 9px;
                 }
 
-                .league {
+                .match__league {
                     font-size: 12px;
+                }
+
+                .match__body {
+                    gap: 14px;
                 }
 
                 .time,
@@ -192,11 +231,13 @@
 
                             html += `
                 <div class="match">
-                    <div>
-                        ${m?.home || "?"} – ${m?.away || "?"}
-                        <div class="league">${m?.league || ""}</div>
+                    <div class="match__league">${m?.league || ""}</div>
+                    <div class="match__body">
+                        <div class="match__teams">
+                            <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
+                        </div>
+                        <div class="time">${scoreOrTime}</div>
                     </div>
-                    <div class="time">${scoreOrTime}</div>
                 </div>`;
                         });
                     });

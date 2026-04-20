@@ -11,11 +11,69 @@ const fs = require("fs");
  */
 
 // Read existing matches.json to preserve if fetch fails
-let existingData = { "УПЛ": [], "Ліга чемпіонів": [] };
+let existingData = { "УПЛ": [], "Ліга чемпіонів": [], "Кубок України": [] };
 try {
   existingData = JSON.parse(fs.readFileSync("matches.json", "utf8"));
 } catch (e) {
   console.warn("⚠️ Could not read existing matches.json");
+}
+
+const REFRESH_META_FILE = "matches.meta.json";
+const DEFAULT_REFRESH_TTL_MINUTES = 120;
+const ACTIVE_REFRESH_TTL_MINUTES = 10;
+const FORCE_REFRESH_ARGS = new Set(["--force", "--refresh", "--refresh-now"]);
+
+function readRefreshMeta() {
+  try {
+    return JSON.parse(fs.readFileSync(REFRESH_META_FILE, "utf8"));
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeRefreshMeta(meta) {
+  fs.writeFileSync(REFRESH_META_FILE, JSON.stringify(meta, null, 2));
+}
+
+function isActiveWindowData(matchesData) {
+  const todayIso = getKyivTodayIso();
+  const tomorrowIso = shiftIsoDate(todayIso, 1);
+
+  return Object.values(matchesData)
+    .filter(Array.isArray)
+    .flat()
+    .some(match => match?.dateIso === todayIso || match?.dateIso === tomorrowIso);
+}
+
+function getRefreshTtlMinutes(matchesData) {
+  return isActiveWindowData(matchesData)
+    ? ACTIVE_REFRESH_TTL_MINUTES
+    : DEFAULT_REFRESH_TTL_MINUTES;
+}
+
+function isRefreshForced() {
+  return process.argv.some(arg => FORCE_REFRESH_ARGS.has(arg)) || process.env.FORCE_REFRESH === "1";
+}
+
+function shouldReuseCachedMatches(matchesData) {
+  if (isRefreshForced()) {
+    return false;
+  }
+
+  const meta = readRefreshMeta();
+  if (!meta?.lastUpdated) {
+    return false;
+  }
+
+  const lastUpdatedMs = new Date(meta.lastUpdated).getTime();
+  if (Number.isNaN(lastUpdatedMs)) {
+    return false;
+  }
+
+  const ttlMinutes = typeof meta.ttlMinutes === "number" ? meta.ttlMinutes : getRefreshTtlMinutes(matchesData);
+  const ageMinutes = (Date.now() - lastUpdatedMs) / 60000;
+
+  return ageMinutes < ttlMinutes;
 }
 
 // Team name mapping for UPL and Ukrainian teams in other competitions
@@ -61,6 +119,16 @@ const uplTeamNames = {
   "Epitsentr Dunayivtsi": "Епіцентр Дунаївці",
   "FC Epitsentr": "Епіцентр",
   "Epicentr": "Епіцентр",
+  "Bukovyna": "Буковина Чернівці",
+  "Bukovyna (Ч)": "Буковина Чернівці",
+  "Bukovina": "Буковина Чернівці",
+  "Bukovina (Ch)": "Буковина Чернівці",
+  "Chernihiv": "Чернігів",
+  "Chernihiv (Ч)": "Чернігів",
+  "Dynamo (К)": "Динамо Київ",
+  "Dynamo (K)": "Динамо Київ",
+  "Metalist 1925": "Металіст 1925 Харків",
+  "Metalist 1925 (Х)": "Металіст 1925 Харків",
   "Minai": "Мінай",
   "Mynai": "Мінай",
   "Polissya Zhytomyr": "Полісся Житомир",
@@ -398,6 +466,27 @@ function getConferenceLeagueFallbackEvents() {
   return knownEvents.filter(event => isDateWithinWindow(event.dateEvent));
 }
 
+function getCupFallbackEvents() {
+  const knownEvents = [
+    makeFallbackEvent({
+      idEvent: "uaf-cup-fallback-2026-04-21-bukovyna-dynamo",
+      dateEvent: "2026-04-21",
+      strTime: "18:00:00",
+      strHomeTeam: "Буковина Чернівці",
+      strAwayTeam: "Динамо Київ"
+    }),
+    makeFallbackEvent({
+      idEvent: "uaf-cup-fallback-2026-04-22-metalist1925-chernihiv",
+      dateEvent: "2026-04-22",
+      strTime: "18:00:00",
+      strHomeTeam: "Металіст 1925 Харків",
+      strAwayTeam: "Чернігів"
+    })
+  ];
+
+  return knownEvents.filter(event => isDateWithinWindow(event.dateEvent));
+}
+
 function decodeHtmlText(text) {
   return text
     .replace(/&/g, "&")
@@ -654,6 +743,78 @@ function parseFlashscoreFixtureEvents(html) {
   return dedupeEvents(events).sort(sortByDateTimeAsc);
 }
 
+function parseCupUafEvents(html) {
+  const text = htmlToPlainText(html)
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const calendarSection = text.split("Календар матчів")[1]?.split("Новини")[0] || text;
+  const events = [];
+  const matchPattern = /(\d{2}\.\d{2}\.\d{4})\s+(\d{2}:\d{2})\s+(.+?)\s*-\s+(.+?)(?=\s+\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}\s+|$)/g;
+
+  for (const match of calendarSection.matchAll(matchPattern)) {
+    const [, dateText, timeText, homeTeamRaw, awayTeamRaw] = match;
+    const dateEvent = parseDotDmyToIso(dateText);
+
+    if (!isDateWithinWindow(dateEvent)) {
+      continue;
+    }
+
+    const homeTeam = getUplTeamName(cleanExtractedText(homeTeamRaw));
+    const awayTeam = getUplTeamName(cleanExtractedText(awayTeamRaw));
+
+    if (!homeTeam || !awayTeam) {
+      continue;
+    }
+
+    events.push({
+      idEvent: `uaf-cup-${dateEvent}-${homeTeam}-${awayTeam}`.replace(/\s+/g, "-"),
+      dateEvent,
+      strTime: `${timeText}:00`,
+      strStatus: "Scheduled",
+      strHomeTeam: homeTeam,
+      strAwayTeam: awayTeam,
+      intHomeScore: null,
+      intAwayScore: null,
+      isLocalTime: true
+    });
+  }
+
+  const parsedEvents = dedupeEvents(events).sort(sortByDateTimeAsc);
+
+  if (parsedEvents.length > 0) {
+    return parsedEvents;
+  }
+
+  return getCupFallbackEvents();
+}
+
+async function fetchCupEvents() {
+  const cupUrl = "https://kubok.uaf.ua/";
+  const cupHtml = await fetchText(cupUrl, "Кубок України fetch error");
+
+  if (!cupHtml) {
+    const fallbackEvents = getCupFallbackEvents();
+    console.log(`⚠️ Кубок України source unavailable, using fallback schedule: ${fallbackEvents.length} matches in ±7 days window`);
+    return fallbackEvents.length > 0 ? fallbackEvents : null;
+  }
+
+  const events = parseCupUafEvents(cupHtml);
+
+  if (events.length > 0) {
+    if (events.some(event => event.idEvent.startsWith("uaf-cup-fallback-"))) {
+      console.log(`⚠️ Кубок України source incomplete, using fallback schedule: ${events.length} matches in ±7 days window`);
+    } else {
+      console.log(`✅ Кубок України fetched: ${events.length} matches in ±7 days window`);
+    }
+    return events;
+  }
+
+  console.log("⚠️ Кубок України source empty, keeping existing");
+  return null;
+}
+
 async function fetchUplEvents() {
   const officialUrl = "https://upl.ua/en/tournaments/championship/428/calendar";
   const officialHtml = await fetchText(officialUrl, "УПЛ official upl.ua fetch error");
@@ -830,6 +991,7 @@ async function main() {
   const matches = {
     "УПЛ": existingData["УПЛ"] || [],
     "Ліга чемпіонів": existingData["Ліга чемпіонів"] || existingData["Champions League"] || [],
+    "Кубок України": existingData["Кубок України"] || [],
     "Ліга Європи": existingData["Ліга Європи"] || [],
     "Ліга конференцій": existingData["Ліга конференцій"] || [],
     "Суперкубок УЄФА": existingData["Суперкубок УЄФА"] || [],
@@ -840,9 +1002,18 @@ async function main() {
     "Збірна України": existingData["Збірна України"] || []
   };
 
-  const [uplEvents, clEvents, extraMatches] = await Promise.all([
+  if (shouldReuseCachedMatches(existingData)) {
+    const meta = readRefreshMeta();
+    const ttlMinutes = typeof meta?.ttlMinutes === "number" ? meta.ttlMinutes : getRefreshTtlMinutes(existingData);
+    const ageMinutes = meta?.lastUpdated ? Math.max(0, Math.round((Date.now() - new Date(meta.lastUpdated).getTime()) / 60000)) : 0;
+    console.log(`⏭️ Cache fresh (${ageMinutes}m old, TTL ${ttlMinutes}m), reusing existing matches.json`);
+    return;
+  }
+
+  const [uplEvents, clEvents, cupEvents, extraMatches] = await Promise.all([
     fetchUplEvents(),
     fetchChampionsLeagueEvents(),
+    fetchCupEvents(),
     fetchExtraMatches()
   ]);
 
@@ -858,10 +1029,21 @@ async function main() {
     );
   }
 
+  if (cupEvents) {
+    matches["Кубок України"] = cupEvents.map(event =>
+      mapEventToMatch(event, "Кубок України", getUplTeamName)
+    );
+  }
+
   matches["Українські клуби в Європі"] = extraMatches.clubMatches;
   matches["Збірна України"] = extraMatches.nationalMatches;
 
   fs.writeFileSync("matches.json", JSON.stringify(matches, null, 2));
+  writeRefreshMeta({
+    lastUpdated: new Date().toISOString(),
+    ttlMinutes: getRefreshTtlMinutes(matches),
+    forceRefresh: isRefreshForced()
+  });
   console.log("✅ matches.json updated");
 }
 
