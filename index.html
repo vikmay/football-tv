@@ -52,6 +52,10 @@
                 letter-spacing: 0.08em;
             }
 
+            .match__league-stage {
+                color: #7dd3fc;
+            }
+
             .match__body {
                 display: flex;
                 align-items: center;
@@ -179,6 +183,10 @@
         <script>
             let hasScrolledToToday = false;
 
+            function renderLeagueLabel(label) {
+                return String(label || "").replace(/\s*\(([^)]+)\)/, ' <span class="match__league-stage">($1)</span>');
+            }
+
             function getKyivTodayIso() {
                 return new Intl.DateTimeFormat("en-CA", {
                     timeZone: "Europe/Kyiv",
@@ -274,7 +282,7 @@
 
                                 html += `
                 <div class="match">
-                    <div class="match__league">${m?.league || ""}</div>
+                    <div class="match__league">${renderLeagueLabel(m?.league || "")}</div>
                     <div class="match__body">
                         <div class="match__teams">
                             <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
