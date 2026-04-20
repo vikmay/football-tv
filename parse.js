@@ -297,6 +297,16 @@ function isoDateToDisplayDate(dateString) {
 function formatDateUk(dateString) {
   const todayIso = getKyivTodayIso();
   const matchDate = isoDateToDisplayDate(dateString);
+  const weekdays = [
+    "неділя",
+    "понеділок",
+    "вівторок",
+    "середа",
+    "четвер",
+    "пʼятниця",
+    "субота"
+  ];
+  const weekday = weekdays[matchDate.getUTCDay()];
 
   if (dateString === todayIso) {
     return (
@@ -309,12 +319,11 @@ function formatDateUk(dateString) {
     );
   }
 
-  return matchDate.toLocaleDateString("uk-UA", {
+  return `${weekday}, ${matchDate.toLocaleDateString("uk-UA", {
     timeZone: "Europe/Kyiv",
-    weekday: "long",
     day: "numeric",
     month: "long"
-  });
+  })}`;
 }
 
 function formatTime(event) {

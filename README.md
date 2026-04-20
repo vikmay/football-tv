@@ -47,13 +47,13 @@ Workflow запускається:
 
 ```json
 {
-  "Nazwa Ligi": [
+  "Назва ліги": [
     {
-      "home": "Zespół domowy",
-      "away": "Zespół wyjazdowy",
-      "league": "Nazwa Ligi",
+      "home": "Команда господарів",
+      "away": "Команда гостей",
+      "league": "Назва ліги",
       "time": "HH:MM",
-      "date": "dzień, DD miesiąca",
+      "date": "день, DD місяця",
       "dateIso": "YYYY-MM-DD",
       "status": "Match Finished" | "Scheduled",
       "score": "X - Y" | ""
