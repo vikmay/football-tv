@@ -179,6 +179,39 @@
         <script>
             let hasScrolledToToday = false;
 
+            function getKyivTodayIso() {
+                return new Intl.DateTimeFormat("en-CA", {
+                    timeZone: "Europe/Kyiv",
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit"
+                }).format(new Date());
+            }
+
+            function formatDateUk(dateIso) {
+                const date = new Date(`${dateIso}T12:00:00Z`);
+                const todayIso = getKyivTodayIso();
+                const weekdays = [
+                    "неділя",
+                    "понеділок",
+                    "вівторок",
+                    "середа",
+                    "четвер",
+                    "пʼятниця",
+                    "субота"
+                ];
+                const dayName = weekdays[date.getUTCDay()];
+                const formattedDate = date.toLocaleDateString("uk-UA", {
+                    timeZone: "Europe/Kyiv",
+                    day: "numeric",
+                    month: "long"
+                });
+
+                return dateIso === todayIso
+                    ? `Сьогодні, ${formattedDate}`
+                    : `${dayName}, ${formattedDate}`;
+            }
+
             async function load() {
                 const content = document.getElementById("content");
 
@@ -208,28 +241,38 @@
                         return;
                     }
 
-                    // Групуємо всі матчі по даті незалежно від ліги
+                    const todayIso = getKyivTodayIso();
+                    const hasTodayMatches = allMatches.some(m => m.dateIso === todayIso);
                     const matchesByDate = {};
                     allMatches.forEach(m => {
-                        const dateKey = m.date || "Інша дата";
+                        const dateKey = m.dateIso || m.date || "Інша дата";
                         if (!matchesByDate[dateKey]) {
                             matchesByDate[dateKey] = [];
                         }
                         matchesByDate[dateKey].push(m);
                     });
 
-                    // Виводимо групи по датах у хронологічному порядку
-                    Object.keys(matchesByDate).forEach(date => {
-                        const dayClass = date.startsWith("Сьогодні") ? "day day--today" : "day";
-                        html += `<div class="${dayClass}" data-day="${date}">${date}</div>`;
+                    if (!hasTodayMatches) {
+                        html += `<div class="empty" style="text-align: center; color: #ffcc00; font-size: 22px; margin: 20px 10px;">Сьогодні матчів немає</div>`;
+                    }
 
-                        matchesByDate[date].forEach(m => {
-                            // Показуємо рахунок якщо матч завершений, інакше час
-                            const scoreOrTime = m.score
-                                ? `<span class="score">${m.score}</span>`
-                                : m.time;
+                    Object.keys(matchesByDate)
+                        .sort((a, b) => {
+                            if (a === "Інша дата") return 1;
+                            if (b === "Інша дата") return -1;
+                            return new Date(a) - new Date(b);
+                        })
+                        .forEach(dateIso => {
+                            const dateLabel = dateIso === "Інша дата" ? dateIso : formatDateUk(dateIso);
+                            const dayClass = dateIso === todayIso ? "day day--today" : "day";
+                            html += `<div class="${dayClass}" data-day="${dateIso}">${dateLabel}</div>`;
 
-                            html += `
+                            matchesByDate[dateIso].forEach(m => {
+                                const scoreOrTime = m.score
+                                    ? `<span class="score">${m.score}</span>`
+                                    : m.time;
+
+                                html += `
                 <div class="match">
                     <div class="match__league">${m?.league || ""}</div>
                     <div class="match__body">
@@ -239,8 +282,8 @@
                         <div class="time">${scoreOrTime}</div>
                     </div>
                 </div>`;
+                            });
                         });
-                    });
 
                     content.innerHTML = html;
 
