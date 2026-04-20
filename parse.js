@@ -366,11 +366,44 @@ function formatScore(event) {
   return "";
 }
 
+function formatCompetitionStage(event) {
+  const roundValue = event.intRound ?? event.strRound ?? event.strEventRound ?? event.strStage ?? event.intStage;
+
+  const roundNumber = typeof roundValue === "string" ? Number(roundValue) : roundValue;
+  if (!Number.isFinite(roundNumber)) {
+    return "";
+  }
+
+  if (roundNumber === 125) {
+    return "Чвертьфінал";
+  }
+
+  if (roundNumber === 150) {
+    return "Півфінал";
+  }
+
+  if (roundNumber === 200) {
+    return "Фінал";
+  }
+
+  return "";
+}
+
+function formatCompetitionLabel(leagueLabel, event) {
+  const stage = formatCompetitionStage(event);
+
+  if (!stage) {
+    return leagueLabel;
+  }
+
+  return `${leagueLabel} (${stage})`;
+}
+
 function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
   return {
     home: mapTeamName(event.strHomeTeam),
     away: mapTeamName(event.strAwayTeam),
-    league: leagueLabel,
+    league: formatCompetitionLabel(leagueLabel, event),
     time: formatTime(event),
     date: formatDateUk(event.dateEvent),
     dateIso: event.dateEvent,
