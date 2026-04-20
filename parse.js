@@ -432,6 +432,35 @@ function dedupeEvents(events) {
   );
 }
 
+function mergeEventMetadata(baseEvents, metadataEvents) {
+  return baseEvents.map(event => {
+    const metadataEvent = metadataEvents.find(item =>
+      (item.idEvent && event.idEvent && item.idEvent === event.idEvent) ||
+      (
+        item.dateEvent === event.dateEvent &&
+        item.strHomeTeam === event.strHomeTeam &&
+        item.strAwayTeam === event.strAwayTeam
+      )
+    );
+
+    if (!metadataEvent) {
+      return event;
+    }
+
+    const metadataPatch = {};
+    for (const key of ["intRound", "strRound", "strEventRound", "strStage", "intStage"]) {
+      if (metadataEvent[key] !== undefined && metadataEvent[key] !== null) {
+        metadataPatch[key] = metadataEvent[key];
+      }
+    }
+
+    return {
+      ...event,
+      ...metadataPatch
+    };
+  });
+}
+
 function makeFallbackEvent({
   idEvent,
   dateEvent,
@@ -439,6 +468,7 @@ function makeFallbackEvent({
   strAwayTeam,
   intHomeScore,
   intAwayScore,
+  intRound,
   strTime = "20:00:00",
   strStatus = "Match Finished"
 }) {
@@ -450,7 +480,8 @@ function makeFallbackEvent({
     strHomeTeam,
     strAwayTeam,
     intHomeScore,
-    intAwayScore
+    intAwayScore,
+    intRound
   };
 }
 
@@ -462,7 +493,8 @@ function getChampionsLeagueFallbackEvents() {
       strHomeTeam: "Liverpool",
       strAwayTeam: "Paris Saint-Germain",
       intHomeScore: 0,
-      intAwayScore: 2
+      intAwayScore: 2,
+      intRound: 125
     }),
     makeFallbackEvent({
       idEvent: "ucl-fallback-2026-04-14-atletico-barcelona",
@@ -470,7 +502,8 @@ function getChampionsLeagueFallbackEvents() {
       strHomeTeam: "Atletico Madrid",
       strAwayTeam: "Barcelona",
       intHomeScore: 1,
-      intAwayScore: 2
+      intAwayScore: 2,
+      intRound: 125
     }),
     makeFallbackEvent({
       idEvent: "ucl-fallback-2026-04-15-arsenal-sporting",
@@ -478,7 +511,8 @@ function getChampionsLeagueFallbackEvents() {
       strHomeTeam: "Arsenal",
       strAwayTeam: "Sporting CP",
       intHomeScore: 0,
-      intAwayScore: 0
+      intAwayScore: 0,
+      intRound: 125
     }),
     makeFallbackEvent({
       idEvent: "ucl-fallback-2026-04-15-bayern-real",
@@ -486,7 +520,8 @@ function getChampionsLeagueFallbackEvents() {
       strHomeTeam: "Bayern Munich",
       strAwayTeam: "Real Madrid",
       intHomeScore: 4,
-      intAwayScore: 3
+      intAwayScore: 3,
+      intRound: 125
     })
   ];
 
@@ -515,14 +550,16 @@ function getCupFallbackEvents() {
       dateEvent: "2026-04-21",
       strTime: "18:00:00",
       strHomeTeam: "Буковина Чернівці",
-      strAwayTeam: "Динамо Київ"
+      strAwayTeam: "Динамо Київ",
+      intRound: 150
     }),
     makeFallbackEvent({
       idEvent: "uaf-cup-fallback-2026-04-22-metalist1925-chernihiv",
       dateEvent: "2026-04-22",
       strTime: "18:00:00",
       strHomeTeam: "Металіст 1925 Харків",
-      strAwayTeam: "Чернігів"
+      strAwayTeam: "Чернігів",
+      intRound: 150
     })
   ];
 
@@ -826,7 +863,7 @@ function parseCupUafEvents(html) {
   const parsedEvents = dedupeEvents(events).sort(sortByDateTimeAsc);
 
   if (parsedEvents.length > 0) {
-    return parsedEvents;
+    return mergeEventMetadata(parsedEvents, getCupFallbackEvents());
   }
 
   return getCupFallbackEvents();
@@ -942,11 +979,13 @@ async function fetchChampionsLeagueEvents() {
     .filter(event => isDateWithinWindow(event.dateEvent))
     .sort(sortByDateTimeAsc);
 
-  if (!apiEvents || mergedEvents.length > apiEvents.length) {
-    console.log(`⚠️ Ліга чемпіонів source incomplete, merged fallback matches: ${mergedEvents.length}`);
+  const enrichedEvents = mergeEventMetadata(mergedEvents, fallbackEvents);
+
+  if (!apiEvents || enrichedEvents.length > apiEvents.length) {
+    console.log(`⚠️ Ліга чемпіонів source incomplete, merged fallback matches: ${enrichedEvents.length}`);
   }
 
-  return mergedEvents;
+  return enrichedEvents;
 }
 
 async function fetchFlashscoreCompetitionEvents(url, label) {
