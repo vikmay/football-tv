@@ -109,119 +109,6 @@
                 border-radius: 12px;
             }
 
-            .standings__desktop {
-                display: block;
-            }
-
-            .standings__mobile {
-                display: none;
-            }
-
-            .standings__cards {
-                display: grid;
-                gap: 12px;
-            }
-
-            .standings-card {
-                background: linear-gradient(180deg, #1f1f1f 0%, #171717 100%);
-                border: 1px solid #2a2a2a;
-                border-radius: 16px;
-                padding: 13px 14px 14px;
-                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-                display: grid;
-                gap: 10px;
-            }
-
-            .standings-card__top {
-                display: grid;
-                grid-template-columns: 34px minmax(0, 1fr) auto;
-                align-items: center;
-                gap: 10px;
-                min-width: 0;
-            }
-
-            .standings-card__rank {
-                width: 34px;
-                height: 34px;
-                border-radius: 10px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                background: #2c2c2c;
-                color: #ffcc00;
-                font-weight: 800;
-                font-size: 14px;
-            }
-
-            .standings-card__team {
-                min-width: 0;
-                font-size: 18px;
-                font-weight: 800;
-                color: #fff;
-                line-height: 1.15;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-
-            .standings-card__points {
-                min-width: 44px;
-                padding: 7px 10px;
-                border-radius: 999px;
-                background: rgba(0, 255, 136, 0.12);
-                color: #00ff88;
-                font-size: 18px;
-                font-weight: 900;
-                text-align: center;
-                line-height: 1;
-            }
-
-            .standings-card__subhead {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-            }
-
-            .standings-card__record {
-                color: #d0d0d0;
-                font-size: 13px;
-                font-weight: 600;
-                line-height: 1.35;
-            }
-
-            .standings-card__stats {
-                display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-                gap: 8px;
-            }
-
-            .standings-stat {
-                background: #232323;
-                border: 1px solid #313131;
-                border-radius: 12px;
-                padding: 8px 6px;
-                text-align: center;
-            }
-
-            .standings-stat__label {
-                display: block;
-                color: #9b9b9b;
-                font-size: 11px;
-                line-height: 1;
-                margin-bottom: 4px;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-            }
-
-            .standings-stat__value {
-                display: block;
-                color: #fff;
-                font-size: 16px;
-                font-weight: 800;
-                line-height: 1.1;
-            }
-
             .standings__title {
                 margin: 0 0 14px;
                 text-align: center;
@@ -229,35 +116,69 @@
                 color: #ffcc00;
             }
 
+            .standings__table-wrap {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                border: 1px solid #2a2a2a;
+                border-radius: 12px;
+                background: #121212;
+            }
+
             .standings__table {
                 width: 100%;
+                min-width: 760px;
                 border-collapse: collapse;
-                font-size: 18px;
+                font-size: 16px;
+                table-layout: fixed;
             }
 
             .standings__table th,
             .standings__table td {
-                padding: 12px 10px;
+                padding: 11px 8px;
                 border-bottom: 1px solid #2a2a2a;
                 text-align: center;
+                vertical-align: middle;
             }
 
             .standings__table th {
                 color: #aaa;
                 font-weight: 700;
-                font-size: 14px;
+                font-size: 13px;
                 text-transform: uppercase;
                 letter-spacing: 0.06em;
+                background: #171717;
             }
 
-            .standings__table td:first-child,
-            .standings__table th:first-child {
+            .standings__table tr:last-child td {
+                border-bottom: 0;
+            }
+
+            .standings__table tr:hover td {
+                background: rgba(255, 255, 255, 0.02);
+            }
+
+            .standings__rank-cell {
+                width: 42px;
+                color: #a8a8a8;
+                font-weight: 700;
+            }
+
+            .standings__team-cell {
                 text-align: left;
-            }
-
-            .standings__team {
                 font-weight: 700;
                 color: #fff;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.2;
+            }
+
+            .standings__points-cell {
+                color: #00ff88;
+                font-weight: 900;
+                background: rgba(0, 255, 136, 0.12);
+                border-left: 1px solid rgba(0, 255, 136, 0.18);
+                border-right: 1px solid rgba(0, 255, 136, 0.18);
             }
 
             .standings__note {
@@ -312,12 +233,14 @@
                     margin-bottom: 12px;
                 }
 
-                .standings__desktop {
-                    display: none;
+                .standings__table {
+                    min-width: 760px;
+                    font-size: 13px;
                 }
 
-                .standings__mobile {
-                    display: block;
+                .standings__table th,
+                .standings__table td {
+                    padding: 9px 7px;
                 }
 
                 .standings__note {
@@ -335,31 +258,8 @@
                     padding-right: 8px;
                 }
 
-                .standings-card {
-                    padding: 11px 10px 12px;
-                    border-radius: 14px;
-                }
-
-                .standings-card__team {
-                    font-size: 16px;
-                }
-
-                .standings-card__points {
-                    min-width: 40px;
-                    font-size: 16px;
-                    padding: 6px 8px;
-                }
-
-                .standings-card__stats {
-                    gap: 6px;
-                }
-
-                .standings-stat {
-                    padding: 7px 4px;
-                }
-
-                .standings-stat__value {
-                    font-size: 15px;
+                .standings__table {
+                    min-width: 760px;
                 }
             }
 
@@ -447,158 +347,64 @@
                     : `${dayName}, ${formattedDate}`;
             }
 
-            function parseScore(score) {
-                const match = String(score || "").match(/^(\d+)\s*-\s*(\d+)$/);
-                if (!match) {
-                    return null;
-                }
+            const uplStandings = [
+                { position: 1, team: "Шахтар Донецьк", played: 23, wins: 16, draws: 6, losses: 1, goalsFor: 54, goalsAgainst: 14, goalDifference: 40, points: 54 },
+                { position: 2, team: "ЛНЗ Черкаси", played: 24, wins: 16, draws: 3, losses: 5, goalsFor: 35, goalsAgainst: 15, goalDifference: 20, points: 51 },
+                { position: 3, team: "Полісся Житомир", played: 24, wins: 14, draws: 4, losses: 6, goalsFor: 41, goalsAgainst: 16, goalDifference: 25, points: 46 },
+                { position: 4, team: "Металіст 1925 Харків", played: 24, wins: 12, draws: 8, losses: 4, goalsFor: 30, goalsAgainst: 13, goalDifference: 17, points: 44 },
+                { position: 5, team: "Динамо Київ", played: 24, wins: 13, draws: 5, losses: 6, goalsFor: 52, goalsAgainst: 26, goalDifference: 26, points: 44 },
+                { position: 6, team: "Кривбас Кривий Ріг", played: 24, wins: 11, draws: 7, losses: 6, goalsFor: 38, goalsAgainst: 32, goalDifference: 6, points: 40 },
+                { position: 7, team: "Колос Ковалівка", played: 24, wins: 9, draws: 10, losses: 5, goalsFor: 22, goalsAgainst: 21, goalDifference: 1, points: 37 },
+                { position: 8, team: "Карпати Львів", played: 24, wins: 8, draws: 9, losses: 7, goalsFor: 32, goalsAgainst: 26, goalDifference: 6, points: 33 },
+                { position: 9, team: "Зоря Луганськ", played: 23, wins: 8, draws: 8, losses: 7, goalsFor: 32, goalsAgainst: 30, goalDifference: 2, points: 32 },
+                { position: 10, team: "Верес Рівне", played: 24, wins: 7, draws: 8, losses: 9, goalsFor: 22, goalsAgainst: 29, goalDifference: -7, points: 29 },
+                { position: 11, team: "Епіцентр Кам'янець-Подільський", played: 24, wins: 7, draws: 3, losses: 14, goalsFor: 26, goalsAgainst: 36, goalDifference: -10, points: 24 },
+                { position: 12, team: "Оболонь Київ", played: 23, wins: 5, draws: 8, losses: 10, goalsFor: 18, goalsAgainst: 39, goalDifference: -21, points: 23 },
+                { position: 13, team: "Кудрівка", played: 24, wins: 5, draws: 6, losses: 13, goalsFor: 25, goalsAgainst: 39, goalDifference: -14, points: 21 },
+                { position: 14, team: "Рух Львів", played: 24, wins: 6, draws: 2, losses: 16, goalsFor: 17, goalsAgainst: 39, goalDifference: -22, points: 20 },
+                { position: 15, team: "Олександрія", played: 23, wins: 2, draws: 6, losses: 15, goalsFor: 17, goalsAgainst: 45, goalDifference: -28, points: 12 },
+                { position: 16, team: "Полтава", played: 24, wins: 2, draws: 5, losses: 17, goalsFor: 20, goalsAgainst: 61, goalDifference: -41, points: 11 }
+            ];
 
-                return {
-                    home: Number(match[1]),
-                    away: Number(match[2])
-                };
-            }
-
-            function buildUplStandings(matches) {
-                const table = new Map();
-
-                for (const match of matches) {
-                    const score = parseScore(match.score);
-                    if (!score) {
-                        continue;
-                    }
-
-                    if (!table.has(match.home)) {
-                        table.set(match.home, { team: match.home, played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 });
-                    }
-
-                    if (!table.has(match.away)) {
-                        table.set(match.away, { team: match.away, played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 });
-                    }
-
-                    const home = table.get(match.home);
-                    const away = table.get(match.away);
-
-                    home.played += 1;
-                    away.played += 1;
-                    home.goalsFor += score.home;
-                    home.goalsAgainst += score.away;
-                    away.goalsFor += score.away;
-                    away.goalsAgainst += score.home;
-
-                    if (score.home > score.away) {
-                        home.wins += 1;
-                        home.points += 3;
-                        away.losses += 1;
-                    } else if (score.home < score.away) {
-                        away.wins += 1;
-                        away.points += 3;
-                        home.losses += 1;
-                    } else {
-                        home.draws += 1;
-                        away.draws += 1;
-                        home.points += 1;
-                        away.points += 1;
-                    }
-                }
-
-                return Array.from(table.values())
-                    .map(item => ({
-                        ...item,
-                        goalDifference: item.goalsFor - item.goalsAgainst
-                    }))
-                    .sort((a, b) =>
-                        b.points - a.points ||
-                        b.goalDifference - a.goalDifference ||
-                        b.goalsFor - a.goalsFor ||
-                        a.team.localeCompare(b.team, "uk")
-                    );
-            }
-
-            function renderUplStandings(matches) {
+            function renderUplStandings() {
                 const standingsHost = document.getElementById("standings");
-                const standings = buildUplStandings(matches);
-
-                if (!standings.length) {
-                    standingsHost.innerHTML = "";
-                    return;
-                }
 
                 standingsHost.innerHTML = `
                     <section class="standings">
                         <h2 class="standings__title">Таблиця УПЛ</h2>
-
-                        <div class="standings__desktop">
+                        <div class="standings__table-wrap">
                             <table class="standings__table">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>№</th>
                                         <th>Команда</th>
-                                        <th>І</th>
+                                        <th>М</th>
                                         <th>В</th>
                                         <th>Н</th>
                                         <th>П</th>
-                                        <th>М</th>
+                                        <th>Г</th>
                                         <th>Р</th>
                                         <th>О</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    ${standings.map((team, index) => `
+                                    ${uplStandings.map(team => `
                                         <tr>
-                                            <td>${index + 1}</td>
-                                            <td class="standings__team">${team.team}</td>
+                                            <td class="standings__rank-cell">${team.position}</td>
+                                            <td class="standings__team-cell">${team.team}</td>
                                             <td>${team.played}</td>
                                             <td>${team.wins}</td>
                                             <td>${team.draws}</td>
                                             <td>${team.losses}</td>
                                             <td>${team.goalsFor}:${team.goalsAgainst}</td>
                                             <td>${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td>
-                                            <td>${team.points}</td>
+                                            <td class="standings__points-cell">${team.points}</td>
                                         </tr>
                                     `).join("")}
                                 </tbody>
                             </table>
                         </div>
-
-                        <div class="standings__mobile">
-                            <div class="standings__cards">
-                                ${standings.map((team, index) => `
-                                    <article class="standings-card">
-                                        <div class="standings-card__top">
-                                            <div class="standings-card__rank">${index + 1}</div>
-                                            <div class="standings-card__team">${team.team}</div>
-                                            <div class="standings-card__points">${team.points}</div>
-                                        </div>
-
-                                        <div class="standings-card__subhead">
-                                            <div class="standings-card__record">${team.played} матчів · ${team.wins}В ${team.draws}Н ${team.losses}П</div>
-                                        </div>
-
-                                        <div class="standings-card__stats">
-                                            <div class="standings-stat">
-                                                <span class="standings-stat__label">Голи</span>
-                                                <span class="standings-stat__value">${team.goalsFor}:${team.goalsAgainst}</span>
-                                            </div>
-                                            <div class="standings-stat">
-                                                <span class="standings-stat__label">Різн</span>
-                                                <span class="standings-stat__value">${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</span>
-                                            </div>
-                                            <div class="standings-stat">
-                                                <span class="standings-stat__label">Ігри</span>
-                                                <span class="standings-stat__value">${team.played}</span>
-                                            </div>
-                                            <div class="standings-stat">
-                                                <span class="standings-stat__label">Очки</span>
-                                                <span class="standings-stat__value">${team.points}</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                `).join("")}
-                            </div>
-                        </div>
-
-                        <div class="standings__note">Таблиця сформована з завершених матчів УПЛ із файлу matches.json</div>
+                        <div class="standings__note">Актуальна таблиця з офіційного сайту УПЛ: upl.ua/en/tournaments/championship/428/table</div>
                     </section>
                 `;
             }
@@ -677,7 +483,7 @@
                         });
 
                     content.innerHTML = html;
-                    renderUplStandings(allMatches.filter(match => match.league === "УПЛ"));
+                    renderUplStandings();
 
                     const todayElement = document.querySelector(".day--today");
                     if (todayElement && !hasScrolledToToday) {
