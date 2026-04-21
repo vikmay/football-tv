@@ -109,6 +109,119 @@
                 border-radius: 12px;
             }
 
+            .standings__desktop {
+                display: block;
+            }
+
+            .standings__mobile {
+                display: none;
+            }
+
+            .standings__cards {
+                display: grid;
+                gap: 12px;
+            }
+
+            .standings-card {
+                background: linear-gradient(180deg, #1f1f1f 0%, #171717 100%);
+                border: 1px solid #2a2a2a;
+                border-radius: 16px;
+                padding: 13px 14px 14px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+                display: grid;
+                gap: 10px;
+            }
+
+            .standings-card__top {
+                display: grid;
+                grid-template-columns: 34px minmax(0, 1fr) auto;
+                align-items: center;
+                gap: 10px;
+                min-width: 0;
+            }
+
+            .standings-card__rank {
+                width: 34px;
+                height: 34px;
+                border-radius: 10px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background: #2c2c2c;
+                color: #ffcc00;
+                font-weight: 800;
+                font-size: 14px;
+            }
+
+            .standings-card__team {
+                min-width: 0;
+                font-size: 18px;
+                font-weight: 800;
+                color: #fff;
+                line-height: 1.15;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .standings-card__points {
+                min-width: 44px;
+                padding: 7px 10px;
+                border-radius: 999px;
+                background: rgba(0, 255, 136, 0.12);
+                color: #00ff88;
+                font-size: 18px;
+                font-weight: 900;
+                text-align: center;
+                line-height: 1;
+            }
+
+            .standings-card__subhead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .standings-card__record {
+                color: #d0d0d0;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 1.35;
+            }
+
+            .standings-card__stats {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 8px;
+            }
+
+            .standings-stat {
+                background: #232323;
+                border: 1px solid #313131;
+                border-radius: 12px;
+                padding: 8px 6px;
+                text-align: center;
+            }
+
+            .standings-stat__label {
+                display: block;
+                color: #9b9b9b;
+                font-size: 11px;
+                line-height: 1;
+                margin-bottom: 4px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .standings-stat__value {
+                display: block;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 800;
+                line-height: 1.1;
+            }
+
             .standings__title {
                 margin: 0 0 14px;
                 text-align: center;
@@ -196,73 +309,57 @@
 
                 .standings__title {
                     font-size: 22px;
-                    margin-bottom: 10px;
+                    margin-bottom: 12px;
                 }
 
-                .standings__table,
-                .standings__table thead,
-                .standings__table tbody,
-                .standings__table th,
-                .standings__table td,
-                .standings__table tr {
-                    display: block;
-                    width: 100%;
-                }
-
-                .standings__table thead {
+                .standings__desktop {
                     display: none;
                 }
 
-                .standings__table tr {
-                    background: #1e1e1e;
-                    border: 1px solid #2a2a2a;
-                    border-radius: 12px;
-                    margin-bottom: 10px;
-                    overflow: hidden;
-                }
-
-                .standings__table td {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 12px;
-                    padding: 8px 12px;
-                    border-bottom: 1px solid #2a2a2a;
-                    text-align: right;
-                    font-size: 15px;
-                }
-
-                .standings__table td::before {
-                    content: attr(data-label);
-                    flex: 0 0 auto;
-                    color: #aaa;
-                    font-size: 11px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.05em;
-                    text-align: left;
-                }
-
-                .standings__table td.standings__team-cell {
+                .standings__mobile {
                     display: block;
-                    text-align: left;
-                    font-size: 16px;
-                    font-weight: 700;
-                    color: #fff;
-                    padding-top: 12px;
-                    padding-bottom: 12px;
-                }
-
-                .standings__table td.standings__team-cell::before {
-                    display: none;
-                }
-
-                .standings__table td:last-child {
-                    border-bottom: 0;
                 }
 
                 .standings__note {
                     font-size: 12px;
                     line-height: 1.4;
+                    margin-top: 12px;
+                }
+            }
+
+            @media (max-width: 420px) {
+                .standings {
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+
+                .standings-card {
+                    padding: 11px 10px 12px;
+                    border-radius: 14px;
+                }
+
+                .standings-card__team {
+                    font-size: 16px;
+                }
+
+                .standings-card__points {
+                    min-width: 40px;
+                    font-size: 16px;
+                    padding: 6px 8px;
+                }
+
+                .standings-card__stats {
+                    gap: 6px;
+                }
+
+                .standings-stat {
+                    padding: 7px 4px;
+                }
+
+                .standings-stat__value {
+                    font-size: 15px;
                 }
             }
 
@@ -430,35 +527,77 @@
                 standingsHost.innerHTML = `
                     <section class="standings">
                         <h2 class="standings__title">Таблиця УПЛ</h2>
-                        <table class="standings__table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Команда</th>
-                                    <th>І</th>
-                                    <th>В</th>
-                                    <th>Н</th>
-                                    <th>П</th>
-                                    <th>М</th>
-                                    <th>Р</th>
-                                    <th>О</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                ${standings.map((team, index) => `
+
+                        <div class="standings__desktop">
+                            <table class="standings__table">
+                                <thead>
                                     <tr>
-                                        <td data-label="#" class="standings__team-cell">${index + 1}. ${team.team}</td>
-                                        <td data-label="І">${team.played}</td>
-                                        <td data-label="В">${team.wins}</td>
-                                        <td data-label="Н">${team.draws}</td>
-                                        <td data-label="П">${team.losses}</td>
-                                        <td data-label="М">${team.goalsFor}:${team.goalsAgainst}</td>
-                                        <td data-label="Р">${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td>
-                                        <td data-label="О">${team.points}</td>
+                                        <th>#</th>
+                                        <th>Команда</th>
+                                        <th>І</th>
+                                        <th>В</th>
+                                        <th>Н</th>
+                                        <th>П</th>
+                                        <th>М</th>
+                                        <th>Р</th>
+                                        <th>О</th>
                                     </tr>
+                                </thead>
+                                <tbody>
+                                    ${standings.map((team, index) => `
+                                        <tr>
+                                            <td>${index + 1}</td>
+                                            <td class="standings__team">${team.team}</td>
+                                            <td>${team.played}</td>
+                                            <td>${team.wins}</td>
+                                            <td>${team.draws}</td>
+                                            <td>${team.losses}</td>
+                                            <td>${team.goalsFor}:${team.goalsAgainst}</td>
+                                            <td>${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td>
+                                            <td>${team.points}</td>
+                                        </tr>
+                                    `).join("")}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="standings__mobile">
+                            <div class="standings__cards">
+                                ${standings.map((team, index) => `
+                                    <article class="standings-card">
+                                        <div class="standings-card__top">
+                                            <div class="standings-card__rank">${index + 1}</div>
+                                            <div class="standings-card__team">${team.team}</div>
+                                            <div class="standings-card__points">${team.points}</div>
+                                        </div>
+
+                                        <div class="standings-card__subhead">
+                                            <div class="standings-card__record">${team.played} матчів · ${team.wins}В ${team.draws}Н ${team.losses}П</div>
+                                        </div>
+
+                                        <div class="standings-card__stats">
+                                            <div class="standings-stat">
+                                                <span class="standings-stat__label">Голи</span>
+                                                <span class="standings-stat__value">${team.goalsFor}:${team.goalsAgainst}</span>
+                                            </div>
+                                            <div class="standings-stat">
+                                                <span class="standings-stat__label">Різн</span>
+                                                <span class="standings-stat__value">${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</span>
+                                            </div>
+                                            <div class="standings-stat">
+                                                <span class="standings-stat__label">Ігри</span>
+                                                <span class="standings-stat__value">${team.played}</span>
+                                            </div>
+                                            <div class="standings-stat">
+                                                <span class="standings-stat__label">Очки</span>
+                                                <span class="standings-stat__value">${team.points}</span>
+                                            </div>
+                                        </div>
+                                    </article>
                                 `).join("")}
-                            </tbody>
-                        </table>
+                            </div>
+                        </div>
+
                         <div class="standings__note">Таблиця сформована з завершених матчів УПЛ із файлу matches.json</div>
                     </section>
                 `;
