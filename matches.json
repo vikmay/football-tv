@@ -183,26 +183,6 @@
   ],
   "Ліга чемпіонів": [
     {
-      "home": "Liverpool",
-      "away": "Paris Saint-Germain",
-      "league": "Ліга чемпіонів (Чвертьфінал)",
-      "time": "23:00",
-      "date": "вівторок, 14 квітня",
-      "dateIso": "2026-04-14",
-      "status": "Match Finished",
-      "score": "0 - 2"
-    },
-    {
-      "home": "Atletico Madrid",
-      "away": "Barcelona",
-      "league": "Ліга чемпіонів (Чвертьфінал)",
-      "time": "23:00",
-      "date": "вівторок, 14 квітня",
-      "dateIso": "2026-04-14",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
-    {
       "home": "Bayern Munich",
       "away": "Real Madrid",
       "league": "Ліга чемпіонів (Чвертьфінал)",
@@ -238,20 +218,20 @@
       "home": "Буковина Чернівці",
       "away": "Динамо Київ",
       "league": "Кубок України (Півфінал)",
-      "time": "21:00",
-      "date": "Сьогодні, 21 квітня",
+      "time": "18:00",
+      "date": "вівторок, 21 квітня",
       "dateIso": "2026-04-21",
       "status": "Match Finished",
-      "score": ""
+      "score": "0 - 3"
     },
     {
       "home": "Металіст 1925 Харків",
       "away": "Чернігів",
       "league": "Кубок України (Півфінал)",
-      "time": "21:00",
-      "date": "середа, 22 квітня",
+      "time": "18:00",
+      "date": "Сьогодні, 22 квітня",
       "dateIso": "2026-04-22",
-      "status": "Match Finished",
+      "status": "Scheduled",
       "score": ""
     }
   ],

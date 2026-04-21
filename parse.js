@@ -123,10 +123,14 @@ const uplTeamNames = {
   "Bukovyna (Ч)": "Буковина Чернівці",
   "Bukovina": "Буковина Чернівці",
   "Bukovina (Ch)": "Буковина Чернівці",
+  "Буковина": "Буковина Чернівці",
   "Chernihiv": "Чернігів",
   "Chernihiv (Ч)": "Чернігів",
   "Dynamo (К)": "Динамо Київ",
   "Dynamo (K)": "Динамо Київ",
+  "Динамо К.": "Динамо Київ",
+  "Шахтар Д.": "Шахтар Донецьк",
+  "Металіст 1925": "Металіст 1925 Харків",
   "Metalist 1925": "Металіст 1925 Харків",
   "Metalist 1925 (Х)": "Металіст 1925 Харків",
   "Minai": "Мінай",
@@ -152,6 +156,21 @@ const uplTeamNames = {
 
 function getUplTeamName(englishName) {
   return uplTeamNames[englishName] || englishName;
+}
+
+function normalizeCupTeamName(name) {
+  const mappedName = getUplTeamName(name);
+  const cupAliases = {
+    "Буковина": "Буковина Чернівці",
+    "Буковина Чернівці": "Буковина Чернівці",
+    "Металіст 1925": "Металіст 1925 Харків",
+    "Металіст 1925 Харків": "Металіст 1925 Харків",
+    "Динамо К.": "Динамо Київ",
+    "Динамо Київ": "Динамо Київ",
+    "Чернігів": "Чернігів"
+  };
+
+  return cupAliases[mappedName] || mappedName;
 }
 
 const ukrainianClubAliases = new Set(
@@ -461,6 +480,122 @@ function mergeEventMetadata(baseEvents, metadataEvents) {
   });
 }
 
+function getMatchIdentity(event) {
+  return [
+    event?.dateEvent || "",
+    normalizeCupTeamName(event?.strHomeTeam || ""),
+    normalizeCupTeamName(event?.strAwayTeam || "")
+  ].join("|");
+}
+
+function normalizeCupEvent(event) {
+  return {
+    ...event,
+    strHomeTeam: normalizeCupTeamName(event.strHomeTeam),
+    strAwayTeam: normalizeCupTeamName(event.strAwayTeam)
+  };
+}
+
+function parseFlashscoreCupFeedData(data) {
+  const events = [];
+  const blocks = data.split("~AA÷").slice(1);
+
+  for (const block of blocks) {
+    const adMatch = block.match(/(?:^|¬)AD÷(\d{10})/);
+    const homeMatch = block.match(/(?:^|¬)CX÷([^¬]+)/);
+    const awayMatch = block.match(/(?:^|¬)AF÷([^¬]+)/);
+    const roundMatch = block.match(/(?:^|¬)ER÷([^¬]+)/);
+    const scoreHomeMatch = block.match(/(?:^|¬)AG÷(\d+)/);
+    const scoreAwayMatch = block.match(/(?:^|¬)AH÷(\d+)/);
+    const statusCode = block.match(/(?:^|¬)AB÷(\d+)/)?.[1];
+
+    if (!adMatch || !homeMatch || !awayMatch) {
+      continue;
+    }
+
+    const kickoff = new Date(Number(adMatch[1]) * 1000);
+    if (Number.isNaN(kickoff.getTime())) {
+      continue;
+    }
+
+    const dateEvent = formatDateToIsoInTimeZone(kickoff, "Europe/Kyiv");
+    if (!isDateWithinWindow(dateEvent)) {
+      continue;
+    }
+
+    const homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
+    const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
+    const hasScore = Boolean(scoreHomeMatch && scoreAwayMatch);
+    const isFinished = statusCode === "3" && hasScore;
+    const roundText = cleanExtractedText(roundMatch?.[1] || "");
+    const intRound = roundText.includes("Півфін") ? 150 : roundText.includes("Чвертьфін") ? 125 : roundText.includes("Фінал") ? 200 : undefined;
+
+    events.push({
+      idEvent: `flashscore-cup-${dateEvent}-${homeTeam}-${awayTeam}`.replace(/\s+/g, "-"),
+      dateEvent,
+      strTime: kickoff.toLocaleTimeString("uk-UA", {
+        timeZone: "Europe/Kyiv",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }),
+      strStatus: isFinished ? "Match Finished" : "Scheduled",
+      strHomeTeam: homeTeam,
+      strAwayTeam: awayTeam,
+      intHomeScore: hasScore ? Number(scoreHomeMatch[1]) : null,
+      intAwayScore: hasScore ? Number(scoreAwayMatch[1]) : null,
+      intRound,
+      isLocalTime: true
+    });
+  }
+
+  return dedupeEvents(events).sort(sortByDateTimeAsc);
+}
+
+function mergeCupEvents(baseEvents, metadataEvents) {
+  const byIdentity = new Map();
+
+  for (const sourceEvent of [...baseEvents, ...metadataEvents].map(normalizeCupEvent)) {
+    const key = getMatchIdentity(sourceEvent);
+    const existingEvent = byIdentity.get(key);
+
+    if (!existingEvent) {
+      byIdentity.set(key, sourceEvent);
+      continue;
+    }
+
+    const existingFinished = existingEvent.strStatus === "Match Finished" && existingEvent.intHomeScore !== null && existingEvent.intAwayScore !== null;
+    const sourceFinished = sourceEvent.strStatus === "Match Finished" && sourceEvent.intHomeScore !== null && sourceEvent.intAwayScore !== null;
+
+    if (sourceFinished && !existingFinished) {
+      byIdentity.set(key, {
+        ...existingEvent,
+        ...sourceEvent,
+        strStatus: sourceEvent.strStatus,
+        intHomeScore: sourceEvent.intHomeScore,
+        intAwayScore: sourceEvent.intAwayScore
+      });
+      continue;
+    }
+
+    if (existingFinished && !sourceFinished) {
+      continue;
+    }
+
+    byIdentity.set(key, {
+      ...existingEvent,
+      ...sourceEvent,
+      strHomeTeam: existingEvent.strHomeTeam || sourceEvent.strHomeTeam,
+      strAwayTeam: existingEvent.strAwayTeam || sourceEvent.strAwayTeam,
+      strTime: sourceEvent.strTime || existingEvent.strTime,
+      intRound: sourceEvent.intRound ?? existingEvent.intRound,
+      isLocalTime: sourceEvent.isLocalTime ?? existingEvent.isLocalTime
+    });
+  }
+
+  return [...byIdentity.values()].sort(sortByDateTimeAsc);
+}
+
 function makeFallbackEvent({
   idEvent,
   dateEvent,
@@ -470,7 +605,8 @@ function makeFallbackEvent({
   intAwayScore,
   intRound,
   strTime = "20:00:00",
-  strStatus = "Match Finished"
+  strStatus = "Match Finished",
+  isLocalTime = false
 }) {
   return {
     idEvent,
@@ -481,7 +617,8 @@ function makeFallbackEvent({
     strAwayTeam,
     intHomeScore,
     intAwayScore,
-    intRound
+    intRound,
+    isLocalTime
   };
 }
 
@@ -549,17 +686,21 @@ function getCupFallbackEvents() {
       idEvent: "uaf-cup-fallback-2026-04-21-bukovyna-dynamo",
       dateEvent: "2026-04-21",
       strTime: "18:00:00",
+      strStatus: "Scheduled",
       strHomeTeam: "Буковина Чернівці",
       strAwayTeam: "Динамо Київ",
-      intRound: 150
+      intRound: 150,
+      isLocalTime: true
     }),
     makeFallbackEvent({
       idEvent: "uaf-cup-fallback-2026-04-22-metalist1925-chernihiv",
       dateEvent: "2026-04-22",
       strTime: "18:00:00",
+      strStatus: "Scheduled",
       strHomeTeam: "Металіст 1925 Харків",
       strAwayTeam: "Чернігів",
-      intRound: 150
+      intRound: 150,
+      isLocalTime: true
     })
   ];
 
@@ -830,32 +971,58 @@ function parseCupUafEvents(html) {
 
   const calendarSection = text.split("Календар матчів")[1]?.split("Новини")[0] || text;
   const events = [];
-  const matchPattern = /(\d{2}\.\d{2}\.\d{4})\s+(\d{2}:\d{2})\s+(.+?)\s*-\s+(.+?)(?=\s+\d{2}\.\d{2}\.\d{4}\s+\d{2}:\d{2}\s+|$)/g;
+
+  const matchPattern = /(\d{2}\.\d{2}\.\d{4})\s+(.+?)(?=\s+\d{2}\.\d{2}\.\d{4}\s+|$)/g;
+  const timePattern = /(\d{2}:\d{2})/;
+  const scorePattern = /\b(\d+)\s*[:\-]\s*(\d+)\b/;
 
   for (const match of calendarSection.matchAll(matchPattern)) {
-    const [, dateText, timeText, homeTeamRaw, awayTeamRaw] = match;
+    const [, dateText, blockText] = match;
     const dateEvent = parseDotDmyToIso(dateText);
 
     if (!isDateWithinWindow(dateEvent)) {
       continue;
     }
 
-    const homeTeam = getUplTeamName(cleanExtractedText(homeTeamRaw));
-    const awayTeam = getUplTeamName(cleanExtractedText(awayTeamRaw));
+    const normalizedBlock = cleanExtractedText(blockText);
+    const teamsMatch = normalizedBlock.match(/^(.+?)\s*-\s*(.+?)(?:\s+\d{2}:\d{2}|\s+\d+\s*[:\-]\s*\d+|$)/);
+
+    if (!teamsMatch) {
+      continue;
+    }
+
+    const homeTeam = getUplTeamName(cleanExtractedText(teamsMatch[1]));
+    const awayTeam = getUplTeamName(cleanExtractedText(teamsMatch[2]));
 
     if (!homeTeam || !awayTeam) {
       continue;
     }
 
+    const timeMatch = normalizedBlock.match(timePattern);
+    const scoreMatch = normalizedBlock.match(scorePattern);
+
+    let strTime = "00:00:00";
+    let strStatus = "Scheduled";
+    let intHomeScore = null;
+    let intAwayScore = null;
+
+    if (scoreMatch) {
+      intHomeScore = Number(scoreMatch[1]);
+      intAwayScore = Number(scoreMatch[2]);
+      strStatus = "Match Finished";
+    } else if (timeMatch) {
+      strTime = `${timeMatch[1]}:00`;
+    }
+
     events.push({
       idEvent: `uaf-cup-${dateEvent}-${homeTeam}-${awayTeam}`.replace(/\s+/g, "-"),
       dateEvent,
-      strTime: `${timeText}:00`,
-      strStatus: "Scheduled",
+      strTime,
+      strStatus,
       strHomeTeam: homeTeam,
       strAwayTeam: awayTeam,
-      intHomeScore: null,
-      intAwayScore: null,
+      intHomeScore,
+      intAwayScore,
       isLocalTime: true
     });
   }
@@ -871,23 +1038,38 @@ function parseCupUafEvents(html) {
 
 async function fetchCupEvents() {
   const cupUrl = "https://kubok.uaf.ua/";
-  const cupHtml = await fetchText(cupUrl, "Кубок України fetch error");
+  const flashscoreResultsUrl = "https://www.flashscore.ua/soccer/ukraine/ukrainian-cup/results/";
+  const flashscoreFixturesUrl = "https://www.flashscore.ua/soccer/ukraine/ukrainian-cup/fixtures/";
 
-  if (!cupHtml) {
-    const fallbackEvents = getCupFallbackEvents();
-    console.log(`⚠️ Кубок України source unavailable, using fallback schedule: ${fallbackEvents.length} matches in ±7 days window`);
-    return fallbackEvents.length > 0 ? fallbackEvents : null;
+  const [cupHtml, flashscoreResultsHtml, flashscoreFixturesHtml] = await Promise.all([
+    fetchText(cupUrl, "Кубок України fetch error"),
+    fetchText(flashscoreResultsUrl, "Кубок України Flashscore results fetch error"),
+    fetchText(flashscoreFixturesUrl, "Кубок України Flashscore fixtures fetch error")
+  ]);
+
+  const cupEvents = cupHtml ? parseCupUafEvents(cupHtml) : [];
+  const flashscoreEvents = dedupeEvents([
+    ...(flashscoreResultsHtml ? parseFlashscoreCupFeedData((flashscoreResultsHtml.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i) || [])[1] || "") : []),
+    ...(flashscoreFixturesHtml ? parseFlashscoreCupFeedData((flashscoreFixturesHtml.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i) || [])[1] || "") : [])
+  ]).sort(sortByDateTimeAsc);
+
+  const mergedEvents = cupEvents.length > 0 ? mergeCupEvents(cupEvents, flashscoreEvents) : flashscoreEvents;
+
+  if (mergedEvents.length > 0) {
+    if (flashscoreEvents.some(event => event.strStatus === "Match Finished")) {
+      console.log(`✅ Кубок України fetched with Flashscore results merge: ${mergedEvents.length} matches in ±7 days window`);
+    } else if (cupEvents.some(event => event.idEvent.startsWith("uaf-cup-fallback-"))) {
+      console.log(`⚠️ Кубок України source incomplete, using fallback schedule: ${mergedEvents.length} matches in ±7 days window`);
+    } else {
+      console.log(`✅ Кубок України fetched: ${mergedEvents.length} matches in ±7 days window`);
+    }
+    return mergedEvents;
   }
 
-  const events = parseCupUafEvents(cupHtml);
-
-  if (events.length > 0) {
-    if (events.some(event => event.idEvent.startsWith("uaf-cup-fallback-"))) {
-      console.log(`⚠️ Кубок України source incomplete, using fallback schedule: ${events.length} matches in ±7 days window`);
-    } else {
-      console.log(`✅ Кубок України fetched: ${events.length} matches in ±7 days window`);
-    }
-    return events;
+  const fallbackEvents = getCupFallbackEvents();
+  if (fallbackEvents.length > 0) {
+    console.log(`⚠️ Кубок України source unavailable, using fallback schedule: ${fallbackEvents.length} matches in ±7 days window`);
+    return fallbackEvents;
   }
 
   console.log("⚠️ Кубок України source empty, keeping existing");
