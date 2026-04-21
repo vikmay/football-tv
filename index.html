@@ -101,6 +101,59 @@
                 color: #777;
             }
 
+            .standings {
+                max-width: 900px;
+                margin: 40px auto 24px;
+                padding: 18px 16px 20px;
+                background: #161616;
+                border-radius: 12px;
+            }
+
+            .standings__title {
+                margin: 0 0 14px;
+                text-align: center;
+                font-size: 28px;
+                color: #ffcc00;
+            }
+
+            .standings__table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 18px;
+            }
+
+            .standings__table th,
+            .standings__table td {
+                padding: 12px 10px;
+                border-bottom: 1px solid #2a2a2a;
+                text-align: center;
+            }
+
+            .standings__table th {
+                color: #aaa;
+                font-weight: 700;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+            }
+
+            .standings__table td:first-child,
+            .standings__table th:first-child {
+                text-align: left;
+            }
+
+            .standings__team {
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .standings__note {
+                margin-top: 10px;
+                color: #888;
+                font-size: 14px;
+                text-align: center;
+            }
+
             @media (max-width: 600px) {
                 .header {
                     font-size: 32px;
@@ -134,6 +187,82 @@
 
                 #error {
                     font-size: 16px;
+                }
+
+                .standings {
+                    margin: 28px 10px 18px;
+                    padding: 14px 10px 12px;
+                }
+
+                .standings__title {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                .standings__table,
+                .standings__table thead,
+                .standings__table tbody,
+                .standings__table th,
+                .standings__table td,
+                .standings__table tr {
+                    display: block;
+                    width: 100%;
+                }
+
+                .standings__table thead {
+                    display: none;
+                }
+
+                .standings__table tr {
+                    background: #1e1e1e;
+                    border: 1px solid #2a2a2a;
+                    border-radius: 12px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                }
+
+                .standings__table td {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 8px 12px;
+                    border-bottom: 1px solid #2a2a2a;
+                    text-align: right;
+                    font-size: 15px;
+                }
+
+                .standings__table td::before {
+                    content: attr(data-label);
+                    flex: 0 0 auto;
+                    color: #aaa;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    text-align: left;
+                }
+
+                .standings__table td.standings__team-cell {
+                    display: block;
+                    text-align: left;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #fff;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+
+                .standings__table td.standings__team-cell::before {
+                    display: none;
+                }
+
+                .standings__table td:last-child {
+                    border-bottom: 0;
+                }
+
+                .standings__note {
+                    font-size: 12px;
+                    line-height: 1.4;
                 }
             }
 
@@ -179,6 +308,7 @@
 
         <div class="header">⚽ Football TV</div>
         <div id="content">Loading...</div>
+        <div id="standings"></div>
 
         <script>
             let hasScrolledToToday = false;
@@ -218,6 +348,120 @@
                 return dateIso === todayIso
                     ? `Сьогодні, ${formattedDate}`
                     : `${dayName}, ${formattedDate}`;
+            }
+
+            function parseScore(score) {
+                const match = String(score || "").match(/^(\d+)\s*-\s*(\d+)$/);
+                if (!match) {
+                    return null;
+                }
+
+                return {
+                    home: Number(match[1]),
+                    away: Number(match[2])
+                };
+            }
+
+            function buildUplStandings(matches) {
+                const table = new Map();
+
+                for (const match of matches) {
+                    const score = parseScore(match.score);
+                    if (!score) {
+                        continue;
+                    }
+
+                    if (!table.has(match.home)) {
+                        table.set(match.home, { team: match.home, played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 });
+                    }
+
+                    if (!table.has(match.away)) {
+                        table.set(match.away, { team: match.away, played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 });
+                    }
+
+                    const home = table.get(match.home);
+                    const away = table.get(match.away);
+
+                    home.played += 1;
+                    away.played += 1;
+                    home.goalsFor += score.home;
+                    home.goalsAgainst += score.away;
+                    away.goalsFor += score.away;
+                    away.goalsAgainst += score.home;
+
+                    if (score.home > score.away) {
+                        home.wins += 1;
+                        home.points += 3;
+                        away.losses += 1;
+                    } else if (score.home < score.away) {
+                        away.wins += 1;
+                        away.points += 3;
+                        home.losses += 1;
+                    } else {
+                        home.draws += 1;
+                        away.draws += 1;
+                        home.points += 1;
+                        away.points += 1;
+                    }
+                }
+
+                return Array.from(table.values())
+                    .map(item => ({
+                        ...item,
+                        goalDifference: item.goalsFor - item.goalsAgainst
+                    }))
+                    .sort((a, b) =>
+                        b.points - a.points ||
+                        b.goalDifference - a.goalDifference ||
+                        b.goalsFor - a.goalsFor ||
+                        a.team.localeCompare(b.team, "uk")
+                    );
+            }
+
+            function renderUplStandings(matches) {
+                const standingsHost = document.getElementById("standings");
+                const standings = buildUplStandings(matches);
+
+                if (!standings.length) {
+                    standingsHost.innerHTML = "";
+                    return;
+                }
+
+                standingsHost.innerHTML = `
+                    <section class="standings">
+                        <h2 class="standings__title">Таблиця УПЛ</h2>
+                        <table class="standings__table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Команда</th>
+                                    <th>І</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>М</th>
+                                    <th>Р</th>
+                                    <th>О</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${standings.map((team, index) => `
+                                    <tr>
+                                        <td data-label="#" class="standings__team-cell">${index + 1}. ${team.team}</td>
+                                        <td data-label="І">${team.played}</td>
+                                        <td data-label="В">${team.wins}</td>
+                                        <td data-label="Н">${team.draws}</td>
+                                        <td data-label="П">${team.losses}</td>
+                                        <td data-label="М">${team.goalsFor}:${team.goalsAgainst}</td>
+                                        <td data-label="Р">${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td>
+                                        <td data-label="О">${team.points}</td>
+                                    </tr>
+                                `).join("")}
+                            </tbody>
+                        </table>
+                        <div class="standings__note">Таблиця сформована з завершених матчів УПЛ із файлу matches.json</div>
+                    </section>
+                `;
             }
 
             async function load() {
@@ -294,6 +538,7 @@
                         });
 
                     content.innerHTML = html;
+                    renderUplStandings(allMatches.filter(match => match.league === "УПЛ"));
 
                     const todayElement = document.querySelector(".day--today");
                     if (todayElement && !hasScrolledToToday) {
