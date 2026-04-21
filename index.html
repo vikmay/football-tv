@@ -102,11 +102,12 @@
             }
 
             .standings {
-                max-width: 900px;
+                max-width: 980px;
                 margin: 40px auto 24px;
                 padding: 18px 16px 20px;
                 background: #161616;
                 border-radius: 12px;
+                font-family: Arial, sans-serif;
             }
 
             .standings__title {
@@ -126,54 +127,66 @@
             .standings__table {
                 width: 100%;
                 border-collapse: collapse;
-                font-size: 16px;
+                font-size: 17px;
                 table-layout: fixed;
             }
 
             .standings__table col.standings__col--rank {
-                width: 4%;
+                width: 3%;
             }
 
             .standings__table col.standings__col--team {
-                width: 56%;
+                width: 32%;
             }
 
             .standings__table col.standings__col--played,
             .standings__table col.standings__col--wins,
             .standings__table col.standings__col--draws,
             .standings__table col.standings__col--losses {
-                width: 4%;
+                width: 5%;
             }
 
             .standings__table col.standings__col--goals {
-                width: 9%;
+                width: 18%;
             }
 
             .standings__table col.standings__col--difference {
-                width: 9%;
+                width: 12%;
             }
 
             .standings__table col.standings__col--points {
-                width: 8%;
+                width: 10%;
             }
 
-            .standings__table th,
+            .standings__table th {
+                padding: 10px 6px;
+                border-bottom: 1px solid #2a2a2a;
+                text-align: center;
+                vertical-align: middle;
+                overflow: hidden;
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: #d9d9d9;
+                background: rgba(255, 255, 255, 0.04);
+            }
+
+            .standings__table th:nth-child(2),
+            .standings__table td:nth-child(2) {
+                text-align: left;
+                padding-left: 0;
+                padding-right: 0;
+                padding-inline-start: 0;
+                padding-inline-end: 0;
+            }
+
             .standings__table td {
                 padding: 10px 6px;
                 border-bottom: 1px solid #2a2a2a;
                 text-align: center;
                 vertical-align: middle;
                 overflow: hidden;
-            }
-
-            .standings__team-cell {
-                text-align: left;
-                font-weight: 700;
-                color: #fff;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: clip;
-                line-height: 1.15;
+                font-size: 19px;
             }
 
             .standings__table tr:last-child td {
@@ -191,17 +204,21 @@
 
             .standings__team-cell {
                 text-align: left;
+                padding-left: 0;
+                padding-right: 0;
                 font-weight: 700;
                 color: #fff;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: clip;
                 line-height: 1.15;
+                font-size: 16px;
             }
 
             .standings__points-cell {
                 color: #00ff88;
                 font-weight: 900;
+                font-size: 20px;
                 background: rgba(0, 255, 136, 0.12);
                 border-left: 1px solid rgba(0, 255, 136, 0.18);
                 border-right: 1px solid rgba(0, 255, 136, 0.18);
@@ -273,22 +290,22 @@
                 }
 
                 .standings__table col.standings__col--team {
-                    width: 60%;
+                    width: 58%;
                 }
 
                 .standings__table col.standings__col--played,
                 .standings__table col.standings__col--wins,
                 .standings__table col.standings__col--draws,
                 .standings__table col.standings__col--losses {
-                    width: 3.5%;
+                    width: 4%;
                 }
 
                 .standings__table col.standings__col--goals {
-                    width: 8%;
+                    width: 9%;
                 }
 
                 .standings__table col.standings__col--difference {
-                    width: 7%;
+                    width: 8%;
                 }
 
                 .standings__table col.standings__col--points {
@@ -301,6 +318,8 @@
                     text-overflow: clip;
                     font-size: 8px;
                     line-height: 1;
+                    padding-left: 0;
+                    padding-right: 0;
                 }
 
                 .standings__note {
@@ -328,15 +347,15 @@
                 }
 
                 .standings__table col.standings__col--team {
-                    width: 62%;
+                    width: 60%;
                 }
 
                 .standings__table col.standings__col--goals {
-                    width: 8%;
+                    width: 9%;
                 }
 
                 .standings__table col.standings__col--difference {
-                    width: 6%;
+                    width: 7%;
                 }
 
                 .standings__table col.standings__col--points {
@@ -345,6 +364,8 @@
 
                 .standings__team-cell {
                     font-size: 7.5px;
+                    padding-left: 0;
+                    padding-right: 0;
                 }
             }
 

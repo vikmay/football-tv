@@ -238,20 +238,20 @@
       "home": "Буковина Чернівці",
       "away": "Динамо Київ",
       "league": "Кубок України (Півфінал)",
-      "time": "21:00",
+      "time": "18:00",
       "date": "Сьогодні, 21 квітня",
       "dateIso": "2026-04-21",
-      "status": "Match Finished",
+      "status": "Scheduled",
       "score": ""
     },
     {
       "home": "Металіст 1925 Харків",
       "away": "Чернігів",
       "league": "Кубок України (Півфінал)",
-      "time": "21:00",
+      "time": "18:00",
       "date": "середа, 22 квітня",
       "dateIso": "2026-04-22",
-      "status": "Match Finished",
+      "status": "Scheduled",
       "score": ""
     }
   ],
