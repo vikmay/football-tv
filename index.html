@@ -346,6 +346,11 @@
                     padding: 2px 1px;
                 }
 
+                .standings__table th:nth-child(2),
+                .standings__table td:nth-child(2) {
+                    padding-left: 4px;
+                }
+
                 .standings__table col.standings__col--team {
                     width: 60%;
                 }
@@ -402,6 +407,93 @@
 
                 #error {
                     font-size: 16px;
+                }
+
+                .standings {
+                    margin: 16px 2px 10px;
+                    padding: 8px 2px 6px;
+                }
+
+                .standings__title {
+                    font-size: 16px;
+                    margin-bottom: 6px;
+                }
+
+                .standings__table-wrap {
+                    border-radius: 10px;
+                }
+
+                .standings__table {
+                    font-size: 6.5px;
+                }
+
+                .standings__table th,
+                .standings__table td {
+                    padding: 2px 1px;
+                }
+
+                .standings__table th {
+                    font-size: 9px;
+                    letter-spacing: 0.04em;
+                }
+
+                .standings__table td {
+                    font-size: 10px;
+                }
+
+                .standings__table col.standings__col--rank {
+                    width: 6%;
+                }
+
+                .standings__table col.standings__col--team {
+                    width: 42%;
+                }
+
+                .standings__table col.standings__col--played,
+                .standings__table col.standings__col--wins,
+                .standings__table col.standings__col--draws,
+                .standings__table col.standings__col--losses {
+                    width: 5%;
+                }
+
+                .standings__table col.standings__col--goals {
+                    width: 12%;
+                }
+
+                .standings__table col.standings__col--difference {
+                    width: 10%;
+                }
+
+                .standings__table col.standings__col--points {
+                    width: 10%;
+                }
+
+                .standings__table th:nth-child(2),
+                .standings__table td:nth-child(2) {
+                    padding-left: 4px;
+                    padding-right: 0;
+                    padding-inline-start: 4px;
+                    padding-inline-end: 0;
+                }
+
+                .standings__team-cell {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: clip;
+                    font-size: 7px;
+                    line-height: 1;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .standings__points-cell {
+                    font-size: 11px;
+                }
+
+                .standings__note {
+                    font-size: 9px;
+                    line-height: 1.2;
+                    margin-top: 5px;
                 }
             }
         </style>
@@ -472,6 +564,26 @@
                 { position: 16, team: "Полтава", played: 24, wins: 2, draws: 5, losses: 17, goalsFor: 20, goalsAgainst: 61, goalDifference: -41, points: 11 }
             ];
 
+            function getStandingsTeamLabel(teamName) {
+                const aliases = {
+                    "Шахтар Донецьк": "Шахтар",
+                    "ЛНЗ Черкаси": "ЛНЗ",
+                    "Полісся Житомир": "Полісся",
+                    "Металіст 1925 Харків": "Металіст 1925",
+                    "Динамо Київ": "Динамо",
+                    "Кривбас Кривий Ріг": "Кривбас",
+                    "Колос Ковалівка": "Колос",
+                    "Карпати Львів": "Карпати",
+                    "Зоря Луганськ": "Зоря",
+                    "Верес Рівне": "Верес",
+                    "Епіцентр Кам'янець-Подільський": "Епіцентр",
+                    "Оболонь Київ": "Оболонь",
+                    "Рух Львів": "Рух"
+                };
+
+                return aliases[teamName] || teamName;
+            }
+
             function renderUplStandings() {
                 const standingsHost = document.getElementById("standings");
 
@@ -508,7 +620,7 @@
                                     ${uplStandings.map(team => `
                                         <tr>
                                             <td class="standings__rank-cell">${team.position}</td>
-                                            <td class="standings__team-cell">${team.team}</td>
+                                            <td class="standings__team-cell">${getStandingsTeamLabel(team.team)}</td>
                                             <td>${team.played}</td>
                                             <td>${team.wins}</td>
                                             <td>${team.draws}</td>
