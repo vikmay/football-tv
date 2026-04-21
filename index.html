@@ -374,6 +374,77 @@
                 }
             }
 
+            @media (max-width: 900px) and (orientation: landscape) {
+                .standings {
+                    margin: 16px 6px 16px;
+                    padding: 10px 8px 12px;
+                }
+
+                .standings__title {
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+
+                .standings__table {
+                    font-size: 10px;
+                }
+
+                .standings__table th,
+                .standings__table td {
+                    padding: 4px 3px;
+                }
+
+                .standings__table col.standings__col--rank {
+                    width: 8%;
+                }
+
+                .standings__table col.standings__col--team {
+                    width: 48%;
+                }
+
+                .standings__table col.standings__col--played,
+                .standings__table col.standings__col--wins,
+                .standings__table col.standings__col--draws,
+                .standings__table col.standings__col--losses {
+                    width: 3%;
+                }
+
+                .standings__table col.standings__col--goals {
+                    width: 11%;
+                }
+
+                .standings__table col.standings__col--difference {
+                    width: 9%;
+                }
+
+                .standings__table col.standings__col--points {
+                    width: 9%;
+                }
+
+                .standings__table th:nth-child(2),
+                .standings__table td:nth-child(2) {
+                    padding-left: 12px;
+                    padding-right: 0;
+                    padding-inline-start: 12px;
+                    padding-inline-end: 0;
+                }
+
+                .standings__team-cell {
+                    font-size: 10px;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .standings__points-cell {
+                    font-size: 12px;
+                }
+
+                .standings__note {
+                    font-size: 11px;
+                    margin-top: 6px;
+                }
+            }
+
             @media (max-width: 900px) and (orientation: portrait) {
                 .header {
                     font-size: 38px;
