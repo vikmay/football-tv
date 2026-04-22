@@ -625,40 +625,23 @@ function makeFallbackEvent({
 function getChampionsLeagueFallbackEvents() {
   const knownEvents = [
     makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-14-liverpool-psg",
-      dateEvent: "2026-04-14",
-      strHomeTeam: "Liverpool",
-      strAwayTeam: "Paris Saint-Germain",
-      intHomeScore: 0,
-      intAwayScore: 2,
-      intRound: 125
+      idEvent: "ucl-fallback-2026-04-28-paris-sg-bayern-munich",
+      dateEvent: "2026-04-28",
+      strTime: "22:00:00",
+      strHomeTeam: "Paris SG",
+      strAwayTeam: "Bayern Munich",
+      intRound: 150,
+      isLocalTime: true
     }),
     makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-14-atletico-barcelona",
-      dateEvent: "2026-04-14",
-      strHomeTeam: "Atletico Madrid",
-      strAwayTeam: "Barcelona",
-      intHomeScore: 1,
-      intAwayScore: 2,
-      intRound: 125
-    }),
-    makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-15-arsenal-sporting",
-      dateEvent: "2026-04-15",
+      idEvent: "ucl-fallback-2026-04-29-arsenal-barcelona",
+      dateEvent: "2026-04-29",
+      strTime: "22:00:00",
+      strStatus: "Scheduled",
       strHomeTeam: "Arsenal",
-      strAwayTeam: "Sporting CP",
-      intHomeScore: 0,
-      intAwayScore: 0,
-      intRound: 125
-    }),
-    makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-15-bayern-real",
-      dateEvent: "2026-04-15",
-      strHomeTeam: "Bayern Munich",
-      strAwayTeam: "Real Madrid",
-      intHomeScore: 4,
-      intAwayScore: 3,
-      intRound: 125
+      strAwayTeam: "Barcelona",
+      intRound: 150,
+      isLocalTime: true
     })
   ];
 
@@ -1149,10 +1132,7 @@ async function fetchLeagueEvents(leagueId, leagueName) {
 async function fetchChampionsLeagueEvents() {
   const apiEvents = await fetchLeagueEvents(4480, "Ліга чемпіонів");
   const fallbackEvents = getChampionsLeagueFallbackEvents();
-
-  if (!fallbackEvents.length) {
-    return apiEvents;
-  }
+  const fallbackByDate = new Map(fallbackEvents.map(event => [event.dateEvent, event]));
 
   const mergedEvents = dedupeEvents([
     ...(apiEvents || []),
@@ -1161,7 +1141,22 @@ async function fetchChampionsLeagueEvents() {
     .filter(event => isDateWithinWindow(event.dateEvent))
     .sort(sortByDateTimeAsc);
 
-  const enrichedEvents = mergeEventMetadata(mergedEvents, fallbackEvents);
+  const enrichedEvents = mergeEventMetadata(mergedEvents, fallbackEvents).map(event => {
+    const fallbackEvent = fallbackByDate.get(event.dateEvent);
+
+    if (!fallbackEvent) {
+      return event;
+    }
+
+    return {
+      ...event,
+      intRound: event.intRound ?? fallbackEvent.intRound,
+      strRound: event.strRound ?? fallbackEvent.strRound,
+      strEventRound: event.strEventRound ?? fallbackEvent.strEventRound,
+      strStage: event.strStage ?? fallbackEvent.strStage,
+      intStage: event.intStage ?? fallbackEvent.intStage
+    };
+  });
 
   if (!apiEvents || enrichedEvents.length > apiEvents.length) {
     console.log(`⚠️ Ліга чемпіонів source incomplete, merged fallback matches: ${enrichedEvents.length}`);

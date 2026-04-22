@@ -193,16 +193,6 @@
       "score": "4 - 3"
     },
     {
-      "home": "Arsenal",
-      "away": "Sporting CP",
-      "league": "Ліга чемпіонів (Чвертьфінал)",
-      "time": "23:00",
-      "date": "середа, 15 квітня",
-      "dateIso": "2026-04-15",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
       "home": "Paris SG",
       "away": "Bayern Munich",
       "league": "Ліга чемпіонів (Півфінал)",
@@ -210,6 +200,16 @@
       "date": "вівторок, 28 квітня",
       "dateIso": "2026-04-28",
       "status": "Not Started",
+      "score": ""
+    },
+    {
+      "home": "Arsenal",
+      "away": "Barcelona",
+      "league": "Ліга чемпіонів (Півфінал)",
+      "time": "22:00",
+      "date": "середа, 29 квітня",
+      "dateIso": "2026-04-29",
+      "status": "Match Finished",
       "score": ""
     }
   ],
@@ -231,8 +231,8 @@
       "time": "18:00",
       "date": "Сьогодні, 22 квітня",
       "dateIso": "2026-04-22",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     }
   ],
   "Ліга Європи": [],

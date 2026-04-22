@@ -2,9 +2,7 @@ name: Update matches
 
 on:
   schedule:
-    - cron: "0 6 * * *"
-    - cron: "0 14 * * *"
-    - cron: "0 20 * * *"
+    - cron: "5 * * * *"
   workflow_dispatch:
 
 permissions:
