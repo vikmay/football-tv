@@ -21,6 +21,7 @@ try {
 const REFRESH_META_FILE = "matches.meta.json";
 const DEFAULT_REFRESH_TTL_MINUTES = 120;
 const ACTIVE_REFRESH_TTL_MINUTES = 10;
+const RECENT_RESULTS_TTL_MINUTES = 5;
 const FORCE_REFRESH_ARGS = new Set(["--force", "--refresh", "--refresh-now"]);
 
 function readRefreshMeta() {
@@ -45,7 +46,26 @@ function isActiveWindowData(matchesData) {
     .some(match => match?.dateIso === todayIso || match?.dateIso === tomorrowIso);
 }
 
+function hasRecentFinishedMatches(matchesData) {
+  const todayIso = getKyivTodayIso();
+  const yesterdayIso = shiftIsoDate(todayIso, -1);
+
+  return Object.values(matchesData)
+    .filter(Array.isArray)
+    .flat()
+    .some(match =>
+      match?.status === "Match Finished" &&
+      typeof match?.dateIso === "string" &&
+      match.dateIso >= yesterdayIso &&
+      match.dateIso <= todayIso
+    );
+}
+
 function getRefreshTtlMinutes(matchesData) {
+  if (hasRecentFinishedMatches(matchesData)) {
+    return RECENT_RESULTS_TTL_MINUTES;
+  }
+
   return isActiveWindowData(matchesData)
     ? ACTIVE_REFRESH_TTL_MINUTES
     : DEFAULT_REFRESH_TTL_MINUTES;
@@ -418,8 +438,18 @@ function formatCompetitionLabel(leagueLabel, event) {
   return `${leagueLabel} (${stage})`;
 }
 
-function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
+function normalizeMatchSnapshot(match) {
+  const hasScore = typeof match.score === "string" && match.score.trim() !== "";
+  const normalizedStatus = hasScore ? "Match Finished" : (match.status || "Scheduled");
+
   return {
+    ...match,
+    status: normalizedStatus === "Match Finished" && !hasScore ? "Scheduled" : normalizedStatus
+  };
+}
+
+function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
+  return normalizeMatchSnapshot({
     home: mapTeamName(event.strHomeTeam),
     away: mapTeamName(event.strAwayTeam),
     league: formatCompetitionLabel(leagueLabel, event),
@@ -428,7 +458,7 @@ function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
     dateIso: event.dateEvent,
     status: event.strStatus || "Scheduled",
     score: formatScore(event)
-  };
+  });
 }
 
 function sortByDateTimeAsc(a, b) {
