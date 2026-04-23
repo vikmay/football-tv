@@ -84,11 +84,11 @@
       "home": "Зоря Луганськ",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "00:00",
       "date": "Сьогодні, 23 квітня",
       "dateIso": "2026-04-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Колос Ковалівка",
