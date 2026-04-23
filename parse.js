@@ -439,12 +439,13 @@ function formatCompetitionLabel(leagueLabel, event) {
 }
 
 function normalizeMatchSnapshot(match) {
-  const hasScore = typeof match.score === "string" && match.score.trim() !== "";
-  const normalizedStatus = hasScore ? "Match Finished" : (match.status || "Scheduled");
+  const hasValidScore = typeof match.score === "string" && match.score.trim() !== "";
+  const isFinished = match.status === "Match Finished";
 
   return {
     ...match,
-    status: normalizedStatus === "Match Finished" && !hasScore ? "Scheduled" : normalizedStatus
+    status: isFinished && hasValidScore ? "Match Finished" : (match.status || "Scheduled"),
+    score: isFinished && hasValidScore ? match.score : ""
   };
 }
 
