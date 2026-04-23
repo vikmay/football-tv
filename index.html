@@ -215,6 +215,28 @@
                 font-size: 16px;
             }
 
+            .standings__team {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                min-width: 0;
+            }
+
+            .standings__team-logo {
+                width: 18px;
+                height: 18px;
+                flex: 0 0 18px;
+                object-fit: contain;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.06);
+            }
+
+            .standings__team-name {
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: clip;
+            }
+
             .standings__points-cell {
                 color: #00ff88;
                 font-weight: 900;
@@ -667,7 +689,12 @@
                                     ${rows.map(team => `
                                         <tr>
                                             <td class="standings__rank-cell">${team.position ?? ""}</td>
-                                            <td class="standings__team-cell">${getStandingsTeamLabel(team.team || "")}</td>
+                                            <td class="standings__team-cell">
+                                                <span class="standings__team">
+                                                    ${team.logo ? `<img class="standings__team-logo" src="${team.logo}" alt="" loading="lazy" decoding="async">` : ""}
+                                                    <span class="standings__team-name">${getStandingsTeamLabel(team.team || "")}</span>
+                                                </span>
+                                            </td>
                                             <td>${team.played ?? ""}</td>
                                             <td>${team.wins ?? ""}</td>
                                             <td>${team.draws ?? ""}</td>
