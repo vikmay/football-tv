@@ -722,11 +722,13 @@ function getCupFallbackEvents() {
 }
 
 function decodeHtmlText(text) {
-  return text
-    .replace(/&/g, "&")
-    .replace(/&#x27;|'/g, "'")
-    .replace(/"/g, '"')
-    .replace(/&nbsp;/g, " ")
+  return String(text || "")
+    .replace(/&laquo;/gi, "«")
+    .replace(/&raquo;/gi, "»")
+    .replace(/"|"|&#x22;/gi, "\"")
+    .replace(/&#x27;/gi, "'")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&/gi, "&")
     .trim();
 }
 
@@ -1091,45 +1093,68 @@ async function fetchCupEvents() {
 }
 
 const uplStandingsTeamNames = {
-  "Динамо К.": "Динамо К.",
-  "Шахтар Д.": "Шахтар Д.",
-  "Полісся Ж.": "Полісся Ж.",
-  "Металіст 1925": "Металіст 1925",
-  "Кривбас": "Кривбас",
-  "Колос": "Колос",
-  "Карпати Л.": "Карпати Л.",
-  "Зоря": "Зоря",
-  "Верес": "Верес",
-  "Епіцентр": "Епіцентр",
-  "Оболонь": "Оболонь",
-  "Кудрівка": "Кудрівка",
-  "Рух": "Рух",
-  "Олександрія": "Олександрія",
-  "СК Полтава": "СК Полтава",
-  "ЛНЗ Черкаси": "ЛНЗ Черкаси"
-};
-
-const uplStandingsTeamLogos = {
-  "Динамо К.": "https://static.flashscore.com/res/image/data/MPqCcHle-M1Cjh44S.png",
-  "Шахтар Д.": "https://static.flashscore.com/res/image/data/fLOld9A6-YmCZKGcR.png",
-  "Полісся Ж.": "https://static.flashscore.com/res/image/data/no6gIVAN-2aYKHyBP.png",
-  "Металіст 1925": "https://static.flashscore.com/res/image/data/Kxjkvxne-nmGP4L7g.png",
-  "Кривбас": "https://static.flashscore.com/res/image/data/jHrpSqiC-b3qH8I6J.png",
-  "Колос": "https://static.flashscore.com/res/image/data/4S8rqvT0-reHWnXse.png",
-  "Карпати Л.": "https://static.flashscore.com/res/image/data/xp1axole-pAWqOavk.png",
-  "Зоря": "https://static.flashscore.com/res/image/data/OIakXq6k-lxvkDsJf.png",
-  "Верес": "https://static.flashscore.com/res/image/data/2BQ4YAWH-r9IFcMj3.png",
-  "Епіцентр": "https://static.flashscore.com/res/image/data/OSX1mB8k-O2KNgah2.png",
-  "Оболонь": "https://static.flashscore.com/res/image/data/jB3p83me-QanlLhoo.png",
-  "Кудрівка": "https://static.flashscore.com/res/image/data/CUoqynU0-pUOna96L.png",
-  "Рух": "https://static.flashscore.com/res/image/data/OtcXGEBN-vPBjrhhc.png",
-  "Олександрія": "https://static.flashscore.com/res/image/data/25N2P5me-WhuO7nt3.png",
-  "СК Полтава": "https://static.flashscore.com/res/image/data/448eovlC-vFbzuVd5.png",
-  "ЛНЗ Черкаси": "https://static.flashscore.com/res/image/data/EktgdIU0-h2MXGMKq.png"
+  "Shakhtar": "Шахтар Донецьк",
+  "Shakhtar Donetsk": "Шахтар Донецьк",
+  "LNZ": "ЛНЗ Черкаси",
+  "LNZ Cherkasy": "ЛНЗ Черкаси",
+  "Polissya": "Полісся Житомир",
+  "Polissya Zhytomyr": "Полісся Житомир",
+  "Metalist 1925": "Металіст 1925 Харків",
+  "Metalist 1925 Kharkiv": "Металіст 1925 Харків",
+  "Dynamo": "Динамо Київ",
+  "Dynamo Kyiv": "Динамо Київ",
+  "Kryvbas": "Кривбас",
+  "Kryvbas Kryvyi Rih": "Кривбас",
+  "Kolos": "Колос Ковалівка",
+  "Kolos Kovalivka": "Колос Ковалівка",
+  "Karpaty": "Карпати Львів",
+  "Karpaty Lviv": "Карпати Львів",
+  "Zorya": "Зоря Луганськ",
+  "Zorya Luhansk": "Зоря Луганськ",
+  "Veres": "Верес Рівне",
+  "Veres Rivne": "Верес Рівне",
+  "Epicentr": "Епіцентр Кам'янець-Подільський",
+  "Epitsentr": "Епіцентр Кам'янець-Подільський",
+  "Obolon": "Оболонь Київ",
+  "Obolon Kyiv": "Оболонь Київ",
+  "Kudrivka": "Кудрівка",
+  "Ruh": "Рух Львів",
+  "Ruh Lviv": "Рух Львів",
+  "Olexandriya": "Олександрія",
+  "Oleksandriya": "Олександрія",
+  "Poltava": "Полтава"
 };
 
 function normalizeUplStandingsTeamName(name) {
-  return uplStandingsTeamNames[name] || name;
+  return uplStandingsTeamNames[name] || getUplTeamName(name);
+}
+
+function formatUplStandingsTeamName(name) {
+  const normalized = decodeHtmlText(name)
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^«+/, "")
+    .replace(/»+$/, "")
+    .replace(/^"+/, "")
+    .replace(/"+$/, "");
+
+  const cleaned = normalized.replace(/»/g, "").trim();
+
+  if (cleaned === "Епіцентр Кам'янець-Подільський") {
+    return "Епіцентр";
+  }
+
+  const duplicateMatch = cleaned.match(/^(.+?)\s+\1$/i);
+  if (duplicateMatch) {
+    return duplicateMatch[1];
+  }
+
+  return cleaned;
+}
+
+function shouldDropCitySuffix() {
+  return false;
 }
 
 function fetchUplStandingsFromOfficialPage(html) {
@@ -1144,7 +1169,8 @@ function fetchUplStandingsFromOfficialPage(html) {
   const rows = [];
 
   for (const rowHtml of tableHtml.matchAll(rowPattern)) {
-    const cellValues = [...rowHtml[0].matchAll(/<td>([\s\S]*?)<\/td>/gi)]
+    const rowHtmlText = rowHtml[0];
+    const cellValues = [...rowHtmlText.matchAll(/<td>([\s\S]*?)<\/td>/gi)]
       .map(match => cleanExtractedText(match[1]))
       .filter(value => value !== "");
 
@@ -1153,7 +1179,8 @@ function fetchUplStandingsFromOfficialPage(html) {
     }
 
     const position = Number(cellValues[0]);
-    const teamText = cellValues[1];
+    const teamCellMatch = rowHtmlText.match(/<a[^>]*>([\s\S]*?)<\/a>/i);
+    const logoMatch = rowHtmlText.match(/<img[^>]+src="([^"]+)"/i);
     const played = Number(cellValues[2]);
     const wins = Number(cellValues[3]);
     const draws = Number(cellValues[4]);
@@ -1170,16 +1197,13 @@ function fetchUplStandingsFromOfficialPage(html) {
       continue;
     }
 
-    const cleanedTeamText = cleanExtractedText(teamText)
-      .replace(/<[^>]+>/g, " ")
-      .replace(/^«|»$/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+    const cleanedTeamText = formatUplStandingsTeamName(teamCellMatch?.[1] || cellValues[1]);
+    const displayTeamName = normalizeUplStandingsTeamName(cleanedTeamText);
 
     rows.push({
       position,
-      team: normalizeUplStandingsTeamName(cleanedTeamText),
-      logo: uplStandingsTeamLogos[normalizeUplStandingsTeamName(cleanedTeamText)] || "",
+      team: displayTeamName,
+      emblem: logoMatch ? `https://upl.ua${logoMatch[1]}` : "",
       played,
       wins,
       draws,
