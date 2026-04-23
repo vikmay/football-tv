@@ -616,24 +616,6 @@
                     : `${dayName}, ${formattedDate}`;
             }
 
-            const uplStandings = [
-                { position: 1, team: "Шахтар Донецьк", played: 23, wins: 16, draws: 6, losses: 1, goalsFor: 54, goalsAgainst: 14, goalDifference: 40, points: 54 },
-                { position: 2, team: "ЛНЗ Черкаси", played: 24, wins: 16, draws: 3, losses: 5, goalsFor: 35, goalsAgainst: 15, goalDifference: 20, points: 51 },
-                { position: 3, team: "Полісся Житомир", played: 24, wins: 14, draws: 4, losses: 6, goalsFor: 41, goalsAgainst: 16, goalDifference: 25, points: 46 },
-                { position: 4, team: "Металіст 1925 Харків", played: 24, wins: 12, draws: 8, losses: 4, goalsFor: 30, goalsAgainst: 13, goalDifference: 17, points: 44 },
-                { position: 5, team: "Динамо Київ", played: 24, wins: 13, draws: 5, losses: 6, goalsFor: 52, goalsAgainst: 26, goalDifference: 26, points: 44 },
-                { position: 6, team: "Кривбас Кривий Ріг", played: 24, wins: 11, draws: 7, losses: 6, goalsFor: 38, goalsAgainst: 32, goalDifference: 6, points: 40 },
-                { position: 7, team: "Колос Ковалівка", played: 24, wins: 9, draws: 10, losses: 5, goalsFor: 22, goalsAgainst: 21, goalDifference: 1, points: 37 },
-                { position: 8, team: "Карпати Львів", played: 24, wins: 8, draws: 9, losses: 7, goalsFor: 32, goalsAgainst: 26, goalDifference: 6, points: 33 },
-                { position: 9, team: "Зоря Луганськ", played: 23, wins: 8, draws: 8, losses: 7, goalsFor: 32, goalsAgainst: 30, goalDifference: 2, points: 32 },
-                { position: 10, team: "Верес Рівне", played: 24, wins: 7, draws: 8, losses: 9, goalsFor: 22, goalsAgainst: 29, goalDifference: -7, points: 29 },
-                { position: 11, team: "Епіцентр Кам'янець-Подільський", played: 24, wins: 7, draws: 3, losses: 14, goalsFor: 26, goalsAgainst: 36, goalDifference: -10, points: 24 },
-                { position: 12, team: "Оболонь Київ", played: 23, wins: 5, draws: 8, losses: 10, goalsFor: 18, goalsAgainst: 39, goalDifference: -21, points: 23 },
-                { position: 13, team: "Кудрівка", played: 24, wins: 5, draws: 6, losses: 13, goalsFor: 25, goalsAgainst: 39, goalDifference: -14, points: 21 },
-                { position: 14, team: "Рух Львів", played: 24, wins: 6, draws: 2, losses: 16, goalsFor: 17, goalsAgainst: 39, goalDifference: -22, points: 20 },
-                { position: 15, team: "Олександрія", played: 23, wins: 2, draws: 6, losses: 15, goalsFor: 17, goalsAgainst: 45, goalDifference: -28, points: 12 },
-                { position: 16, team: "Полтава", played: 24, wins: 2, draws: 5, losses: 17, goalsFor: 20, goalsAgainst: 61, goalDifference: -41, points: 11 }
-            ];
 
             function getStandingsTeamLabel(teamName) {
                 const aliases = {
@@ -643,8 +625,14 @@
                 return aliases[teamName] || teamName;
             }
 
-            function renderUplStandings() {
+            function renderUplStandings(standings) {
                 const standingsHost = document.getElementById("standings");
+                const rows = Array.isArray(standings) ? standings : [];
+
+                if (!rows.length) {
+                    standingsHost.innerHTML = "";
+                    return;
+                }
 
                 standingsHost.innerHTML = `
                     <section class="standings">
@@ -676,23 +664,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    ${uplStandings.map(team => `
+                                    ${rows.map(team => `
                                         <tr>
-                                            <td class="standings__rank-cell">${team.position}</td>
-                                            <td class="standings__team-cell">${getStandingsTeamLabel(team.team)}</td>
-                                            <td>${team.played}</td>
-                                            <td>${team.wins}</td>
-                                            <td>${team.draws}</td>
-                                            <td>${team.losses}</td>
-                                            <td>${team.goalsFor}:${team.goalsAgainst}</td>
-                                            <td>${team.goalDifference > 0 ? `+${team.goalDifference}` : team.goalDifference}</td>
-                                            <td class="standings__points-cell">${team.points}</td>
+                                            <td class="standings__rank-cell">${team.position ?? ""}</td>
+                                            <td class="standings__team-cell">${getStandingsTeamLabel(team.team || "")}</td>
+                                            <td>${team.played ?? ""}</td>
+                                            <td>${team.wins ?? ""}</td>
+                                            <td>${team.draws ?? ""}</td>
+                                            <td>${team.losses ?? ""}</td>
+                                            <td>${team.goalsFor ?? ""}:${team.goalsAgainst ?? ""}</td>
+                                            <td>${typeof team.goalDifference === "number" && team.goalDifference > 0 ? `+${team.goalDifference}` : (team.goalDifference ?? "")}</td>
+                                            <td class="standings__points-cell">${team.points ?? ""}</td>
                                         </tr>
                                     `).join("")}
                                 </tbody>
                             </table>
                         </div>
-                        <div class="standings__note">Актуальна таблиця з офіційного сайту УПЛ: upl.ua/en/tournaments/championship/428/table</div>
                     </section>
                 `;
             }
@@ -710,11 +697,12 @@
                     const data = await res.json();
                     console.log("DATA LOADED:", data);
 
+                    const standings = data["Таблиця УПЛ"] || [];
                     let html = "";
 
-                    const allMatches = Object.values(data)
-                        .filter(Array.isArray)
-                        .flat()
+                    const allMatches = Object.entries(data)
+                        .filter(([key, value]) => key !== "Таблиця УПЛ" && Array.isArray(value))
+                        .flatMap(([, value]) => value)
                         .sort((a, b) => {
                             const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
                             const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
@@ -771,7 +759,7 @@
                         });
 
                     content.innerHTML = html;
-                    renderUplStandings();
+                    renderUplStandings(standings);
 
                     const todayElement = document.querySelector(".day--today");
                     if (todayElement && !hasScrolledToToday) {

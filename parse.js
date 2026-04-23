@@ -1090,6 +1090,124 @@ async function fetchCupEvents() {
   return null;
 }
 
+const uplStandingsTeamNames = {
+  "Shakhtar": "Шахтар Донецьк",
+  "Shakhtar Donetsk": "Шахтар Донецьк",
+  "LNZ": "ЛНЗ Черкаси",
+  "LNZ Cherkasy": "ЛНЗ Черкаси",
+  "Polissya": "Полісся Житомир",
+  "Polissya Zhytomyr": "Полісся Житомир",
+  "Metalist 1925": "Металіст 1925 Харків",
+  "Metalist 1925 Kharkiv": "Металіст 1925 Харків",
+  "Dynamo": "Динамо Київ",
+  "Dynamo Kyiv": "Динамо Київ",
+  "Kryvbas": "Кривбас",
+  "Kryvbas Kryvyi Rih": "Кривбас",
+  "Kolos": "Колос Ковалівка",
+  "Kolos Kovalivka": "Колос Ковалівка",
+  "Karpaty": "Карпати Львів",
+  "Karpaty Lviv": "Карпати Львів",
+  "Zorya": "Зоря Луганськ",
+  "Zorya Luhansk": "Зоря Луганськ",
+  "Veres": "Верес Рівне",
+  "Veres Rivne": "Верес Рівне",
+  "Epicentr": "Епіцентр Кам'янець-Подільський",
+  "Epitsentr": "Епіцентр Кам'янець-Подільський",
+  "Obolon": "Оболонь Київ",
+  "Obolon Kyiv": "Оболонь Київ",
+  "Kudrivka": "Кудрівка",
+  "Ruh": "Рух Львів",
+  "Ruh Lviv": "Рух Львів",
+  "Olexandriya": "Олександрія",
+  "Oleksandriya": "Олександрія",
+  "Poltava": "Полтава"
+};
+
+function normalizeUplStandingsTeamName(name) {
+  return uplStandingsTeamNames[name] || getUplTeamName(name);
+}
+
+function fetchUplStandingsFromOfficialPage(html) {
+  const tableMatch = html.match(/<table class="table table-gray table-num">([\s\S]*?)<\/table>/i);
+
+  if (!tableMatch) {
+    return [];
+  }
+
+  const tableHtml = tableMatch[1];
+  const rowPattern = /<tr\b[\s\S]*?<\/tr>/gi;
+  const rows = [];
+
+  for (const rowHtml of tableHtml.matchAll(rowPattern)) {
+    const cellValues = [...rowHtml[0].matchAll(/<td>([\s\S]*?)<\/td>/gi)]
+      .map(match => cleanExtractedText(match[1]))
+      .filter(value => value !== "");
+
+    if (cellValues.length < 10) {
+      continue;
+    }
+
+    const position = Number(cellValues[0]);
+    const teamText = cellValues[1];
+    const played = Number(cellValues[2]);
+    const wins = Number(cellValues[3]);
+    const draws = Number(cellValues[4]);
+    const losses = Number(cellValues[5]);
+    const goalsFor = Number(cellValues[6]);
+    const goalsAgainst = Number(cellValues[7]);
+    const goalDifference = Number(cellValues[8]);
+    const points = Number(cellValues[9]);
+
+    if (
+      !Number.isFinite(position) ||
+      [played, wins, draws, losses, goalsFor, goalsAgainst, goalDifference, points].some(value => !Number.isFinite(value))
+    ) {
+      continue;
+    }
+
+    const cleanedTeamText = cleanExtractedText(teamText)
+      .replace(/<[^>]+>/g, " ")
+      .replace(/^«|»$/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    rows.push({
+      position,
+      team: normalizeUplStandingsTeamName(cleanedTeamText),
+      played,
+      wins,
+      draws,
+      losses,
+      goalsFor,
+      goalsAgainst,
+      goalDifference,
+      points
+    });
+  }
+
+  return rows;
+}
+
+async function fetchUplStandings() {
+  const standingsUrl = "https://upl.ua/ua/tournaments/championship/428/table";
+  const standingsHtml = await fetchText(standingsUrl, "УПЛ standings fetch error");
+
+  if (!standingsHtml) {
+    console.log("⚠️ УПЛ standings source empty, keeping existing");
+    return null;
+  }
+
+  const parsedRows = fetchUplStandingsFromOfficialPage(standingsHtml);
+
+  if (parsedRows.length > 0) {
+    console.log(`✅ УПЛ standings fetched: ${parsedRows.length} rows`);
+    return parsedRows;
+  }
+
+  console.log("⚠️ УПЛ standings source empty, keeping existing");
+  return null;
+}
+
 async function fetchUplEvents() {
   const officialUrl = "https://upl.ua/en/tournaments/championship/428/calendar";
   const officialHtml = await fetchText(officialUrl, "УПЛ official upl.ua fetch error");
@@ -1299,8 +1417,9 @@ async function main() {
     return;
   }
 
-  const [uplEvents, clEvents, cupEvents, extraMatches] = await Promise.all([
+  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches] = await Promise.all([
     fetchUplEvents(),
+    fetchUplStandings(),
     fetchChampionsLeagueEvents(),
     fetchCupEvents(),
     fetchExtraMatches()
@@ -1310,6 +1429,10 @@ async function main() {
     matches["УПЛ"] = uplEvents.map(event =>
       mapEventToMatch(event, "УПЛ", getUplTeamName)
     );
+  }
+
+  if (uplStandings) {
+    matches["Таблиця УПЛ"] = uplStandings;
   }
 
   if (clEvents) {
