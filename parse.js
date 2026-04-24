@@ -194,8 +194,18 @@ function normalizeCupTeamName(name) {
 }
 
 const ukrainianClubAliases = new Set(
-  Object.keys(uplTeamNames).filter(name => name !== "Ukraine")
+  [
+    ...Object.keys(uplTeamNames).filter(name => name !== "Ukraine"),
+    ...Object.values(uplTeamNames).filter(name => name !== "Україна")
+  ]
 );
+
+function normalizeClubLookupName(name) {
+  return cleanExtractedText(String(name || ""))
+    .replace(/\s+/g, " ")
+    .replace(/^[«"]+|[»"]+$/g, "")
+    .trim();
+}
 
 const extraCompetitionConfigs = [
   {
@@ -249,7 +259,14 @@ const extraCompetitionConfigs = [
 ];
 
 function isUkrainianClubName(name) {
-  return ukrainianClubAliases.has(name);
+  const normalizedName = normalizeClubLookupName(name);
+  const mappedName = getUplTeamName(normalizedName);
+
+  return (
+    ukrainianClubAliases.has(normalizedName) ||
+    ukrainianClubAliases.has(mappedName) ||
+    [...ukrainianClubAliases].some(alias => normalizeClubLookupName(alias) === normalizedName)
+  );
 }
 
 function isUkraineNationalTeamName(name) {
@@ -979,6 +996,42 @@ function parseFlashscoreFixtureEvents(html) {
   return dedupeEvents(events).sort(sortByDateTimeAsc);
 }
 
+function parseFlashscoreDrawPageEvents(html) {
+  const text = htmlToPlainText(html).replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
+  const events = [];
+  const matches = [...text.matchAll(/(\d{2})\.(\d{2})\.\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\),\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\)/g)];
+
+  for (const match of matches) {
+    const [, day, month, homeRaw, awayRaw] = match;
+    const dateEvent = `${getKyivTodayIso().slice(0, 4)}-${month}-${day}`;
+
+    if (!isDateWithinWindow(dateEvent)) {
+      continue;
+    }
+
+    const homeTeam = cleanExtractedText(homeRaw);
+    const awayTeam = cleanExtractedText(awayRaw);
+
+    if (!homeTeam || !awayTeam) {
+      continue;
+    }
+
+    events.push({
+      idEvent: `flashscore-draw-${dateEvent}-${homeTeam}-${awayTeam}`.replace(/\s+/g, "-"),
+      dateEvent,
+      strTime: "00:00:00",
+      strStatus: "Scheduled",
+      strHomeTeam: homeTeam,
+      strAwayTeam: awayTeam,
+      intHomeScore: null,
+      intAwayScore: null,
+      isLocalTime: true
+    });
+  }
+
+  return dedupeEvents(events).sort(sortByDateTimeAsc);
+}
+
 function parseCupUafEvents(html) {
   const text = htmlToPlainText(html)
     .replace(/\u00a0/g, " ")
@@ -1360,9 +1413,19 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
       continue;
     }
 
-    const events = parseFlashscoreFixtureEvents(html);
+    const feedDataMatches = [
+      ...(html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : []),
+      ...(html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : [])
+    ];
+
+    const feedEvents = feedDataMatches.flatMap(data => parseFlashscoreCupFeedData(data));
+    const textEvents = parseFlashscoreFixtureEvents(html);
+    const drawPageEvents = parseFlashscoreDrawPageEvents(html);
+
+    const events = dedupeEvents([...feedEvents, ...textEvents, ...drawPageEvents]).sort(sortByDateTimeAsc);
 
     if (events.length > 0) {
+      console.log(`✅ ${label}: found ${events.length} matches from Flashscore`);
       return events;
     }
   }
@@ -1375,34 +1438,27 @@ async function fetchExtraMatches() {
   const nationalMatches = [];
 
   for (const config of extraCompetitionConfigs) {
-    const apiEvents = await fetchCompetitionEvents(config.id, config.name);
-    const apiRelevantEvents = apiEvents.filter(event => isExtraCompetitionMatch(event, config.type));
-    let mergedRelevantEvents = [...apiRelevantEvents];
+    const flashscoreRelevantEvents = [];
+    const flashscoreUrls = Array.isArray(config.flashscoreUrls) ? config.flashscoreUrls : [];
 
-    if (config.name === "Ліга конференцій") {
-      mergedRelevantEvents = dedupeEvents([
-        ...mergedRelevantEvents,
-        ...getConferenceLeagueFallbackEvents()
-      ])
-        .filter(event => isDateWithinWindow(event.dateEvent))
-        .sort(sortByDateTimeAsc);
-    }
+    for (const url of flashscoreUrls) {
+      const flashscoreEvents = await fetchFlashscoreCompetitionEvents(url, config.name);
+      const relevantEvents = flashscoreEvents.filter(event => isExtraCompetitionMatch(event, config.type));
 
-    if (Array.isArray(config.flashscoreUrls)) {
-      for (const url of config.flashscoreUrls) {
-        const flashscoreEvents = await fetchFlashscoreCompetitionEvents(url, config.name);
-        const flashscoreRelevantEvents = flashscoreEvents.filter(event => isExtraCompetitionMatch(event, config.type));
-
-        if (flashscoreRelevantEvents.length) {
-          mergedRelevantEvents = dedupeEvents([
-            ...mergedRelevantEvents,
-            ...flashscoreRelevantEvents
-          ]).filter(event => isDateWithinWindow(event.dateEvent)).sort(sortByDateTimeAsc);
-
-          console.log(`⚠️ ${config.name}: merged Flashscore fallback with ${flashscoreRelevantEvents.length} Ukrainian-related matches in ±7 days window`);
-        }
+      if (relevantEvents.length) {
+        flashscoreRelevantEvents.push(...relevantEvents);
       }
     }
+
+    const apiEvents = await fetchCompetitionEvents(config.id, config.name);
+    const apiRelevantEvents = apiEvents.filter(event => isExtraCompetitionMatch(event, config.type));
+
+    const mergedRelevantEvents = dedupeEvents([
+      ...flashscoreRelevantEvents,
+      ...apiRelevantEvents
+    ])
+      .filter(event => isDateWithinWindow(event.dateEvent))
+      .sort(sortByDateTimeAsc);
 
     if (!mergedRelevantEvents.length) {
       continue;

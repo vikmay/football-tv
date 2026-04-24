@@ -85,7 +85,7 @@
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
       "time": "00:00",
-      "date": "Сьогодні, 23 квітня",
+      "date": "четвер, 23 квітня",
       "dateIso": "2026-04-23",
       "status": "Match Finished",
       "score": "1 - 2"
@@ -94,11 +94,11 @@
       "home": "Колос Ковалівка",
       "away": "Полтава",
       "league": "УПЛ",
-      "time": "15:30",
-      "date": "пʼятниця, 24 квітня",
+      "time": "00:00",
+      "date": "Сьогодні, 24 квітня",
       "dateIso": "2026-04-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Рух Львів",
@@ -169,6 +169,16 @@
       "dateIso": "2026-04-27",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Полтава",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "пʼятниця, 1 травня",
+      "dateIso": "2026-05-01",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [
@@ -223,14 +233,14 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "AZ Alkmaar",
-      "away": "Шахтар Донецьк",
-      "league": "Ліга конференцій",
-      "time": "23:00",
-      "date": "четвер, 16 квітня",
-      "dateIso": "2026-04-16",
-      "status": "Match Finished",
-      "score": "2 - 2"
+      "home": "Шахтар Донецьк",
+      "away": "Кристал Пелес",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Збірна України": [],
@@ -302,6 +312,19 @@
     },
     {
       "position": 6,
+      "team": "Колос Ковалівка",
+      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
+      "played": 25,
+      "wins": 10,
+      "draws": 10,
+      "losses": 5,
+      "goalsFor": 24,
+      "goalsAgainst": 21,
+      "goalDifference": 3,
+      "points": 40
+    },
+    {
+      "position": 7,
       "team": "Кривбас Кривий Ріг",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 24,
@@ -312,19 +335,6 @@
       "goalsAgainst": 32,
       "goalDifference": 6,
       "points": 40
-    },
-    {
-      "position": 7,
-      "team": "Колос Ковалівка",
-      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 24,
-      "wins": 9,
-      "draws": 10,
-      "losses": 5,
-      "goalsFor": 22,
-      "goalsAgainst": 21,
-      "goalDifference": 1,
-      "points": 37
     },
     {
       "position": 8,
@@ -434,13 +444,13 @@
       "position": 16,
       "team": "Полтава",
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
-      "played": 24,
+      "played": 25,
       "wins": 2,
       "draws": 5,
-      "losses": 17,
+      "losses": 18,
       "goalsFor": 20,
-      "goalsAgainst": 61,
-      "goalDifference": -41,
+      "goalsAgainst": 63,
+      "goalDifference": -43,
       "points": 11
     }
   ]
