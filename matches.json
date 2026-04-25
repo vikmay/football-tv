@@ -88,7 +88,7 @@
       "date": "Сьогодні, 25 квітня",
       "dateIso": "2026-04-25",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "0 - 3"
     },
     {
       "home": "Кривбас",
@@ -351,13 +351,13 @@
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 25,
-      "wins": 8,
-      "draws": 10,
+      "wins": 9,
+      "draws": 9,
       "losses": 7,
-      "goalsFor": 32,
+      "goalsFor": 35,
       "goalsAgainst": 26,
-      "goalDifference": 6,
-      "points": 34
+      "goalDifference": 9,
+      "points": 36
     },
     {
       "position": 9,
@@ -413,19 +413,6 @@
     },
     {
       "position": 13,
-      "team": "Рух Львів",
-      "emblem": "https://upl.ua/glide/uploads/2008/EiWees-TX5OtIK5GztZxcyiARQig3g0R.png?w=40&amp;h=40&amp;fit=contain&amp;s=a3d658d8902678ca26033c312bdf482c",
-      "played": 25,
-      "wins": 6,
-      "draws": 3,
-      "losses": 16,
-      "goalsFor": 17,
-      "goalsAgainst": 39,
-      "goalDifference": -22,
-      "points": 21
-    },
-    {
-      "position": 14,
       "team": "Кудрівка",
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
       "played": 24,
@@ -436,6 +423,19 @@
       "goalsAgainst": 39,
       "goalDifference": -14,
       "points": 21
+    },
+    {
+      "position": 14,
+      "team": "Рух Львів",
+      "emblem": "https://upl.ua/glide/uploads/2008/EiWees-TX5OtIK5GztZxcyiARQig3g0R.png?w=40&amp;h=40&amp;fit=contain&amp;s=a3d658d8902678ca26033c312bdf482c",
+      "played": 25,
+      "wins": 6,
+      "draws": 2,
+      "losses": 17,
+      "goalsFor": 17,
+      "goalsAgainst": 42,
+      "goalDifference": -25,
+      "points": 20
     },
     {
       "position": 15,
