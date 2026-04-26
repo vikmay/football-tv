@@ -88,7 +88,7 @@
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "1 - 1"
     },
     {
       "home": "Кудрівка",
@@ -286,8 +286,8 @@
       "wins": 16,
       "draws": 4,
       "losses": 5,
-      "goalsFor": 35,
-      "goalsAgainst": 15,
+      "goalsFor": 36,
+      "goalsAgainst": 16,
       "goalDifference": 20,
       "points": 52
     },
@@ -325,8 +325,8 @@
       "wins": 12,
       "draws": 9,
       "losses": 4,
-      "goalsFor": 30,
-      "goalsAgainst": 13,
+      "goalsFor": 31,
+      "goalsAgainst": 14,
       "goalDifference": 17,
       "points": 45
     },
