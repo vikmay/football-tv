@@ -78,17 +78,17 @@
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
       "status": "Match Finished",
-      "score": "5 - 5"
+      "score": "5 - 6"
     },
     {
       "home": "ЛНЗ Черкаси",
       "away": "Металіст 1925 Харків",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "00:00",
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Кудрівка",
@@ -282,17 +282,30 @@
       "position": 2,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 24,
+      "played": 25,
       "wins": 16,
-      "draws": 3,
+      "draws": 4,
       "losses": 5,
       "goalsFor": 35,
       "goalsAgainst": 15,
       "goalDifference": 20,
-      "points": 51
+      "points": 52
     },
     {
       "position": 3,
+      "team": "Динамо Київ",
+      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
+      "played": 25,
+      "wins": 14,
+      "draws": 5,
+      "losses": 6,
+      "goalsFor": 58,
+      "goalsAgainst": 31,
+      "goalDifference": 27,
+      "points": 47
+    },
+    {
+      "position": 4,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 24,
@@ -305,46 +318,20 @@
       "points": 46
     },
     {
-      "position": 4,
-      "team": "Динамо Київ",
-      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 25,
-      "wins": 13,
-      "draws": 6,
-      "losses": 6,
-      "goalsFor": 57,
-      "goalsAgainst": 31,
-      "goalDifference": 26,
-      "points": 45
-    },
-    {
       "position": 5,
       "team": "Металіст 1925 Харків",
       "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
-      "played": 24,
+      "played": 25,
       "wins": 12,
-      "draws": 8,
+      "draws": 9,
       "losses": 4,
       "goalsFor": 30,
       "goalsAgainst": 13,
       "goalDifference": 17,
-      "points": 44
+      "points": 45
     },
     {
       "position": 6,
-      "team": "Кривбас Кривий Ріг",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 25,
-      "wins": 11,
-      "draws": 8,
-      "losses": 6,
-      "goalsFor": 43,
-      "goalsAgainst": 37,
-      "goalDifference": 6,
-      "points": 41
-    },
-    {
-      "position": 7,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
       "played": 25,
@@ -354,6 +341,19 @@
       "goalsFor": 24,
       "goalsAgainst": 21,
       "goalDifference": 3,
+      "points": 40
+    },
+    {
+      "position": 7,
+      "team": "Кривбас Кривий Ріг",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 25,
+      "wins": 11,
+      "draws": 7,
+      "losses": 7,
+      "goalsFor": 43,
+      "goalsAgainst": 38,
+      "goalDifference": 5,
       "points": 40
     },
     {
