@@ -94,21 +94,21 @@
       "home": "Кудрівка",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "00:00",
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Полісся Житомир",
       "away": "Оболонь Київ",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "00:00",
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Епіцентр",
@@ -269,14 +269,14 @@
       "position": 1,
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 24,
-      "wins": 17,
+      "played": 25,
+      "wins": 18,
       "draws": 6,
       "losses": 1,
-      "goalsFor": 56,
+      "goalsFor": 57,
       "goalsAgainst": 15,
-      "goalDifference": 41,
-      "points": 57
+      "goalDifference": 42,
+      "points": 60
     },
     {
       "position": 2,
@@ -293,6 +293,19 @@
     },
     {
       "position": 3,
+      "team": "Полісся Житомир",
+      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
+      "played": 25,
+      "wins": 15,
+      "draws": 4,
+      "losses": 6,
+      "goalsFor": 42,
+      "goalsAgainst": 16,
+      "goalDifference": 26,
+      "points": 49
+    },
+    {
+      "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
       "played": 25,
@@ -303,19 +316,6 @@
       "goalsAgainst": 31,
       "goalDifference": 27,
       "points": 47
-    },
-    {
-      "position": 4,
-      "team": "Полісся Житомир",
-      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
-      "played": 24,
-      "wins": 14,
-      "draws": 4,
-      "losses": 6,
-      "goalsFor": 41,
-      "goalsAgainst": 16,
-      "goalDifference": 25,
-      "points": 46
     },
     {
       "position": 5,
@@ -412,26 +412,26 @@
       "position": 12,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 23,
+      "played": 24,
       "wins": 5,
       "draws": 8,
-      "losses": 10,
+      "losses": 11,
       "goalsFor": 18,
-      "goalsAgainst": 39,
-      "goalDifference": -21,
+      "goalsAgainst": 40,
+      "goalDifference": -22,
       "points": 23
     },
     {
       "position": 13,
       "team": "Кудрівка",
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 24,
+      "played": 25,
       "wins": 5,
       "draws": 6,
-      "losses": 13,
+      "losses": 14,
       "goalsFor": 25,
-      "goalsAgainst": 39,
-      "goalDifference": -14,
+      "goalsAgainst": 40,
+      "goalDifference": -15,
       "points": 21
     },
     {
