@@ -108,7 +108,7 @@
       "date": "Сьогодні, 26 квітня",
       "dateIso": "2026-04-26",
       "status": "Match Finished",
-      "score": "2 - 0"
+      "score": "3 - 1"
     },
     {
       "home": "Епіцентр",
@@ -299,8 +299,8 @@
       "wins": 15,
       "draws": 4,
       "losses": 6,
-      "goalsFor": 43,
-      "goalsAgainst": 16,
+      "goalsFor": 44,
+      "goalsAgainst": 17,
       "goalDifference": 27,
       "points": 49
     },
@@ -416,8 +416,8 @@
       "wins": 5,
       "draws": 8,
       "losses": 11,
-      "goalsFor": 18,
-      "goalsAgainst": 41,
+      "goalsFor": 19,
+      "goalsAgainst": 42,
       "goalDifference": -23,
       "points": 23
     },
