@@ -108,7 +108,7 @@
       "date": "Сьогодні, 27 квітня",
       "dateIso": "2026-04-27",
       "status": "Match Finished",
-      "score": "1 - 0"
+      "score": "2 - 0"
     },
     {
       "home": "Полтава",
@@ -367,9 +367,9 @@
       "wins": 9,
       "draws": 8,
       "losses": 8,
-      "goalsFor": 34,
+      "goalsFor": 35,
       "goalsAgainst": 32,
-      "goalDifference": 2,
+      "goalDifference": 3,
       "points": 35
     },
     {
@@ -381,8 +381,8 @@
       "draws": 8,
       "losses": 10,
       "goalsFor": 22,
-      "goalsAgainst": 30,
-      "goalDifference": -8,
+      "goalsAgainst": 31,
+      "goalDifference": -9,
       "points": 29
     },
     {
