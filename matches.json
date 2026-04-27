@@ -94,11 +94,11 @@
       "home": "Епіцентр",
       "away": "Олександрія",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "00:00",
       "date": "Сьогодні, 27 квітня",
       "dateIso": "2026-04-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Зоря Луганськ",
@@ -389,14 +389,14 @@
       "position": 11,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 24,
-      "wins": 7,
+      "played": 25,
+      "wins": 8,
       "draws": 3,
       "losses": 14,
-      "goalsFor": 26,
+      "goalsFor": 27,
       "goalsAgainst": 36,
-      "goalDifference": -10,
-      "points": 24
+      "goalDifference": -9,
+      "points": 27
     },
     {
       "position": 12,
@@ -441,13 +441,13 @@
       "position": 15,
       "team": "Олександрія",
       "emblem": "https://upl.ua/glide/uploads/1611/-O3qIDnmY2y78cevXXjO1DazjQACCduO.png?w=40&amp;h=40&amp;fit=contain&amp;s=f9a5041e22f2d5a1fca07de01d7b2660",
-      "played": 23,
+      "played": 24,
       "wins": 2,
       "draws": 6,
-      "losses": 15,
+      "losses": 16,
       "goalsFor": 17,
-      "goalsAgainst": 45,
-      "goalDifference": -28,
+      "goalsAgainst": 46,
+      "goalDifference": -29,
       "points": 12
     },
     {
