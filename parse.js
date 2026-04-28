@@ -1362,39 +1362,43 @@ async function fetchLeagueEvents(leagueId, leagueName) {
 }
 
 async function fetchChampionsLeagueEvents() {
-  const apiEvents = await fetchLeagueEvents(4480, "Ліга чемпіонів");
-  const fallbackEvents = getChampionsLeagueFallbackEvents();
-  const fallbackByDate = new Map(fallbackEvents.map(event => [event.dateEvent, event]));
+  const urlsToTry = [
+    "https://www.flashscore.ua/soccer/europe/champions-league/fixtures/",
+    "https://www.flashscore.ua/soccer/europe/champions-league/results/"
+  ];
 
-  const mergedEvents = dedupeEvents([
-    ...(apiEvents || []),
-    ...fallbackEvents
-  ])
-    .filter(event => isDateWithinWindow(event.dateEvent))
-    .sort(sortByDateTimeAsc);
+  for (const url of urlsToTry) {
+    const html = await fetchText(url, "Ліга чемпіонів Flashscore fetch error");
 
-  const enrichedEvents = mergeEventMetadata(mergedEvents, fallbackEvents).map(event => {
-    const fallbackEvent = fallbackByDate.get(event.dateEvent);
-
-    if (!fallbackEvent) {
-      return event;
+    if (!html) {
+      continue;
     }
 
-    return {
-      ...event,
-      intRound: event.intRound ?? fallbackEvent.intRound,
-      strRound: event.strRound ?? fallbackEvent.strRound,
-      strEventRound: event.strEventRound ?? fallbackEvent.strEventRound,
-      strStage: event.strStage ?? fallbackEvent.strStage,
-      intStage: event.intStage ?? fallbackEvent.intStage
-    };
-  });
+    const feedDataMatches = [
+      ...(html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : []),
+      ...(html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : [])
+    ];
 
-  if (!apiEvents || enrichedEvents.length > apiEvents.length) {
-    console.log(`⚠️ Ліга чемпіонів source incomplete, merged fallback matches: ${enrichedEvents.length}`);
+    const events = dedupeEvents(feedDataMatches.flatMap(data => parseFlashscoreCupFeedData(data)))
+      .filter(event => isDateWithinWindow(event.dateEvent))
+      .sort(sortByDateTimeAsc)
+      .filter(event => event.strHomeTeam && event.strAwayTeam && !/Показати більше|Live результати|Flashscore\.ua/i.test(`${event.strHomeTeam} ${event.strAwayTeam}`));
+
+    if (events.length > 0) {
+      console.log(`✅ Ліга чемпіонів fetched from Flashscore: ${events.length} matches in ±7 days window`);
+      return events;
+    }
   }
 
-  return enrichedEvents;
+  console.log("⚠️ Ліга чемпіонів Flashscore source empty, falling back to TheSportsDB");
+  const apiEvents = await fetchLeagueEvents(4480, "Ліга чемпіонів");
+
+  if (apiEvents && apiEvents.length > 0) {
+    return apiEvents;
+  }
+
+  console.log("⚠️ Ліга чемпіонів source empty, keeping existing");
+  return null;
 }
 
 async function fetchFlashscoreCompetitionEvents(url, label) {
