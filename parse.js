@@ -1564,17 +1564,6 @@ async function fetchExtraMatches() {
     }
   }
 
-  clubMatches.push({
-    home: "Шахтар Донецьк",
-    away: "Кристал Пелес",
-    league: "Ліга конференцій (Півфінал)",
-    time: "22:00",
-    date: formatDateUk("2026-05-07"),
-    dateIso: "2026-05-07",
-    status: "Scheduled",
-    score: "",
-    isLocalTime: true
-  });
 
   return { clubMatches, nationalMatches };
 }
