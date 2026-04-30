@@ -466,6 +466,72 @@ function normalizeMatchSnapshot(match) {
   };
 }
 
+function isActiveOrFinishedMatch(match) {
+  if (!match) {
+    return false;
+  }
+
+  return match.status === "Match Finished" || match.status === "Live" || match.status === "In Progress" || match.status === "1st Half" || match.status === "2nd Half";
+}
+
+function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
+  const current = Array.isArray(currentMatches) ? currentMatches : [];
+  const previous = Array.isArray(previousMatches) ? previousMatches : [];
+  const byIdentity = new Map();
+
+  const getStableKey = match => {
+    const home = cleanExtractedText(match?.home || "");
+    const away = cleanExtractedText(match?.away || "");
+    const pairKey = [home, away].sort((a, b) => a.localeCompare(b, "uk")).join("|");
+    return `${match?.dateIso || ""}|${pairKey}|${match?.league || ""}`;
+  };
+
+  for (const match of previous) {
+    if (!isActiveOrFinishedMatch(match)) {
+      continue;
+    }
+
+    const key = getStableKey(match);
+    byIdentity.set(key, match);
+  }
+
+  for (const match of current) {
+    const key = getStableKey(match);
+    const existing = byIdentity.get(key);
+
+    if (existing) {
+      const existingActive = isActiveOrFinishedMatch(existing);
+      const incomingActive = isActiveOrFinishedMatch(match);
+      const incomingIsScheduled = match.status === "Scheduled";
+      const existingLooksToday = typeof existing.dateIso === "string" && existing.dateIso <= getKyivTodayIso();
+
+      if (existingActive && !incomingActive) {
+        continue;
+      }
+
+      if (existingActive && incomingIsScheduled) {
+        continue;
+      }
+
+      if (existingActive && existingLooksToday && match.dateIso && existing.dateIso !== match.dateIso) {
+        continue;
+      }
+
+      if (!existingActive && incomingIsScheduled && existingLooksToday) {
+        continue;
+      }
+    }
+
+    byIdentity.set(key, match);
+  }
+
+  return [...byIdentity.values()].sort((a, b) => {
+    const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
+    const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
+    return new Date(aDate) - new Date(bDate);
+  });
+}
+
 function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
   return normalizeMatchSnapshot({
     home: mapTeamName(event.strHomeTeam),
@@ -487,13 +553,18 @@ function sortByDateTimeAsc(a, b) {
 }
 
 function dedupeEvents(events) {
+  const getPairKey = event => {
+    const home = cleanExtractedText(event?.strHomeTeam || "");
+    const away = cleanExtractedText(event?.strAwayTeam || "");
+    return [home, away].sort((a, b) => a.localeCompare(b, "uk")).join("|");
+  };
+
   return events.filter((event, index, arr) =>
     arr.findIndex(item =>
       (item.idEvent && event.idEvent && item.idEvent === event.idEvent) ||
       (
         item.dateEvent === event.dateEvent &&
-        item.strHomeTeam === event.strHomeTeam &&
-        item.strAwayTeam === event.strAwayTeam
+        getPairKey(item) === getPairKey(event)
       )
     ) === index
   );
@@ -705,6 +776,17 @@ function getConferenceLeagueFallbackEvents() {
       strAwayTeam: "Shakhtar Donetsk",
       intHomeScore: 2,
       intAwayScore: 2
+    }),
+    makeFallbackEvent({
+      idEvent: "conf-fallback-2026-04-30-crystal-palace-shakhtar",
+      dateEvent: "2026-04-30",
+      strTime: "22:00:00",
+      strStatus: "Live",
+      strHomeTeam: "Crystal Palace",
+      strAwayTeam: "Shakhtar Donetsk",
+      intHomeScore: null,
+      intAwayScore: null,
+      isLocalTime: true
     })
   ];
 
@@ -1474,12 +1556,25 @@ async function fetchExtraMatches() {
       mapEventToMatch(event, config.name, getUplTeamName)
     );
 
+    const dedupedMappedMatches = mergeCurrentAndPreviousMatches(mappedMatches, []);
     if (config.type === "club") {
-      clubMatches.push(...mappedMatches);
+      clubMatches.push(...dedupedMappedMatches);
     } else if (config.type === "national") {
-      nationalMatches.push(...mappedMatches);
+      nationalMatches.push(...dedupedMappedMatches);
     }
   }
+
+  clubMatches.push({
+    home: "Шахтар Донецьк",
+    away: "Кристал Пелес",
+    league: "Ліга конференцій (Півфінал)",
+    time: "22:00",
+    date: formatDateUk("2026-05-07"),
+    dateIso: "2026-05-07",
+    status: "Scheduled",
+    score: "",
+    isLocalTime: true
+  });
 
   return { clubMatches, nationalMatches };
 }
@@ -1516,8 +1611,9 @@ async function main() {
   ]);
 
   if (uplEvents) {
-    matches["УПЛ"] = uplEvents.map(event =>
-      mapEventToMatch(event, "УПЛ", getUplTeamName)
+    matches["УПЛ"] = mergeCurrentAndPreviousMatches(
+      uplEvents.map(event => mapEventToMatch(event, "УПЛ", getUplTeamName)),
+      existingData["УПЛ"] || []
     );
   }
 
@@ -1526,19 +1622,28 @@ async function main() {
   }
 
   if (clEvents) {
-    matches["Ліга чемпіонів"] = clEvents.map(event =>
-      mapEventToMatch(event, "Ліга чемпіонів")
+    matches["Ліга чемпіонів"] = mergeCurrentAndPreviousMatches(
+      clEvents.map(event => mapEventToMatch(event, "Ліга чемпіонів")),
+      existingData["Ліга чемпіонів"] || existingData["Champions League"] || []
     );
   }
 
   if (cupEvents) {
-    matches["Кубок України"] = cupEvents.map(event =>
-      mapEventToMatch(event, "Кубок України", getUplTeamName)
+    matches["Кубок України"] = mergeCurrentAndPreviousMatches(
+      cupEvents.map(event => mapEventToMatch(event, "Кубок України", getUplTeamName)),
+      existingData["Кубок України"] || []
     );
   }
 
-  matches["Українські клуби в Європі"] = extraMatches.clubMatches;
-  matches["Збірна України"] = extraMatches.nationalMatches;
+  matches["Українські клуби в Європі"] = mergeCurrentAndPreviousMatches(
+    extraMatches.clubMatches,
+    existingData["Українські клуби в Європі"] || []
+  );
+
+  matches["Збірна України"] = mergeCurrentAndPreviousMatches(
+    extraMatches.nationalMatches,
+    existingData["Збірна України"] || []
+  );
 
   fs.writeFileSync("matches.json", JSON.stringify(matches, null, 2));
   writeRefreshMeta({
