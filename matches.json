@@ -1,16 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Зоря Луганськ",
-      "away": "Шахтар Донецьк",
-      "league": "УПЛ",
-      "time": "00:00",
-      "date": "четвер, 23 квітня",
-      "dateIso": "2026-04-23",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
-    {
       "home": "Колос Ковалівка",
       "away": "Полтава",
       "league": "УПЛ",
@@ -31,16 +21,6 @@
       "score": "0 - 3"
     },
     {
-      "home": "ЛНЗ Черкаси",
-      "away": "Металіст 1925 Харків",
-      "league": "УПЛ",
-      "time": "00:00",
-      "date": "неділя, 26 квітня",
-      "dateIso": "2026-04-26",
-      "status": "Match Finished",
-      "score": "1 - 1"
-    },
-    {
       "home": "Кривбас",
       "away": "Динамо Київ",
       "league": "УПЛ",
@@ -49,6 +29,16 @@
       "dateIso": "2026-04-26",
       "status": "Match Finished",
       "score": "5 - 6"
+    },
+    {
+      "home": "ЛНЗ Черкаси",
+      "away": "Металіст 1925 Харків",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "неділя, 26 квітня",
+      "dateIso": "2026-04-26",
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Кудрівка",
@@ -71,16 +61,6 @@
       "score": "3 - 1"
     },
     {
-      "home": "Зоря Луганськ",
-      "away": "Верес Рівне",
-      "league": "УПЛ",
-      "time": "00:00",
-      "date": "понеділок, 27 квітня",
-      "dateIso": "2026-04-27",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
       "home": "Епіцентр",
       "away": "Олександрія",
       "league": "УПЛ",
@@ -91,6 +71,16 @@
       "score": "1 - 1"
     },
     {
+      "home": "Зоря Луганськ",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "понеділок, 27 квітня",
+      "dateIso": "2026-04-27",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
       "home": "Полтава",
       "away": "Кривбас",
       "league": "УПЛ",
@@ -99,26 +89,6 @@
       "dateIso": "2026-05-01",
       "status": "Match Finished",
       "score": "3 - 3"
-    },
-    {
-      "home": "Полтава",
-      "away": "Кривбас",
-      "league": "УПЛ",
-      "time": "00:00",
-      "date": "Сьогодні, 1 травня",
-      "dateIso": "2026-05-01",
-      "status": "Match Finished",
-      "score": "0 - 1"
-    },
-    {
-      "home": "Полтава",
-      "away": "Кривбас",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "Сьогодні, 1 травня",
-      "dateIso": "2026-05-01",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "Олександрія",
@@ -263,18 +233,7 @@
       "score": ""
     }
   ],
-  "Кубок України": [
-    {
-      "home": "Металіст 1925 Харків",
-      "away": "Чернігів",
-      "league": "Кубок України (Півфінал)",
-      "time": "18:00",
-      "date": "середа, 22 квітня",
-      "dateIso": "2026-04-22",
-      "status": "Match Finished",
-      "score": "0 - 1"
-    }
-  ],
+  "Кубок України": [],
   "Ліга Європи": [
     {
       "home": "Braga",
@@ -315,8 +274,6 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
-<<<<<<< HEAD
-=======
     },
     {
       "home": "Фрайбург",
@@ -327,13 +284,10 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
     }
   ],
   "Ліга конференцій": [
     {
-<<<<<<< HEAD
-=======
       "home": "Райо Вальєкано",
       "away": "Страсбург",
       "league": "Ліга конференцій (Півфінал)",
@@ -344,7 +298,6 @@
       "score": "1 - 0"
     },
     {
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
       "home": "Шахтар Донецьк",
       "away": "Кристал Пелес",
       "league": "Ліга конференцій (Півфінал)",
@@ -363,8 +316,6 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
-<<<<<<< HEAD
-=======
     },
     {
       "home": "Страсбург",
@@ -375,7 +326,6 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
     }
   ],
   "Суперкубок УЄФА": [],
@@ -384,17 +334,6 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "Шахтар Донецьк",
-      "away": "Кристал Пелес",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 30 квітня",
-      "dateIso": "2026-04-30",
-      "status": "Match Finished",
-      "score": "1 - 3"
-    },
-    {
-<<<<<<< HEAD
       "home": "Braga",
       "away": "Freiburg",
       "league": "Ліга Європи (Півфінал)",
@@ -405,8 +344,6 @@
       "score": "2 - 1"
     },
     {
-=======
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
       "home": "Ноттінгем",
       "away": "Астон Вілла",
       "league": "Ліга Європи (Півфінал)",
@@ -415,18 +352,6 @@
       "dateIso": "2026-04-30",
       "status": "Match Finished",
       "score": "1 - 0"
-    },
-    {
-<<<<<<< HEAD
-=======
-      "home": "Braga",
-      "away": "Freiburg",
-      "league": "Ліга Європи (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 30 квітня",
-      "dateIso": "2026-04-30",
-      "status": "Match Finished",
-      "score": "2 - 1"
     },
     {
       "home": "Райо Вальєкано",
@@ -439,35 +364,14 @@
       "score": "1 - 0"
     },
     {
-      "home": "Атлетик Більбао",
-      "away": "Манчестер Юнайтед",
-      "league": "Ліга Європи (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 30 квітня",
-      "dateIso": "2026-04-30",
-      "status": "Match Finished",
-      "score": "2 - 1"
-    },
-    {
-      "home": "Фіорентина",
-      "away": "Реал Бетіс",
+      "home": "Шахтар Донецьк",
+      "away": "Кристал Пелес",
       "league": "Ліга конференцій (Півфінал)",
       "time": "22:00",
       "date": "четвер, 30 квітня",
       "dateIso": "2026-04-30",
       "status": "Match Finished",
-      "score": "2 - 2"
-    },
-    {
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
-      "home": "Кристал Пелес",
-      "away": "Шахтар Донецьк",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 7 травня",
-      "dateIso": "2026-05-07",
-      "status": "Scheduled",
-      "score": ""
+      "score": "1 - 3"
     },
     {
       "home": "Астон Вілла",
@@ -488,13 +392,21 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
-<<<<<<< HEAD
-=======
     },
     {
       "home": "Фрайбург",
       "away": "Брага",
       "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кристал Пелес",
+      "away": "Шахтар Донецьк",
+      "league": "Ліга конференцій (Півфінал)",
       "time": "22:00",
       "date": "четвер, 7 травня",
       "dateIso": "2026-05-07",
@@ -510,27 +422,6 @@
       "dateIso": "2026-05-07",
       "status": "Scheduled",
       "score": ""
-    },
-    {
-      "home": "Манчестер Юнайтед",
-      "away": "Атлетик Більбао",
-      "league": "Ліга Європи (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 7 травня",
-      "dateIso": "2026-05-07",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Реал Бетіс",
-      "away": "Фіорентина",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "22:00",
-      "date": "четвер, 7 травня",
-      "dateIso": "2026-05-07",
-      "status": "Scheduled",
-      "score": ""
->>>>>>> 46a764e ( Fix Flashscore dedupe and stabilize match parsing)
     }
   ],
   "Збірна України": [],
