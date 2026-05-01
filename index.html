@@ -617,13 +617,18 @@
             }
 
 
-            function getStandingsTeamLabel(teamName) {
+            function normalizeMatchTeamName(teamName) {
                 const cleaned = String(teamName || "")
                     .replace(/^«+/, "")
                     .replace(/»+$/, "")
                     .replace(/^"+/, "")
                     .replace(/"+$/, "")
                     .trim();
+
+                const aliases = {
+                    "Ноттінгем": "Ноттінгем Форест",
+                    "Nottingham": "Nottingham Forest"
+                };
 
                 if (cleaned === "Епіцентр Кам'янець-Подільський") {
                     return "Епіцентр";
@@ -634,7 +639,11 @@
                     return duplicateMatch[1];
                 }
 
-                return cleaned;
+                return aliases[cleaned] || cleaned;
+            }
+
+            function getStandingsTeamLabel(teamName) {
+                return normalizeMatchTeamName(teamName);
             }
 
             function renderUplStandings(standings) {
@@ -712,7 +721,7 @@
                     const standings = data["Таблиця УПЛ"] || [];
                     let html = "";
 
-                    const allMatches = Object.entries(data)
+                    const matches = Object.entries(data)
                         .filter(([key, value]) => key !== "Таблиця УПЛ" && key !== "Українські клуби в Європі" && Array.isArray(value))
                         .flatMap(([, value]) => value)
                         .sort((a, b) => {
@@ -721,16 +730,49 @@
                             return new Date(aDate) - new Date(bDate);
                         });
 
-                    if (!allMatches.length) {
+                    const dedupeKey = match => [
+                        match?.dateIso || "",
+                        String(match?.league || ""),
+                        normalizeMatchTeamName(match?.home || ""),
+                        normalizeMatchTeamName(match?.away || "")
+                    ].join("|");
+
+                    const byMatchIdentity = new Map();
+
+                    for (const match of matches) {
+                        const key = dedupeKey(match);
+                        const existing = byMatchIdentity.get(key);
+
+                        if (!existing) {
+                            byMatchIdentity.set(key, match);
+                            continue;
+                        }
+
+                        const existingHasScore = Boolean(String(existing?.score || "").trim());
+                        const incomingHasScore = Boolean(String(match?.score || "").trim());
+
+                        if (incomingHasScore && !existingHasScore) {
+                            byMatchIdentity.set(key, match);
+                            continue;
+                        }
+
+                        if (incomingHasScore === existingHasScore && String(match?.score || "").length > String(existing?.score || "").length) {
+                            byMatchIdentity.set(key, match);
+                        }
+                    }
+
+                    const visibleMatches = [...byMatchIdentity.values()];
+
+                    if (!visibleMatches.length) {
                         content.innerHTML = "<div id='error'>❌ Немає даних</div>";
                         return;
                     }
 
                     const todayIso = getKyivTodayIso();
-                    const hasTodayMatches = allMatches.some(m => m.dateIso === todayIso);
+                    const hasTodayMatches = visibleMatches.some(m => m.dateIso === todayIso);
                     const matchesByDate = {};
 
-                    allMatches.forEach(m => {
+                    visibleMatches.forEach(m => {
                         const dateKey = m.dateIso || m.date || "Інша дата";
                         if (!matchesByDate[dateKey]) {
                             matchesByDate[dateKey] = [];

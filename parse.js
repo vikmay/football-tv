@@ -252,13 +252,39 @@ function transliterateLatinToCyrillic(text) {
   return result;
 }
 
+const flashscoreClubAliases = {
+  "psg": "псж",
+  "paris sg": "псж",
+  "paris saint-germain": "псж",
+  "bayern munich": "баварія мюнхен",
+  "fc bayern munchen": "баварія мюнхен",
+  "arsenal": "арсенал",
+  "atletico": "атлетіко",
+  "atlético madrid": "атлетіко",
+  "nottingham": "ноттінгем форест",
+  "nottingham forest": "ноттінгем форест",
+  "aston villa": "астон вілла",
+  "crystal palace": "кристал пелес",
+  "braga": "брага",
+  "freiburg": "фрайбург",
+  "strasbourg": "страсбург",
+  "rayo vallecano": "райо вальєкано",
+  "fiorentina": "фіорентина",
+  "real betis": "реал бетіс",
+  "athletic bilbao": "атлетик більбао",
+  "manchester united": "манчестер юнайтед"
+};
+
 function normalizeClubLookupName(name) {
   const cleaned = cleanExtractedText(String(name || ""))
     .replace(/\s+/g, " ")
     .replace(/^[«"]+|[»"]+$/g, "")
     .trim();
 
-  return transliterateLatinToCyrillic(cleaned);
+  const lowered = cleaned.toLowerCase();
+  const transliterated = transliterateLatinToCyrillic(cleaned);
+
+  return flashscoreClubAliases[lowered] || flashscoreClubAliases[transliterated] || transliterated;
 }
 
 const extraCompetitionConfigs = [
@@ -702,34 +728,23 @@ function dedupeEvents(events) {
     [
       event?.dateEvent || "",
       String(event?.strTime || ""),
-      String(event?.league || "")
+      String(event?.league || ""),
+      normalizeClubLookupName(event?.strHomeTeam || ""),
+      normalizeClubLookupName(event?.strAwayTeam || "")
     ].join("|");
 
   const getTextScore = event =>
     String(event?.strHomeTeam || "").length + String(event?.strAwayTeam || "").length;
 
-  const getNormalizedLabel = event =>
-    `${normalizeClubLookupName(event?.strHomeTeam || "")} ${normalizeClubLookupName(event?.strAwayTeam || "")}`.trim();
+  const getFinishedScore = event =>
+    event?.strStatus === "Match Finished" || (event?.intHomeScore !== null && event?.intHomeScore !== undefined && event?.intAwayScore !== null && event?.intAwayScore !== undefined)
+      ? 1000
+      : 0;
 
-  const getPairSignature = event => {
-    const home = normalizeClubLookupName(event?.strHomeTeam || "");
-    const away = normalizeClubLookupName(event?.strAwayTeam || "");
-    return [home, away].sort((a, b) => a.localeCompare(b, "uk")).join("|");
-  };
-
-  const isObviousTruncation = (candidate, other) => {
-    const candidateLabel = getNormalizedLabel(candidate);
-    const otherLabel = getNormalizedLabel(other);
-
-    if (!candidateLabel || !otherLabel || candidateLabel === otherLabel) {
-      return false;
-    }
-
-    return (
-      candidateLabel.length < otherLabel.length &&
-      otherLabel.includes(candidateLabel)
-    );
-  };
+  const getQualityScore = event =>
+    getFinishedScore(event) +
+    getTextScore(event) +
+    (String(event?.idEvent || "").length / 1000);
 
   const groups = new Map();
 
@@ -743,44 +758,15 @@ function dedupeEvents(events) {
   const result = [];
 
   for (const bucket of groups.values()) {
-    const bySignature = new Map();
-
-    for (const event of bucket) {
-      const signature = getPairSignature(event);
-      const existing = bySignature.get(signature);
-
-      if (!existing) {
-        bySignature.set(signature, event);
-        continue;
-      }
-
-      const existingScore = getTextScore(existing);
-      const incomingScore = getTextScore(event);
-
-      if (incomingScore > existingScore) {
-        bySignature.set(signature, event);
-        continue;
-      }
-
-      if (incomingScore === existingScore && String(event?.idEvent || "").length > String(existing?.idEvent || "").length) {
-        bySignature.set(signature, event);
-      }
-    }
-
-    const representatives = [...bySignature.values()].filter(candidate =>
-      !bucket.some(other => other !== candidate && isObviousTruncation(candidate, other))
-    );
-
-    representatives.sort((a, b) => {
-      const scoreA = getTextScore(a);
-      const scoreB = getTextScore(b);
-      if (scoreA !== scoreB) {
-        return scoreB - scoreA;
+    const sortedBucket = [...bucket].sort((a, b) => {
+      const qualityDiff = getQualityScore(b) - getQualityScore(a);
+      if (qualityDiff !== 0) {
+        return qualityDiff;
       }
       return String(b?.idEvent || "").length - String(a?.idEvent || "").length;
     });
 
-    result.push(representatives[0] || bucket[0]);
+    result.push(sortedBucket[0]);
   }
 
   return result;
@@ -958,55 +944,15 @@ function makeFallbackEvent({
 }
 
 function getChampionsLeagueFallbackEvents() {
-  const knownEvents = [
-    makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-28-paris-sg-bayern-munich",
-      dateEvent: "2026-04-28",
-      strTime: "22:00:00",
-      strHomeTeam: "Paris SG",
-      strAwayTeam: "Bayern Munich",
-      intRound: 150,
-      isLocalTime: true
-    }),
-    makeFallbackEvent({
-      idEvent: "ucl-fallback-2026-04-29-arsenal-barcelona",
-      dateEvent: "2026-04-29",
-      strTime: "22:00:00",
-      strStatus: "Scheduled",
-      strHomeTeam: "Arsenal",
-      strAwayTeam: "Barcelona",
-      intRound: 150,
-      isLocalTime: true
-    })
-  ];
+  return [];
+}
 
-  return knownEvents.filter(event => isDateWithinWindow(event.dateEvent));
+function getEuropaLeagueFallbackEvents() {
+  return [];
 }
 
 function getConferenceLeagueFallbackEvents() {
-  const knownEvents = [
-    makeFallbackEvent({
-      idEvent: "conf-fallback-2026-04-16-az-alkmaar-shakhtar",
-      dateEvent: "2026-04-16",
-      strHomeTeam: "AZ Alkmaar",
-      strAwayTeam: "Shakhtar Donetsk",
-      intHomeScore: 2,
-      intAwayScore: 2
-    }),
-    makeFallbackEvent({
-      idEvent: "conf-fallback-2026-04-30-crystal-palace-shakhtar",
-      dateEvent: "2026-04-30",
-      strTime: "22:00:00",
-      strStatus: "Live",
-      strHomeTeam: "Crystal Palace",
-      strAwayTeam: "Shakhtar Donetsk",
-      intHomeScore: null,
-      intAwayScore: null,
-      isLocalTime: true
-    })
-  ];
-
-  return knownEvents.filter(event => isDateWithinWindow(event.dateEvent));
+  return [];
 }
 
 function getCupFallbackEvents() {
@@ -1783,33 +1729,39 @@ async function fetchExtraMatches() {
       shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
     );
 
-    const mergedRelevantEvents = dedupeEvents([
+    const mergedRelevantEvents = [
       ...flashscoreRelevantEvents,
       ...apiRelevantEvents
-    ])
+    ]
       .filter(event => isDateWithinWindow(event.dateEvent))
       .filter(event => !(config.type === "club" && String(event.strTime || "").startsWith("00:00")))
-      .sort(sortByDateTimeAsc);
+      .sort((a, b) => sortByDateTimeAsc(a, b));
 
-    if (!mergedRelevantEvents.length) {
+    const fallbackRelevantEvents =
+      config.name === "Ліга Європи"
+        ? getEuropaLeagueFallbackEvents()
+        : config.name === "Ліга конференцій"
+          ? getConferenceLeagueFallbackEvents()
+          : [];
+
+    const chosenEvents = fallbackRelevantEvents.length > 0 ? fallbackRelevantEvents : mergedRelevantEvents;
+
+    if (!chosenEvents.length) {
       continue;
     }
 
-    console.log(`✅ ${config.name}: found ${mergedRelevantEvents.length} matches in ±7 days window`);
+    console.log(`✅ ${config.name}: found ${chosenEvents.length} matches in ±7 days window`);
 
-    const mappedMatches = mergedRelevantEvents.map(event =>
+    const mappedMatches = chosenEvents.map(event =>
       mapEventToMatch(event, config.name, getUplTeamName)
     );
 
-    const dedupedMappedMatches = mergeCurrentAndPreviousMatches(mappedMatches, []).filter(event =>
-      !(config.type === "club" && String(event.time || "").startsWith("00:00"))
-    );
-    leagueMatches[config.name] = dedupedMappedMatches;
+    leagueMatches[config.name] = mappedMatches;
 
     if (config.type === "club") {
-      clubMatches.push(...dedupedMappedMatches);
+      clubMatches.push(...mappedMatches);
     } else if (config.type === "national") {
-      nationalMatches.push(...dedupedMappedMatches);
+      nationalMatches.push(...mappedMatches);
     }
   }
 
