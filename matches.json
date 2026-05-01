@@ -94,6 +94,16 @@
       "home": "Полтава",
       "away": "Кривбас",
       "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 1 травня",
+      "dateIso": "2026-05-01",
+      "status": "Match Finished",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Полтава",
+      "away": "Кривбас",
+      "league": "УПЛ",
       "time": "15:30",
       "date": "Сьогодні, 1 травня",
       "dateIso": "2026-05-01",
@@ -255,8 +265,70 @@
       "score": "0 - 1"
     }
   ],
-  "Ліга Європи": [],
-  "Ліга конференцій": [],
+  "Ліга Європи": [
+    {
+      "home": "Braga",
+      "away": "Freiburg",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "Ноттінгем",
+      "away": "Астон Вілла",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Астон Вілла",
+      "away": "Ноттінгем Форест",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Not Started",
+      "score": ""
+    },
+    {
+      "home": "Астон Вілла",
+      "away": "Ноттінгем",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Scheduled",
+      "score": ""
+    }
+  ],
+  "Ліга конференцій": [
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Кристал Пелес",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Match Finished",
+      "score": "1 - 3"
+    },
+    {
+      "home": "Кристал Пелес",
+      "away": "Шахтар Донецьк",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Scheduled",
+      "score": ""
+    }
+  ],
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [],
   "Чемпіонат світу": [],
@@ -273,9 +345,49 @@
       "score": "1 - 3"
     },
     {
+      "home": "Braga",
+      "away": "Freiburg",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "Ноттінгем",
+      "away": "Астон Вілла",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 30 квітня",
+      "dateIso": "2026-04-30",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
       "home": "Кристал Пелес",
       "away": "Шахтар Донецьк",
       "league": "Ліга конференцій (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Астон Вілла",
+      "away": "Ноттінгем Форест",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 7 травня",
+      "dateIso": "2026-05-07",
+      "status": "Not Started",
+      "score": ""
+    },
+    {
+      "home": "Астон Вілла",
+      "away": "Ноттінгем",
+      "league": "Ліга Європи (Півфінал)",
       "time": "22:00",
       "date": "четвер, 7 травня",
       "dateIso": "2026-05-07",
@@ -352,6 +464,19 @@
     },
     {
       "position": 6,
+      "team": "Кривбас Кривий Ріг",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 26,
+      "wins": 12,
+      "draws": 7,
+      "losses": 7,
+      "goalsFor": 44,
+      "goalsAgainst": 38,
+      "goalDifference": 6,
+      "points": 43
+    },
+    {
+      "position": 7,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
       "played": 25,
@@ -361,19 +486,6 @@
       "goalsFor": 24,
       "goalsAgainst": 21,
       "goalDifference": 3,
-      "points": 40
-    },
-    {
-      "position": 7,
-      "team": "Кривбас Кривий Ріг",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 25,
-      "wins": 11,
-      "draws": 7,
-      "losses": 7,
-      "goalsFor": 43,
-      "goalsAgainst": 38,
-      "goalDifference": 5,
       "points": 40
     },
     {
@@ -484,13 +596,13 @@
       "position": 16,
       "team": "Полтава",
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
-      "played": 25,
+      "played": 26,
       "wins": 2,
       "draws": 5,
-      "losses": 18,
+      "losses": 19,
       "goalsFor": 20,
-      "goalsAgainst": 63,
-      "goalDifference": -43,
+      "goalsAgainst": 64,
+      "goalDifference": -44,
       "points": 11
     }
   ]
