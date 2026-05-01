@@ -171,7 +171,9 @@ const uplTeamNames = {
   "Kudrivka": "Кудрівка",
   "FC Kudrivka": "Кудрівка",
   "Poltava": "Полтава",
-  "SC Poltava": "СК Полтава"
+  "SC Poltava": "СК Полтава",
+  "Aston Villa": "Астон Вілла",
+  "Nottingham Forest": "Ноттінгем Форест"
 };
 
 function getUplTeamName(englishName) {
@@ -200,11 +202,63 @@ const ukrainianClubAliases = new Set(
   ]
 );
 
+function transliterateLatinToCyrillic(text) {
+  const rules = [
+    ["shch", "щ"],
+    ["sch", "щ"],
+    ["yo", "йо"],
+    ["yu", "ю"],
+    ["ya", "я"],
+    ["zh", "ж"],
+    ["kh", "х"],
+    ["ts", "ц"],
+    ["ch", "ч"],
+    ["sh", "ш"],
+    ["ie", "є"],
+    ["yi", "ї"],
+    ["i", "і"],
+    ["g", "г"],
+    ["a", "а"],
+    ["b", "б"],
+    ["v", "в"],
+    ["d", "д"],
+    ["e", "е"],
+    ["z", "з"],
+    ["y", "и"],
+    ["k", "к"],
+    ["l", "л"],
+    ["m", "м"],
+    ["n", "н"],
+    ["o", "о"],
+    ["p", "п"],
+    ["r", "р"],
+    ["s", "с"],
+    ["t", "т"],
+    ["u", "у"],
+    ["f", "ф"],
+    ["c", "к"],
+    ["j", "дж"],
+    ["w", "в"],
+    ["q", "к"],
+    ["x", "кс"]
+  ];
+
+  let result = String(text || "").toLowerCase();
+
+  for (const [latin, cyrillic] of rules) {
+    result = result.replaceAll(latin, cyrillic);
+  }
+
+  return result;
+}
+
 function normalizeClubLookupName(name) {
-  return cleanExtractedText(String(name || ""))
+  const cleaned = cleanExtractedText(String(name || ""))
     .replace(/\s+/g, " ")
     .replace(/^[«"]+|[»"]+$/g, "")
     .trim();
+
+  return transliterateLatinToCyrillic(cleaned);
 }
 
 const extraCompetitionConfigs = [
@@ -480,49 +534,40 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
   const byIdentity = new Map();
 
   const getStableKey = match => {
-    const home = cleanExtractedText(match?.home || "");
-    const away = cleanExtractedText(match?.away || "");
-    const pairKey = [home, away].sort((a, b) => a.localeCompare(b, "uk")).join("|");
-    return `${match?.dateIso || ""}|${pairKey}|${match?.league || ""}`;
+    const home = normalizeClubLookupName(match?.home || "");
+    const away = normalizeClubLookupName(match?.away || "");
+    const league = String(match?.league || "");
+    const time = String(match?.time || "");
+    return `${match?.dateIso || ""}|${time}|${league}|${home}|${away}`;
   };
 
-  for (const match of previous) {
-    if (!isActiveOrFinishedMatch(match)) {
-      continue;
-    }
+  const getScore = match => {
+    const hasScore = String(match?.score || "").trim() !== "";
+    const isFinished = match?.status === "Match Finished" || hasScore;
+    const nameScore = String(match?.home || "").length + String(match?.away || "").length;
+    return (isFinished ? 1000 : 0) + nameScore + (hasScore ? 100 : 0);
+  };
 
-    const key = getStableKey(match);
-    byIdentity.set(key, match);
-  }
-
-  for (const match of current) {
+  for (const match of [...previous, ...current]) {
     const key = getStableKey(match);
     const existing = byIdentity.get(key);
 
-    if (existing) {
-      const existingActive = isActiveOrFinishedMatch(existing);
-      const incomingActive = isActiveOrFinishedMatch(match);
-      const incomingIsScheduled = match.status === "Scheduled";
-      const existingLooksToday = typeof existing.dateIso === "string" && existing.dateIso <= getKyivTodayIso();
-
-      if (existingActive && !incomingActive) {
-        continue;
-      }
-
-      if (existingActive && incomingIsScheduled) {
-        continue;
-      }
-
-      if (existingActive && existingLooksToday && match.dateIso && existing.dateIso !== match.dateIso) {
-        continue;
-      }
-
-      if (!existingActive && incomingIsScheduled && existingLooksToday) {
-        continue;
-      }
+    if (!existing) {
+      byIdentity.set(key, match);
+      continue;
     }
 
-    byIdentity.set(key, match);
+    const existingScore = getScore(existing);
+    const incomingScore = getScore(match);
+
+    if (incomingScore > existingScore) {
+      byIdentity.set(key, match);
+      continue;
+    }
+
+    if (incomingScore === existingScore && String(match?.idEvent || "").length > String(existing?.idEvent || "").length) {
+      byIdentity.set(key, match);
+    }
   }
 
   return [...byIdentity.values()].sort((a, b) => {
@@ -530,6 +575,106 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
     return new Date(aDate) - new Date(bDate);
   });
+}
+
+function dedupeMatchesByIdentity(matches, excludedMatches = []) {
+  const excludeKeys = new Set(
+    (Array.isArray(excludedMatches) ? excludedMatches : []).map(match => {
+      const home = normalizeClubLookupName(match?.home || "");
+      const league = String(match?.league || "");
+      const time = String(match?.time || "");
+      return `${match?.dateIso || ""}|${time}|${league}|${home}`;
+    })
+  );
+
+  return (Array.isArray(matches) ? matches : []).filter(match => {
+    const home = normalizeClubLookupName(match?.home || "");
+    const league = String(match?.league || "");
+    const time = String(match?.time || "");
+    return !excludeKeys.has(`${match?.dateIso || ""}|${time}|${league}|${home}`);
+  });
+}
+
+function dedupeScheduleSections(matches) {
+  const sectionOrder = [
+    "УПЛ",
+    "Ліга чемпіонів",
+    "Кубок України",
+    "Ліга Європи",
+    "Ліга конференцій",
+    "Суперкубок УЄФА",
+    "Ліга націй УЄФА",
+    "Чемпіонат світу",
+    "Чемпіонат Європи",
+    "Українські клуби в Європі",
+    "Збірна України",
+    "Таблиця УПЛ"
+  ];
+
+  const getTextScore = item =>
+    String(item?.home || "").length + String(item?.away || "").length;
+
+  const result = {};
+
+  for (const sectionName of sectionOrder) {
+    const items = Array.isArray(matches?.[sectionName]) ? matches[sectionName] : [];
+
+    if (sectionName === "Таблиця УПЛ") {
+      const seenRows = new Set();
+      result[sectionName] = items.filter(item => {
+        if (!item || typeof item !== "object") {
+          return false;
+        }
+
+        const rowKey = `table|${item.position || ""}|${normalizeClubLookupName(item.team || "")}`;
+        if (seenRows.has(rowKey)) {
+          return false;
+        }
+        seenRows.add(rowKey);
+        return true;
+      });
+      continue;
+    }
+
+    const bySlot = new Map();
+
+    for (const item of items) {
+      if (!item || typeof item !== "object") {
+        continue;
+      }
+
+      const slotKey = `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
+      const existing = bySlot.get(slotKey);
+
+      if (!existing) {
+        bySlot.set(slotKey, item);
+        continue;
+      }
+
+      const existingScore = getTextScore(existing);
+      const incomingScore = getTextScore(item);
+
+      if (incomingScore > existingScore) {
+        bySlot.set(slotKey, item);
+        continue;
+      }
+
+      if (incomingScore === existingScore && String(item?.idEvent || "").length > String(existing?.idEvent || "").length) {
+        bySlot.set(slotKey, item);
+      }
+    }
+
+    result[sectionName] = [...bySlot.values()].sort(sortByDateTimeAsc);
+  }
+
+  for (const [sectionName, items] of Object.entries(matches || {})) {
+    if (sectionOrder.includes(sectionName)) {
+      continue;
+    }
+    result[sectionName] = Array.isArray(items) ? items : [];
+  }
+
+  return result;
 }
 
 function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
@@ -553,21 +698,92 @@ function sortByDateTimeAsc(a, b) {
 }
 
 function dedupeEvents(events) {
-  const getPairKey = event => {
-    const home = cleanExtractedText(event?.strHomeTeam || "");
-    const away = cleanExtractedText(event?.strAwayTeam || "");
+  const getSlotKey = event =>
+    [
+      event?.dateEvent || "",
+      String(event?.strTime || ""),
+      String(event?.league || "")
+    ].join("|");
+
+  const getTextScore = event =>
+    String(event?.strHomeTeam || "").length + String(event?.strAwayTeam || "").length;
+
+  const getNormalizedLabel = event =>
+    `${normalizeClubLookupName(event?.strHomeTeam || "")} ${normalizeClubLookupName(event?.strAwayTeam || "")}`.trim();
+
+  const getPairSignature = event => {
+    const home = normalizeClubLookupName(event?.strHomeTeam || "");
+    const away = normalizeClubLookupName(event?.strAwayTeam || "");
     return [home, away].sort((a, b) => a.localeCompare(b, "uk")).join("|");
   };
 
-  return events.filter((event, index, arr) =>
-    arr.findIndex(item =>
-      (item.idEvent && event.idEvent && item.idEvent === event.idEvent) ||
-      (
-        item.dateEvent === event.dateEvent &&
-        getPairKey(item) === getPairKey(event)
-      )
-    ) === index
-  );
+  const isObviousTruncation = (candidate, other) => {
+    const candidateLabel = getNormalizedLabel(candidate);
+    const otherLabel = getNormalizedLabel(other);
+
+    if (!candidateLabel || !otherLabel || candidateLabel === otherLabel) {
+      return false;
+    }
+
+    return (
+      candidateLabel.length < otherLabel.length &&
+      otherLabel.includes(candidateLabel)
+    );
+  };
+
+  const groups = new Map();
+
+  for (const event of Array.isArray(events) ? events : []) {
+    const key = getSlotKey(event);
+    const bucket = groups.get(key) || [];
+    bucket.push(event);
+    groups.set(key, bucket);
+  }
+
+  const result = [];
+
+  for (const bucket of groups.values()) {
+    const bySignature = new Map();
+
+    for (const event of bucket) {
+      const signature = getPairSignature(event);
+      const existing = bySignature.get(signature);
+
+      if (!existing) {
+        bySignature.set(signature, event);
+        continue;
+      }
+
+      const existingScore = getTextScore(existing);
+      const incomingScore = getTextScore(event);
+
+      if (incomingScore > existingScore) {
+        bySignature.set(signature, event);
+        continue;
+      }
+
+      if (incomingScore === existingScore && String(event?.idEvent || "").length > String(existing?.idEvent || "").length) {
+        bySignature.set(signature, event);
+      }
+    }
+
+    const representatives = [...bySignature.values()].filter(candidate =>
+      !bucket.some(other => other !== candidate && isObviousTruncation(candidate, other))
+    );
+
+    representatives.sort((a, b) => {
+      const scoreA = getTextScore(a);
+      const scoreB = getTextScore(b);
+      if (scoreA !== scoreB) {
+        return scoreB - scoreA;
+      }
+      return String(b?.idEvent || "").length - String(a?.idEvent || "").length;
+    });
+
+    result.push(representatives[0] || bucket[0]);
+  }
+
+  return result;
 }
 
 function mergeEventMetadata(baseEvents, metadataEvents) {
@@ -1026,6 +1242,17 @@ function parseFlashscoreFixtureEvents(html) {
   const events = [];
   const chunks = text.split(/(?=\b\d{2}\.\d{2}\.)/g).map(chunk => chunk.trim()).filter(Boolean);
 
+  const isNoiseText = value =>
+    /Flashscore\.ua|Live результати|УПЛ 2026|Ліга чемпіонів|Ліга Європи|Ліга конференцій|більше спорту|Правила користування|Політика конфіденційності|Copyright|Gambling Therapy|Встановити конфіденційність|18\+|Показати більше/i.test(value);
+
+  const getQualityScore = value => {
+    const normalized = cleanExtractedText(value);
+    const lengthScore = normalized.length;
+    const wordScore = normalized.split(/\s+/).filter(Boolean).length * 8;
+    const cyrillicScore = /[А-Яа-яІіЇїЄєҐґ]/.test(normalized) ? 15 : 0;
+    return lengthScore + wordScore + cyrillicScore;
+  };
+
   for (const chunk of chunks) {
     const dateMatch = chunk.match(/^(\d{2})\.(\d{2})\.\s*(.+)$/);
     if (!dateMatch) {
@@ -1045,7 +1272,7 @@ function parseFlashscoreFixtureEvents(html) {
       .filter(Boolean);
 
     for (const fragment of fragments) {
-      if (/^Показати більше/i.test(fragment)) {
+      if (isNoiseText(fragment)) {
         continue;
       }
 
@@ -1057,7 +1284,7 @@ function parseFlashscoreFixtureEvents(html) {
       const homeTeam = cleanExtractedText(match[1]);
       const awayTeam = cleanExtractedText(match[2]);
 
-      if (!homeTeam || !awayTeam) {
+      if (!homeTeam || !awayTeam || isNoiseText(homeTeam) || isNoiseText(awayTeam)) {
         continue;
       }
 
@@ -1070,18 +1297,26 @@ function parseFlashscoreFixtureEvents(html) {
         strAwayTeam: awayTeam,
         intHomeScore: null,
         intAwayScore: null,
-        isLocalTime: true
+        isLocalTime: true,
+        __quality: getQualityScore(homeTeam) + getQualityScore(awayTeam)
       });
     }
   }
 
-  return dedupeEvents(events).sort(sortByDateTimeAsc);
+  const deduped = dedupeEvents(events)
+    .sort((a, b) => (b.__quality || 0) - (a.__quality || 0) || sortByDateTimeAsc(a, b))
+    .map(({ __quality, ...event }) => event);
+
+  return deduped;
 }
 
 function parseFlashscoreDrawPageEvents(html) {
   const text = htmlToPlainText(html).replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
   const events = [];
   const matches = [...text.matchAll(/(\d{2})\.(\d{2})\.\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\),\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\)/g)];
+
+  const isNoiseText = value =>
+    /Flashscore\.ua|Live результати|УПЛ 2026|Ліга чемпіонів|Ліга Європи|Ліга конференцій|більше спорту|Правила користування|Політика конфіденційності|Copyright|Gambling Therapy|Встановити конфіденційність|18\+|Показати більше/i.test(value);
 
   for (const match of matches) {
     const [, day, month, homeRaw, awayRaw] = match;
@@ -1094,7 +1329,7 @@ function parseFlashscoreDrawPageEvents(html) {
     const homeTeam = cleanExtractedText(homeRaw);
     const awayTeam = cleanExtractedText(awayRaw);
 
-    if (!homeTeam || !awayTeam) {
+    if (!homeTeam || !awayTeam || isNoiseText(homeTeam) || isNoiseText(awayTeam)) {
       continue;
     }
 
@@ -1522,14 +1757,21 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
 async function fetchExtraMatches() {
   const clubMatches = [];
   const nationalMatches = [];
+  const leagueMatches = {};
 
   for (const config of extraCompetitionConfigs) {
     const flashscoreRelevantEvents = [];
     const flashscoreUrls = Array.isArray(config.flashscoreUrls) ? config.flashscoreUrls : [];
+    const shouldUseAllEvents = config.type === "club" && (config.name === "Ліга чемпіонів" || config.name === "Ліга Європи" || config.name === "Ліга конференцій" || config.name === "Суперкубок УЄФА");
+    const shouldShowAllTeamsFromQuarterfinal = event =>
+      shouldUseAllEvents &&
+      Number(event?.intRound) >= 125;
 
     for (const url of flashscoreUrls) {
       const flashscoreEvents = await fetchFlashscoreCompetitionEvents(url, config.name);
-      const relevantEvents = flashscoreEvents.filter(event => isExtraCompetitionMatch(event, config.type));
+      const relevantEvents = flashscoreEvents.filter(event =>
+        shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+      );
 
       if (relevantEvents.length) {
         flashscoreRelevantEvents.push(...relevantEvents);
@@ -1537,26 +1779,33 @@ async function fetchExtraMatches() {
     }
 
     const apiEvents = await fetchCompetitionEvents(config.id, config.name);
-    const apiRelevantEvents = apiEvents.filter(event => isExtraCompetitionMatch(event, config.type));
+    const apiRelevantEvents = apiEvents.filter(event =>
+      shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+    );
 
     const mergedRelevantEvents = dedupeEvents([
       ...flashscoreRelevantEvents,
       ...apiRelevantEvents
     ])
       .filter(event => isDateWithinWindow(event.dateEvent))
+      .filter(event => !(config.type === "club" && String(event.strTime || "").startsWith("00:00")))
       .sort(sortByDateTimeAsc);
 
     if (!mergedRelevantEvents.length) {
       continue;
     }
 
-    console.log(`✅ ${config.name}: found ${mergedRelevantEvents.length} Ukrainian-related matches in ±7 days window`);
+    console.log(`✅ ${config.name}: found ${mergedRelevantEvents.length} matches in ±7 days window`);
 
     const mappedMatches = mergedRelevantEvents.map(event =>
       mapEventToMatch(event, config.name, getUplTeamName)
     );
 
-    const dedupedMappedMatches = mergeCurrentAndPreviousMatches(mappedMatches, []);
+    const dedupedMappedMatches = mergeCurrentAndPreviousMatches(mappedMatches, []).filter(event =>
+      !(config.type === "club" && String(event.time || "").startsWith("00:00"))
+    );
+    leagueMatches[config.name] = dedupedMappedMatches;
+
     if (config.type === "club") {
       clubMatches.push(...dedupedMappedMatches);
     } else if (config.type === "national") {
@@ -1564,8 +1813,7 @@ async function fetchExtraMatches() {
     }
   }
 
-
-  return { clubMatches, nationalMatches };
+  return { clubMatches, nationalMatches, leagueMatches };
 }
 
 async function main() {
@@ -1624,6 +1872,12 @@ async function main() {
     );
   }
 
+  matches["Ліга Європи"] = (extraMatches.leagueMatches?.["Ліга Європи"] || []).slice();
+
+  matches["Ліга конференцій"] = (extraMatches.leagueMatches?.["Ліга конференцій"] || []).slice();
+
+  matches["Суперкубок УЄФА"] = (extraMatches.leagueMatches?.["Суперкубок УЄФА"] || []).slice();
+
   matches["Українські клуби в Європі"] = mergeCurrentAndPreviousMatches(
     extraMatches.clubMatches,
     existingData["Українські клуби в Європі"] || []
@@ -1634,7 +1888,8 @@ async function main() {
     existingData["Збірна України"] || []
   );
 
-  fs.writeFileSync("matches.json", JSON.stringify(matches, null, 2));
+  const dedupedMatches = dedupeScheduleSections(matches);
+  fs.writeFileSync("matches.json", JSON.stringify(dedupedMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
     ttlMinutes: getRefreshTtlMinutes(matches),

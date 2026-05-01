@@ -713,7 +713,7 @@
                     let html = "";
 
                     const allMatches = Object.entries(data)
-                        .filter(([key, value]) => key !== "Таблиця УПЛ" && Array.isArray(value))
+                        .filter(([key, value]) => key !== "Таблиця УПЛ" && key !== "Українські клуби в Європі" && Array.isArray(value))
                         .flatMap(([, value]) => value)
                         .sort((a, b) => {
                             const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
@@ -729,6 +729,7 @@
                     const todayIso = getKyivTodayIso();
                     const hasTodayMatches = allMatches.some(m => m.dateIso === todayIso);
                     const matchesByDate = {};
+
                     allMatches.forEach(m => {
                         const dateKey = m.dateIso || m.date || "Інша дата";
                         if (!matchesByDate[dateKey]) {
@@ -778,7 +779,6 @@
                         todayElement.scrollIntoView({ behavior: "smooth", block: "start" });
                         hasScrolledToToday = true;
                     }
-
                 } catch (err) {
                     console.log(err);
                     content.innerHTML =
