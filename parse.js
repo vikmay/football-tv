@@ -1043,6 +1043,17 @@ function isDateWithinWindow(dateString) {
   return dateString >= minDateIso && dateString <= maxDateIso;
 }
 
+function filterMatchesWithinWindow(matches) {
+  return Object.fromEntries(
+    Object.entries(matches || {}).map(([sectionName, items]) => [
+      sectionName,
+      Array.isArray(items)
+        ? items.filter(item => !item?.dateIso || isDateWithinWindow(item.dateIso))
+        : []
+    ])
+  );
+}
+
 function parseDmyToIso(dateText) {
   const [day, month, year] = dateText.split("/");
   return `${year}-${month}-${day}`;
@@ -1867,7 +1878,8 @@ async function main() {
   );
 
   const dedupedMatches = dedupeScheduleSections(matches);
-  fs.writeFileSync("matches.json", JSON.stringify(dedupedMatches, null, 2));
+  const finalMatches = filterMatchesWithinWindow(dedupedMatches);
+  fs.writeFileSync("matches.json", JSON.stringify(finalMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
     ttlMinutes: getRefreshTtlMinutes(matches),
