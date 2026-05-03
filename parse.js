@@ -567,11 +567,37 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     return `${match?.dateIso || ""}|${time}|${league}|${home}|${away}`;
   };
 
-  const getScore = match => {
+  const getStatusRank = match => {
+    const status = String(match?.status || "");
     const hasScore = String(match?.score || "").trim() !== "";
-    const isFinished = match?.status === "Match Finished" || hasScore;
+
+    if (status === "Match Finished" && hasScore) {
+      return 3000;
+    }
+
+    if (status === "Match Finished") {
+      return 2500;
+    }
+
+    if (status === "Live" || status === "In Progress" || status === "1st Half" || status === "2nd Half") {
+      return 2000;
+    }
+
+    if (hasScore) {
+      return 1500;
+    }
+
+    if (status === "Scheduled" || status === "Not Started") {
+      return 1000;
+    }
+
+    return 0;
+  };
+
+  const getScore = match => {
     const nameScore = String(match?.home || "").length + String(match?.away || "").length;
-    return (isFinished ? 1000 : 0) + nameScore + (hasScore ? 100 : 0);
+    const idScore = String(match?.idEvent || "").length / 1000;
+    return getStatusRank(match) + nameScore + idScore;
   };
 
   for (const match of [...previous, ...current]) {
