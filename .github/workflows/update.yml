@@ -1,40 +1,41 @@
 name: Update matches
 
 on:
-  schedule:
-    - cron: "5 * * * *"
-  workflow_dispatch:
+    schedule:
+        - cron: '5 * * * *'
+    workflow_dispatch:
 
 permissions:
-  contents: write
+    contents: write
 
 concurrency:
-  group: update-matches
-  cancel-in-progress: false
+    group: update-matches
+    cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v5
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  check-latest: true
 
-      - name: Generate matches
-        run: node parse.js
+            - name: Generate matches
+              run: node parse.js
 
-      - name: Commit changes
-        run: |
-          if git diff --quiet -- matches.json matches.meta.json; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add matches.json matches.meta.json
-          git commit -m "update matches"
-          git push
+            - name: Commit changes
+              run: |
+                  if git diff --quiet -- matches.json matches.meta.json; then
+                    echo "No changes to commit"
+                    exit 0
+                  fi
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
+                  git add matches.json matches.meta.json
+                  git commit -m "update matches"
+                  git push
