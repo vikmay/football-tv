@@ -269,19 +269,49 @@
       "dateIso": "2026-05-12",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Рух Львів",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ЛНЗ Черкаси",
+      "away": "Полтава",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Колос Ковалівка",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [
-    {
-      "home": "ПСЖ",
-      "away": "Баварія Мюнхен",
-      "league": "Ліга чемпіонів (Півфінал)",
-      "time": "22:00",
-      "date": "вівторок, 28 квітня",
-      "dateIso": "2026-04-28",
-      "status": "Match Finished",
-      "score": "5 - 4"
-    },
     {
       "home": "Атлетіко",
       "away": "Арсенал",
@@ -299,8 +329,8 @@
       "time": "22:00",
       "date": "вівторок, 5 травня",
       "dateIso": "2026-05-05",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Баварія Мюнхен",
