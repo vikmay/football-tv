@@ -756,7 +756,20 @@
                             continue;
                         }
 
-                        if (incomingHasScore === existingHasScore && String(match?.score || "").length > String(existing?.score || "").length) {
+                        const existingScore = String(existing?.score || "").trim();
+                        const incomingScore = String(match?.score || "").trim();
+
+                        const existingIsFinished = String(existing?.status || "") === "Match Finished";
+                        const incomingIsFinished = String(match?.status || "") === "Match Finished";
+
+                        // Якщо в обох є score і він різний — заміняємо, але не перезаписуємо finished на non-finished.
+                        if (incomingHasScore && existingHasScore && incomingScore !== existingScore) {
+                            if (existingIsFinished && !incomingIsFinished) {
+                                // existing finished — тримаємо його
+                                continue;
+                            }
+
+                            // або incoming finished, або обидва finished
                             byMatchIdentity.set(key, match);
                         }
                     }
