@@ -510,6 +510,19 @@
     },
     {
       "position": 5,
+      "team": "Колос Ковалівка",
+      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
+      "played": 27,
+      "wins": 12,
+      "draws": 10,
+      "losses": 5,
+      "goalsFor": 28,
+      "goalsAgainst": 21,
+      "goalDifference": 7,
+      "points": 46
+    },
+    {
+      "position": 6,
       "team": "Металіст 1925 Харків",
       "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
       "played": 26,
@@ -520,19 +533,6 @@
       "goalsAgainst": 15,
       "goalDifference": 16,
       "points": 45
-    },
-    {
-      "position": 6,
-      "team": "Колос Ковалівка",
-      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 27,
-      "wins": 11,
-      "draws": 11,
-      "losses": 5,
-      "goalsFor": 27,
-      "goalsAgainst": 21,
-      "goalDifference": 6,
-      "points": 44
     },
     {
       "position": 7,
@@ -618,12 +618,12 @@
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
       "played": 27,
       "wins": 5,
-      "draws": 8,
-      "losses": 14,
+      "draws": 7,
+      "losses": 15,
       "goalsFor": 27,
-      "goalsAgainst": 43,
-      "goalDifference": -16,
-      "points": 23
+      "goalsAgainst": 44,
+      "goalDifference": -17,
+      "points": 22
     },
     {
       "position": 14,
