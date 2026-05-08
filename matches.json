@@ -484,13 +484,13 @@
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 27,
-      "wins": 16,
-      "draws": 5,
+      "wins": 17,
+      "draws": 4,
       "losses": 6,
-      "goalsFor": 45,
+      "goalsFor": 46,
       "goalsAgainst": 17,
-      "goalDifference": 28,
-      "points": 53
+      "goalDifference": 29,
+      "points": 55
     },
     {
       "position": 3,
@@ -654,12 +654,12 @@
       "emblem": "https://upl.ua/glide/uploads/1611/-O3qIDnmY2y78cevXXjO1DazjQACCduO.png?w=40&amp;h=40&amp;fit=contain&amp;s=f9a5041e22f2d5a1fca07de01d7b2660",
       "played": 26,
       "wins": 2,
-      "draws": 8,
-      "losses": 16,
+      "draws": 7,
+      "losses": 17,
       "goalsFor": 18,
-      "goalsAgainst": 49,
-      "goalDifference": -31,
-      "points": 14
+      "goalsAgainst": 50,
+      "goalDifference": -32,
+      "points": 13
     },
     {
       "position": 16,
