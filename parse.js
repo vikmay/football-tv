@@ -609,6 +609,26 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
       continue;
     }
 
+    const existingScoreText = String(existing?.score || "").trim();
+    const incomingScoreText = String(match?.score || "").trim();
+
+    const existingIsFinished = String(existing?.status || "") === "Match Finished";
+    const incomingIsFinished = String(match?.status || "") === "Match Finished";
+
+    // System fix:
+    // якщо обидва матчі finished і score відрізняється — беремо incoming (current),
+    // інакше "0 - 0" може лишатися з кешу.
+    if (
+      existingIsFinished &&
+      incomingIsFinished &&
+      existingScoreText &&
+      incomingScoreText &&
+      existingScoreText !== incomingScoreText
+    ) {
+      byIdentity.set(key, match);
+      continue;
+    }
+
     const existingScore = getScore(existing);
     const incomingScore = getScore(match);
 
