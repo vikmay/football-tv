@@ -171,6 +171,16 @@
       "score": "0 - 0"
     },
     {
+      "home": "Полісся Житомир",
+      "away": "Олександрія",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 8 травня",
+      "dateIso": "2026-05-08",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Кривбас",
       "away": "Карпати Львів",
       "league": "УПЛ",
@@ -471,6 +481,19 @@
     },
     {
       "position": 2,
+      "team": "Полісся Житомир",
+      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
+      "played": 27,
+      "wins": 16,
+      "draws": 5,
+      "losses": 6,
+      "goalsFor": 45,
+      "goalsAgainst": 17,
+      "goalDifference": 28,
+      "points": 53
+    },
+    {
+      "position": 3,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
       "played": 26,
@@ -481,19 +504,6 @@
       "goalsAgainst": 16,
       "goalDifference": 20,
       "points": 53
-    },
-    {
-      "position": 3,
-      "team": "Полісся Житомир",
-      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
-      "played": 26,
-      "wins": 16,
-      "draws": 4,
-      "losses": 6,
-      "goalsFor": 45,
-      "goalsAgainst": 17,
-      "goalDifference": 28,
-      "points": 52
     },
     {
       "position": 4,
@@ -642,14 +652,14 @@
       "position": 15,
       "team": "Олександрія",
       "emblem": "https://upl.ua/glide/uploads/1611/-O3qIDnmY2y78cevXXjO1DazjQACCduO.png?w=40&amp;h=40&amp;fit=contain&amp;s=f9a5041e22f2d5a1fca07de01d7b2660",
-      "played": 25,
+      "played": 26,
       "wins": 2,
-      "draws": 7,
+      "draws": 8,
       "losses": 16,
       "goalsFor": 18,
       "goalsAgainst": 49,
       "goalDifference": -31,
-      "points": 13
+      "points": 14
     },
     {
       "position": 16,
