@@ -154,6 +154,16 @@
       "home": "Кривбас",
       "away": "Карпати Львів",
       "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 8 травня",
+      "dateIso": "2026-05-08",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Кривбас",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
       "time": "13:00",
       "date": "пʼятниця, 8 травня",
       "dateIso": "2026-05-08",
@@ -518,14 +528,14 @@
       "position": 7,
       "team": "Кривбас Кривий Ріг",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 26,
+      "played": 27,
       "wins": 11,
-      "draws": 8,
+      "draws": 9,
       "losses": 7,
       "goalsFor": 46,
       "goalsAgainst": 41,
       "goalDifference": 5,
-      "points": 41
+      "points": 42
     },
     {
       "position": 8,
@@ -544,14 +554,14 @@
       "position": 9,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 26,
+      "played": 27,
       "wins": 9,
-      "draws": 10,
+      "draws": 11,
       "losses": 7,
       "goalsFor": 35,
       "goalsAgainst": 26,
       "goalDifference": 9,
-      "points": 37
+      "points": 38
     },
     {
       "position": 10,
