@@ -775,7 +775,7 @@
                     }
 
                     const currentTodayIso = getKyivTodayIso();
-                    const dateWindowDays = 7;
+                    const dateWindowDays = 8;
                     const todayForWindow = new Date(`${currentTodayIso}T12:00:00Z`);
                     const minDate = new Date(todayForWindow);
                     minDate.setUTCDate(minDate.getUTCDate() - dateWindowDays);

@@ -1052,8 +1052,8 @@ function htmlToPlainText(html) {
 
 function getDateWindow() {
   const todayIso = getKyivTodayIso();
-  const minDateIso = shiftIsoDate(todayIso, -7);
-  const maxDateIso = shiftIsoDate(todayIso, 7);
+  const minDateIso = shiftIsoDate(todayIso, -8);
+  const maxDateIso = shiftIsoDate(todayIso, 8);
 
   return { minDateIso, maxDateIso };
 }
