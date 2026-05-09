@@ -238,7 +238,7 @@
       "date": "Сьогодні, 9 травня",
       "dateIso": "2026-05-09",
       "status": "Match Finished",
-      "score": "1 - 2"
+      "score": "2 - 2"
     },
     {
       "home": "Зоря Луганськ",
@@ -248,7 +248,7 @@
       "date": "Сьогодні, 9 травня",
       "dateIso": "2026-05-09",
       "status": "Match Finished",
-      "score": "0 - 1"
+      "score": "1 - 1"
     },
     {
       "home": "Рух Львів",
@@ -627,19 +627,6 @@
     },
     {
       "position": 4,
-      "team": "Металіст 1925 Харків",
-      "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
-      "played": 27,
-      "wins": 13,
-      "draws": 9,
-      "losses": 5,
-      "goalsFor": 32,
-      "goalsAgainst": 15,
-      "goalDifference": 17,
-      "points": 48
-    },
-    {
-      "position": 5,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
       "played": 27,
@@ -650,6 +637,19 @@
       "goalsAgainst": 33,
       "goalDifference": 26,
       "points": 48
+    },
+    {
+      "position": 5,
+      "team": "Металіст 1925 Харків",
+      "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
+      "played": 27,
+      "wins": 12,
+      "draws": 10,
+      "losses": 5,
+      "goalsFor": 32,
+      "goalsAgainst": 16,
+      "goalDifference": 16,
+      "points": 46
     },
     {
       "position": 6,
@@ -683,12 +683,12 @@
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
       "played": 27,
       "wins": 10,
-      "draws": 8,
-      "losses": 9,
-      "goalsFor": 37,
+      "draws": 9,
+      "losses": 8,
+      "goalsFor": 38,
       "goalsAgainst": 34,
-      "goalDifference": 3,
-      "points": 38
+      "goalDifference": 4,
+      "points": 39
     },
     {
       "position": 9,
@@ -721,13 +721,13 @@
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 27,
-      "wins": 8,
-      "draws": 5,
+      "wins": 7,
+      "draws": 6,
       "losses": 14,
       "goalsFor": 32,
-      "goalsAgainst": 41,
-      "goalDifference": -9,
-      "points": 29
+      "goalsAgainst": 42,
+      "goalDifference": -10,
+      "points": 27
     },
     {
       "position": 12,
@@ -735,12 +735,12 @@
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
       "played": 26,
       "wins": 5,
-      "draws": 9,
-      "losses": 12,
-      "goalsFor": 21,
+      "draws": 10,
+      "losses": 11,
+      "goalsFor": 22,
       "goalsAgainst": 45,
-      "goalDifference": -24,
-      "points": 24
+      "goalDifference": -23,
+      "points": 25
     },
     {
       "position": 13,
