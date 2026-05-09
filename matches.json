@@ -221,6 +221,16 @@
       "score": "0 - 0"
     },
     {
+      "home": "ЛНЗ Черкаси",
+      "away": "Динамо Київ",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 9 травня",
+      "dateIso": "2026-05-09",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Рух Львів",
       "away": "Верес Рівне",
       "league": "УПЛ",
@@ -586,27 +596,27 @@
       "position": 3,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 26,
+      "played": 27,
       "wins": 16,
-      "draws": 5,
+      "draws": 6,
       "losses": 5,
       "goalsFor": 36,
       "goalsAgainst": 16,
       "goalDifference": 20,
-      "points": 53
+      "points": 54
     },
     {
       "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 26,
+      "played": 27,
       "wins": 14,
-      "draws": 5,
+      "draws": 6,
       "losses": 7,
       "goalsFor": 59,
       "goalsAgainst": 33,
       "goalDifference": 26,
-      "points": 47
+      "points": 48
     },
     {
       "position": 5,
