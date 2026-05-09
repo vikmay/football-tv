@@ -238,7 +238,7 @@
       "date": "Сьогодні, 9 травня",
       "dateIso": "2026-05-09",
       "status": "Match Finished",
-      "score": "0 - 1"
+      "score": "1 - 2"
     },
     {
       "home": "Зоря Луганськ",
@@ -724,8 +724,8 @@
       "wins": 8,
       "draws": 5,
       "losses": 14,
-      "goalsFor": 31,
-      "goalsAgainst": 40,
+      "goalsFor": 32,
+      "goalsAgainst": 41,
       "goalDifference": -9,
       "points": 29
     },
@@ -737,8 +737,8 @@
       "wins": 5,
       "draws": 9,
       "losses": 12,
-      "goalsFor": 20,
-      "goalsAgainst": 44,
+      "goalsFor": 21,
+      "goalsAgainst": 45,
       "goalDifference": -24,
       "points": 24
     },
