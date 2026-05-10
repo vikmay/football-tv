@@ -288,7 +288,7 @@
       "date": "Сьогодні, 10 травня",
       "dateIso": "2026-05-10",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "0 - 1"
     },
     {
       "home": "Полтава",
@@ -591,13 +591,13 @@
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
       "played": 27,
-      "wins": 19,
-      "draws": 7,
+      "wins": 20,
+      "draws": 6,
       "losses": 1,
-      "goalsFor": 61,
+      "goalsFor": 62,
       "goalsAgainst": 17,
-      "goalDifference": 44,
-      "points": 64
+      "goalDifference": 45,
+      "points": 66
     },
     {
       "position": 2,
@@ -787,12 +787,12 @@
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
       "played": 27,
       "wins": 2,
-      "draws": 7,
-      "losses": 18,
+      "draws": 6,
+      "losses": 19,
       "goalsFor": 23,
-      "goalsAgainst": 66,
-      "goalDifference": -43,
-      "points": 13
+      "goalsAgainst": 67,
+      "goalDifference": -44,
+      "points": 12
     }
   ]
 }
