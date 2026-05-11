@@ -101,6 +101,13 @@
                 color: #777;
             }
 
+            .empty--red {
+                color: #ff3b30;
+                text-align: center;
+                font-size: 24px;
+                margin: 10px 10px 0;
+            }
+
             .standings {
                 max-width: 980px;
                 margin: 40px auto 24px;
@@ -612,7 +619,7 @@
                 });
 
                 return dateIso === todayIso
-                    ? `Сьогодні, ${formattedDate}`
+                    ? `Сьогодні, ${dayName}, ${formattedDate}`
                     : `${dayName}, ${formattedDate}`;
             }
 
@@ -791,13 +798,7 @@
                         return matchDate >= minDate && matchDate <= maxDate;
                     });
 
-                    if (!visibleMatches.length) {
-                        content.innerHTML = "<div id='error'>❌ Немає даних</div>";
-                        return;
-                    }
-
                     const todayIso = getKyivTodayIso();
-                    const hasTodayMatches = visibleMatches.some(m => m.dateIso === todayIso);
                     const matchesByDate = {};
 
                     visibleMatches.forEach(m => {
@@ -808,8 +809,8 @@
                         matchesByDate[dateKey].push(m);
                     });
 
-                    if (!hasTodayMatches) {
-                        html += `<div class="empty" style="text-align: center; color: #ffcc00; font-size: 22px; margin: 20px 10px;">Сьогодні матчів немає</div>`;
+                    if (!Object.prototype.hasOwnProperty.call(matchesByDate, todayIso)) {
+                        matchesByDate[todayIso] = [];
                     }
 
                     Object.keys(matchesByDate)
@@ -822,6 +823,10 @@
                             const dateLabel = dateIso === "Інша дата" ? dateIso : formatDateUk(dateIso);
                             const dayClass = dateIso === todayIso ? "day day--today" : "day";
                             html += `<div class="${dayClass}" data-day="${dateIso}">${dateLabel}</div>`;
+
+                            if (dateIso === todayIso && matchesByDate[dateIso].length === 0) {
+                                html += `<div class="empty empty--red">Сьогодні матчів немає</div>`;
+                            }
 
                             matchesByDate[dateIso].forEach(m => {
                                 const scoreOrTime = m.score
