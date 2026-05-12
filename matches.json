@@ -191,6 +191,16 @@
       "score": "1 - 2"
     },
     {
+      "home": "Епіцентр",
+      "away": "Полісся Житомир",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Олександрія",
       "away": "Зоря Луганськ",
       "league": "УПЛ",
@@ -524,14 +534,14 @@
       "position": 2,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
-      "played": 27,
+      "played": 28,
       "wins": 17,
-      "draws": 4,
+      "draws": 5,
       "losses": 6,
       "goalsFor": 47,
       "goalsAgainst": 18,
       "goalDifference": 29,
-      "points": 55
+      "points": 56
     },
     {
       "position": 3,
@@ -641,14 +651,14 @@
       "position": 11,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 27,
+      "played": 28,
       "wins": 7,
-      "draws": 6,
+      "draws": 7,
       "losses": 14,
       "goalsFor": 32,
       "goalsAgainst": 42,
       "goalDifference": -10,
-      "points": 27
+      "points": 28
     },
     {
       "position": 12,
