@@ -188,7 +188,7 @@
       "date": "Сьогодні, 12 травня",
       "dateIso": "2026-05-12",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "1 - 2"
     },
     {
       "home": "Олександрія",
@@ -603,13 +603,13 @@
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
       "played": 28,
-      "wins": 10,
-      "draws": 10,
+      "wins": 11,
+      "draws": 9,
       "losses": 8,
-      "goalsFor": 38,
-      "goalsAgainst": 34,
-      "goalDifference": 4,
-      "points": 40
+      "goalsFor": 40,
+      "goalsAgainst": 35,
+      "goalDifference": 5,
+      "points": 42
     },
     {
       "position": 9,
@@ -695,12 +695,12 @@
       "emblem": "https://upl.ua/glide/uploads/1611/-O3qIDnmY2y78cevXXjO1DazjQACCduO.png?w=40&amp;h=40&amp;fit=contain&amp;s=f9a5041e22f2d5a1fca07de01d7b2660",
       "played": 27,
       "wins": 2,
-      "draws": 8,
-      "losses": 17,
-      "goalsFor": 19,
-      "goalsAgainst": 51,
-      "goalDifference": -32,
-      "points": 14
+      "draws": 7,
+      "losses": 18,
+      "goalsFor": 20,
+      "goalsAgainst": 53,
+      "goalDifference": -33,
+      "points": 13
     },
     {
       "position": 16,
