@@ -198,7 +198,27 @@
       "date": "Сьогодні, 12 травня",
       "dateIso": "2026-05-12",
       "status": "Match Finished",
-      "score": "2 - 0"
+      "score": "3 - 2"
+    },
+    {
+      "home": "Металіст 1925 Харків",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Верес Рівне",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Олександрія",
@@ -538,9 +558,9 @@
       "wins": 17,
       "draws": 4,
       "losses": 7,
-      "goalsFor": 47,
-      "goalsAgainst": 20,
-      "goalDifference": 27,
+      "goalsFor": 49,
+      "goalsAgainst": 21,
+      "goalDifference": 28,
       "points": 55
     },
     {
@@ -573,14 +593,14 @@
       "position": 5,
       "team": "Металіст 1925 Харків",
       "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
-      "played": 27,
+      "played": 28,
       "wins": 12,
-      "draws": 10,
+      "draws": 11,
       "losses": 5,
       "goalsFor": 32,
       "goalsAgainst": 16,
       "goalDifference": 16,
-      "points": 46
+      "points": 47
     },
     {
       "position": 6,
@@ -599,14 +619,14 @@
       "position": 7,
       "team": "Кривбас Кривий Ріг",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 27,
+      "played": 28,
       "wins": 12,
-      "draws": 8,
+      "draws": 9,
       "losses": 7,
       "goalsFor": 47,
       "goalsAgainst": 41,
       "goalDifference": 6,
-      "points": 44
+      "points": 45
     },
     {
       "position": 8,
@@ -625,27 +645,27 @@
       "position": 9,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 27,
+      "played": 28,
       "wins": 9,
-      "draws": 10,
+      "draws": 11,
       "losses": 8,
       "goalsFor": 35,
       "goalsAgainst": 27,
       "goalDifference": 8,
-      "points": 37
+      "points": 38
     },
     {
       "position": 10,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
-      "played": 27,
+      "played": 28,
       "wins": 7,
-      "draws": 10,
+      "draws": 11,
       "losses": 10,
       "goalsFor": 25,
       "goalsAgainst": 34,
       "goalDifference": -9,
-      "points": 31
+      "points": 32
     },
     {
       "position": 11,
@@ -655,9 +675,9 @@
       "wins": 8,
       "draws": 6,
       "losses": 14,
-      "goalsFor": 34,
-      "goalsAgainst": 42,
-      "goalDifference": -8,
+      "goalsFor": 35,
+      "goalsAgainst": 44,
+      "goalDifference": -9,
       "points": 30
     },
     {
