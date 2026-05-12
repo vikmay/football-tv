@@ -198,7 +198,7 @@
       "date": "Сьогодні, 12 травня",
       "dateIso": "2026-05-12",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "2 - 0"
     },
     {
       "home": "Олександрія",
@@ -536,12 +536,12 @@
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 28,
       "wins": 17,
-      "draws": 5,
-      "losses": 6,
+      "draws": 4,
+      "losses": 7,
       "goalsFor": 47,
-      "goalsAgainst": 18,
-      "goalDifference": 29,
-      "points": 56
+      "goalsAgainst": 20,
+      "goalDifference": 27,
+      "points": 55
     },
     {
       "position": 3,
@@ -652,13 +652,13 @@
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 28,
-      "wins": 7,
-      "draws": 7,
+      "wins": 8,
+      "draws": 6,
       "losses": 14,
-      "goalsFor": 32,
+      "goalsFor": 34,
       "goalsAgainst": 42,
-      "goalDifference": -10,
-      "points": 28
+      "goalDifference": -8,
+      "points": 30
     },
     {
       "position": 12,
