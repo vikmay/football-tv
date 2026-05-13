@@ -241,6 +241,26 @@
       "score": ""
     },
     {
+      "home": "ЛНЗ Черкаси",
+      "away": "Полтава",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Колос Ковалівка",
+      "league": "УПЛ",
+      "time": "00:00",
+      "date": "Сьогодні, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
       "home": "Кудрівка",
       "away": "Рух Львів",
       "league": "УПЛ",
@@ -542,6 +562,19 @@
     },
     {
       "position": 2,
+      "team": "ЛНЗ Черкаси",
+      "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
+      "played": 28,
+      "wins": 17,
+      "draws": 6,
+      "losses": 5,
+      "goalsFor": 37,
+      "goalsAgainst": 16,
+      "goalDifference": 21,
+      "points": 57
+    },
+    {
+      "position": 3,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 28,
@@ -554,30 +587,17 @@
       "points": 55
     },
     {
-      "position": 3,
-      "team": "ЛНЗ Черкаси",
-      "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 27,
-      "wins": 16,
-      "draws": 6,
-      "losses": 5,
-      "goalsFor": 36,
-      "goalsAgainst": 16,
-      "goalDifference": 20,
-      "points": 54
-    },
-    {
       "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 27,
-      "wins": 14,
+      "played": 28,
+      "wins": 15,
       "draws": 6,
       "losses": 7,
-      "goalsFor": 59,
+      "goalsFor": 61,
       "goalsAgainst": 33,
-      "goalDifference": 26,
-      "points": 48
+      "goalDifference": 28,
+      "points": 51
     },
     {
       "position": 5,
@@ -609,13 +629,13 @@
       "position": 7,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 27,
+      "played": 28,
       "wins": 12,
       "draws": 10,
-      "losses": 5,
+      "losses": 6,
       "goalsFor": 28,
-      "goalsAgainst": 21,
-      "goalDifference": 7,
+      "goalsAgainst": 23,
+      "goalDifference": 5,
       "points": 46
     },
     {
@@ -726,13 +746,13 @@
       "position": 16,
       "team": "Полтава",
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
-      "played": 27,
+      "played": 28,
       "wins": 2,
       "draws": 6,
-      "losses": 19,
+      "losses": 20,
       "goalsFor": 23,
-      "goalsAgainst": 70,
-      "goalDifference": -47,
+      "goalsAgainst": 71,
+      "goalDifference": -48,
       "points": 12
     }
   ]
