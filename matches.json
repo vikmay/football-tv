@@ -248,7 +248,7 @@
       "date": "Сьогодні, 13 травня",
       "dateIso": "2026-05-13",
       "status": "Match Finished",
-      "score": "1 - 0"
+      "score": "2 - 0"
     },
     {
       "home": "Динамо Київ",
@@ -297,6 +297,16 @@
       "time": "18:00",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Рух Львів",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "четвер, 14 травня",
+      "dateIso": "2026-05-14",
       "status": "Scheduled",
       "score": ""
     },
@@ -568,9 +578,9 @@
       "wins": 17,
       "draws": 6,
       "losses": 5,
-      "goalsFor": 37,
+      "goalsFor": 38,
       "goalsAgainst": 16,
-      "goalDifference": 21,
+      "goalDifference": 22,
       "points": 57
     },
     {
@@ -751,8 +761,8 @@
       "draws": 6,
       "losses": 20,
       "goalsFor": 23,
-      "goalsAgainst": 71,
-      "goalDifference": -48,
+      "goalsAgainst": 72,
+      "goalDifference": -49,
       "points": 12
     }
   ]
