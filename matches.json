@@ -268,7 +268,7 @@
       "date": "Сьогодні, 13 травня",
       "dateIso": "2026-05-13",
       "status": "Match Finished",
-      "score": "2 - 0"
+      "score": "2 - 1"
     },
     {
       "home": "Кудрівка",
@@ -397,6 +397,26 @@
       "time": "18:00",
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Зоря Луганськ",
+      "away": "Полісся Житомир",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "понеділок, 18 травня",
+      "dateIso": "2026-05-18",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кудрівка",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "понеділок, 18 травня",
+      "dateIso": "2026-05-18",
       "status": "Scheduled",
       "score": ""
     },
@@ -576,8 +596,8 @@
       "draws": 6,
       "losses": 1,
       "goalsFor": 67,
-      "goalsAgainst": 17,
-      "goalDifference": 50,
+      "goalsAgainst": 18,
+      "goalDifference": 49,
       "points": 69
     },
     {
@@ -718,9 +738,9 @@
       "wins": 5,
       "draws": 10,
       "losses": 12,
-      "goalsFor": 22,
+      "goalsFor": 23,
       "goalsAgainst": 47,
-      "goalDifference": -25,
+      "goalDifference": -24,
       "points": 25
     },
     {
