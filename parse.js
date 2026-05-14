@@ -649,6 +649,45 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
   });
 }
 
+function dedupeMatchesByPairKeepLatestDate(matches) {
+  const list = Array.isArray(matches) ? matches : [];
+  const byPair = new Map();
+
+  const toComparableDateTime = match => {
+    const dateIso = typeof match?.dateIso === "string" && match.dateIso ? match.dateIso : "0001-01-01";
+    const time = typeof match?.time === "string" && match.time ? match.time : "00:00";
+    return `${dateIso}T${time}`;
+  };
+
+  const getKey = match =>
+    `${String(match?.league || "")}|${normalizeClubLookupName(String(match?.home || ""))}|${normalizeClubLookupName(String(match?.away || ""))}`;
+
+  for (const match of list) {
+    const key = getKey(match);
+    const existing = byPair.get(key);
+
+    if (!existing) {
+      byPair.set(key, match);
+      continue;
+    }
+
+    const existingDt = toComparableDateTime(existing);
+    const incomingDt = toComparableDateTime(match);
+
+    if (incomingDt > existingDt) {
+      byPair.set(key, match);
+      continue;
+    }
+
+    if (incomingDt === existingDt && String(match?.idEvent || "").length > String(existing?.idEvent || "").length) {
+      byPair.set(key, match);
+      continue;
+    }
+  }
+
+  return [...byPair.values()].sort(sortByDateTimeAsc);
+}
+
 function dedupeMatchesByIdentity(matches, excludedMatches = []) {
   const excludeKeys = new Set(
     (Array.isArray(excludedMatches) ? excludedMatches : []).map(match => {
@@ -1861,6 +1900,10 @@ async function main() {
       uplEvents.map(event => mapEventToMatch(event, "УПЛ", getUplTeamName)),
       existingData["УПЛ"] || []
     );
+
+    // When a match is rescheduled, sources may contain both the old and the updated date.
+    // For the УПЛ section keep only the latest (actual) date per home+away pair.
+    matches["УПЛ"] = dedupeMatchesByPairKeepLatestDate(matches["УПЛ"]);
   }
 
   if (uplStandings) {
