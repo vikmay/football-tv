@@ -127,6 +127,7 @@ const uplTeamNames = {
   "Karpaty": "Карпати Львів",
   "Rukh Lviv": "Рух Львів",
   "Ruh": "Рух Львів",
+  "Рух": "Рух Львів",
   "Obolon-Brovar Kyiv": "Оболонь Київ",
   "Obolon Kyiv": "Оболонь Київ",
   "Obolon Kiev": "Оболонь Київ",
@@ -272,7 +273,30 @@ const flashscoreClubAliases = {
   "fiorentina": "фіорентина",
   "real betis": "реал бетіс",
   "athletic bilbao": "атлетик більбао",
-  "manchester united": "манчестер юнайтед"
+  "manchester united": "манчестер юнайтед",
+
+  // UPL: prevent duplicate match rows when one source uses short/variant team names
+  "рух": "рух львів",
+  "рух львів": "рух львів",
+
+  "оболонь": "оболонь київ",
+  "оболонь київ": "оболонь київ",
+
+  "зоря": "зоря луганськ",
+  "зоря луганськ": "зоря луганськ",
+
+  "колос": "колос ковалівка",
+  "колос ковалівка": "колос ковалівка",
+
+  "верес": "верес рівне",
+  "верес рівне": "верес рівне",
+
+  "полісся": "полісся житомир",
+  "полісся ж.": "полісся житомир",
+  "полісся житомир": "полісся житомир",
+
+  "карпати л.": "карпати львів",
+  "карпати львів": "карпати львів"
 };
 
 function normalizeClubLookupName(name) {
@@ -679,9 +703,27 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
       continue;
     }
 
-    if (incomingDt === existingDt && String(match?.idEvent || "").length > String(existing?.idEvent || "").length) {
-      byPair.set(key, match);
-      continue;
+    if (incomingDt === existingDt) {
+      const existingIsFinished = String(existing?.status || "") === "Match Finished";
+      const incomingIsFinished = String(match?.status || "") === "Match Finished";
+
+      const existingHasScore = String(existing?.score || "").trim() !== "";
+      const incomingHasScore = String(match?.score || "").trim() !== "";
+
+      // Prefer finished matches with a real score over scheduled/empty duplicates
+      if (incomingIsFinished && incomingHasScore && (!existingIsFinished || !existingHasScore)) {
+        byPair.set(key, match);
+        continue;
+      }
+
+      if (
+        incomingIsFinished === existingIsFinished &&
+        incomingHasScore === existingHasScore &&
+        String(match?.idEvent || "").length > String(existing?.idEvent || "").length
+      ) {
+        byPair.set(key, match);
+        continue;
+      }
     }
   }
 
@@ -932,7 +974,11 @@ function parseFlashscoreCupFeedData(data) {
     const homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
     const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
     const hasScore = Boolean(scoreHomeMatch && scoreAwayMatch);
-    const isFinished = statusCode === "3" && hasScore;
+
+    // Flashscore statusCode can differ between fixtures/results pages and even across leagues.
+    // For UI we only need the presence of a score to mark the match as finished.
+    const isFinished = hasScore;
+
     const roundText = cleanExtractedText(roundMatch?.[1] || "");
     const intRound = roundText.includes("Півфін") ? 150 : roundText.includes("Чвертьфін") ? 125 : roundText.includes("Фінал") ? 200 : undefined;
 
@@ -1652,43 +1698,64 @@ async function fetchUplStandings() {
 
 async function fetchUplEvents() {
   const officialUrl = "https://upl.ua/en/tournaments/championship/428/calendar";
-  const officialHtml = await fetchText(officialUrl, "УПЛ official upl.ua fetch error");
+  const officialHtml = await fetchText(officialUrl, "РЈРџР› official upl.ua fetch error");
 
-  if (officialHtml) {
-    const events = parseOfficialUplEvents(officialHtml);
-
-    if (events.length > 0) {
-      console.log(`✅ УПЛ fetched from official upl.ua: ${events.length} matches in ±7 days window`);
-      return events;
-    }
-  }
-
-  const flashscoreUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/fixtures/";
-  const flashscoreHtml = await fetchText(flashscoreUrl, "УПЛ Flashscore fetch error");
-
-  if (flashscoreHtml) {
-    const events = parseFlashscoreFixtureEvents(flashscoreHtml);
-
-    if (events.length > 0) {
-      console.log(`⚠️ УПЛ official source empty, fallback to Flashscore: ${events.length} matches in ±7 days window`);
-      return events;
-    }
-  }
+  const flashscoreFixturesUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/fixtures/";
+  const flashscoreResultsUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/results/";
 
   const tntUrl = "https://www.tntsports.co.uk/football/ukrainian-premier-league/2025-2026/calendar-results.shtml";
-  const tntHtml = await fetchText(tntUrl, "УПЛ TNT Sports fetch error");
 
-  if (tntHtml) {
-    const events = parseTntUplEvents(tntHtml);
+  const [flashscoreFixturesHtml, flashscoreResultsHtml, tntHtml] = await Promise.all([
+    fetchText(flashscoreFixturesUrl, "РЈРџР› Flashscore fixtures fetch error"),
+    fetchText(flashscoreResultsUrl, "РЈРџР› Flashscore results fetch error"),
+    fetchText(tntUrl, "РЈРџР› TNT Sports fetch error")
+  ]);
 
-    if (events.length > 0) {
-      console.log(`⚠️ УПЛ official source empty, fallback to TNT Sports: ${events.length} matches in ±7 days window`);
-      return events;
+  const officialEvents = officialHtml ? parseOfficialUplEvents(officialHtml) : [];
+  const flashscoreFixturesEvents = flashscoreFixturesHtml ? parseFlashscoreFixtureEvents(flashscoreFixturesHtml) : [];
+
+  // Flashscore results are parsed via the generic feed parser (same as cups/champions league feeds).
+  let flashscoreResultsEvents = [];
+  if (flashscoreResultsHtml) {
+    const resultsData =
+      flashscoreResultsHtml.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] || "";
+
+    if (resultsData) {
+      flashscoreResultsEvents = parseFlashscoreCupFeedData(resultsData);
     }
   }
 
-  console.log("⚠️ UPL web sources returned no matches, falling back to TheSportsDB");
-  return fetchLeagueEvents(4354, "УПЛ");
+  const tntEvents = tntHtml ? parseTntUplEvents(tntHtml) : [];
+
+  // Prefer official calendar, but overlay finished scores from Flashscore results.
+  if (officialEvents.length > 0) {
+    if (flashscoreResultsEvents.length > 0) {
+      console.log(`✅ РЈРџР› official + Flashscore results merged: ${officialEvents.length} matches in В±7 days window`);
+      return mergeCupEvents(officialEvents, flashscoreResultsEvents);
+    }
+
+    console.log(`вњ… РЈРџР› fetched from official upl.ua: ${officialEvents.length} matches in В±7 days window`);
+    return officialEvents;
+  }
+
+  // If no official, prefer Flashscore results (they include scores), otherwise fixtures, otherwise TNT.
+  if (flashscoreResultsEvents.length > 0) {
+    console.log(`✅ РЈРџР› fetched from Flashscore results: ${flashscoreResultsEvents.length} matches in В±7 days window`);
+    return flashscoreResultsEvents;
+  }
+
+  if (flashscoreFixturesEvents.length > 0) {
+    console.log(`вљ пёЏ РЈРџР› official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in В±7 days window`);
+    return flashscoreFixturesEvents;
+  }
+
+  if (tntEvents.length > 0) {
+    console.log(`вљ пёЏ РЈРџР› official source empty, fallback to TNT Sports: ${tntEvents.length} matches in В±7 days window`);
+    return tntEvents;
+  }
+
+  console.log("вљ пёЏ UPL web sources returned no matches, falling back to TheSportsDB");
+  return fetchLeagueEvents(4354, "РЈРџР›");
 }
 
 async function fetchCompetitionEvents(leagueId, leagueName) {
