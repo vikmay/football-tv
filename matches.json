@@ -318,7 +318,7 @@
       "date": "Сьогодні, 14 травня",
       "dateIso": "2026-05-14",
       "status": "Match Finished",
-      "score": "2 - 0"
+      "score": "2 - 1"
     },
     {
       "home": "Кудрівка",
@@ -752,8 +752,8 @@
       "draws": 7,
       "losses": 15,
       "goalsFor": 29,
-      "goalsAgainst": 44,
-      "goalDifference": -15,
+      "goalsAgainst": 45,
+      "goalDifference": -16,
       "points": 25
     },
     {
@@ -764,9 +764,9 @@
       "wins": 6,
       "draws": 3,
       "losses": 19,
-      "goalsFor": 18,
+      "goalsFor": 19,
       "goalsAgainst": 46,
-      "goalDifference": -28,
+      "goalDifference": -27,
       "points": 21
     },
     {
