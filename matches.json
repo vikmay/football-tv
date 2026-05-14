@@ -1,24 +1,24 @@
 {
   "УПЛ": [
     {
+      "home": "Колос",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "пʼятниця, 8 травня",
+      "dateIso": "2026-05-08",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
       "home": "Кривбас",
       "away": "Карпати Львів",
       "league": "УПЛ",
       "time": "13:00",
       "date": "пʼятниця, 8 травня",
       "dateIso": "2026-05-08",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Колос Ковалівка",
-      "away": "Кудрівка",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "пʼятниця, 8 травня",
-      "dateIso": "2026-05-08",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Полісся Житомир",
@@ -27,8 +27,8 @@
       "time": "18:00",
       "date": "пʼятниця, 8 травня",
       "dateIso": "2026-05-08",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Рух Львів",
@@ -37,8 +37,8 @@
       "time": "13:00",
       "date": "субота, 9 травня",
       "dateIso": "2026-05-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -47,8 +47,8 @@
       "time": "15:30",
       "date": "субота, 9 травня",
       "dateIso": "2026-05-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Оболонь Київ",
@@ -57,8 +57,8 @@
       "time": "18:00",
       "date": "субота, 9 травня",
       "dateIso": "2026-05-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "Зоря Луганськ",
@@ -67,18 +67,18 @@
       "time": "18:00",
       "date": "субота, 9 травня",
       "dateIso": "2026-05-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
-      "home": "Полтава",
+      "home": "СК Полтава",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
       "time": "15:30",
       "date": "неділя, 10 травня",
       "dateIso": "2026-05-10",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 4"
     },
     {
       "home": "Олександрія",
@@ -87,8 +87,8 @@
       "time": "13:00",
       "date": "вівторок, 12 травня",
       "dateIso": "2026-05-12",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Епіцентр",
@@ -97,8 +97,8 @@
       "time": "15:30",
       "date": "вівторок, 12 травня",
       "dateIso": "2026-05-12",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2"
     },
     {
       "home": "Верес Рівне",
@@ -107,8 +107,8 @@
       "time": "18:00",
       "date": "вівторок, 12 травня",
       "dateIso": "2026-05-12",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 3"
     },
     {
       "home": "Металіст 1925 Харків",
@@ -117,28 +117,28 @@
       "time": "18:00",
       "date": "вівторок, 12 травня",
       "dateIso": "2026-05-12",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "ЛНЗ Черкаси",
-      "away": "Полтава",
+      "away": "СК Полтава",
       "league": "УПЛ",
       "time": "15:30",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Динамо Київ",
-      "away": "Колос Ковалівка",
+      "away": "Колос",
       "league": "УПЛ",
       "time": "15:30",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Шахтар Донецьк",
@@ -147,18 +147,18 @@
       "time": "18:00",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Кудрівка",
       "away": "Рух Львів",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "четвер, 14 травня",
+      "date": "Сьогодні, 14 травня",
       "dateIso": "2026-05-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Полтава",
