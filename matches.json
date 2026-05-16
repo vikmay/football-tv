@@ -161,8 +161,8 @@
       "score": "2 - 1"
     },
     {
-      "home": "Полтава",
-      "away": "Динамо Київ",
+      "home": "Металіст 1925 Харків",
+      "away": "Епіцентр",
       "league": "УПЛ",
       "time": "13:00",
       "date": "субота, 16 травня",
@@ -171,8 +171,8 @@
       "score": ""
     },
     {
-      "home": "Металіст 1925 Харків",
-      "away": "Епіцентр",
+      "home": "Полтава",
+      "away": "Динамо Київ",
       "league": "УПЛ",
       "time": "13:00",
       "date": "субота, 16 травня",
@@ -408,17 +408,30 @@
       "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 28,
-      "wins": 15,
+      "played": 29,
+      "wins": 16,
       "draws": 6,
       "losses": 7,
-      "goalsFor": 61,
+      "goalsFor": 62,
       "goalsAgainst": 34,
-      "goalDifference": 27,
-      "points": 51
+      "goalDifference": 28,
+      "points": 54
     },
     {
       "position": 5,
+      "team": "Металіст 1925 Харків",
+      "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
+      "played": 29,
+      "wins": 13,
+      "draws": 11,
+      "losses": 5,
+      "goalsFor": 35,
+      "goalsAgainst": 18,
+      "goalDifference": 17,
+      "points": 50
+    },
+    {
+      "position": 6,
       "team": "Кривбас Кривий Ріг",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 28,
@@ -428,19 +441,6 @@
       "goalsFor": 50,
       "goalsAgainst": 42,
       "goalDifference": 8,
-      "points": 47
-    },
-    {
-      "position": 6,
-      "team": "Металіст 1925 Харків",
-      "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
-      "played": 28,
-      "wins": 12,
-      "draws": 11,
-      "losses": 5,
-      "goalsFor": 34,
-      "goalsAgainst": 18,
-      "goalDifference": 16,
       "points": 47
     },
     {
@@ -499,13 +499,13 @@
       "position": 11,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 28,
+      "played": 29,
       "wins": 8,
       "draws": 6,
-      "losses": 14,
+      "losses": 15,
       "goalsFor": 35,
-      "goalsAgainst": 44,
-      "goalDifference": -9,
+      "goalsAgainst": 45,
+      "goalDifference": -10,
       "points": 30
     },
     {
@@ -564,13 +564,13 @@
       "position": 16,
       "team": "Полтава",
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
-      "played": 28,
+      "played": 29,
       "wins": 2,
       "draws": 6,
-      "losses": 20,
+      "losses": 21,
       "goalsFor": 23,
-      "goalsAgainst": 72,
-      "goalDifference": -49,
+      "goalsAgainst": 73,
+      "goalDifference": -50,
       "points": 12
     }
   ]
