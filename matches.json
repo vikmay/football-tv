@@ -444,13 +444,13 @@
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 29,
-      "wins": 9,
-      "draws": 12,
+      "wins": 10,
+      "draws": 11,
       "losses": 8,
-      "goalsFor": 37,
+      "goalsFor": 38,
       "goalsAgainst": 29,
-      "goalDifference": 8,
-      "points": 39
+      "goalDifference": 9,
+      "points": 41
     },
     {
       "position": 10,
@@ -458,12 +458,12 @@
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
       "played": 29,
       "wins": 7,
-      "draws": 11,
-      "losses": 11,
+      "draws": 10,
+      "losses": 12,
       "goalsFor": 26,
-      "goalsAgainst": 37,
-      "goalDifference": -11,
-      "points": 32
+      "goalsAgainst": 38,
+      "goalDifference": -12,
+      "points": 31
     },
     {
       "position": 11,
