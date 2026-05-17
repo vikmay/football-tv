@@ -340,13 +340,13 @@
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
       "played": 29,
-      "wins": 21,
-      "draws": 7,
+      "wins": 22,
+      "draws": 6,
       "losses": 1,
-      "goalsFor": 68,
+      "goalsFor": 70,
       "goalsAgainst": 18,
-      "goalDifference": 50,
-      "points": 70
+      "goalDifference": 52,
+      "points": 72
     },
     {
       "position": 2,
@@ -389,19 +389,6 @@
     },
     {
       "position": 5,
-      "team": "Кривбас Кривий Ріг",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 29,
-      "wins": 13,
-      "draws": 9,
-      "losses": 7,
-      "goalsFor": 50,
-      "goalsAgainst": 42,
-      "goalDifference": 8,
-      "points": 48
-    },
-    {
-      "position": 6,
       "team": "Металіст 1925 Харків",
       "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
       "played": 29,
@@ -414,17 +401,30 @@
       "points": 48
     },
     {
+      "position": 6,
+      "team": "Кривбас Кривий Ріг",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 29,
+      "wins": 13,
+      "draws": 8,
+      "losses": 8,
+      "goalsFor": 50,
+      "goalsAgainst": 44,
+      "goalDifference": 6,
+      "points": 47
+    },
+    {
       "position": 7,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
       "played": 29,
       "wins": 12,
-      "draws": 11,
-      "losses": 6,
+      "draws": 10,
+      "losses": 7,
       "goalsFor": 29,
-      "goalsAgainst": 23,
-      "goalDifference": 6,
-      "points": 47
+      "goalsAgainst": 25,
+      "goalDifference": 4,
+      "points": 46
     },
     {
       "position": 8,
@@ -467,6 +467,19 @@
     },
     {
       "position": 11,
+      "team": "Оболонь Київ",
+      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
+      "played": 29,
+      "wins": 7,
+      "draws": 10,
+      "losses": 12,
+      "goalsFor": 28,
+      "goalsAgainst": 48,
+      "goalDifference": -20,
+      "points": 31
+    },
+    {
+      "position": 12,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 29,
@@ -477,19 +490,6 @@
       "goalsAgainst": 45,
       "goalDifference": -9,
       "points": 31
-    },
-    {
-      "position": 12,
-      "team": "Оболонь Київ",
-      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 29,
-      "wins": 6,
-      "draws": 11,
-      "losses": 12,
-      "goalsFor": 26,
-      "goalsAgainst": 48,
-      "goalDifference": -22,
-      "points": 29
     },
     {
       "position": 13,
