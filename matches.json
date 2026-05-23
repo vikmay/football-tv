@@ -325,6 +325,19 @@
     },
     {
       "position": 6,
+      "team": "Кривбас Кривий Ріг",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 30,
+      "wins": 13,
+      "draws": 9,
+      "losses": 8,
+      "goalsFor": 52,
+      "goalsAgainst": 45,
+      "goalDifference": 7,
+      "points": 48
+    },
+    {
+      "position": 7,
       "team": "Металіст 1925 Харків",
       "emblem": "https://upl.ua/glide/uploads/2107/es9g7JeddAffBvxCCZoBDubY-aZrhLTn.png?w=40&amp;h=40&amp;fit=contain&amp;s=3104d0656625206427e45c2c4fac55d3",
       "played": 29,
@@ -335,19 +348,6 @@
       "goalsAgainst": 19,
       "goalDifference": 16,
       "points": 48
-    },
-    {
-      "position": 7,
-      "team": "Кривбас Кривий Ріг",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 29,
-      "wins": 13,
-      "draws": 8,
-      "losses": 8,
-      "goalsFor": 52,
-      "goalsAgainst": 45,
-      "goalDifference": 7,
-      "points": 47
     },
     {
       "position": 8,
@@ -444,14 +444,14 @@
       "position": 15,
       "team": "Олександрія",
       "emblem": "https://upl.ua/glide/uploads/1611/-O3qIDnmY2y78cevXXjO1DazjQACCduO.png?w=40&amp;h=40&amp;fit=contain&amp;s=f9a5041e22f2d5a1fca07de01d7b2660",
-      "played": 29,
+      "played": 30,
       "wins": 3,
-      "draws": 7,
+      "draws": 8,
       "losses": 19,
       "goalsFor": 23,
       "goalsAgainst": 57,
       "goalDifference": -34,
-      "points": 16
+      "points": 17
     },
     {
       "position": 16,
