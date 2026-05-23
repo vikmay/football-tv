@@ -101,16 +101,6 @@
       "score": "0 - 0"
     },
     {
-      "home": "Олександрія",
-      "away": "Кривбас",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "Сьогодні, 23 травня",
-      "dateIso": "2026-05-23",
-      "status": "Match Finished",
-      "score": "1 - 1"
-    },
-    {
       "home": "Карпати Львів",
       "away": "Зоря Луганськ",
       "league": "УПЛ",
@@ -119,6 +109,16 @@
       "dateIso": "2026-05-23",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Олександрія",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 23 травня",
+      "dateIso": "2026-05-23",
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Динамо Київ",
@@ -353,27 +353,27 @@
       "position": 8,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 29,
+      "played": 30,
       "wins": 11,
-      "draws": 10,
+      "draws": 11,
       "losses": 8,
       "goalsFor": 40,
       "goalsAgainst": 35,
       "goalDifference": 5,
-      "points": 43
+      "points": 44
     },
     {
       "position": 9,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 29,
+      "played": 30,
       "wins": 10,
-      "draws": 11,
+      "draws": 12,
       "losses": 8,
       "goalsFor": 39,
       "goalsAgainst": 29,
       "goalDifference": 10,
-      "points": 41
+      "points": 42
     },
     {
       "position": 10,
