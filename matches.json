@@ -91,6 +91,16 @@
       "score": "0 - 1"
     },
     {
+      "home": "Епіцентр",
+      "away": "СК Полтава",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "Сьогодні, 23 травня",
+      "dateIso": "2026-05-23",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Олександрія",
       "away": "Кривбас",
       "league": "УПЛ",
@@ -99,16 +109,6 @@
       "dateIso": "2026-05-23",
       "status": "Match Finished",
       "score": "1 - 1"
-    },
-    {
-      "home": "Епіцентр",
-      "away": "Полтава",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "субота, 23 травня",
-      "dateIso": "2026-05-23",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "Карпати Львів",
@@ -377,6 +377,19 @@
     },
     {
       "position": 10,
+      "team": "Епіцентр",
+      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
+      "played": 30,
+      "wins": 8,
+      "draws": 8,
+      "losses": 14,
+      "goalsFor": 36,
+      "goalsAgainst": 45,
+      "goalDifference": -9,
+      "points": 32
+    },
+    {
+      "position": 11,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
       "played": 29,
@@ -389,7 +402,7 @@
       "points": 31
     },
     {
-      "position": 11,
+      "position": 12,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
       "played": 29,
@@ -399,19 +412,6 @@
       "goalsFor": 28,
       "goalsAgainst": 48,
       "goalDifference": -20,
-      "points": 31
-    },
-    {
-      "position": 12,
-      "team": "Епіцентр",
-      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 29,
-      "wins": 8,
-      "draws": 7,
-      "losses": 14,
-      "goalsFor": 36,
-      "goalsAgainst": 45,
-      "goalDifference": -9,
       "points": 31
     },
     {
@@ -457,14 +457,14 @@
       "position": 16,
       "team": "Полтава",
       "emblem": "https://upl.ua/glide/uploads/2507/YReqdR-TJWgK5PVezaD3olx4oH1SWpAv.png?w=40&amp;h=40&amp;fit=contain&amp;s=0d74efa684e5c1aea3858c7a4ab6f1f9",
-      "played": 29,
+      "played": 30,
       "wins": 2,
-      "draws": 6,
+      "draws": 7,
       "losses": 21,
       "goalsFor": 23,
       "goalsAgainst": 74,
       "goalDifference": -51,
-      "points": 12
+      "points": 13
     }
   ]
 }
