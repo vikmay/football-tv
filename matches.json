@@ -95,10 +95,10 @@
       "away": "Кривбас",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "субота, 23 травня",
+      "date": "Сьогодні, 23 травня",
       "dateIso": "2026-05-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Епіцентр",
@@ -331,8 +331,8 @@
       "wins": 13,
       "draws": 9,
       "losses": 8,
-      "goalsFor": 52,
-      "goalsAgainst": 45,
+      "goalsFor": 53,
+      "goalsAgainst": 46,
       "goalDifference": 7,
       "points": 48
     },
@@ -448,8 +448,8 @@
       "wins": 3,
       "draws": 8,
       "losses": 19,
-      "goalsFor": 23,
-      "goalsAgainst": 57,
+      "goalsFor": 24,
+      "goalsAgainst": 58,
       "goalDifference": -34,
       "points": 17
     },
