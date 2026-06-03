@@ -38,4 +38,11 @@ jobs:
                   git config user.email github-actions@github.com
                   git add matches.json matches.meta.json
                   git commit -m "update matches"
+
+                  # Prevent: "remote contains work that you do not have locally"
+                  # by rebasing our commit on top of the latest remote branch before pushing.
+                  branch="$(git rev-parse --abbrev-ref HEAD)"
+                  git fetch origin "$branch"
+                  git pull --rebase origin "$branch"
+
                   git push
