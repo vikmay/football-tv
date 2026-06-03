@@ -171,6 +171,8 @@ const uplTeamNames = {
   "Livyi Bereh": "Лівий Берег",
   "Kudrivka": "Кудрівка",
   "FC Kudrivka": "Кудрівка",
+  "Ahrobiznes Volochysk": "Агробізнес Волочиськ",
+  "Agrobiznes Volochysk": "Агробізнес Волочиськ",
 
   // Flashscore results (UПЛ) often returns short Cyrillic variants
   "Рух": "Рух Львів",
@@ -193,7 +195,22 @@ const uplTeamNames = {
 };
 
 function getUplTeamName(englishName) {
-  return uplTeamNames[englishName] || englishName;
+  // important: normalize encoding/entities before matching
+  const raw = cleanExtractedText(String(englishName || ""));
+  const lower = raw.toLowerCase();
+
+  // Flashscore інколи дає коротку форму: "Агробізнес" / "Agrobiznes"
+  // Без цього мапінгу у нас з'являвся дублікат.
+  if (
+    raw.includes("Агробізнес") ||
+    raw.includes("Ахробізнес") ||
+    lower.includes("agrobiznes") ||
+    lower.includes("ahrobiznes")
+  ) {
+    return uplTeamNames["Agrobiznes Volochysk"] || "Агробізнес Волочиськ";
+  }
+
+  return uplTeamNames[raw] || uplTeamNames[englishName] || raw;
 }
 
 function normalizeCupTeamName(name) {
@@ -701,8 +718,13 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
     return `${dateIso}T${time}`;
   };
 
-  const getKey = match =>
-    `${String(match?.league || "")}|${normalizeClubLookupName(String(match?.home || ""))}|${normalizeClubLookupName(String(match?.away || ""))}`;
+  const getKey = match => {
+    const league = String(match?.league || "");
+    const home = getUplTeamName(String(match?.home || ""));
+    const away = getUplTeamName(String(match?.away || ""));
+    // Direction-aware: A (home) vs B (away) — важливо, щоб не “склеїти” реальні матчі в різні дні
+    return `${league}|${home}|${away}`;
+  };
 
   for (const match of list) {
     const key = getKey(match);
@@ -814,7 +836,15 @@ function dedupeScheduleSections(matches) {
         continue;
       }
 
-      const slotKey = `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
+      const slotKey =
+        sectionName === "УПЛ"
+          ? (() => {
+            const homeKey = getUplTeamName(String(item.home || ""));
+            const awayKey = getUplTeamName(String(item.away || ""));
+            const pairKey = [homeKey, awayKey].sort().join("|");
+            return `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${pairKey}`;
+          })()
+          : `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
       const existing = bySlot.get(slotKey);
 
       if (!existing) {
@@ -835,7 +865,15 @@ function dedupeScheduleSections(matches) {
       }
     }
 
-    result[sectionName] = [...bySlot.values()].sort(sortByDateTimeAsc);
+    const cleanedItems =
+      sectionName === "УПЛ"
+        ? [...bySlot.values()].filter(item => {
+          const t = String(item?.time || "");
+          return t !== "00:00" && t !== "00:00:00";
+        })
+        : [...bySlot.values()];
+
+    result[sectionName] = cleanedItems.sort(sortByDateTimeAsc);
   }
 
   for (const [sectionName, items] of Object.entries(matches || {})) {
@@ -1321,6 +1359,17 @@ function parseOfficialUplEvents(html) {
         }
       }
 
+      // Fallback:
+      // On some UPL calendar cards the “resualt” block doesn’t contain time (leaves it as 00:00:00),
+      // while kickoff time is still present elsewhere inside cardHtml.
+      if (strStatus === "Scheduled" && strTime === "00:00:00") {
+        const cardText = cleanExtractedText(cardHtml);
+        const timeMatch = cardText.match(/\b\d{1,2}:\d{2}\b/);
+        if (timeMatch) {
+          strTime = `${timeMatch[0]}:00`;
+        }
+      }
+
       events.push({
         idEvent: reportMatch ? `upl-official-${reportMatch[1]}` : `upl-official-${dateEvent}-${homeTeam}-${awayTeam}`,
         dateEvent,
@@ -1333,6 +1382,119 @@ function parseOfficialUplEvents(html) {
         isLocalTime: true
       });
     }
+  }
+
+  return dedupeEvents(events).sort(sortByDateTimeAsc);
+}
+
+function parseFlashscoreUplSummaryResults(summaryData) {
+  const summary = String(summaryData || "");
+  const events = [];
+
+  // summary-results format: AD÷<unix> ... CX÷<home> ... AF÷<away>
+  const matchRe = /AD÷(\d{10})[\s\S]*?CX÷([^¬]+)[\s\S]*?AF÷([^¬]+)/g;
+
+  let m;
+  while ((m = matchRe.exec(summary)) !== null) {
+    const unix = m[1];
+    const homeRaw = m[2];
+    const awayRaw = m[3];
+
+    const kickoff = new Date(Number(unix) * 1000);
+    if (Number.isNaN(kickoff.getTime())) {
+      continue;
+    }
+
+    const dateEvent = formatDateToIsoInTimeZone(kickoff, "Europe/Kyiv");
+    if (!isDateWithinWindow(dateEvent)) {
+      continue;
+    }
+
+    const homeTeam = getUplTeamName(cleanExtractedText(homeRaw));
+    const awayTeam = getUplTeamName(cleanExtractedText(awayRaw));
+
+    if (!homeTeam || !awayTeam) {
+      continue;
+    }
+
+    const strTime = kickoff.toLocaleTimeString("uk-UA", {
+      timeZone: "Europe/Kyiv",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    });
+
+    events.push({
+      idEvent: `flashscore-upl-summary-${dateEvent}-${homeTeam}-${awayTeam}-${unix}`.replace(/\s+/g, "-"),
+      dateEvent,
+      strTime,
+      strStatus: "Scheduled",
+      strHomeTeam: homeTeam,
+      strAwayTeam: awayTeam,
+      intHomeScore: null,
+      intAwayScore: null,
+      isLocalTime: true
+    });
+  }
+
+  return dedupeEvents(events).sort(sortByDateTimeAsc);
+}
+
+function parseFlashscoreUplFixturesFromHtml(html) {
+  // Flashscore fixtures page for UPL encodes kickoff in initialFeeds blocks:
+  // ~AAГ· ... AOГ·<unix> ... CXГ·<home> ... AFГ·<away>
+  const text = htmlToPlainText(html)
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const events = [];
+  const blocks = text.split("~AAГ·").slice(1);
+
+  for (const block of blocks) {
+    const aoMatch = block.match(/(?:^|В¬)AOГ·(\d{10})/);
+    const homeMatch = block.match(/(?:^|В¬)CXГ·([^В¬]+)/);
+    const awayMatch = block.match(/(?:^|В¬)AFГ·([^В¬]+)/);
+
+    if (!aoMatch || !homeMatch || !awayMatch) {
+      continue;
+    }
+
+    const kickoff = new Date(Number(aoMatch[1]) * 1000);
+    if (Number.isNaN(kickoff.getTime())) {
+      continue;
+    }
+
+    const dateEvent = formatDateToIsoInTimeZone(kickoff, "Europe/Kyiv");
+    if (!isDateWithinWindow(dateEvent)) {
+      continue;
+    }
+
+    const homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
+    const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
+
+    if (!homeTeam || !awayTeam) {
+      continue;
+    }
+
+    const strTime = kickoff.toLocaleTimeString("uk-UA", {
+      timeZone: "Europe/Kyiv",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    });
+
+    events.push({
+      idEvent: `flashscore-upl-fixture-${dateEvent}-${homeTeam}-${awayTeam}-${aoMatch[1]}`.replace(/\s+/g, "-"),
+      dateEvent,
+      strTime,
+      strStatus: "Scheduled",
+      strHomeTeam: homeTeam,
+      strAwayTeam: awayTeam,
+      intHomeScore: null,
+      intAwayScore: null,
+      isLocalTime: true
+    });
   }
 
   return dedupeEvents(events).sort(sortByDateTimeAsc);
@@ -1382,7 +1544,13 @@ function parseFlashscoreFixtureEvents(html) {
         continue;
       }
 
-      const match = fragment.match(/^(.+?)\s*-\s*(.+)$/);
+      const timeMatch = fragment.match(/\b(\d{1,2}:\d{2})\b/);
+      const timePart = timeMatch?.[1];
+      const timeForEvent = timePart ? `${timePart}:00` : "00:00:00";
+
+      const fragmentWithoutTime = fragment.replace(/\b\d{1,2}:\d{2}\b/g, "").trim();
+
+      const match = fragmentWithoutTime.match(/^(.+?)\s*-\s*(.+)$/);
       if (!match) {
         continue;
       }
@@ -1397,7 +1565,7 @@ function parseFlashscoreFixtureEvents(html) {
       events.push({
         idEvent: `flashscore-${dateEvent}-${homeTeam}-${awayTeam}`,
         dateEvent,
-        strTime: "00:00:00",
+        strTime: timeForEvent,
         strStatus: "Scheduled",
         strHomeTeam: homeTeam,
         strAwayTeam: awayTeam,
@@ -1730,7 +1898,32 @@ async function fetchUplEvents() {
   ]);
 
   const officialEvents = officialHtml ? parseOfficialUplEvents(officialHtml) : [];
-  const flashscoreFixturesEvents = flashscoreFixturesHtml ? parseFlashscoreFixtureEvents(flashscoreFixturesHtml) : [];
+
+  // Flashscore fixtures page: visible HTML може не містити kickoff часу,
+  // але всередині initialFeeds["summary-results"] час є (AD÷<unix>).
+  let flashscoreSummaryEvents = [];
+  let flashscoreSummaryFixturesEvents = [];
+
+  if (flashscoreFixturesHtml) {
+    const summaryData =
+      flashscoreFixturesHtml.match(/cjs\.initialFeeds\["summary-results"\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ||
+      "";
+    if (summaryData) {
+      flashscoreSummaryEvents = parseFlashscoreUplSummaryResults(summaryData);
+    }
+  }
+
+  // Correct kickoff time for upcoming UPL matches is usually in results page under summary-fixtures.
+  if (flashscoreResultsHtml) {
+    const summaryFixturesData =
+      flashscoreResultsHtml.match(/cjs\.initialFeeds\["summary-fixtures"\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ||
+      "";
+    if (summaryFixturesData) {
+      flashscoreSummaryFixturesEvents = parseFlashscoreUplSummaryResults(summaryFixturesData);
+    }
+  }
+
+  const flashscoreFixturesEvents = flashscoreFixturesHtml ? parseFlashscoreUplFixturesFromHtml(flashscoreFixturesHtml) : [];
 
   // Flashscore results are parsed via the generic feed parser (same as cups/champions league feeds).
   let flashscoreResultsEvents = [];
@@ -1762,8 +1955,57 @@ async function fetchUplEvents() {
     return flashscoreResultsEvents;
   }
 
+  // If no official, prefer Flashscore “summary-results” (usually has kickoff time),
+  // otherwise fallback to legacy fixtures parser (may produce 00:00:00).
+  // Prefer Flashscore вЂњsummary-fixturesвЂќ (usually has correct kickoff),
+  // then fallback to вЂњsummary-resultsвЂќ.
+  if (flashscoreSummaryFixturesEvents.length > 0) {
+    console.log(`вњ… РЈРџР› summary-fixtures parsed: ${flashscoreSummaryFixturesEvents.length} matches in В±7 days window`);
+    return flashscoreSummaryFixturesEvents;
+  }
+
+  if (flashscoreSummaryEvents.length > 0) {
+    console.log(`вњ… РЈРџР› summary-results parsed: ${flashscoreSummaryEvents.length} matches in В±7 days window`);
+    return flashscoreSummaryEvents;
+  }
+
   if (flashscoreFixturesEvents.length > 0) {
-    console.log(`вљ пёЏ РЈРџР› official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in В±7 days window`);
+    console.log(`Р Р†РЎв„ўР’В Р С—РЎвЂР РЏ Р В Р в‚¬Р В РЎСџР В РІР‚С” official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in Р вЂ™Р’В±7 days window`);
+
+    // Flashscore fixtures HTML often lacks kickoff time -> parser keeps "00:00:00".
+    // Overlay kickoff time from TheSportsDB for those matches.
+    const needsOverlay = flashscoreFixturesEvents.some(e => String(e?.strTime || "").startsWith("00:00"));
+    if (needsOverlay) {
+      const sportsDbEvents = await fetchLeagueEvents(4354, "Р Р€Р СџР вЂє");
+      if (Array.isArray(sportsDbEvents) && sportsDbEvents.length > 0) {
+        const getHomeNorm = e => getUplTeamName(String(e?.strHomeTeam || ""));
+        const getAwayNorm = e => getUplTeamName(String(e?.strAwayTeam || ""));
+        const keyOf = e =>
+          `${String(e?.dateEvent || "")}|${getHomeNorm(e)}|${getAwayNorm(e)}`;
+
+        const byKey = new Map();
+        sportsDbEvents.forEach(se => {
+          if (!se?.dateEvent || !se?.strHomeTeam || !se?.strAwayTeam) return;
+          byKey.set(keyOf(se), se);
+        });
+
+        for (const fe of flashscoreFixturesEvents) {
+          if (!String(fe?.strTime || "").startsWith("00:00")) continue;
+
+          const repl = byKey.get(
+            `${String(fe?.dateEvent || "")}|${getUplTeamName(String(fe?.strHomeTeam || ""))}|${getUplTeamName(String(fe?.strAwayTeam || ""))}`
+          );
+
+          if (!repl?.strTime) continue;
+
+          // formatTime() uses isLocalTime -> strTimeLocal/strTime substring(0,5)
+          fe.strTime = repl.strTime;
+          fe.strTimeLocal = repl.strTime;
+          fe.isLocalTime = true;
+        }
+      }
+    }
+
     return flashscoreFixturesEvents;
   }
 
