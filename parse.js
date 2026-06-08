@@ -955,8 +955,13 @@ function dedupeScheduleSections(matches) {
         continue;
       }
 
-      const slotKey =
-        sectionName === "УПЛ"
+      // For World Cup: dedupe by (date + league + home + away) without time,
+      // because Flashscore may return the same match with 00:00 and real time.
+      // Prefer the one with a real time.
+      const isWc = sectionName === "Чемпіонат світу";
+      const slotKey = isWc
+        ? `${item.dateIso || ""}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`
+        : sectionName === "УПЛ"
           ? (() => {
             const homeKey = getUplTeamName(String(item.home || ""));
             const awayKey = getUplTeamName(String(item.away || ""));
@@ -967,6 +972,20 @@ function dedupeScheduleSections(matches) {
       const existing = bySlot.get(slotKey);
 
       if (!existing) {
+        bySlot.set(slotKey, item);
+        continue;
+      }
+
+      // Prefer the match with a real time over 00:00 placeholder
+      const existingTime = String(existing?.time || "");
+      const incomingTime = String(item?.time || "");
+      const existingIsPlaceholder = existingTime === "00:00" || existingTime === "00:00:00";
+      const incomingIsPlaceholder = incomingTime === "00:00" || incomingTime === "00:00:00";
+
+      if (incomingIsPlaceholder && !existingIsPlaceholder) {
+        continue; // keep existing with real time
+      }
+      if (existingIsPlaceholder && !incomingIsPlaceholder) {
         bySlot.set(slotKey, item);
         continue;
       }
@@ -984,13 +1003,14 @@ function dedupeScheduleSections(matches) {
       }
     }
 
-    const cleanedItems =
-      sectionName === "УПЛ" || sectionName === "Чемпіонат світу"
-        ? [...bySlot.values()].filter(item => {
-          const t = String(item?.time || "");
-          return t !== "00:00" && t !== "00:00:00";
-        })
-        : [...bySlot.values()];
+    const cleanedItems = [...bySlot.values()].filter(item => {
+      // For УПЛ: skip placeholder times
+      if (sectionName === "УПЛ") {
+        const t = String(item?.time || "");
+        if (t === "00:00" || t === "00:00:00") return false;
+      }
+      return true;
+    });
 
     result[sectionName] = cleanedItems.sort(sortByDateTimeAsc);
   }
@@ -1312,8 +1332,8 @@ function htmlToPlainText(html) {
 
 function getDateWindow() {
   const todayIso = getKyivTodayIso();
-  const minDateIso = shiftIsoDate(todayIso, -8);
-  const maxDateIso = shiftIsoDate(todayIso, 8);
+  const minDateIso = shiftIsoDate(todayIso, -30);
+  const maxDateIso = shiftIsoDate(todayIso, 60);
 
   return { minDateIso, maxDateIso };
 }

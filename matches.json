@@ -1,10 +1,300 @@
 {
   "УПЛ": [
     {
-      "home": "Кудрівка",
-      "away": "Агробізнес Волочиськ",
+      "home": "Рух Львів",
+      "away": "Верес Рівне",
       "league": "УПЛ",
-      "time": "00:00",
+      "time": "13:00",
+      "date": "субота, 9 травня",
+      "dateIso": "2026-05-09",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "ЛНЗ Черкаси",
+      "away": "Динамо Київ",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "субота, 9 травня",
+      "dateIso": "2026-05-09",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Оболонь Київ",
+      "away": "Епіцентр",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "субота, 9 травня",
+      "dateIso": "2026-05-09",
+      "status": "Match Finished",
+      "score": "2 - 2"
+    },
+    {
+      "home": "Зоря Луганськ",
+      "away": "Металіст 1925 Харків",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "субота, 9 травня",
+      "dateIso": "2026-05-09",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
+      "home": "СК Полтава",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "неділя, 10 травня",
+      "dateIso": "2026-05-10",
+      "status": "Match Finished",
+      "score": "0 - 4"
+    },
+    {
+      "home": "Олександрія",
+      "away": "Зоря Луганськ",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "вівторок, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "1 - 2"
+    },
+    {
+      "home": "Епіцентр",
+      "away": "Полісся Житомир",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "вівторок, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "3 - 2"
+    },
+    {
+      "home": "Верес Рівне",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "вівторок, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "1 - 3"
+    },
+    {
+      "home": "Металіст 1925 Харків",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "вівторок, 12 травня",
+      "dateIso": "2026-05-12",
+      "status": "Match Finished",
+      "score": "2 - 2"
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Колос",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "ЛНЗ Черкаси",
+      "away": "СК Полтава",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "середа, 13 травня",
+      "dateIso": "2026-05-13",
+      "status": "Match Finished",
+      "score": "3 - 1"
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Рух Львів",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "четвер, 14 травня",
+      "dateIso": "2026-05-14",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "Металіст 1925 Харків",
+      "away": "Епіцентр",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 16 травня",
+      "dateIso": "2026-05-16",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
+      "home": "СК Полтава",
+      "away": "Динамо Київ",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 16 травня",
+      "dateIso": "2026-05-16",
+      "status": "Match Finished",
+      "score": "0 - 2"
+    },
+    {
+      "home": "Кривбас",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 17 травня",
+      "dateIso": "2026-05-17",
+      "status": "Match Finished",
+      "score": "2 - 3"
+    },
+    {
+      "home": "Рух Львів",
+      "away": "Олександрія",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 17 травня",
+      "dateIso": "2026-05-17",
+      "status": "Match Finished",
+      "score": "1 - 3"
+    },
+    {
+      "home": "Колос",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "неділя, 17 травня",
+      "dateIso": "2026-05-17",
+      "status": "Match Finished",
+      "score": "0 - 2"
+    },
+    {
+      "home": "Карпати Львів",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "неділя, 17 травня",
+      "dateIso": "2026-05-17",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
+      "home": "Зоря Луганськ",
+      "away": "Полісся Житомир",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "понеділок, 18 травня",
+      "dateIso": "2026-05-18",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Кудрівка",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "понеділок, 18 травня",
+      "dateIso": "2026-05-18",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Колос",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "четвер, 21 травня",
+      "dateIso": "2026-05-21",
+      "status": "Match Finished",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Олександрія",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 23 травня",
+      "dateIso": "2026-05-23",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
+      "home": "Епіцентр",
+      "away": "СК Полтава",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "субота, 23 травня",
+      "dateIso": "2026-05-23",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Карпати Львів",
+      "away": "Зоря Луганськ",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "субота, 23 травня",
+      "dateIso": "2026-05-23",
+      "status": "Match Finished",
+      "score": "1 - 2"
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 24 травня",
+      "dateIso": "2026-05-24",
+      "status": "Match Finished",
+      "score": "3 - 2"
+    },
+    {
+      "home": "Верес Рівне",
+      "away": "Металіст 1925 Харків",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 24 травня",
+      "dateIso": "2026-05-24",
+      "status": "Match Finished",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Полісся Житомир",
+      "away": "Рух Львів",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 24 травня",
+      "dateIso": "2026-05-24",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
+      "home": "Оболонь Київ",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 24 травня",
+      "dateIso": "2026-05-24",
+      "status": "Match Finished",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Олександрія",
+      "away": "Лівий берег",
+      "league": "УПЛ",
+      "time": "15:30",
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Scheduled",
@@ -13,18 +303,48 @@
     {
       "home": "Олександрія",
       "away": "Лівий берег",
+      "league": "УПЛ (Фінал)",
+      "time": "15:30",
+      "date": "пʼятниця, 5 червня",
+      "dateIso": "2026-06-05",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Агробізнес Волочиськ",
       "league": "УПЛ",
-      "time": "00:00",
+      "time": "18:00",
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Scheduled",
       "score": ""
     },
     {
+      "home": "Кудрівка",
+      "away": "Агробізнес Волочиськ",
+      "league": "УПЛ (Фінал)",
+      "time": "18:00",
+      "date": "пʼятниця, 5 червня",
+      "dateIso": "2026-06-05",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Лівий берег",
       "away": "Олександрія",
       "league": "УПЛ",
-      "time": "00:00",
+      "time": "15:30",
+      "date": "вівторок, 9 червня",
+      "dateIso": "2026-06-09",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Агробізнес Волочиськ",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "18:00",
       "date": "вівторок, 9 червня",
       "dateIso": "2026-06-09",
       "status": "Scheduled",
@@ -37,14 +357,36 @@
       "away": "Арсенал",
       "league": "Ліга чемпіонів (Фінал)",
       "time": "19:00",
-      "date": "Сьогодні, 30 травня",
+      "date": "субота, 30 травня",
       "dateIso": "2026-05-30",
       "status": "Match Finished",
       "score": "2 - 1"
     }
   ],
-  "Кубок України": [],
-  "Ліга Європи": [],
+  "Кубок України": [
+    {
+      "home": "Чернігів",
+      "away": "Динамо Київ",
+      "league": "Кубок України (Фінал)",
+      "time": "18:00",
+      "date": "середа, 20 травня",
+      "dateIso": "2026-05-20",
+      "status": "Match Finished",
+      "score": "1 - 3"
+    }
+  ],
+  "Ліга Європи": [
+    {
+      "home": "Freiburg",
+      "away": "Астон Вілла",
+      "league": "Ліга Європи (Фінал)",
+      "time": "22:00",
+      "date": "середа, 20 травня",
+      "dateIso": "2026-05-20",
+      "status": "FT",
+      "score": ""
+    }
+  ],
   "Ліга конференцій": [
     {
       "home": "Кристал Пелес",
@@ -57,11 +399,773 @@
       "score": "1 - 0"
     }
   ],
-  "Суперкубок УЄФА": [],
+  "Суперкубок УЄФА": [
+    {
+      "home": "Lens",
+      "away": "Nice",
+      "league": "Суперкубок УЄФА (Фінал)",
+      "time": "22:00",
+      "date": "пʼятниця, 22 травня",
+      "dateIso": "2026-05-22",
+      "status": "FT",
+      "score": ""
+    }
+  ],
   "Ліга націй УЄФА": [],
-  "Чемпіонат світу": [],
+  "Чемпіонат світу": [
+    {
+      "home": "Мексика",
+      "away": "Південна Африка",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "четвер, 11 червня",
+      "dateIso": "2026-06-11",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Канада",
+      "away": "Боснія і Герцеговина",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "пʼятниця, 12 червня",
+      "dateIso": "2026-06-12",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Південна Корея",
+      "away": "Чехія",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "пʼятниця, 12 червня",
+      "dateIso": "2026-06-12",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Катар",
+      "away": "Швейцарія",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "субота, 13 червня",
+      "dateIso": "2026-06-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "США",
+      "away": "Парагвай",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "субота, 13 червня",
+      "dateIso": "2026-06-13",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Австралія",
+      "away": "Туреччина",
+      "league": "Чемпіонат світу",
+      "time": "07:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Нідерланди",
+      "away": "Японія",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бразилія",
+      "away": "Марокко",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Гаїті",
+      "away": "Шотландія",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Німеччина",
+      "away": "Кюрасао",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кот",
+      "away": "д’Івуар - Еквадор",
+      "league": "Чемпіонат світу",
+      "time": "00:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Іспанія",
+      "away": "Кабо-Верде",
+      "league": "Чемпіонат світу",
+      "time": "19:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бельгія",
+      "away": "Єгипет",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Швеція",
+      "away": "Туніс",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кот-д’Івуар",
+      "away": "Еквадор",
+      "league": "Чемпіонат світу",
+      "time": "02:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Саудівська Аравія",
+      "away": "Уругвай",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "вівторок, 16 червня",
+      "dateIso": "2026-06-16",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Іран",
+      "away": "Нова Зеландія",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "вівторок, 16 червня",
+      "dateIso": "2026-06-16",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Франція",
+      "away": "Сенегал",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "вівторок, 16 червня",
+      "dateIso": "2026-06-16",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Ірак",
+      "away": "Норвегія",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "середа, 17 червня",
+      "dateIso": "2026-06-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Аргентина",
+      "away": "Алжир",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "середа, 17 червня",
+      "dateIso": "2026-06-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Австрія",
+      "away": "Йорданія",
+      "league": "Чемпіонат світу",
+      "time": "07:00",
+      "date": "середа, 17 червня",
+      "dateIso": "2026-06-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Португалія",
+      "away": "ДР Конго",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "середа, 17 червня",
+      "dateIso": "2026-06-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Англія",
+      "away": "Хорватія",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "середа, 17 червня",
+      "dateIso": "2026-06-17",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Гана",
+      "away": "Панама",
+      "league": "Чемпіонат світу",
+      "time": "02:00",
+      "date": "четвер, 18 червня",
+      "dateIso": "2026-06-18",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Узбекистан",
+      "away": "Колумбія",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "четвер, 18 червня",
+      "dateIso": "2026-06-18",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Чехія",
+      "away": "Південна Африка",
+      "league": "Чемпіонат світу",
+      "time": "19:00",
+      "date": "четвер, 18 червня",
+      "dateIso": "2026-06-18",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Швейцарія",
+      "away": "Боснія і Герцеговина",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "четвер, 18 червня",
+      "dateIso": "2026-06-18",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Канада",
+      "away": "Катар",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "пʼятниця, 19 червня",
+      "dateIso": "2026-06-19",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Мексика",
+      "away": "Південна Корея",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "пʼятниця, 19 червня",
+      "dateIso": "2026-06-19",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "США",
+      "away": "Австралія",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "пʼятниця, 19 червня",
+      "dateIso": "2026-06-19",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шотландія",
+      "away": "Марокко",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "субота, 20 червня",
+      "dateIso": "2026-06-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бразилія",
+      "away": "Гаїті",
+      "league": "Чемпіонат світу",
+      "time": "03:30",
+      "date": "субота, 20 червня",
+      "dateIso": "2026-06-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Туреччина",
+      "away": "Парагвай",
+      "league": "Чемпіонат світу",
+      "time": "06:00",
+      "date": "субота, 20 червня",
+      "dateIso": "2026-06-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Нідерланди",
+      "away": "Швеція",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "субота, 20 червня",
+      "dateIso": "2026-06-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Німеччина",
+      "away": "Кот-д’Івуар",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "субота, 20 червня",
+      "dateIso": "2026-06-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Еквадор",
+      "away": "Кюрасао",
+      "league": "Чемпіонат світу",
+      "time": "03:00",
+      "date": "неділя, 21 червня",
+      "dateIso": "2026-06-21",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Туніс",
+      "away": "Японія",
+      "league": "Чемпіонат світу",
+      "time": "07:00",
+      "date": "неділя, 21 червня",
+      "dateIso": "2026-06-21",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Іспанія",
+      "away": "Саудівська Аравія",
+      "league": "Чемпіонат світу",
+      "time": "19:00",
+      "date": "неділя, 21 червня",
+      "dateIso": "2026-06-21",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бельгія",
+      "away": "Іран",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "неділя, 21 червня",
+      "dateIso": "2026-06-21",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Уругвай",
+      "away": "Кабо-Верде",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "понеділок, 22 червня",
+      "dateIso": "2026-06-22",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Нова Зеландія",
+      "away": "Єгипет",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "понеділок, 22 червня",
+      "dateIso": "2026-06-22",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Аргентина",
+      "away": "Австрія",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "понеділок, 22 червня",
+      "dateIso": "2026-06-22",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Франція",
+      "away": "Ірак",
+      "league": "Чемпіонат світу",
+      "time": "00:00",
+      "date": "вівторок, 23 червня",
+      "dateIso": "2026-06-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Норвегія",
+      "away": "Сенегал",
+      "league": "Чемпіонат світу",
+      "time": "03:00",
+      "date": "вівторок, 23 червня",
+      "dateIso": "2026-06-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Йорданія",
+      "away": "Алжир",
+      "league": "Чемпіонат світу",
+      "time": "06:00",
+      "date": "вівторок, 23 червня",
+      "dateIso": "2026-06-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Португалія",
+      "away": "Узбекистан",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "вівторок, 23 червня",
+      "dateIso": "2026-06-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Англія",
+      "away": "Гана",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "вівторок, 23 червня",
+      "dateIso": "2026-06-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Панама",
+      "away": "Хорватія",
+      "league": "Чемпіонат світу",
+      "time": "02:00",
+      "date": "середа, 24 червня",
+      "dateIso": "2026-06-24",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Колумбія",
+      "away": "ДР Конго",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "середа, 24 червня",
+      "dateIso": "2026-06-24",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Боснія і Герцеговина",
+      "away": "Катар",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "середа, 24 червня",
+      "dateIso": "2026-06-24",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Швейцарія",
+      "away": "Канада",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "середа, 24 червня",
+      "dateIso": "2026-06-24",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Марокко",
+      "away": "Гаїті",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шотландія",
+      "away": "Бразилія",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Південна Африка",
+      "away": "Південна Корея",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Чехія",
+      "away": "Мексика",
+      "league": "Чемпіонат світу",
+      "time": "04:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Еквадор",
+      "away": "Німеччина",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кюрасао",
+      "away": "Кот-д’Івуар",
+      "league": "Чемпіонат світу",
+      "time": "23:00",
+      "date": "четвер, 25 червня",
+      "dateIso": "2026-06-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Туніс",
+      "away": "Нідерланди",
+      "league": "Чемпіонат світу",
+      "time": "02:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Японія",
+      "away": "Швеція",
+      "league": "Чемпіонат світу",
+      "time": "02:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Парагвай",
+      "away": "Австралія",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Туреччина",
+      "away": "США",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Норвегія",
+      "away": "Франція",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Сенегал",
+      "away": "Ірак",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "пʼятниця, 26 червня",
+      "dateIso": "2026-06-26",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Кабо-Верде",
+      "away": "Саудівська Аравія",
+      "league": "Чемпіонат світу",
+      "time": "03:00",
+      "date": "субота, 27 червня",
+      "dateIso": "2026-06-27",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Уругвай",
+      "away": "Іспанія",
+      "league": "Чемпіонат світу",
+      "time": "03:00",
+      "date": "субота, 27 червня",
+      "dateIso": "2026-06-27",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Єгипет",
+      "away": "Іран",
+      "league": "Чемпіонат світу",
+      "time": "06:00",
+      "date": "субота, 27 червня",
+      "dateIso": "2026-06-27",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Нова Зеландія",
+      "away": "Бельгія",
+      "league": "Чемпіонат світу",
+      "time": "06:00",
+      "date": "субота, 27 червня",
+      "dateIso": "2026-06-27",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Панама",
+      "away": "Англія",
+      "league": "Чемпіонат світу",
+      "time": "00:00",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Хорватія",
+      "away": "Гана",
+      "league": "Чемпіонат світу",
+      "time": "00:00",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ДР Конго",
+      "away": "Узбекистан",
+      "league": "Чемпіонат світу",
+      "time": "02:30",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Колумбія",
+      "away": "Португалія",
+      "league": "Чемпіонат світу",
+      "time": "02:30",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Алжир",
+      "away": "Австрія",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Йорданія",
+      "away": "Аргентина",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "неділя, 28 червня",
+      "dateIso": "2026-06-28",
+      "status": "Scheduled",
+      "score": ""
+    }
+  ],
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
+    {
+      "home": "Фрайбург",
+      "away": "Астон Вілла",
+      "league": "Ліга Європи (Фінал)",
+      "time": "22:00",
+      "date": "середа, 20 травня",
+      "dateIso": "2026-05-20",
+      "status": "Match Finished",
+      "score": "0 - 3"
+    },
+    {
+      "home": "Lens",
+      "away": "Nice",
+      "league": "Суперкубок УЄФА (Фінал)",
+      "time": "22:00",
+      "date": "пʼятниця, 22 травня",
+      "dateIso": "2026-05-22",
+      "status": "FT",
+      "score": ""
+    },
     {
       "home": "Кристал Пелес",
       "away": "Райо Вальєкано",
@@ -283,5 +1387,607 @@
       "goalDifference": -51,
       "points": 13
     }
-  ]
+  ],
+  "Таблиця ЧС 2026": {
+    "A": [
+      {
+        "position": 1,
+        "teamName": "Мексика",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Південна Корея",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Чехія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Південна Африка",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "B": [
+      {
+        "position": 1,
+        "teamName": "Швейцарія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Канада",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Катар",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Bosnia &amp; Herzegovina",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "C": [
+      {
+        "position": 1,
+        "teamName": "Бразилія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Марокко",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Шотландія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Гаїті",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "D": [
+      {
+        "position": 1,
+        "teamName": "США",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Туреччина",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Австралія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Парагвай",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "E": [
+      {
+        "position": 1,
+        "teamName": "Німеччина",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Еквадор",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Кот-д'Івуар",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Кюрасао",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "F": [
+      {
+        "position": 1,
+        "teamName": "Нідерланди",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Японія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Швеція",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Туніс",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "G": [
+      {
+        "position": 1,
+        "teamName": "Бельгія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Іран",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Єгипет",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Нова Зеландія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "H": [
+      {
+        "position": 1,
+        "teamName": "Іспанія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Уругвай",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Саудівська Аравія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Кабо-Верде",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "I": [
+      {
+        "position": 1,
+        "teamName": "Франція",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Сенегал",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Норвегія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Ірак",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "J": [
+      {
+        "position": 1,
+        "teamName": "Аргентина",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Австрія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Алжир",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Йорданія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "K": [
+      {
+        "position": 1,
+        "teamName": "Португалія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Колумбія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "ДР Конго",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Узбекистан",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ],
+    "L": [
+      {
+        "position": 1,
+        "teamName": "Англія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "teamName": "Хорватія",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "teamName": "Панама",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "teamName": "Гана",
+        "played": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "goalDifference": 0,
+        "points": 0
+      }
+    ]
+  }
 }

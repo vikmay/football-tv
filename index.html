@@ -1028,27 +1028,10 @@
                         }
                     }
 
-                    const currentTodayIso = getKyivTodayIso();
-                    const dateWindowDays = 8;
-                    const todayForWindow = new Date(`${currentTodayIso}T12:00:00Z`);
-                    const minDate = new Date(todayForWindow);
-                    minDate.setUTCDate(minDate.getUTCDate() - dateWindowDays);
-                    const maxDate = new Date(todayForWindow);
-                    maxDate.setUTCDate(maxDate.getUTCDate() + dateWindowDays);
-
-                    const visibleMatches = [...byMatchIdentity.values()].filter(match => {
-                        if (!match?.dateIso) {
-                            return true;
-                        }
-
-                        const matchDate = new Date(`${match.dateIso}T12:00:00Z`);
-                        return matchDate >= minDate && matchDate <= maxDate;
-                    });
-
                     const todayIso = getKyivTodayIso();
                     const matchesByDate = {};
 
-                    visibleMatches.forEach(m => {
+                    [...byMatchIdentity.values()].forEach(m => {
                         const dateKey = m.dateIso || m.date || "Інша дата";
                         if (!matchesByDate[dateKey]) {
                             matchesByDate[dateKey] = [];
