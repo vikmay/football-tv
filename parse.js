@@ -448,6 +448,19 @@ function getWorldCupTeamName(englishName) {
   return worldCupTeamNames[cleaned] || cleaned;
 }
 
+function isFlashscoreBrokenTeamName(name) {
+  // Flashscore sometimes splits a team name at a hyphen, creating a short fragment
+  // like "Кот" when the real name is "Кот-д’Івуар".
+  // We filter out such fragments here.
+  const cleaned = String(name || "").trim();
+  const minRealTeamNameLength = 3;
+  if (cleaned.length < minRealTeamNameLength) return true;
+  // Name that starts with a hyphen-apostrophe combo (e.g. "д’Івуар - Еквадор")
+  // means the away team was split from the home team at the same hyphen.
+  if (/^[дл]'|^[дл][’']/.test(cleaned)) return true;
+  return false;
+}
+
 const nonSoccerTeams = new Set([
   "Arizona Diamondbacks", "Washington Nationals", "Chicago Cubs", "San Francisco Giants",
   "Boston Red Sox", "Baltimore Orioles", "Seattle Mariners", "New York Mets",
@@ -1166,8 +1179,30 @@ function parseFlashscoreCupFeedData(data) {
       continue;
     }
 
-    const homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
-    const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
+    let homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
+    let awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
+
+    // Fix: Flashscore иногда разделяет составные названия команд через дефис
+    // например "Кот-д’Івуар" превращается в home="Кот", away="д’Івуар - Еквадор"
+    const awayLower = awayTeam.toLowerCase();
+    if (
+      awayLower.startsWith("д'") ||
+      awayLower.startsWith("д’") ||
+      awayLower.startsWith("де ") ||
+      (awayLower.startsWith("і ") && homeTeam.length < 6)
+    ) {
+      const combined = homeTeam + "-" + awayTeam;
+      const parts = combined.split(" - ");
+      if (parts.length === 2) {
+        const maybeHome = parts[0].trim();
+        const maybeAway = parts[1].trim();
+        if (maybeHome && maybeAway && maybeAway.length > 2) {
+          homeTeam = maybeHome;
+          awayTeam = maybeAway;
+        }
+      }
+    }
+
     const hasScore = Boolean(scoreHomeMatch && scoreAwayMatch);
 
     // Flashscore statusCode can differ between fixtures/results pages and even across leagues.
@@ -2392,9 +2427,9 @@ async function fetchExtraMatches() {
     console.log(`✅ ${config.name}: found ${chosenEvents.length} matches in ±7 days window`);
 
     const teamMapper = config.name === "Чемпіонат світу" ? getWorldCupTeamName : getUplTeamName;
-    const mappedMatches = chosenEvents.map(event =>
-      mapEventToMatch(event, config.name, teamMapper)
-    );
+    const mappedMatches = chosenEvents
+      .map(event => mapEventToMatch(event, config.name, teamMapper))
+      .filter(m => !isFlashscoreBrokenTeamName(m.home) && !isFlashscoreBrokenTeamName(m.away));
 
     leagueMatches[config.name] = mappedMatches;
 
