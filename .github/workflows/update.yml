@@ -43,6 +43,10 @@ jobs:
                   # by rebasing our commit on top of the latest remote branch before pushing.
                   branch="$(git rev-parse --abbrev-ref HEAD)"
                   git fetch origin "$branch"
-                  git pull --rebase origin "$branch"
+                  git pull --rebase -X theirs origin "$branch" 2>/dev/null || {
+                    # resolve any leftover conflicts (e.g. matches.meta.json) in favour of our commit
+                    git diff --name-only --diff-filter=U | xargs -r git checkout --theirs
+                    git rebase --continue
+                  }
 
                   git push
