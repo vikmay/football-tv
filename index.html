@@ -682,18 +682,138 @@
                 return normalizeMatchTeamName(teamName);
             }
 
-            function renderUplStandings(standings) {
-                const standingsHost = document.getElementById("standings");
-                const rows = Array.isArray(standings) ? standings : [];
+            function worldCupGroupTitle(groupLetter) {
+                return `Таблиця ЧС 2026 — Група ${groupLetter}`;
+            }
 
-                if (!rows.length) {
-                    standingsHost.innerHTML = "";
-                    return;
+            // World Cup team name translation (English → Ukrainian)
+            const worldCupTeamNames = {
+                "Mexico": "Мексика",
+                "South Korea": "Південна Корея",
+                "Czech Republic": "Чехія",
+                "South Africa": "Південна Африка",
+                "Switzerland": "Швейцарія",
+                "Canada": "Канада",
+                "Qatar": "Катар",
+                "Bosnia and Herzegovina": "Боснія і Герцеговина",
+                "Bosnia & Herzegovina": "Боснія і Герцеговина",
+                "Brazil": "Бразилія",
+                "Morocco": "Марокко",
+                "Scotland": "Шотландія",
+                "Haiti": "Гаїті",
+                "United States": "США",
+                "USA": "США",
+                "Turkey": "Туреччина",
+                "Australia": "Австралія",
+                "Paraguay": "Парагвай",
+                "Germany": "Німеччина",
+                "Ecuador": "Еквадор",
+                "Ivory Coast": "Кот-д'Івуар",
+                "Curacao": "Кюрасао",
+                "Netherlands": "Нідерланди",
+                "Japan": "Японія",
+                "Sweden": "Швеція",
+                "Tunisia": "Туніс",
+                "Belgium": "Бельгія",
+                "Iran": "Іран",
+                "Egypt": "Єгипет",
+                "New Zealand": "Нова Зеландія",
+                "Spain": "Іспанія",
+                "Uruguay": "Уругвай",
+                "Saudi Arabia": "Саудівська Аравія",
+                "Cape Verde": "Кабо-Верде",
+                "France": "Франція",
+                "Senegal": "Сенегал",
+                "Norway": "Норвегія",
+                "Iraq": "Ірак",
+                "Argentina": "Аргентина",
+                "Austria": "Австрія",
+                "Algeria": "Алжир",
+                "Jordan": "Йорданія",
+                "Portugal": "Португалія",
+                "Colombia": "Колумбія",
+                "DR Congo": "ДР Конго",
+                "Uzbekistan": "Узбекистан",
+                "England": "Англія",
+                "Croatia": "Хорватія",
+                "Panama": "Панама",
+                "Ghana": "Гана",
+                "Italy": "Італія",
+                "Denmark": "Данія",
+                "Poland": "Польща",
+                "Serbia": "Сербія",
+                "Nigeria": "Нігерія",
+                "Cameroon": "Камерун",
+                "Chile": "Чилі",
+                "Peru": "Перу",
+                "Russia": "Росія",
+                "Wales": "Уельс",
+                "Ukraine": "Україна",
+                "Slovakia": "Словаччина",
+                "Romania": "Румунія",
+                "Greece": "Греція",
+                "Hungary": "Угорщина",
+                "Slovenia": "Словенія",
+                "Bulgaria": "Болгарія",
+                "Finland": "Фінляндія",
+                "Iceland": "Ісландія",
+                "Northern Ireland": "Північна Ірландія",
+                "Ireland": "Ірландія",
+                "Montenegro": "Чорногорія",
+                "Albania": "Албанія",
+                "North Macedonia": "Північна Македонія",
+                "Bosnia": "Боснія і Герцеговина",
+                "Kosovo": "Косово",
+                "Georgia": "Грузія",
+                "Armenia": "Вірменія",
+                "Azerbaijan": "Азербайджан",
+                "Kazakhstan": "Казахстан",
+                "Israel": "Ізраїль",
+                "Cyprus": "Кіпр",
+                "Luxembourg": "Люксембург",
+                "Malta": "Мальта",
+                "Moldova": "Молдова",
+                "Estonia": "Естонія",
+                "Latvia": "Латвія",
+                "Lithuania": "Литва",
+                "China": "Китай",
+                "Venezuela": "Венесуела",
+                "Bolivia": "Болівія",
+                "Costa Rica": "Коста-Рика",
+                "Jamaica": "Ямайка",
+                "Honduras": "Гондурас",
+                "El Salvador": "Сальвадор",
+                "Guatemala": "Гватемала",
+                "Cuba": "Куба",
+                "Dominican Republic": "Домініканська Республіка",
+                "Indonesia": "Індонезія",
+                "Vietnam": "В'єтнам"
+            };
+
+            function getWorldCupTeamName(name) {
+                const cleaned = String(name || "").trim();
+                return worldCupTeamNames[cleaned] || cleaned;
+            }
+
+            function parseNumberCell(text) {
+                const cleaned = String(text || "").replace(/\s+/g, " ").trim();
+                const n = Number(cleaned);
+                return Number.isFinite(n) ? n : null;
+            }
+
+            function renderWorldCupGroupStandingsSection(groupLetter, rows) {
+                if (!Array.isArray(rows) || !rows.length) {
+                    return `
+                        <section class="standings">
+                            <h2 class="standings__title">${worldCupGroupTitle(groupLetter)}</h2>
+                            <div class="standings__note">Немає даних</div>
+                        </section>
+                    `;
                 }
 
-                standingsHost.innerHTML = `
+                return `
                     <section class="standings">
-                        <h2 class="standings__title">Таблиця УПЛ</h2>
+                        <h2 class="standings__title">${worldCupGroupTitle(groupLetter)}</h2>
                         <div class="standings__table-wrap">
                             <table class="standings__table">
                                 <colgroup>
@@ -724,7 +844,7 @@
                                     ${rows.map(team => `
                                         <tr>
                                             <td class="standings__rank-cell">${team.position ?? ""}</td>
-                                            <td class="standings__team-cell">${getStandingsTeamLabel(team.team || "")}</td>
+                                            <td class="standings__team-cell">${getWorldCupTeamName(team.teamName ?? "")}</td>
                                             <td>${team.played ?? ""}</td>
                                             <td>${team.wins ?? ""}</td>
                                             <td>${team.draws ?? ""}</td>
@@ -741,8 +861,104 @@
                 `;
             }
 
+            async function fetchWorldCupGroupStandingsRows(groupLetter) {
+                const url = `https://worldcupstats.football/groups/${groupLetter.toLowerCase()}/`;
+                const res = await fetch(url);
+                if (!res.ok) {
+                    throw new Error(`HTTP ${res.status}`);
+                }
+
+                const html = await res.text();
+                const doc = new DOMParser().parseFromString(html, "text/html");
+
+                const table = doc.querySelector("table.standings-table");
+                if (!table) {
+                    return [];
+                }
+
+                const rows = [];
+                const trList = table.querySelectorAll("tbody tr");
+                trList.forEach(tr => {
+                    const cells = tr.querySelectorAll("td");
+                    if (!cells || cells.length < 10) {
+                        return;
+                    }
+
+                    const position = parseNumberCell(cells[0].textContent);
+                    const teamName = (cells[1].querySelector("span")?.textContent || cells[1].textContent || "").trim();
+
+                    const played = parseNumberCell(cells[2].textContent);
+                    const wins = parseNumberCell(cells[3].textContent);
+                    const draws = parseNumberCell(cells[4].textContent);
+                    const losses = parseNumberCell(cells[5].textContent);
+                    const goalsFor = parseNumberCell(cells[6].textContent);
+                    const goalsAgainst = parseNumberCell(cells[7].textContent);
+                    const goalDifference = parseNumberCell(cells[8].textContent);
+                    const points = parseNumberCell(cells[9].textContent);
+
+                    if (
+                        position === null ||
+                        !teamName ||
+                        [played, wins, draws, losses, goalsFor, goalsAgainst, goalDifference, points].some(v => v === null)
+                    ) {
+                        return;
+                    }
+
+                    rows.push({
+                        position,
+                        teamName,
+                        played,
+                        wins,
+                        draws,
+                        losses,
+                        goalsFor,
+                        goalsAgainst,
+                        goalDifference,
+                        points
+                    });
+                });
+
+                return rows;
+            }
+
+            async function renderWorldCup2026GroupsStandings(standingsByGroup) {
+                const standingsHost = document.getElementById("standings");
+                standingsHost.innerHTML = "";
+
+                const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+
+                // Prefer local matches.json tables (works in same-origin app; no CORS).
+                if (standingsByGroup && typeof standingsByGroup === "object") {
+                    const sections = letters.map(letter =>
+                        renderWorldCupGroupStandingsSection(letter, standingsByGroup?.[letter] || [])
+                    );
+                    standingsHost.innerHTML = sections.join("");
+                    return;
+                }
+
+                // Fallback to worldcupstats (may be blocked by CORS when opened via file://).
+                const sections = [];
+
+                for (const letter of letters) {
+                    try {
+                        const rows = await fetchWorldCupGroupStandingsRows(letter);
+                        sections.push(renderWorldCupGroupStandingsSection(letter, rows));
+                    } catch (e) {
+                        sections.push(`
+                            <section class="standings">
+                                <h2 class="standings__title">${worldCupGroupTitle(letter)}</h2>
+                                <div class="standings__note">Помилка завантаження</div>
+                            </section>
+                        `);
+                    }
+                }
+
+                standingsHost.innerHTML = sections.join("");
+            }
+
             async function load() {
                 const content = document.getElementById("content");
+
 
                 try {
                     const res = await fetch("./matches.json?cache=" + Date.now());
@@ -754,12 +970,14 @@
                     const data = await res.json();
                     console.log("DATA LOADED:", data);
 
-                    const standings = data["Таблиця УПЛ"] || [];
+                    await renderWorldCup2026GroupsStandings(data["Таблиця ЧС 2026"] || {});
+
                     let html = "";
 
-                    const matches = Object.entries(data)
-                        .filter(([key, value]) => key !== "Таблиця УПЛ" && key !== "Українські клуби в Європі" && Array.isArray(value))
-                        .flatMap(([, value]) => value)
+                    const matches = Object.values(data)
+                        .filter(value => Array.isArray(value))
+                        .flat()
+                        .filter(m => m?.league === "Чемпіонат світу")
                         .sort((a, b) => {
                             const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
                             const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
@@ -876,7 +1094,6 @@
                         });
 
                     content.innerHTML = html;
-                    renderUplStandings(standings);
 
                     const todayElement = document.querySelector(".day--today");
                     if (todayElement && !hasScrolledToToday) {

@@ -346,6 +346,119 @@ function normalizeClubLookupName(name) {
   return flashscoreClubAliases[lowered] || flashscoreClubAliases[transliterated] || transliterated;
 }
 
+
+// Non-soccer teams Flashscore sometimes mis-categorizes under "world-championship"
+
+// World Cup team name mapping (English → Ukrainian)
+const worldCupTeamNames = {
+  "Mexico": "Мексика",
+  "South Korea": "Південна Корея",
+  "Czech Republic": "Чехія",
+  "South Africa": "Південна Африка",
+  "Switzerland": "Швейцарія",
+  "Canada": "Канада",
+  "Qatar": "Катар",
+  "Bosnia and Herzegovina": "Боснія і Герцеговина",
+  "Bosnia & Herzegovina": "Боснія і Герцеговина",
+  "Brazil": "Бразилія",
+  "Morocco": "Марокко",
+  "Scotland": "Шотландія",
+  "Haiti": "Гаїті",
+  "United States": "США",
+  "USA": "США",
+  "Turkey": "Туреччина",
+  "Australia": "Австралія",
+  "Paraguay": "Парагвай",
+  "Germany": "Німеччина",
+  "Ecuador": "Еквадор",
+  "Ivory Coast": "Кот-д'Івуар",
+  "Curacao": "Кюрасао",
+  "Curaçao": "Кюрасао",
+  "Netherlands": "Нідерланди",
+  "Japan": "Японія",
+  "Sweden": "Швеція",
+  "Tunisia": "Туніс",
+  "Belgium": "Бельгія",
+  "Iran": "Іран",
+  "Egypt": "Єгипет",
+  "New Zealand": "Нова Зеландія",
+  "Spain": "Іспанія",
+  "Uruguay": "Уругвай",
+  "Saudi Arabia": "Саудівська Аравія",
+  "Cape Verde": "Кабо-Верде",
+  "France": "Франція",
+  "Senegal": "Сенегал",
+  "Norway": "Норвегія",
+  "Iraq": "Ірак",
+  "Argentina": "Аргентина",
+  "Austria": "Австрія",
+  "Algeria": "Алжир",
+  "Jordan": "Йорданія",
+  "Portugal": "Португалія",
+  "Colombia": "Колумбія",
+  "DR Congo": "ДР Конго",
+  "Uzbekistan": "Узбекистан",
+  "England": "Англія",
+  "Croatia": "Хорватія",
+  "Panama": "Панама",
+  "Ghana": "Гана",
+  "Italy": "Італія",
+  "Denmark": "Данія",
+  "Poland": "Польща",
+  "Serbia": "Сербія",
+  "Nigeria": "Нігерія",
+  "Cameroon": "Камерун",
+  "Chile": "Чилі",
+  "Peru": "Перу",
+  "Ukraine": "Україна",
+  "Slovakia": "Словаччина",
+  "Romania": "Румунія",
+  "Greece": "Греція",
+  "Hungary": "Угорщина",
+  "Slovenia": "Словенія",
+  "Ireland": "Ірландія",
+  "Montenegro": "Чорногорія",
+  "Albania": "Албанія",
+  "North Macedonia": "Північна Македонія",
+  "Georgia": "Грузія",
+  "Armenia": "Вірменія",
+  "Azerbaijan": "Азербайджан",
+  "Kazakhstan": "Казахстан",
+  "Israel": "Ізраїль",
+  "Cyprus": "Кіпр",
+  "Malta": "Мальта",
+  "Moldova": "Молдова",
+  "Estonia": "Естонія",
+  "Latvia": "Латвія",
+  "Lithuania": "Литва",
+  "China": "Китай",
+  "Venezuela": "Венесуела",
+  "Bolivia": "Болівія",
+  "Costa Rica": "Коста-Рика",
+  "Jamaica": "Ямайка",
+  "Honduras": "Гондурас",
+  "El Salvador": "Сальвадор",
+  "Guatemala": "Гватемала",
+  "Cuba": "Куба",
+  "Dominican Republic": "Домініканська Республіка"
+};
+
+function getWorldCupTeamName(englishName) {
+  const cleaned = cleanExtractedText(String(englishName || "")).trim();
+  return worldCupTeamNames[cleaned] || cleaned;
+}
+
+const nonSoccerTeams = new Set([
+  "Arizona Diamondbacks", "Washington Nationals", "Chicago Cubs", "San Francisco Giants",
+  "Boston Red Sox", "Baltimore Orioles", "Seattle Mariners", "New York Mets",
+  "New York Yankees", "Los Angeles Dodgers", "Houston Astros", "Atlanta Braves",
+  "St. Louis Cardinals", "Philadelphia Phillies", "Milwaukee Brewers", "Miami Marlins",
+  "Cincinnati Reds", "Pittsburgh Pirates", "Detroit Tigers", "Cleveland Guardians",
+  "Chicago White Sox", "Kansas City Royals", "Minnesota Twins", "Texas Rangers",
+  "Los Angeles Angels", "Oakland Athletics", "Tampa Bay Rays", "Toronto Blue Jays",
+  "Colorado Rockies", "San Diego Padres"
+]);
+
 const extraCompetitionConfigs = [
   {
     id: 4481,
@@ -382,9 +495,10 @@ const extraCompetitionConfigs = [
   {
     id: 4424,
     name: "Чемпіонат світу",
-    type: "national",
+    type: "worldcup",
     flashscoreUrls: [
-      "https://www.flashscore.ua/soccer/world/world-cup/fixtures/"
+      "https://www.flashscore.ua/soccer/world/world-championship/fixtures/",
+      "https://www.flashscore.ua/soccer/world/world-championship/results/"
     ]
   },
   {
@@ -423,6 +537,11 @@ function isExtraCompetitionMatch(event, type) {
 
   if (type === "national") {
     return isUkraineNationalTeamName(event.strHomeTeam) || isUkraineNationalTeamName(event.strAwayTeam);
+  }
+
+  // worldcup — show ALL matches
+  if (type === "worldcup") {
+    return true;
   }
 
   return false;
@@ -866,7 +985,7 @@ function dedupeScheduleSections(matches) {
     }
 
     const cleanedItems =
-      sectionName === "УПЛ"
+      sectionName === "УПЛ" || sectionName === "Чемпіонат світу"
         ? [...bySlot.values()].filter(item => {
           const t = String(item?.time || "");
           return t !== "00:00" && t !== "00:00:00";
@@ -1623,6 +1742,83 @@ function parseFlashscoreDrawPageEvents(html) {
   return dedupeEvents(events).sort(sortByDateTimeAsc);
 }
 
+
+function parseWorldCupGroupStandingsFromHtml(html) {
+  const tableMatch = String(html || "").match(/<table class="standings-table">([\s\S]*?)<\/table>/i);
+  if (!tableMatch) {
+    return [];
+  }
+
+  const tableHtml = tableMatch[1];
+  const rowPattern = /<tr[\s\S]*?<\/tr>/gi;
+  const rows = [];
+
+  for (const rowHtml of tableHtml.matchAll(rowPattern)) {
+    const rowText = String(rowHtml[0]);
+
+    const tdMatches = [...rowText.matchAll(/<td[\s\S]*?>([\s\S]*?)<\/td>/gi)];
+    if (tdMatches.length < 10) {
+      continue;
+    }
+
+    const cellTexts = tdMatches.map(m => htmlToPlainText(m[1]).replace(/\s+/g, " ").trim());
+
+    const position = Number(cellTexts[0]);
+    const teamName = getWorldCupTeamName(cellTexts[1]);
+    const played = Number(cellTexts[2]);
+    const wins = Number(cellTexts[3]);
+    const draws = Number(cellTexts[4]);
+    const losses = Number(cellTexts[5]);
+    const goalsFor = Number(cellTexts[6]);
+    const goalsAgainst = Number(cellTexts[7]);
+    const goalDifference = Number(cellTexts[8]);
+    const points = Number(cellTexts[9]);
+
+    if (!teamName) {
+      continue;
+    }
+
+    const numericValues = [position, played, wins, draws, losses, goalsFor, goalsAgainst, goalDifference, points];
+    if (numericValues.some(v => !Number.isFinite(v))) {
+      continue;
+    }
+
+    rows.push({
+      position,
+      teamName,
+      played,
+      wins,
+      draws,
+      losses,
+      goalsFor,
+      goalsAgainst,
+      goalDifference,
+      points
+    });
+  }
+
+  return rows.sort((a, b) => a.position - b.position);
+}
+
+async function fetchWorldCup2026GroupStandings() {
+  const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"];
+  const result = {};
+
+  for (const letter of letters) {
+    const url = `https://worldcupstats.football/groups/${letter}/`;
+    const html = await fetchText(url, `WC 2026 group ${letter} standings fetch error`);
+
+    if (!html) {
+      result[letter.toUpperCase()] = [];
+      continue;
+    }
+
+    result[letter.toUpperCase()] = parseWorldCupGroupStandingsFromHtml(html);
+  }
+
+  return result;
+}
+
 function parseCupUafEvents(html) {
   const text = htmlToPlainText(html)
     .replace(/\u00a0/g, " ")
@@ -2175,8 +2371,9 @@ async function fetchExtraMatches() {
 
     console.log(`✅ ${config.name}: found ${chosenEvents.length} matches in ±7 days window`);
 
+    const teamMapper = config.name === "Чемпіонат світу" ? getWorldCupTeamName : getUplTeamName;
     const mappedMatches = chosenEvents.map(event =>
-      mapEventToMatch(event, config.name, getUplTeamName)
+      mapEventToMatch(event, config.name, teamMapper)
     );
 
     leagueMatches[config.name] = mappedMatches;
@@ -2214,12 +2411,13 @@ async function main() {
     return;
   }
 
-  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches] = await Promise.all([
+  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches, wcGroupStandings] = await Promise.all([
     fetchUplEvents(),
     fetchUplStandings(),
     fetchChampionsLeagueEvents(),
     fetchCupEvents(),
-    fetchExtraMatches()
+    fetchExtraMatches(),
+    fetchWorldCup2026GroupStandings()
   ]);
 
   if (uplEvents) {
@@ -2251,6 +2449,15 @@ async function main() {
     );
   }
 
+  matches["Чемпіонат світу"] = (extraMatches.leagueMatches?.["Чемпіонат світу"] || []).slice();
+
+  // Filter out non-soccer (MLB) matches mis-categorized by Flashscore
+  if (Array.isArray(matches["Чемпіонат світу"])) {
+    matches["Чемпіонат світу"] = matches["Чемпіонат світу"].filter(m =>
+      !nonSoccerTeams.has(m.home) && !nonSoccerTeams.has(m.away)
+    );
+  }
+
   matches["Ліга Європи"] = (extraMatches.leagueMatches?.["Ліга Європи"] || []).slice();
 
   matches["Ліга конференцій"] = (extraMatches.leagueMatches?.["Ліга конференцій"] || []).slice();
@@ -2269,6 +2476,7 @@ async function main() {
 
   const dedupedMatches = dedupeScheduleSections(matches);
   const finalMatches = filterMatchesWithinWindow(dedupedMatches);
+  finalMatches["Таблиця ЧС 2026"] = wcGroupStandings || {};
   fs.writeFileSync("matches.json", JSON.stringify(finalMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
