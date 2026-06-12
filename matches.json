@@ -1,36 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Динамо Київ",
-      "away": "Колос",
-      "league": "УПЛ",
-      "time": "2 - 1",
-      "date": "середа, 13 травня",
-      "dateIso": "2026-05-13",
-      "status": "Match Finished",
-      "score": "2 - 1"
-    },
-    {
-      "home": "ЛНЗ Черкаси",
-      "away": "СК Полтава",
-      "league": "УПЛ",
-      "time": "2 - 0",
-      "date": "середа, 13 травня",
-      "dateIso": "2026-05-13",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
-      "home": "Шахтар Донецьк",
-      "away": "Оболонь Київ",
-      "league": "УПЛ",
-      "time": "3 - 1",
-      "date": "середа, 13 травня",
-      "dateIso": "2026-05-13",
-      "status": "Match Finished",
-      "score": "3 - 1"
-    },
-    {
       "home": "Кудрівка",
       "away": "Рух Львів",
       "league": "УПЛ",
@@ -48,7 +18,8 @@
       "date": "субота, 16 травня",
       "dateIso": "2026-05-16",
       "status": "Match Finished",
-      "score": "1 - 1"
+      "score": "1 - 1",
+      "originalTime": "13:00"
     },
     {
       "home": "СК Полтава",
@@ -58,7 +29,8 @@
       "date": "субота, 16 травня",
       "dateIso": "2026-05-16",
       "status": "Match Finished",
-      "score": "0 - 2"
+      "score": "0 - 2",
+      "originalTime": "13:00"
     },
     {
       "home": "Кривбас",
@@ -78,7 +50,8 @@
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
-      "score": "1 - 3"
+      "score": "1 - 3",
+      "originalTime": "13:00"
     },
     {
       "home": "Колос",
@@ -88,7 +61,8 @@
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
-      "score": "0 - 2"
+      "score": "0 - 2",
+      "originalTime": "15:30"
     },
     {
       "home": "Карпати Львів",
@@ -108,7 +82,8 @@
       "date": "понеділок, 18 травня",
       "dateIso": "2026-05-18",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "0 - 0",
+      "originalTime": "13:00"
     },
     {
       "home": "Кудрівка",
@@ -118,7 +93,8 @@
       "date": "понеділок, 18 травня",
       "dateIso": "2026-05-18",
       "status": "Match Finished",
-      "score": "1 - 0"
+      "score": "1 - 0",
+      "originalTime": "13:00"
     },
     {
       "home": "Шахтар Донецьк",
@@ -128,7 +104,8 @@
       "date": "четвер, 21 травня",
       "dateIso": "2026-05-21",
       "status": "Match Finished",
-      "score": "0 - 1"
+      "score": "0 - 1",
+      "originalTime": "15:30"
     },
     {
       "home": "Олександрія",
@@ -138,7 +115,8 @@
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
-      "score": "1 - 1"
+      "score": "1 - 1",
+      "originalTime": "13:00"
     },
     {
       "home": "Епіцентр",
@@ -148,7 +126,8 @@
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "0 - 0",
+      "originalTime": "15:30"
     },
     {
       "home": "Карпати Львів",
@@ -158,7 +137,8 @@
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
-      "score": "1 - 2"
+      "score": "1 - 2",
+      "originalTime": "18:00"
     },
     {
       "home": "Динамо Київ",
@@ -178,7 +158,8 @@
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
-      "score": "0 - 1"
+      "score": "0 - 1",
+      "originalTime": "13:00"
     },
     {
       "home": "Полісся Житомир",
@@ -198,7 +179,8 @@
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
-      "score": "0 - 1"
+      "score": "0 - 1",
+      "originalTime": "13:00"
     },
     {
       "home": "Олександрія",
@@ -218,7 +200,8 @@
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Match Finished",
-      "score": "1 - 1"
+      "score": "1 - 1",
+      "originalTime": "15:30"
     },
     {
       "home": "Кудрівка",
@@ -238,7 +221,8 @@
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "0 - 0",
+      "originalTime": "18:00"
     },
     {
       "home": "Лівий берег",
@@ -293,6 +277,17 @@
       "dateIso": "2026-05-30",
       "status": "Match Finished",
       "score": "2 - 1"
+    },
+    {
+      "home": "ПСЖ",
+      "away": "Арсенал",
+      "league": "Ліга чемпіонів (Фінал)",
+      "time": "2 - 1",
+      "date": "субота, 30 травня",
+      "dateIso": "2026-05-30",
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "originalTime": "19:00"
     }
   ],
   "Кубок України": [
@@ -305,6 +300,17 @@
       "dateIso": "2026-05-20",
       "status": "Match Finished",
       "score": "1 - 3"
+    },
+    {
+      "home": "Чернігів",
+      "away": "Динамо Київ",
+      "league": "Кубок України (Фінал)",
+      "time": "1 - 3",
+      "date": "середа, 20 травня",
+      "dateIso": "2026-05-20",
+      "status": "Match Finished",
+      "score": "1 - 3",
+      "originalTime": "18:00"
     }
   ],
   "Ліга Європи": [
@@ -344,6 +350,17 @@
       "status": "Match Finished",
       "score": "3 - 1",
       "originalTime": "22:00"
+    },
+    {
+      "home": "ПСЖ",
+      "away": "Астон Вілла",
+      "league": "Суперкубок УЄФА (Фінал)",
+      "time": "22:00",
+      "date": "середа, 12 серпня",
+      "dateIso": "2026-08-12",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
     }
   ],
   "Ліга націй УЄФА": [],
@@ -364,7 +381,7 @@
       "away": "Чехія",
       "league": "Чемпіонат світу",
       "time": "2 - 1",
-      "date": "Сьогодні, 12 червня",
+      "date": "пʼятниця, 12 червня",
       "dateIso": "2026-06-12",
       "status": "Match Finished",
       "score": "2 - 1",
@@ -374,11 +391,11 @@
       "home": "Канада",
       "away": "Боснія і Герцеговина",
       "league": "Чемпіонат світу",
-      "time": "22:00",
-      "date": "Сьогодні, 12 червня",
+      "time": "1 - 1",
+      "date": "пʼятниця, 12 червня",
       "dateIso": "2026-06-12",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "22:00"
     },
     {
@@ -386,7 +403,7 @@
       "away": "Парагвай",
       "league": "Чемпіонат світу",
       "time": "04:00",
-      "date": "субота, 13 червня",
+      "date": "Сьогодні, 13 червня",
       "dateIso": "2026-06-13",
       "status": "Scheduled",
       "score": "",
@@ -397,7 +414,7 @@
       "away": "Швейцарія",
       "league": "Чемпіонат світу",
       "time": "22:00",
-      "date": "субота, 13 червня",
+      "date": "Сьогодні, 13 червня",
       "dateIso": "2026-06-13",
       "status": "Scheduled",
       "score": "",
@@ -1157,7 +1174,7 @@
       "home": "Lens",
       "away": "Nice",
       "league": "Суперкубок УЄФА (Фінал)",
-      "time": "22:00",
+      "time": "3 - 1",
       "date": "пʼятниця, 22 травня",
       "dateIso": "2026-05-22",
       "status": "Match Finished",
@@ -1178,7 +1195,7 @@
       "home": "Freiburg",
       "away": "Астон Вілла",
       "league": "Ліга Європи (Фінал)",
-      "time": "22:00",
+      "time": "0 - 3",
       "date": "середа, 20 травня",
       "dateIso": "2026-05-20",
       "status": "Match Finished",
@@ -1189,11 +1206,22 @@
       "home": "Кристал Пелес",
       "away": "Райо Вальєкано",
       "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
+      "time": "1 - 0",
       "date": "середа, 27 травня",
       "dateIso": "2026-05-27",
       "status": "Match Finished",
       "score": "1 - 0",
+      "originalTime": "22:00"
+    },
+    {
+      "home": "ПСЖ",
+      "away": "Астон Вілла",
+      "league": "Суперкубок УЄФА (Фінал)",
+      "time": "22:00",
+      "date": "середа, 12 серпня",
+      "dateIso": "2026-08-12",
+      "status": "Scheduled",
+      "score": "",
       "originalTime": "22:00"
     }
   ],
@@ -1462,6 +1490,30 @@
     "B": [
       {
         "position": 1,
+        "teamName": "Канада",
+        "played": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
+        "goalDifference": 0,
+        "points": 1
+      },
+      {
+        "position": 2,
+        "teamName": "Боснія і Герцеговина",
+        "played": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
+        "goalDifference": 0,
+        "points": 1
+      },
+      {
+        "position": 3,
         "teamName": "Швейцарія",
         "played": 0,
         "wins": 0,
@@ -1473,32 +1525,8 @@
         "points": 0
       },
       {
-        "position": 2,
-        "teamName": "Канада",
-        "played": 0,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
-      },
-      {
-        "position": 3,
-        "teamName": "Катар",
-        "played": 0,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
-      },
-      {
         "position": 4,
-        "teamName": "Боснія і Герцеговина",
+        "teamName": "Катар",
         "played": 0,
         "wins": 0,
         "draws": 0,
