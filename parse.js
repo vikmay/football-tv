@@ -2219,17 +2219,17 @@ async function fetchUplEvents() {
   // Prefer official calendar, but overlay finished scores from Flashscore results.
   if (officialEvents.length > 0) {
     if (flashscoreResultsEvents.length > 0) {
-      console.log(`✅ РЈРџР› official + Flashscore results merged: ${officialEvents.length} matches in В±7 days window`);
+      console.log(`✅ УПЛ official + Flashscore results merged: ${officialEvents.length} matches in ±7 days window`);
       return mergeCupEvents(officialEvents, flashscoreResultsEvents);
     }
 
-    console.log(`вњ… РЈРџР› fetched from official upl.ua: ${officialEvents.length} matches in В±7 days window`);
+    console.log(`✅ УПЛ fetched from official upl.ua: ${officialEvents.length} matches in ±7 days window`);
     return officialEvents;
   }
 
   // If no official, prefer Flashscore results (they include scores), otherwise fixtures, otherwise TNT.
   if (flashscoreResultsEvents.length > 0) {
-    console.log(`✅ РЈРџР› fetched from Flashscore results: ${flashscoreResultsEvents.length} matches in В±7 days window`);
+    console.log(`✅ УПЛ fetched from Flashscore results: ${flashscoreResultsEvents.length} matches in ±7 days window`);
     return flashscoreResultsEvents;
   }
 
@@ -2238,23 +2238,23 @@ async function fetchUplEvents() {
   // Prefer Flashscore вЂњsummary-fixturesвЂќ (usually has correct kickoff),
   // then fallback to вЂњsummary-resultsвЂќ.
   if (flashscoreSummaryFixturesEvents.length > 0) {
-    console.log(`вњ… РЈРџР› summary-fixtures parsed: ${flashscoreSummaryFixturesEvents.length} matches in В±7 days window`);
+    console.log(`✅ УПЛ summary-fixtures parsed: ${flashscoreSummaryFixturesEvents.length} matches in ±7 days window`);
     return flashscoreSummaryFixturesEvents;
   }
 
   if (flashscoreSummaryEvents.length > 0) {
-    console.log(`вњ… РЈРџР› summary-results parsed: ${flashscoreSummaryEvents.length} matches in В±7 days window`);
+    console.log(`✅ УПЛ summary-results parsed: ${flashscoreSummaryEvents.length} matches in ±7 days window`);
     return flashscoreSummaryEvents;
   }
 
   if (flashscoreFixturesEvents.length > 0) {
-    console.log(`Р Р†РЎв„ўР’В Р С—РЎвЂР РЏ Р В Р в‚¬Р В РЎСџР В РІР‚С” official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in Р вЂ™Р’В±7 days window`);
+    console.log(`⚠️ УПЛ official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in ±7 days window`);
 
     // Flashscore fixtures HTML often lacks kickoff time -> parser keeps "00:00:00".
     // Overlay kickoff time from TheSportsDB for those matches.
     const needsOverlay = flashscoreFixturesEvents.some(e => String(e?.strTime || "").startsWith("00:00"));
     if (needsOverlay) {
-      const sportsDbEvents = await fetchLeagueEvents(4354, "Р Р€Р СџР вЂє");
+      const sportsDbEvents = await fetchLeagueEvents(4354, "УПЛ");
       if (Array.isArray(sportsDbEvents) && sportsDbEvents.length > 0) {
         const getHomeNorm = e => getUplTeamName(String(e?.strHomeTeam || ""));
         const getAwayNorm = e => getUplTeamName(String(e?.strAwayTeam || ""));
@@ -2288,12 +2288,12 @@ async function fetchUplEvents() {
   }
 
   if (tntEvents.length > 0) {
-    console.log(`вљ пёЏ РЈРџР› official source empty, fallback to TNT Sports: ${tntEvents.length} matches in В±7 days window`);
+    console.log(`⚠️ УПЛ official source empty, fallback to TNT Sports: ${tntEvents.length} matches in ±7 days window`);
     return tntEvents;
   }
 
-  console.log("вљ пёЏ UPL web sources returned no matches, falling back to TheSportsDB");
-  return fetchLeagueEvents(4354, "РЈРџР›");
+  console.log("⚠️ UPL web sources returned no matches, falling back to TheSportsDB");
+  return fetchLeagueEvents(4354, "УПЛ");
 }
 
 async function fetchCompetitionEvents(leagueId, leagueName) {
