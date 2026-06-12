@@ -1,100 +1,10 @@
 {
   "УПЛ": [
     {
-      "home": "Рух Львів",
-      "away": "Верес Рівне",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "субота, 9 травня",
-      "dateIso": "2026-05-09",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
-      "home": "ЛНЗ Черкаси",
-      "away": "Динамо Київ",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "субота, 9 травня",
-      "dateIso": "2026-05-09",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
-      "home": "Оболонь Київ",
-      "away": "Епіцентр",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 9 травня",
-      "dateIso": "2026-05-09",
-      "status": "Match Finished",
-      "score": "2 - 2"
-    },
-    {
-      "home": "Зоря Луганськ",
-      "away": "Металіст 1925 Харків",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 9 травня",
-      "dateIso": "2026-05-09",
-      "status": "Match Finished",
-      "score": "1 - 1"
-    },
-    {
-      "home": "СК Полтава",
-      "away": "Шахтар Донецьк",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "неділя, 10 травня",
-      "dateIso": "2026-05-10",
-      "status": "Match Finished",
-      "score": "0 - 4"
-    },
-    {
-      "home": "Олександрія",
-      "away": "Зоря Луганськ",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "вівторок, 12 травня",
-      "dateIso": "2026-05-12",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
-    {
-      "home": "Епіцентр",
-      "away": "Полісся Житомир",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "вівторок, 12 травня",
-      "dateIso": "2026-05-12",
-      "status": "Match Finished",
-      "score": "3 - 2"
-    },
-    {
-      "home": "Верес Рівне",
-      "away": "Кривбас",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "вівторок, 12 травня",
-      "dateIso": "2026-05-12",
-      "status": "Match Finished",
-      "score": "1 - 3"
-    },
-    {
-      "home": "Металіст 1925 Харків",
-      "away": "Карпати Львів",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "вівторок, 12 травня",
-      "dateIso": "2026-05-12",
-      "status": "Match Finished",
-      "score": "2 - 2"
-    },
-    {
       "home": "Динамо Київ",
       "away": "Колос",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "2 - 1",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
       "status": "Match Finished",
@@ -104,7 +14,7 @@
       "home": "ЛНЗ Черкаси",
       "away": "СК Полтава",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "2 - 0",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
       "status": "Match Finished",
@@ -114,7 +24,7 @@
       "home": "Шахтар Донецьк",
       "away": "Оболонь Київ",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "3 - 1",
       "date": "середа, 13 травня",
       "dateIso": "2026-05-13",
       "status": "Match Finished",
@@ -124,7 +34,7 @@
       "home": "Кудрівка",
       "away": "Рух Львів",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "2 - 1",
       "date": "четвер, 14 травня",
       "dateIso": "2026-05-14",
       "status": "Match Finished",
@@ -134,7 +44,7 @@
       "home": "Металіст 1925 Харків",
       "away": "Епіцентр",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "1 - 1",
       "date": "субота, 16 травня",
       "dateIso": "2026-05-16",
       "status": "Match Finished",
@@ -144,7 +54,7 @@
       "home": "СК Полтава",
       "away": "Динамо Київ",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "0 - 2",
       "date": "субота, 16 травня",
       "dateIso": "2026-05-16",
       "status": "Match Finished",
@@ -154,7 +64,7 @@
       "home": "Кривбас",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "2 - 3",
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
@@ -164,7 +74,7 @@
       "home": "Рух Львів",
       "away": "Олександрія",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "1 - 3",
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
@@ -174,7 +84,7 @@
       "home": "Колос",
       "away": "Оболонь Київ",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "0 - 2",
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
@@ -184,7 +94,7 @@
       "home": "Карпати Львів",
       "away": "Верес Рівне",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "2 - 0",
       "date": "неділя, 17 травня",
       "dateIso": "2026-05-17",
       "status": "Match Finished",
@@ -194,7 +104,7 @@
       "home": "Зоря Луганськ",
       "away": "Полісся Житомир",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "0 - 0",
       "date": "понеділок, 18 травня",
       "dateIso": "2026-05-18",
       "status": "Match Finished",
@@ -204,7 +114,7 @@
       "home": "Кудрівка",
       "away": "ЛНЗ Черкаси",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "1 - 0",
       "date": "понеділок, 18 травня",
       "dateIso": "2026-05-18",
       "status": "Match Finished",
@@ -214,7 +124,7 @@
       "home": "Шахтар Донецьк",
       "away": "Колос",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "0 - 1",
       "date": "четвер, 21 травня",
       "dateIso": "2026-05-21",
       "status": "Match Finished",
@@ -224,7 +134,7 @@
       "home": "Олександрія",
       "away": "Кривбас",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "1 - 1",
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
@@ -234,7 +144,7 @@
       "home": "Епіцентр",
       "away": "СК Полтава",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "0 - 0",
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
@@ -244,7 +154,7 @@
       "home": "Карпати Львів",
       "away": "Зоря Луганськ",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "1 - 2",
       "date": "субота, 23 травня",
       "dateIso": "2026-05-23",
       "status": "Match Finished",
@@ -254,7 +164,7 @@
       "home": "Динамо Київ",
       "away": "Кудрівка",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "3 - 2",
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
@@ -264,7 +174,7 @@
       "home": "Верес Рівне",
       "away": "Металіст 1925 Харків",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "0 - 1",
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
@@ -274,7 +184,7 @@
       "home": "Полісся Житомир",
       "away": "Рух Львів",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "2 - 0",
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
@@ -284,7 +194,7 @@
       "home": "Оболонь Київ",
       "away": "ЛНЗ Черкаси",
       "league": "УПЛ",
-      "time": "13:00",
+      "time": "0 - 1",
       "date": "неділя, 24 травня",
       "dateIso": "2026-05-24",
       "status": "Match Finished",
@@ -304,7 +214,7 @@
       "home": "Олександрія",
       "away": "Лівий берег",
       "league": "УПЛ (Фінал)",
-      "time": "15:30",
+      "time": "1 - 1",
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Match Finished",
@@ -324,7 +234,7 @@
       "home": "Кудрівка",
       "away": "Агробізнес Волочиськ",
       "league": "УПЛ (Фінал)",
-      "time": "18:00",
+      "time": "0 - 0",
       "date": "пʼятниця, 5 червня",
       "dateIso": "2026-06-05",
       "status": "Match Finished",
@@ -341,6 +251,17 @@
       "score": ""
     },
     {
+      "home": "Лівий берег",
+      "away": "Олександрія",
+      "league": "УПЛ (Фінал)",
+      "time": "1 - 0",
+      "date": "вівторок, 9 червня",
+      "dateIso": "2026-06-09",
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "originalTime": "15:30"
+    },
+    {
       "home": "Агробізнес Волочиськ",
       "away": "Кудрівка",
       "league": "УПЛ",
@@ -349,6 +270,17 @@
       "dateIso": "2026-06-09",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Агробізнес Волочиськ",
+      "away": "Кудрівка",
+      "league": "УПЛ (Фінал)",
+      "time": "2 - 3",
+      "date": "вівторок, 9 червня",
+      "dateIso": "2026-06-09",
+      "status": "Match Finished",
+      "score": "2 - 3",
+      "originalTime": "18:00"
     }
   ],
   "Ліга чемпіонів": [
@@ -356,7 +288,7 @@
       "home": "ПСЖ",
       "away": "Арсенал",
       "league": "Ліга чемпіонів (Фінал)",
-      "time": "19:00",
+      "time": "2 - 1",
       "date": "субота, 30 травня",
       "dateIso": "2026-05-30",
       "status": "Match Finished",
@@ -368,7 +300,7 @@
       "home": "Чернігів",
       "away": "Динамо Київ",
       "league": "Кубок України (Фінал)",
-      "time": "18:00",
+      "time": "1 - 3",
       "date": "середа, 20 травня",
       "dateIso": "2026-05-20",
       "status": "Match Finished",
@@ -383,8 +315,9 @@
       "time": "22:00",
       "date": "середа, 20 травня",
       "dateIso": "2026-05-20",
-      "status": "FT",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3",
+      "originalTime": "22:00"
     }
   ],
   "Ліга конференцій": [
@@ -396,7 +329,8 @@
       "date": "середа, 27 травня",
       "dateIso": "2026-05-27",
       "status": "Match Finished",
-      "score": "1 - 0"
+      "score": "1 - 0",
+      "originalTime": "22:00"
     }
   ],
   "Суперкубок УЄФА": [
@@ -407,8 +341,9 @@
       "time": "22:00",
       "date": "пʼятниця, 22 травня",
       "dateIso": "2026-05-22",
-      "status": "FT",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "originalTime": "22:00"
     }
   ],
   "Ліга націй УЄФА": [],
@@ -417,31 +352,45 @@
       "home": "Мексика",
       "away": "Південна Африка",
       "league": "Чемпіонат світу",
-      "time": "22:00",
+      "time": "2 - 0",
       "date": "четвер, 11 червня",
       "dateIso": "2026-06-11",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "originalTime": "22:00"
+    },
+    {
+      "home": "Південна Корея",
+      "away": "Чехія",
+      "league": "Чемпіонат світу",
+      "time": "2 - 1",
+      "date": "Сьогодні, 12 червня",
+      "dateIso": "2026-06-12",
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "originalTime": "05:00"
     },
     {
       "home": "Канада",
       "away": "Боснія і Герцеговина",
       "league": "Чемпіонат світу",
       "time": "22:00",
-      "date": "пʼятниця, 12 червня",
+      "date": "Сьогодні, 12 червня",
       "dateIso": "2026-06-12",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
-      "home": "Південна Корея",
-      "away": "Чехія",
+      "home": "США",
+      "away": "Парагвай",
       "league": "Чемпіонат світу",
-      "time": "05:00",
-      "date": "пʼятниця, 12 червня",
-      "dateIso": "2026-06-12",
+      "time": "04:00",
+      "date": "субота, 13 червня",
+      "dateIso": "2026-06-13",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Катар",
@@ -451,37 +400,8 @@
       "date": "субота, 13 червня",
       "dateIso": "2026-06-13",
       "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "США",
-      "away": "Парагвай",
-      "league": "Чемпіонат світу",
-      "time": "04:00",
-      "date": "субота, 13 червня",
-      "dateIso": "2026-06-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Австралія",
-      "away": "Туреччина",
-      "league": "Чемпіонат світу",
-      "time": "07:00",
-      "date": "неділя, 14 червня",
-      "dateIso": "2026-06-14",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Нідерланди",
-      "away": "Японія",
-      "league": "Чемпіонат світу",
-      "time": "23:00",
-      "date": "неділя, 14 червня",
-      "dateIso": "2026-06-14",
-      "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Бразилія",
@@ -491,7 +411,8 @@
       "date": "неділя, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Гаїті",
@@ -501,7 +422,19 @@
       "date": "неділя, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
+    },
+    {
+      "home": "Австралія",
+      "away": "Туреччина",
+      "league": "Чемпіонат світу",
+      "time": "07:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "07:00"
     },
     {
       "home": "Німеччина",
@@ -511,37 +444,19 @@
       "date": "неділя, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "20:00"
     },
     {
-      "home": "Іспанія",
-      "away": "Кабо-Верде",
+      "home": "Нідерланди",
+      "away": "Японія",
       "league": "Чемпіонат світу",
-      "time": "19:00",
-      "date": "понеділок, 15 червня",
-      "dateIso": "2026-06-15",
+      "time": "23:00",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
       "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Бельгія",
-      "away": "Єгипет",
-      "league": "Чемпіонат світу",
-      "time": "22:00",
-      "date": "понеділок, 15 червня",
-      "dateIso": "2026-06-15",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Швеція",
-      "away": "Туніс",
-      "league": "Чемпіонат світу",
-      "time": "05:00",
-      "date": "понеділок, 15 червня",
-      "dateIso": "2026-06-15",
-      "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Кот-д’Івуар",
@@ -551,7 +466,41 @@
       "date": "понеділок, 15 червня",
       "dateIso": "2026-06-15",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:00"
+    },
+    {
+      "home": "Швеція",
+      "away": "Туніс",
+      "league": "Чемпіонат світу",
+      "time": "05:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "05:00"
+    },
+    {
+      "home": "Іспанія",
+      "away": "Кабо-Верде",
+      "league": "Чемпіонат світу",
+      "time": "19:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
+      "home": "Бельгія",
+      "away": "Єгипет",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "понеділок, 15 червня",
+      "dateIso": "2026-06-15",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Саудівська Аравія",
@@ -561,7 +510,8 @@
       "date": "вівторок, 16 червня",
       "dateIso": "2026-06-16",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Іран",
@@ -571,7 +521,8 @@
       "date": "вівторок, 16 червня",
       "dateIso": "2026-06-16",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Франція",
@@ -581,7 +532,8 @@
       "date": "вівторок, 16 червня",
       "dateIso": "2026-06-16",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Ірак",
@@ -591,7 +543,8 @@
       "date": "середа, 17 червня",
       "dateIso": "2026-06-17",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Аргентина",
@@ -601,7 +554,8 @@
       "date": "середа, 17 червня",
       "dateIso": "2026-06-17",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Австрія",
@@ -611,7 +565,8 @@
       "date": "середа, 17 червня",
       "dateIso": "2026-06-17",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "07:00"
     },
     {
       "home": "Португалія",
@@ -621,7 +576,8 @@
       "date": "середа, 17 червня",
       "dateIso": "2026-06-17",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "20:00"
     },
     {
       "home": "Англія",
@@ -631,7 +587,8 @@
       "date": "середа, 17 червня",
       "dateIso": "2026-06-17",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Гана",
@@ -641,7 +598,8 @@
       "date": "четвер, 18 червня",
       "dateIso": "2026-06-18",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:00"
     },
     {
       "home": "Узбекистан",
@@ -651,7 +609,8 @@
       "date": "четвер, 18 червня",
       "dateIso": "2026-06-18",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     },
     {
       "home": "Чехія",
@@ -661,7 +620,8 @@
       "date": "четвер, 18 червня",
       "dateIso": "2026-06-18",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Швейцарія",
@@ -671,7 +631,8 @@
       "date": "четвер, 18 червня",
       "dateIso": "2026-06-18",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Канада",
@@ -681,7 +642,8 @@
       "date": "пʼятниця, 19 червня",
       "dateIso": "2026-06-19",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Мексика",
@@ -691,7 +653,8 @@
       "date": "пʼятниця, 19 червня",
       "dateIso": "2026-06-19",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "США",
@@ -701,7 +664,8 @@
       "date": "пʼятниця, 19 червня",
       "dateIso": "2026-06-19",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Шотландія",
@@ -711,7 +675,8 @@
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Бразилія",
@@ -721,7 +686,8 @@
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "03:30"
     },
     {
       "home": "Туреччина",
@@ -731,7 +697,8 @@
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "06:00"
     },
     {
       "home": "Нідерланди",
@@ -741,7 +708,8 @@
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "20:00"
     },
     {
       "home": "Німеччина",
@@ -751,7 +719,8 @@
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Еквадор",
@@ -761,7 +730,8 @@
       "date": "неділя, 21 червня",
       "dateIso": "2026-06-21",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "03:00"
     },
     {
       "home": "Туніс",
@@ -771,7 +741,8 @@
       "date": "неділя, 21 червня",
       "dateIso": "2026-06-21",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "07:00"
     },
     {
       "home": "Іспанія",
@@ -781,7 +752,8 @@
       "date": "неділя, 21 червня",
       "dateIso": "2026-06-21",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Бельгія",
@@ -791,7 +763,8 @@
       "date": "неділя, 21 червня",
       "dateIso": "2026-06-21",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Уругвай",
@@ -801,7 +774,8 @@
       "date": "понеділок, 22 червня",
       "dateIso": "2026-06-22",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Нова Зеландія",
@@ -811,7 +785,8 @@
       "date": "понеділок, 22 червня",
       "dateIso": "2026-06-22",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Аргентина",
@@ -821,7 +796,8 @@
       "date": "понеділок, 22 червня",
       "dateIso": "2026-06-22",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "20:00"
     },
     {
       "home": "Франція",
@@ -831,7 +807,8 @@
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "00:00"
     },
     {
       "home": "Норвегія",
@@ -841,7 +818,8 @@
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "03:00"
     },
     {
       "home": "Йорданія",
@@ -851,7 +829,8 @@
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "06:00"
     },
     {
       "home": "Португалія",
@@ -861,7 +840,8 @@
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "20:00"
     },
     {
       "home": "Англія",
@@ -871,7 +851,8 @@
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Панама",
@@ -881,7 +862,8 @@
       "date": "середа, 24 червня",
       "dateIso": "2026-06-24",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:00"
     },
     {
       "home": "Колумбія",
@@ -891,7 +873,8 @@
       "date": "середа, 24 червня",
       "dateIso": "2026-06-24",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     },
     {
       "home": "Боснія і Герцеговина",
@@ -901,7 +884,8 @@
       "date": "середа, 24 червня",
       "dateIso": "2026-06-24",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Швейцарія",
@@ -911,7 +895,8 @@
       "date": "середа, 24 червня",
       "dateIso": "2026-06-24",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Марокко",
@@ -921,7 +906,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Шотландія",
@@ -931,7 +917,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "01:00"
     },
     {
       "home": "Південна Африка",
@@ -941,7 +928,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Чехія",
@@ -951,7 +939,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "04:00"
     },
     {
       "home": "Еквадор",
@@ -961,7 +950,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Кюрасао",
@@ -971,7 +961,8 @@
       "date": "четвер, 25 червня",
       "dateIso": "2026-06-25",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Туніс",
@@ -981,7 +972,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:00"
     },
     {
       "home": "Японія",
@@ -991,7 +983,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:00"
     },
     {
       "home": "Парагвай",
@@ -1001,7 +994,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     },
     {
       "home": "Туреччина",
@@ -1011,7 +1005,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     },
     {
       "home": "Норвегія",
@@ -1021,7 +1016,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Сенегал",
@@ -1031,7 +1027,8 @@
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Кабо-Верде",
@@ -1041,7 +1038,8 @@
       "date": "субота, 27 червня",
       "dateIso": "2026-06-27",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "03:00"
     },
     {
       "home": "Уругвай",
@@ -1051,7 +1049,8 @@
       "date": "субота, 27 червня",
       "dateIso": "2026-06-27",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "03:00"
     },
     {
       "home": "Єгипет",
@@ -1061,7 +1060,8 @@
       "date": "субота, 27 червня",
       "dateIso": "2026-06-27",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "06:00"
     },
     {
       "home": "Нова Зеландія",
@@ -1071,7 +1071,8 @@
       "date": "субота, 27 червня",
       "dateIso": "2026-06-27",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "06:00"
     },
     {
       "home": "Панама",
@@ -1081,7 +1082,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "00:00"
     },
     {
       "home": "Хорватія",
@@ -1091,7 +1093,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "00:00"
     },
     {
       "home": "ДР Конго",
@@ -1101,7 +1104,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:30"
     },
     {
       "home": "Колумбія",
@@ -1111,7 +1115,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "02:30"
     },
     {
       "home": "Алжир",
@@ -1121,7 +1126,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     },
     {
       "home": "Йорданія",
@@ -1131,7 +1137,8 @@
       "date": "неділя, 28 червня",
       "dateIso": "2026-06-28",
       "status": "Scheduled",
-      "score": ""
+      "score": "",
+      "originalTime": "05:00"
     }
   ],
   "Чемпіонат Європи": [],
@@ -1140,7 +1147,7 @@
       "home": "Фрайбург",
       "away": "Астон Вілла",
       "league": "Ліга Європи (Фінал)",
-      "time": "22:00",
+      "time": "0 - 3",
       "date": "середа, 20 травня",
       "dateIso": "2026-05-20",
       "status": "Match Finished",
@@ -1153,8 +1160,30 @@
       "time": "22:00",
       "date": "пʼятниця, 22 травня",
       "dateIso": "2026-05-22",
-      "status": "FT",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "originalTime": "22:00"
+    },
+    {
+      "home": "Кристал Пелес",
+      "away": "Райо Вальєкано",
+      "league": "Ліга конференцій (Фінал)",
+      "time": "1 - 0",
+      "date": "середа, 27 травня",
+      "dateIso": "2026-05-27",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Freiburg",
+      "away": "Астон Вілла",
+      "league": "Ліга Європи (Фінал)",
+      "time": "22:00",
+      "date": "середа, 20 травня",
+      "dateIso": "2026-05-20",
+      "status": "Match Finished",
+      "score": "0 - 3",
+      "originalTime": "22:00"
     },
     {
       "home": "Кристал Пелес",
@@ -1164,7 +1193,8 @@
       "date": "середа, 27 травня",
       "dateIso": "2026-05-27",
       "status": "Match Finished",
-      "score": "1 - 0"
+      "score": "1 - 0",
+      "originalTime": "22:00"
     }
   ],
   "Збірна України": [],
@@ -1383,49 +1413,49 @@
       {
         "position": 1,
         "teamName": "Мексика",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
+        "goalsFor": 2,
         "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalDifference": 2,
+        "points": 3
       },
       {
         "position": 2,
         "teamName": "Південна Корея",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "goalDifference": 1,
+        "points": 3
       },
       {
         "position": 3,
         "teamName": "Чехія",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "goalDifference": -1,
         "points": 0
       },
       {
         "position": 4,
         "teamName": "Південна Африка",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "goalsAgainst": 2,
+        "goalDifference": -2,
         "points": 0
       }
     ],
@@ -1468,7 +1498,7 @@
       },
       {
         "position": 4,
-        "teamName": "Bosnia &amp; Herzegovina",
+        "teamName": "Боснія і Герцеговина",
         "played": 0,
         "wins": 0,
         "draws": 0,
