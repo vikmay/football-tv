@@ -728,12 +728,14 @@ function formatCompetitionLabel(leagueLabel, event) {
 
 function normalizeMatchSnapshot(match) {
   const hasValidScore = typeof match.score === "string" && match.score.trim() !== "";
-  const isFinished = match.status === "Match Finished";
+  // Розширюємо перевірку на статуси завершеного матчу (Match Finished, FT, AET)
+  const isFinished = match.status === "Match Finished" || match.status === "FT" || match.status === "AET";
 
   return {
     ...match,
     status: isFinished && hasValidScore ? "Match Finished" : (match.status || "Scheduled"),
-    score: isFinished && hasValidScore ? match.score : ""
+    score: isFinished && hasValidScore ? match.score : "",
+    originalTime: match.originalTime || match.time // Зберігаємо оригінальний час для коректного сортування
   };
 }
 
@@ -754,7 +756,8 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     const home = normalizeClubLookupName(match?.home || "");
     const away = normalizeClubLookupName(match?.away || "");
     const league = String(match?.league || "");
-    const time = String(match?.time || "");
+    // Використовуємо оригінальний час для ключа, навіть якщо в .time вже записано результат
+    const time = String(match?.originalTime || match?.time || "");
     return `${match?.dateIso || ""}|${time}|${league}|${home}|${away}`;
   };
 
@@ -834,8 +837,10 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
   }
 
   return [...byIdentity.values()].sort((a, b) => {
-    const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
-    const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
+    const aTime = a.originalTime || a.time || "00:00";
+    const bTime = b.originalTime || b.time || "00:00";
+    const aDate = `${a.dateIso || "9999-12-31"}T${aTime}`;
+    const bDate = `${b.dateIso || "9999-12-31"}T${bTime}`;
     return new Date(aDate) - new Date(bDate);
   });
 }
@@ -845,8 +850,8 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
   const byPair = new Map();
 
   const toComparableDateTime = match => {
+    const time = typeof match?.originalTime === "string" ? match.originalTime : (typeof match?.time === "string" ? match.time : "00:00");
     const dateIso = typeof match?.dateIso === "string" && match.dateIso ? match.dateIso : "0001-01-01";
-    const time = typeof match?.time === "string" && match.time ? match.time : "00:00";
     return `${dateIso}T${time}`;
   };
 
@@ -972,6 +977,7 @@ function dedupeScheduleSections(matches) {
       // because Flashscore may return the same match with 00:00 and real time.
       // Prefer the one with a real time.
       const isWc = sectionName === "Чемпіонат світу";
+      const itemTime = String(item.originalTime || item.time || "");
       const slotKey = isWc
         ? `${item.dateIso || ""}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`
         : sectionName === "УПЛ"
@@ -979,9 +985,9 @@ function dedupeScheduleSections(matches) {
             const homeKey = getUplTeamName(String(item.home || ""));
             const awayKey = getUplTeamName(String(item.away || ""));
             const pairKey = [homeKey, awayKey].sort().join("|");
-            return `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${pairKey}`;
+            return `${item.dateIso || ""}|${itemTime}|${String(item.league || "")}|${pairKey}`;
           })()
-          : `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
+          : `${item.dateIso || ""}|${itemTime}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
       const existing = bySlot.get(slotKey);
 
       if (!existing) {
@@ -990,8 +996,8 @@ function dedupeScheduleSections(matches) {
       }
 
       // Prefer the match with a real time over 00:00 placeholder
-      const existingTime = String(existing?.time || "");
-      const incomingTime = String(item?.time || "");
+      const existingTime = String(existing?.originalTime || existing?.time || "");
+      const incomingTime = String(item?.originalTime || item?.time || "");
       const existingIsPlaceholder = existingTime === "00:00" || existingTime === "00:00:00";
       const incomingIsPlaceholder = incomingTime === "00:00" || incomingTime === "00:00:00";
 
@@ -1019,7 +1025,7 @@ function dedupeScheduleSections(matches) {
     const cleanedItems = [...bySlot.values()].filter(item => {
       // For УПЛ: skip placeholder times
       if (sectionName === "УПЛ") {
-        const t = String(item?.time || "");
+        const t = String(item?.originalTime || item?.time || "");
         if (t === "00:00" || t === "00:00:00") return false;
       }
       return true;
@@ -1052,9 +1058,13 @@ function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
 }
 
 function sortByDateTimeAsc(a, b) {
+  const aTime = a.originalTime || a.strTime || a.time || "00:00:00";
+  const bTime = b.originalTime || b.strTime || b.time || "00:00:00";
+  const aDate = a.dateEvent || a.dateIso || "0001-01-01";
+  const bDate = b.dateEvent || b.dateIso || "0001-01-01";
+
   return (
-    new Date(a.strTimestamp || `${a.dateEvent}T${a.strTime || "00:00:00"}`) -
-    new Date(b.strTimestamp || `${b.dateEvent}T${b.strTime || "00:00:00"}`)
+    new Date(`${aDate}T${aTime}`) - new Date(`${bDate}T${bTime}`)
   );
 }
 
@@ -1350,7 +1360,7 @@ function decodeHtmlText(text) {
     .replace(/"|"|&#x22;/gi, "\"")
     .replace(/&#x27;/gi, "'")
     .replace(/&nbsp;/gi, " ")
-    .replace(/&/gi, "&")
+    .replace(/&amp;/gi, "&").replace(/&amp;/gi, "&") // Подвійне декодування для надійності
     .trim();
 }
 
@@ -1799,35 +1809,46 @@ function parseFlashscoreDrawPageEvents(html) {
 
 
 function parseWorldCupGroupStandingsFromHtml(html) {
-  const tableMatch = String(html || "").match(/<table class="standings-table">([\s\S]*?)<\/table>/i);
+  const tableMatch = String(html || "").match(/<table[^>]+class="[^"]*standings[^"]*"[^>]*>([\s\S]*?)<\/table>/i);
   if (!tableMatch) {
     return [];
   }
-
   const tableHtml = tableMatch[1];
   const rowPattern = /<tr[\s\S]*?<\/tr>/gi;
   const rows = [];
 
   for (const rowHtml of tableHtml.matchAll(rowPattern)) {
     const rowText = String(rowHtml[0]);
+    if (rowText.includes("<th") || rowText.includes("thead")) continue; // Пропускаємо заголовок
 
     const tdMatches = [...rowText.matchAll(/<td[\s\S]*?>([\s\S]*?)<\/td>/gi)];
-    if (tdMatches.length < 10) {
+    // Таблиці можуть мати від 8 до 12 колонок залежно від джерела
+    if (tdMatches.length < 8) {
       continue;
     }
 
-    const cellTexts = tdMatches.map(m => htmlToPlainText(m[1]).replace(/\s+/g, " ").trim());
+    const cellTexts = tdMatches.map(m => {
+      const text = htmlToPlainText(m[1]).replace(/\s+/g, " ").trim();
+      // Видаляємо все, крім цифр та мінуса для числових значень
+      return text;
+    });
 
-    const position = Number(cellTexts[0]);
+    const getInt = (idx) => {
+      if (idx >= cellTexts.length) return 0;
+      const val = parseInt(cellTexts[idx].replace(/[^\d-]/g, ''));
+      return isNaN(val) ? 0 : val;
+    };
+
+    const position = getInt(0);
     const teamName = getWorldCupTeamName(cellTexts[1]);
-    const played = Number(cellTexts[2]);
-    const wins = Number(cellTexts[3]);
-    const draws = Number(cellTexts[4]);
-    const losses = Number(cellTexts[5]);
-    const goalsFor = Number(cellTexts[6]);
-    const goalsAgainst = Number(cellTexts[7]);
-    const goalDifference = Number(cellTexts[8]);
-    const points = Number(cellTexts[9]);
+    const played = getInt(2);
+    const wins = getInt(3);
+    const draws = getInt(4);
+    const losses = getInt(5);
+    const goalsFor = getInt(6);
+    const goalsAgainst = getInt(7);
+    const goalDifference = getInt(8);
+    const points = getInt(9) || getInt(tdMatches.length - 1); // Останній стовпчик зазвичай очки
 
     if (!teamName) {
       continue;
@@ -1853,6 +1874,12 @@ function parseWorldCupGroupStandingsFromHtml(html) {
   }
 
   return rows.sort((a, b) => a.position - b.position);
+}
+
+function isValidStandings(standings) {
+  if (!standings || Object.keys(standings).length === 0) return true;
+  // Вважаємо таблицю валідною, якщо розпарсено хоча б одну команду
+  return Object.values(standings).flat().length > 0;
 }
 
 async function fetchWorldCup2026GroupStandings() {
@@ -2134,8 +2161,8 @@ async function fetchUplStandings() {
 }
 
 async function fetchUplEvents() {
-  const officialUrl = "https://upl.ua/en/tournaments/championship/428/calendar";
-  const officialHtml = await fetchText(officialUrl, "РЈРџР› official upl.ua fetch error");
+  const officialUrl = "https://upl.ua/ua/tournaments/championship/428/calendar";
+  const officialHtml = await fetchText(officialUrl, "УПЛ official upl.ua fetch error");
 
   const flashscoreFixturesUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/fixtures/";
   const flashscoreResultsUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/results/";
@@ -2143,9 +2170,9 @@ async function fetchUplEvents() {
   const tntUrl = "https://www.tntsports.co.uk/football/ukrainian-premier-league/2025-2026/calendar-results.shtml";
 
   const [flashscoreFixturesHtml, flashscoreResultsHtml, tntHtml] = await Promise.all([
-    fetchText(flashscoreFixturesUrl, "РЈРџР› Flashscore fixtures fetch error"),
-    fetchText(flashscoreResultsUrl, "РЈРџР› Flashscore results fetch error"),
-    fetchText(tntUrl, "РЈРџР› TNT Sports fetch error")
+    fetchText(flashscoreFixturesUrl, "УПЛ Flashscore fixtures fetch error"),
+    fetchText(flashscoreResultsUrl, "УПЛ Flashscore results fetch error"),
+    fetchText(tntUrl, "УПЛ TNT Sports fetch error")
   ]);
 
   const officialEvents = officialHtml ? parseOfficialUplEvents(officialHtml) : [];
@@ -2504,14 +2531,35 @@ async function main() {
     );
   }
 
-  matches["Чемпіонат світу"] = (extraMatches.leagueMatches?.["Чемпіонат світу"] || []).slice();
-
-  // Filter out non-soccer (MLB) matches mis-categorized by Flashscore
+  // Оновлення Чемпіонату світу з фільтрацією не-футбольних команд
+  const wcMatches = (extraMatches.leagueMatches?.["Чемпіонат світу"] || []).slice();
+  if (wcMatches.length > 0) {
+    matches["Чемпіонат світу"] = wcMatches;
+  }
   if (Array.isArray(matches["Чемпіонат світу"])) {
     matches["Чемпіонат світу"] = matches["Чемпіонат світу"].filter(m =>
       !nonSoccerTeams.has(m.home) && !nonSoccerTeams.has(m.away)
     );
   }
+
+  // Оновлюємо таблицю, якщо отримали хоча б список команд
+  const wcStandings = isValidStandings(wcGroupStandings)
+    ? wcGroupStandings
+    : existingData["Таблиця ЧС 2026"];
+
+  matches["Таблиця ЧС 2026"] = wcStandings || {};
+
+  // Фінальна заміна часу на результат для розкладу
+  Object.keys(matches).forEach(section => {
+    if (Array.isArray(matches[section]) && !section.startsWith("Таблиця")) {
+      matches[section].forEach(match => {
+        // Якщо матч завершено і є рахунок — ставимо рахунок у поле time для відображення
+        if (match.status === "Match Finished" && match.score) {
+          match.time = match.score;
+        }
+      });
+    }
+  });
 
   matches["Ліга Європи"] = (extraMatches.leagueMatches?.["Ліга Європи"] || []).slice();
 
@@ -2531,7 +2579,7 @@ async function main() {
 
   const dedupedMatches = dedupeScheduleSections(matches);
   const finalMatches = filterMatchesWithinWindow(dedupedMatches);
-  finalMatches["Таблиця ЧС 2026"] = wcGroupStandings || {};
+  finalMatches["Таблиця ЧС 2026"] = wcStandings || {};
   fs.writeFileSync("matches.json", JSON.stringify(finalMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
