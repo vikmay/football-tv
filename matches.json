@@ -1,16 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Кудрівка",
-      "away": "Рух Львів",
-      "league": "УПЛ",
-      "time": "2 - 1",
-      "date": "четвер, 14 травня",
-      "dateIso": "2026-05-14",
-      "status": "Match Finished",
-      "score": "2 - 1"
-    },
-    {
       "home": "Металіст 1925 Харків",
       "away": "Епіцентр",
       "league": "УПЛ",
@@ -403,18 +393,29 @@
       "away": "Парагвай",
       "league": "Чемпіонат світу",
       "time": "4 - 1",
-      "date": "Сьогодні, 13 червня",
+      "date": "субота, 13 червня",
       "dateIso": "2026-06-13",
       "status": "Match Finished",
       "score": "4 - 1",
       "originalTime": "04:00"
     },
     {
+      "home": "Катар",
+      "away": "Швейцарія",
+      "league": "Чемпіонат світу",
+      "time": "1 - 1",
+      "date": "субота, 13 червня",
+      "dateIso": "2026-06-13",
+      "status": "Match Finished",
+      "score": "1 - 1",
+      "originalTime": "22:00"
+    },
+    {
       "home": "Бразилія",
       "away": "Марокко",
       "league": "Чемпіонат світу",
       "time": "01:00",
-      "date": "неділя, 14 червня",
+      "date": "Сьогодні, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
       "score": "",
@@ -425,7 +426,7 @@
       "away": "Шотландія",
       "league": "Чемпіонат світу",
       "time": "04:00",
-      "date": "неділя, 14 червня",
+      "date": "Сьогодні, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
       "score": "",
@@ -436,7 +437,7 @@
       "away": "Туреччина",
       "league": "Чемпіонат світу",
       "time": "07:00",
-      "date": "неділя, 14 червня",
+      "date": "Сьогодні, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
       "score": "",
@@ -447,7 +448,7 @@
       "away": "Кюрасао",
       "league": "Чемпіонат світу",
       "time": "20:00",
-      "date": "неділя, 14 червня",
+      "date": "Сьогодні, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
       "score": "",
@@ -458,7 +459,7 @@
       "away": "Японія",
       "league": "Чемпіонат світу",
       "time": "23:00",
-      "date": "неділя, 14 червня",
+      "date": "Сьогодні, 14 червня",
       "dateIso": "2026-06-14",
       "status": "Scheduled",
       "score": "",
@@ -1479,7 +1480,7 @@
     "B": [
       {
         "position": 1,
-        "teamName": "Канада",
+        "teamName": "Швейцарія",
         "played": 1,
         "wins": 0,
         "draws": 1,
@@ -1491,7 +1492,7 @@
       },
       {
         "position": 2,
-        "teamName": "Боснія і Герцеговина",
+        "teamName": "Канада",
         "played": 1,
         "wins": 0,
         "draws": 1,
@@ -1503,27 +1504,27 @@
       },
       {
         "position": 3,
-        "teamName": "Швейцарія",
-        "played": 0,
+        "teamName": "Катар",
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 4,
-        "teamName": "Катар",
-        "played": 0,
+        "teamName": "Боснія і Герцеговина",
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       }
     ],
     "C": [
