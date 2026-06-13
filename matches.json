@@ -399,6 +399,17 @@
       "originalTime": "22:00"
     },
     {
+      "home": "США",
+      "away": "Парагвай",
+      "league": "Чемпіонат світу",
+      "time": "4 - 1",
+      "date": "Сьогодні, 13 червня",
+      "dateIso": "2026-06-13",
+      "status": "Match Finished",
+      "score": "4 - 1",
+      "originalTime": "04:00"
+    },
+    {
       "home": "Катар",
       "away": "Швейцарія",
       "league": "Чемпіонат світу",
@@ -1580,14 +1591,14 @@
       {
         "position": 1,
         "teamName": "США",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalsFor": 4,
+        "goalsAgainst": 1,
+        "goalDifference": 3,
+        "points": 3
       },
       {
         "position": 2,
@@ -1616,13 +1627,13 @@
       {
         "position": 4,
         "teamName": "Парагвай",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 4,
+        "goalDifference": -3,
         "points": 0
       }
     ],
