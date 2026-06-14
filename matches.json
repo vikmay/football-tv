@@ -444,6 +444,17 @@
       "originalTime": "07:00"
     },
     {
+      "home": "Німеччина",
+      "away": "Кюрасао",
+      "league": "Чемпіонат світу",
+      "time": "7 - 1",
+      "date": "Сьогодні, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Match Finished",
+      "score": "7 - 1",
+      "originalTime": "20:00"
+    },
+    {
       "home": "Нідерланди",
       "away": "Японія",
       "league": "Чемпіонат світу",
@@ -1620,14 +1631,14 @@
       {
         "position": 1,
         "teamName": "Німеччина",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalsFor": 7,
+        "goalsAgainst": 1,
+        "goalDifference": 6,
+        "points": 3
       },
       {
         "position": 2,
@@ -1656,13 +1667,13 @@
       {
         "position": 4,
         "teamName": "Кюрасао",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 7,
+        "goalDifference": -6,
         "points": 0
       }
     ],
