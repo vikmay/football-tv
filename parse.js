@@ -2532,9 +2532,13 @@ async function main() {
   }
 
   // Оновлення Чемпіонату світу з фільтрацією не-футбольних команд
-  const wcMatches = (extraMatches.leagueMatches?.["Чемпіонат світу"] || []).slice();
-  if (wcMatches.length > 0) {
-    matches["Чемпіонат світу"] = wcMatches;
+  // Merge World Cup matches with previous data so live matches that disappear from
+  // Flashscore during the match are preserved in the schedule.
+  if (extraMatches.leagueMatches?.["Чемпіонат світу"]) {
+    matches["Чемпіонат світу"] = mergeCurrentAndPreviousMatches(
+      extraMatches.leagueMatches["Чемпіонат світу"],
+      existingData["Чемпіонат світу"] || []
+    );
   }
   if (Array.isArray(matches["Чемпіонат світу"])) {
     matches["Чемпіонат світу"] = matches["Чемпіонат світу"].filter(m =>
@@ -2561,11 +2565,27 @@ async function main() {
     }
   });
 
-  matches["Ліга Європи"] = (extraMatches.leagueMatches?.["Ліга Європи"] || []).slice();
+  // Merge with previous data to preserve live matches that disappear from Flashscore
+  if (extraMatches.leagueMatches?.["Ліга Європи"]) {
+    matches["Ліга Європи"] = mergeCurrentAndPreviousMatches(
+      extraMatches.leagueMatches["Ліга Європи"],
+      existingData["Ліга Європи"] || []
+    );
+  }
 
-  matches["Ліга конференцій"] = (extraMatches.leagueMatches?.["Ліга конференцій"] || []).slice();
+  if (extraMatches.leagueMatches?.["Ліга конференцій"]) {
+    matches["Ліга конференцій"] = mergeCurrentAndPreviousMatches(
+      extraMatches.leagueMatches["Ліга конференцій"],
+      existingData["Ліга конференцій"] || []
+    );
+  }
 
-  matches["Суперкубок УЄФА"] = (extraMatches.leagueMatches?.["Суперкубок УЄФА"] || []).slice();
+  if (extraMatches.leagueMatches?.["Суперкубок УЄФА"]) {
+    matches["Суперкубок УЄФА"] = mergeCurrentAndPreviousMatches(
+      extraMatches.leagueMatches["Суперкубок УЄФА"],
+      existingData["Суперкубок УЄФА"] || []
+    );
+  }
 
   matches["Українські клуби в Європі"] = mergeCurrentAndPreviousMatches(
     extraMatches.clubMatches,
