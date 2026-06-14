@@ -455,6 +455,17 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Нідерланди",
+      "away": "Японія",
+      "league": "Чемпіонат світу",
+      "time": "2 - 2",
+      "date": "неділя, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "originalTime": "23:00"
+    },
+    {
       "home": "Кот-д’Івуар",
       "away": "Еквадор",
       "league": "Чемпіонат світу",
@@ -1670,26 +1681,26 @@
       {
         "position": 1,
         "teamName": "Нідерланди",
-        "played": 0,
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 2,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 2,
         "teamName": "Японія",
-        "played": 0,
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 2,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 3,
