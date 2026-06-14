@@ -433,6 +433,17 @@
       "originalTime": "04:00"
     },
     {
+      "home": "Австралія",
+      "away": "Туреччина",
+      "league": "Чемпіонат світу",
+      "time": "2 - 0",
+      "date": "Сьогодні, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "originalTime": "07:00"
+    },
+    {
       "home": "Німеччина",
       "away": "Кюрасао",
       "league": "Чемпіонат світу",
@@ -1581,26 +1592,26 @@
       },
       {
         "position": 2,
-        "teamName": "Туреччина",
-        "played": 0,
-        "wins": 0,
+        "teamName": "Австралія",
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
+        "goalsFor": 2,
         "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalDifference": 2,
+        "points": 3
       },
       {
         "position": 3,
-        "teamName": "Австралія",
-        "played": 0,
+        "teamName": "Туреччина",
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "goalsAgainst": 2,
+        "goalDifference": -2,
         "points": 0
       },
       {
