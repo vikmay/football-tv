@@ -422,6 +422,17 @@
       "originalTime": "01:00"
     },
     {
+      "home": "Гаїті",
+      "away": "Шотландія",
+      "league": "Чемпіонат світу",
+      "time": "0 - 1",
+      "date": "Сьогодні, 14 червня",
+      "dateIso": "2026-06-14",
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "originalTime": "04:00"
+    },
+    {
       "home": "Австралія",
       "away": "Туреччина",
       "league": "Чемпіонат світу",
@@ -1519,6 +1530,18 @@
     "C": [
       {
         "position": 1,
+        "teamName": "Шотландія",
+        "played": 1,
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 0,
+        "goalDifference": 1,
+        "points": 3
+      },
+      {
+        "position": 2,
         "teamName": "Бразилія",
         "played": 1,
         "wins": 0,
@@ -1530,7 +1553,7 @@
         "points": 1
       },
       {
-        "position": 2,
+        "position": 3,
         "teamName": "Марокко",
         "played": 1,
         "wins": 0,
@@ -1542,27 +1565,15 @@
         "points": 1
       },
       {
-        "position": 3,
-        "teamName": "Шотландія",
-        "played": 0,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
-      },
-      {
         "position": 4,
         "teamName": "Гаїті",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "goalsAgainst": 1,
+        "goalDifference": -1,
         "points": 0
       }
     ],
