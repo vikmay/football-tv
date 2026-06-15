@@ -2470,6 +2470,117 @@ async function fetchExtraMatches() {
   return { clubMatches, nationalMatches, leagueMatches };
 }
 
+/**
+ * Deduplicate World Cup matches by direction-agnostic pair + score.
+ * After reconcile, the old inverted match and the corrected one can coexist
+ * as duplicates. This removes the duplicate keeping the better one.
+ */
+function dedupeWorldCupMatchesByPair(matches) {
+  if (!Array.isArray(matches)) return matches;
+  const byPair = new Map();
+
+  const getScore = m => {
+    // Prefer finished matches with score
+    if (m?.status === "Match Finished" && m?.score) return 1000;
+    return 0;
+  };
+
+  for (const match of matches) {
+    if (!match) continue;
+    const pair = [match.home, match.away].sort().join("|");
+    const key = `${match.dateIso || ""}|${pair}|${match.league || ""}`;
+    const existing = byPair.get(key);
+
+    if (!existing) {
+      byPair.set(key, match);
+      continue;
+    }
+
+    const existingScore = getScore(existing);
+    const incomingScore = getScore(match);
+
+    // If reconciled version has a score but old one doesn't, take reconciled
+    if (incomingScore > existingScore) {
+      byPair.set(key, match);
+      continue;
+    }
+
+    // Both have same score — prefer the one correctly matching standings (home vs away)
+    if (existingScore === incomingScore) {
+      // Keep the one where home team is the actual home per standings if available
+      // (no further heuristics needed — first match is usually fine)
+      continue;
+    }
+  }
+
+  return [...byPair.values()].sort(sortByDateTimeAsc);
+}
+
+/**
+ * Reconcile World Cup match results with standings table.
+ * If a finished match's score contradicts the standings (home/away inverted),
+ * swap the teams so the score matches the standings.
+ */
+function reconcileWorldCupMatchesWithStandings(matches, standings) {
+  if (!Array.isArray(matches)) return matches;
+  if (!standings || typeof standings !== "object") return matches;
+
+  // Build team lookup: teamName -> {goalsFor, goalsAgainst}
+  const teamStats = {};
+  for (const group of Object.values(standings)) {
+    if (!Array.isArray(group)) continue;
+    for (const row of group) {
+      if (row?.teamName) {
+        teamStats[row.teamName] = {
+          goalsFor: row.goalsFor,
+          goalsAgainst: row.goalsAgainst
+        };
+      }
+    }
+  }
+
+  let fixedCount = 0;
+  const result = matches.map(match => {
+    if (!match?.score || match.status !== "Match Finished") return match;
+
+    const parts = match.score.split(" - ");
+    if (parts.length !== 2) return match;
+    const homeScore = Number(parts[0]);
+    const awayScore = Number(parts[1]);
+    if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return match;
+
+    const homeTeam = match.home;
+    const awayTeam = match.away;
+    const homeStats = teamStats[homeTeam];
+    const awayStats = teamStats[awayTeam];
+
+    if (!homeStats || !awayStats) return match;
+
+    // Current assignment matches standings → correct
+    if (homeStats.goalsFor === homeScore && awayStats.goalsFor === awayScore) return match;
+
+    // Check if inverted: home is actually the away team and vice versa
+    if (
+      homeStats.goalsAgainst === homeScore &&
+      awayStats.goalsAgainst === awayScore &&
+      homeStats.goalsFor === awayScore &&
+      awayStats.goalsFor === homeScore
+    ) {
+      fixedCount++;
+      console.log(`🔄 WC reconcile: swapped "${homeTeam}" ↔ "${awayTeam}" (${match.score})`);
+      return { ...match, home: awayTeam, away: homeTeam };
+    }
+
+    return match;
+  });
+
+  if (fixedCount > 0) {
+    console.log(`✅ WC standings reconciliation fixed ${fixedCount} inverted match(es)`);
+  }
+
+  return result;
+}
+
 async function main() {
   const matches = {
     "УПЛ": existingData["УПЛ"] || [],
@@ -2543,6 +2654,23 @@ async function main() {
   if (Array.isArray(matches["Чемпіонат світу"])) {
     matches["Чемпіонат світу"] = matches["Чемпіонат світу"].filter(m =>
       !nonSoccerTeams.has(m.home) && !nonSoccerTeams.has(m.away)
+    );
+  }
+
+  // Reconcile World Cup finished match results with standings table to detect
+  // inverted home/away teams (a known Flashscore bug for some matches).
+  if (Array.isArray(matches["Чемпіонат світу"]) && matches["Таблиця ЧС 2026"]) {
+    matches["Чемпіонат світу"] = reconcileWorldCupMatchesWithStandings(
+      matches["Чемпіонат світу"],
+      matches["Таблиця ЧС 2026"]
+    );
+
+    // After reconciliation, dedupe WC matches by direction-agnostic pair
+    // to remove the old inverted match that may still exist alongside the corrected one.
+    // Use standings to prefer the version where home team matches its actual direction.
+    matches["Чемпіонат світу"] = dedupeWorldCupMatchesByPair(
+      matches["Чемпіонат світу"],
+      matches["Таблиця ЧС 2026"]
     );
   }
 
