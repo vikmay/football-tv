@@ -1,28 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Металіст 1925 Харків",
-      "away": "Епіцентр",
-      "league": "УПЛ",
-      "time": "1 - 1",
-      "date": "субота, 16 травня",
-      "dateIso": "2026-05-16",
-      "status": "Match Finished",
-      "score": "1 - 1",
-      "originalTime": "13:00"
-    },
-    {
-      "home": "СК Полтава",
-      "away": "Динамо Київ",
-      "league": "УПЛ",
-      "time": "0 - 2",
-      "date": "субота, 16 травня",
-      "dateIso": "2026-05-16",
-      "status": "Match Finished",
-      "score": "0 - 2",
-      "originalTime": "13:00"
-    },
-    {
       "home": "Кривбас",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
@@ -502,11 +480,11 @@
       "home": "Бельгія",
       "away": "Єгипет",
       "league": "Чемпіонат світу",
-      "time": "22:00",
+      "time": "1 - 1",
       "date": "понеділок, 15 червня",
       "dateIso": "2026-06-15",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "22:00"
     },
     {
@@ -1731,30 +1709,30 @@
       {
         "position": 1,
         "teamName": "Бельгія",
-        "played": 0,
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 2,
-        "teamName": "Іран",
-        "played": 0,
+        "teamName": "Єгипет",
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 3,
-        "teamName": "Єгипет",
+        "teamName": "Іран",
         "played": 0,
         "wins": 0,
         "draws": 0,
