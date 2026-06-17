@@ -801,11 +801,11 @@
       "home": "Аргентина",
       "away": "Алжир",
       "league": "Чемпіонат світу",
-      "time": "04:00",
-      "date": "середа, 17 червня",
+      "time": "3 - 0",
+      "date": "Сьогодні, 17 червня",
       "dateIso": "2026-06-17",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "04:00"
     },
     {
@@ -2125,14 +2125,14 @@
       {
         "position": 1,
         "teamName": "Аргентина",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalDifference": 3,
+        "points": 3
       },
       {
         "position": 2,
@@ -2148,7 +2148,7 @@
       },
       {
         "position": 3,
-        "teamName": "Алжир",
+        "teamName": "Йорданія",
         "played": 0,
         "wins": 0,
         "draws": 0,
@@ -2160,14 +2160,14 @@
       },
       {
         "position": 4,
-        "teamName": "Йорданія",
-        "played": 0,
+        "teamName": "Алжир",
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "goalsAgainst": 3,
+        "goalDifference": -3,
         "points": 0
       }
     ],
