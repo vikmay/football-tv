@@ -1,28 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Зоря Луганськ",
-      "away": "Полісся Житомир",
-      "league": "УПЛ",
-      "time": "0 - 0",
-      "date": "понеділок, 18 травня",
-      "dateIso": "2026-05-18",
-      "status": "Match Finished",
-      "score": "0 - 0",
-      "originalTime": "13:00"
-    },
-    {
-      "home": "Кудрівка",
-      "away": "ЛНЗ Черкаси",
-      "league": "УПЛ",
-      "time": "1 - 0",
-      "date": "понеділок, 18 травня",
-      "dateIso": "2026-05-18",
-      "status": "Match Finished",
-      "score": "1 - 0",
-      "originalTime": "13:00"
-    },
-    {
       "home": "Шахтар Донецьк",
       "away": "Колос",
       "league": "УПЛ",
