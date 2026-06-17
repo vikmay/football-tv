@@ -522,6 +522,94 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "20:00"
+    },
+    {
+      "home": "Орхус (Den)",
+      "away": "Лех Познань (Pol)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Тун (Sui)",
+      "away": "Динамо Загреб (Cro)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Фенербахче (Tur)",
+      "away": "Гурнік Забже (Pol)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Штурм Грац (Aut)",
+      "away": "Хартс (Sco)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Гурнік Забже (Pol)",
+      "away": "Фенербахче (Tur)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Динамо Загреб (Cro)",
+      "away": "Тун (Sui)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Лех Познань (Pol)",
+      "away": "Орхус (Den)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Хартс (Sco)",
+      "away": "Штурм Грац (Aut)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
     }
   ],
   "Кубок України": [
