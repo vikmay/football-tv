@@ -558,6 +558,17 @@
       "status": "Match Finished",
       "score": "0 - 3",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Qarabağ",
+      "away": "Vestri",
+      "league": "Ліга Європи",
+      "time": "20:00",
+      "date": "четвер, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
     }
   ],
   "Ліга конференцій": [
@@ -812,11 +823,11 @@
       "home": "Австрія",
       "away": "Йорданія",
       "league": "Чемпіонат світу",
-      "time": "07:00",
-      "date": "середа, 17 червня",
+      "time": "3 - 1",
+      "date": "Сьогодні, 17 червня",
       "dateIso": "2026-06-17",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 1",
       "originalTime": "07:00"
     },
     {
@@ -1446,6 +1457,17 @@
       "status": "Match Finished",
       "score": "1 - 0",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Qarabağ",
+      "away": "Vestri",
+      "league": "Ліга Європи",
+      "time": "20:00",
+      "date": "четвер, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
     },
     {
       "home": "ПСЖ",
@@ -2137,25 +2159,25 @@
       {
         "position": 2,
         "teamName": "Австрія",
-        "played": 0,
-        "wins": 0,
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalsFor": 3,
+        "goalsAgainst": 1,
+        "goalDifference": 2,
+        "points": 3
       },
       {
         "position": 3,
         "teamName": "Йорданія",
-        "played": 0,
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 3,
+        "goalDifference": -2,
         "points": 0
       },
       {
