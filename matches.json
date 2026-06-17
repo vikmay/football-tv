@@ -1384,11 +1384,11 @@
       "home": "Португалія",
       "away": "ДР Конго",
       "league": "Чемпіонат світу",
-      "time": "20:00",
-      "date": "середа, 17 червня",
+      "time": "1 - 1",
+      "date": "Сьогодні, 17 червня",
       "dateIso": "2026-06-17",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "20:00"
     },
     {
@@ -3209,30 +3209,30 @@
       {
         "position": 1,
         "teamName": "Португалія",
-        "played": 0,
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 2,
-        "teamName": "Колумбія",
-        "played": 0,
+        "teamName": "ДР Конго",
+        "played": 1,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 0
+        "points": 1
       },
       {
         "position": 3,
-        "teamName": "ДР Конго",
+        "teamName": "Колумбія",
         "played": 0,
         "wins": 0,
         "draws": 0,
