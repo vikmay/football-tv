@@ -1384,11 +1384,11 @@
       "home": "Гана",
       "away": "Панама",
       "league": "Чемпіонат світу",
-      "time": "02:00",
-      "date": "четвер, 18 червня",
+      "time": "1 - 0",
+      "date": "Сьогодні, 18 червня",
       "dateIso": "2026-06-18",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "02:00"
     },
     {
@@ -3248,26 +3248,26 @@
       },
       {
         "position": 2,
-        "teamName": "Панама",
-        "played": 0,
-        "wins": 0,
+        "teamName": "Гана",
+        "played": 1,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 0,
+        "goalsFor": 1,
         "goalsAgainst": 0,
-        "goalDifference": 0,
-        "points": 0
+        "goalDifference": 1,
+        "points": 3
       },
       {
         "position": 3,
-        "teamName": "Гана",
-        "played": 0,
+        "teamName": "Панама",
+        "played": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "goalsAgainst": 1,
+        "goalDifference": -1,
         "points": 0
       },
       {
