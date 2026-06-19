@@ -1439,11 +1439,11 @@
       "home": "Мексика",
       "away": "Південна Корея",
       "league": "Чемпіонат світу",
-      "time": "04:00",
-      "date": "пʼятниця, 19 червня",
+      "time": "1 - 0",
+      "date": "Сьогодні, 19 червня",
       "dateIso": "2026-06-19",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "04:00"
     },
     {
@@ -2698,25 +2698,25 @@
       {
         "position": 1,
         "teamName": "Мексика",
-        "played": 1,
-        "wins": 1,
+        "played": 2,
+        "wins": 2,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 2,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "goalDifference": 2,
-        "points": 3
+        "goalDifference": 3,
+        "points": 6
       },
       {
         "position": 2,
         "teamName": "Південна Корея",
-        "played": 1,
+        "played": 2,
         "wins": 1,
         "draws": 0,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 2,
-        "goalsAgainst": 1,
-        "goalDifference": 1,
+        "goalsAgainst": 2,
+        "goalDifference": 0,
         "points": 3
       },
       {
