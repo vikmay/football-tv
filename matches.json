@@ -1450,11 +1450,11 @@
       "home": "Туреччина",
       "away": "Парагвай",
       "league": "Чемпіонат світу",
-      "time": "06:00",
-      "date": "субота, 20 червня",
+      "time": "0 - 1",
+      "date": "Сьогодні, 20 червня",
       "dateIso": "2026-06-20",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 1",
       "originalTime": "06:00"
     },
     {
@@ -2818,25 +2818,25 @@
       {
         "position": 3,
         "teamName": "Туреччина",
-        "played": 1,
-        "wins": 0,
+        "played": 2,
+        "wins": 1,
         "draws": 0,
         "losses": 1,
-        "goalsFor": 0,
+        "goalsFor": 1,
         "goalsAgainst": 2,
-        "goalDifference": -2,
-        "points": 0
+        "goalDifference": -1,
+        "points": 3
       },
       {
         "position": 4,
         "teamName": "Парагвай",
-        "played": 1,
+        "played": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
+        "losses": 2,
         "goalsFor": 1,
-        "goalsAgainst": 4,
-        "goalDifference": -3,
+        "goalsAgainst": 5,
+        "goalDifference": -4,
         "points": 0
       }
     ],
