@@ -1428,11 +1428,11 @@
       "home": "Шотландія",
       "away": "Марокко",
       "league": "Чемпіонат світу",
-      "time": "01:00",
-      "date": "субота, 20 червня",
+      "time": "0 - 1",
+      "date": "Сьогодні, 20 червня",
       "dateIso": "2026-06-20",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 1",
       "originalTime": "01:00"
     },
     {
@@ -1645,8 +1645,8 @@
       "originalTime": "05:00"
     },
     {
-      "home": "Боснія і Герцеговина",
-      "away": "Катар",
+      "home": "Швейцарія",
+      "away": "Канада",
       "league": "Чемпіонат світу",
       "time": "22:00",
       "date": "середа, 24 червня",
@@ -1656,8 +1656,8 @@
       "originalTime": "22:00"
     },
     {
-      "home": "Швейцарія",
-      "away": "Канада",
+      "home": "Боснія і Герцеговина",
+      "away": "Катар",
       "league": "Чемпіонат світу",
       "time": "22:00",
       "date": "середа, 24 червня",
@@ -2743,31 +2743,31 @@
     "C": [
       {
         "position": 1,
-        "teamName": "Шотландія",
-        "played": 1,
+        "teamName": "Марокко",
+        "played": 2,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 1,
         "goalDifference": 1,
-        "points": 3
+        "points": 4
       },
       {
         "position": 2,
-        "teamName": "Бразилія",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
+        "teamName": "Шотландія",
+        "played": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
         "goalsFor": 1,
         "goalsAgainst": 1,
         "goalDifference": 0,
-        "points": 1
+        "points": 3
       },
       {
         "position": 3,
-        "teamName": "Марокко",
+        "teamName": "Бразилія",
         "played": 1,
         "wins": 0,
         "draws": 1,
