@@ -1439,11 +1439,11 @@
       "home": "Бразилія",
       "away": "Гаїті",
       "league": "Чемпіонат світу",
-      "time": "03:30",
-      "date": "субота, 20 червня",
+      "time": "3 - 0",
+      "date": "Сьогодні, 20 червня",
       "dateIso": "2026-06-20",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "03:30"
     },
     {
@@ -2743,6 +2743,18 @@
     "C": [
       {
         "position": 1,
+        "teamName": "Бразилія",
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 1,
+        "goalDifference": 3,
+        "points": 4
+      },
+      {
+        "position": 2,
         "teamName": "Марокко",
         "played": 2,
         "wins": 1,
@@ -2754,7 +2766,7 @@
         "points": 4
       },
       {
-        "position": 2,
+        "position": 3,
         "teamName": "Шотландія",
         "played": 2,
         "wins": 1,
@@ -2766,27 +2778,15 @@
         "points": 3
       },
       {
-        "position": 3,
-        "teamName": "Бразилія",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 1,
-        "goalDifference": 0,
-        "points": 1
-      },
-      {
         "position": 4,
         "teamName": "Гаїті",
-        "played": 1,
+        "played": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
+        "losses": 2,
         "goalsFor": 0,
-        "goalsAgainst": 1,
-        "goalDifference": -1,
+        "goalsAgainst": 4,
+        "goalDifference": -4,
         "points": 0
       }
     ],
