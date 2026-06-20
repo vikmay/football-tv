@@ -1461,11 +1461,11 @@
       "home": "Нідерланди",
       "away": "Швеція",
       "league": "Чемпіонат світу",
-      "time": "20:00",
-      "date": "субота, 20 червня",
+      "time": "5 - 1",
+      "date": "Сьогодні, 20 червня",
       "dateIso": "2026-06-20",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "5 - 1",
       "originalTime": "20:00"
     },
     {
@@ -2893,27 +2893,27 @@
     "F": [
       {
         "position": 1,
-        "teamName": "Швеція",
-        "played": 1,
+        "teamName": "Нідерланди",
+        "played": 2,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "goalsFor": 5,
-        "goalsAgainst": 1,
+        "goalsFor": 7,
+        "goalsAgainst": 3,
         "goalDifference": 4,
-        "points": 3
+        "points": 4
       },
       {
         "position": 2,
-        "teamName": "Нідерланди",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 2,
+        "teamName": "Швеція",
+        "played": 2,
+        "wins": 1,
+        "draws": 0,
+        "losses": 1,
+        "goalsFor": 6,
+        "goalsAgainst": 6,
         "goalDifference": 0,
-        "points": 1
+        "points": 3
       },
       {
         "position": 3,
