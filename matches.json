@@ -1461,11 +1461,11 @@
       "home": "Німеччина",
       "away": "Кот-д’Івуар",
       "league": "Чемпіонат світу",
-      "time": "23:00",
+      "time": "2 - 1",
       "date": "субота, 20 червня",
       "dateIso": "2026-06-20",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 1",
       "originalTime": "23:00"
     },
     {
@@ -2833,25 +2833,25 @@
       {
         "position": 1,
         "teamName": "Німеччина",
-        "played": 1,
-        "wins": 1,
+        "played": 2,
+        "wins": 2,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 7,
-        "goalsAgainst": 1,
-        "goalDifference": 6,
-        "points": 3
+        "goalsFor": 9,
+        "goalsAgainst": 2,
+        "goalDifference": 7,
+        "points": 6
       },
       {
         "position": 2,
         "teamName": "Кот-д'Івуар",
-        "played": 1,
+        "played": 2,
         "wins": 1,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 0,
-        "goalDifference": 1,
+        "losses": 1,
+        "goalsFor": 2,
+        "goalsAgainst": 2,
+        "goalDifference": 0,
         "points": 3
       },
       {
