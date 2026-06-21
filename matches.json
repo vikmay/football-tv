@@ -1472,11 +1472,11 @@
       "home": "Еквадор",
       "away": "Кюрасао",
       "league": "Чемпіонат світу",
-      "time": "03:00",
-      "date": "неділя, 21 червня",
+      "time": "0 - 0",
+      "date": "Сьогодні, 21 червня",
       "dateIso": "2026-06-21",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 0",
       "originalTime": "03:00"
     },
     {
@@ -2857,26 +2857,26 @@
       {
         "position": 3,
         "teamName": "Еквадор",
-        "played": 1,
+        "played": 2,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
         "goalsFor": 0,
         "goalsAgainst": 1,
         "goalDifference": -1,
-        "points": 0
+        "points": 1
       },
       {
         "position": 4,
         "teamName": "Кюрасао",
-        "played": 1,
+        "played": 2,
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
         "goalsFor": 1,
         "goalsAgainst": 7,
         "goalDifference": -6,
-        "points": 0
+        "points": 1
       }
     ],
     "F": [
