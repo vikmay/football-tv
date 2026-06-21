@@ -2911,17 +2911,29 @@
       {
         "position": 1,
         "teamName": "Іран",
-        "played": 1,
+        "played": 2,
         "wins": 0,
-        "draws": 1,
+        "draws": 2,
         "losses": 0,
         "goalsFor": 2,
         "goalsAgainst": 2,
         "goalDifference": 0,
-        "points": 1
+        "points": 2
       },
       {
         "position": 2,
+        "teamName": "Бельгія",
+        "played": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "goalsFor": 1,
+        "goalsAgainst": 1,
+        "goalDifference": 0,
+        "points": 2
+      },
+      {
+        "position": 3,
         "teamName": "Нова Зеландія",
         "played": 1,
         "wins": 0,
@@ -2929,18 +2941,6 @@
         "losses": 0,
         "goalsFor": 2,
         "goalsAgainst": 2,
-        "goalDifference": 0,
-        "points": 1
-      },
-      {
-        "position": 3,
-        "teamName": "Бельгія",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 1,
         "goalDifference": 0,
         "points": 1
       },
