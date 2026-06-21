@@ -231,11 +231,82 @@
                 border-right: 1px solid rgba(0, 255, 136, 0.18);
             }
 
+            .standings__status-cell--qualified {
+                color: #14a85a;
+                font-weight: 900;
+            }
+
+            .standings__status-cell--eliminated {
+                color: #e03131;
+                font-weight: 900;
+            }
+
+            .standings__rank-cell--qualified {
+                background: #14a85a;
+                color: #fff;
+                font-weight: 900;
+            }
+
+            .standings__rank-cell--third {
+                background: #f0b429;
+                color: #1d1d1d;
+                font-weight: 900;
+            }
+
+            .standings__rank-cell--third-qualified {
+                background: #14a85a;
+                color: #fff;
+                font-weight: 900;
+            }
+
+            .standings__rank-cell--eliminated {
+                background: #e03131;
+                color: #fff;
+                font-weight: 900;
+            }
+
             .standings__note {
                 margin-top: 10px;
                 color: #888;
                 font-size: 14px;
                 text-align: center;
+            }
+
+            .standings__legend {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px 12px;
+                justify-content: center;
+                margin-top: 10px;
+                color: #aaa;
+                font-size: 12px;
+                line-height: 1.25;
+            }
+
+            .standings__legend-item {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .standings__legend-dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 2px;
+                display: inline-block;
+            }
+
+            .standings__legend-dot--qualified,
+            .standings__legend-dot--third-qualified {
+                background: #14a85a;
+            }
+
+            .standings__legend-dot--third {
+                background: #f0b429;
+            }
+
+            .standings__legend-dot--eliminated {
+                background: #e03131;
             }
 
             @media (max-width: 600px) {
@@ -362,17 +433,25 @@
                     width: 60%;
                 }
 
-                .standings__table col.standings__col--goals {
-                    width: 9%;
-                }
+.standings__table col.standings__col--goals {
+                width: 9%;
+            }
 
-                .standings__table col.standings__col--difference {
-                    width: 7%;
-                }
+            .standings__table col.standings__col--difference {
+                width: 7%;
+            }
 
-                .standings__table col.standings__col--points {
-                    width: 6%;
-                }
+            .standings__table col.standings__col--points {
+                width: 6%;
+            }
+
+            .standings__table col.standings__col--goals-for {
+                width: 9%;
+            }
+
+            .standings__table col.standings__col--status {
+                width: 12%;
+            }
 
                 .standings__team-cell {
                     font-size: 7.5px;
@@ -426,6 +505,14 @@
 
                 .standings__table col.standings__col--points {
                     width: 10%;
+                }
+
+                .standings__table col.standings__col--goals-for {
+                    width: 10%;
+                }
+
+                .standings__table col.standings__col--status {
+                    width: 16%;
                 }
 
                 .standings__table th:nth-child(2),
@@ -544,6 +631,14 @@
 
                 .standings__table col.standings__col--points {
                     width: 10%;
+                }
+
+                .standings__table col.standings__col--goals-for {
+                    width: 12%;
+                }
+
+                .standings__table col.standings__col--status {
+                    width: 14%;
                 }
 
                 .standings__table th:nth-child(2),
@@ -801,7 +896,97 @@
                 return Number.isFinite(n) ? n : null;
             }
 
-            function renderWorldCupGroupStandingsSection(groupLetter, rows) {
+            function escapeHtml(value) {
+                return String(value ?? "").replace(/[&<>"']/g, char => ({
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#039;"
+                }[char]));
+            }
+
+            function formatSignedNumber(value) {
+                const number = Number(value);
+                if (!Number.isFinite(number)) return "";
+                return number > 0 ? `+${number}` : String(number);
+            }
+
+            function getWorldCupGroupLetters() {
+                return ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
+            }
+
+            function getWorldCupThirdPlaceRows(standingsByGroup) {
+                return getWorldCupGroupLetters()
+                    .map(groupLetter => {
+                        const rows = Array.isArray(standingsByGroup?.[groupLetter]) ? standingsByGroup[groupLetter] : [];
+                        const thirdPlaceRow = rows.find(row => Number(row?.position) === 3);
+
+                        return thirdPlaceRow ? {
+                            ...thirdPlaceRow,
+                            groupLetter
+                        } : null;
+                    })
+                    .filter(Boolean);
+            }
+
+            function sortWorldCupThirdPlaceRows(rows) {
+                return [...rows].sort((a, b) => {
+                    const pointsDiff = (Number(b.points) || 0) - (Number(a.points) || 0);
+                    if (pointsDiff !== 0) return pointsDiff;
+
+                    const goalDifferenceDiff = (Number(b.goalDifference) || 0) - (Number(a.goalDifference) || 0);
+                    if (goalDifferenceDiff !== 0) return goalDifferenceDiff;
+
+                    const goalsForDiff = (Number(b.goalsFor) || 0) - (Number(a.goalsFor) || 0);
+                    if (goalsForDiff !== 0) return goalsForDiff;
+
+                    return String(a.teamName || "").localeCompare(String(b.teamName || ""), "uk");
+                });
+            }
+
+            function getWorldCupQualifiedThirdPlaceGroups(rows) {
+                return new Set(sortWorldCupThirdPlaceRows(rows).slice(0, 8).map(row => row.groupLetter));
+            }
+
+            function getWorldCupGroupRowClass(row) {
+                const position = Number(row?.position);
+
+                if (position === 1 || position === 2) {
+                    return "standings__rank-cell--qualified";
+                }
+
+                if (position === 3) {
+                    return "standings__rank-cell--third";
+                }
+
+                if (position === 4) {
+                    return "standings__rank-cell--eliminated";
+                }
+
+                return "";
+            }
+
+            function renderWorldCupGroupLegend() {
+                return `
+                    <div class="standings__legend" aria-label="Легенда кольорів">
+                        <span class="standings__legend-item"><span class="standings__legend-dot standings__legend-dot--qualified"></span>1-2 — кваліфікація</span>
+                        <span class="standings__legend-item"><span class="standings__legend-dot standings__legend-dot--third"></span>3-є — можлива кваліфікація</span>
+                        <span class="standings__legend-item"><span class="standings__legend-dot standings__legend-dot--eliminated"></span>4-е — поза плей-оф</span>
+                    </div>
+                `;
+            }
+
+            function renderWorldCupThirdPlaceRankingLegend() {
+                return `
+                    <div class="standings__legend" aria-label="Легенда рейтингу третіх місць">
+                        <span class="standings__legend-item"><span class="standings__legend-dot standings__legend-dot--third-qualified"></span>Топ-8 — кваліфікація</span>
+                        <span class="standings__legend-item"><span class="standings__legend-dot standings__legend-dot--eliminated"></span>Виліт — поза плей-оф</span>
+                    </div>
+                `;
+            }
+
+            function renderWorldCupGroupStandingsSection(groupLetter, rows, qualifiedThirdPlaceGroups) {
                 if (!Array.isArray(rows) || !rows.length) {
                     return `
                         <section class="standings">
@@ -841,22 +1026,91 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    ${rows.map(team => `
-                                        <tr>
-                                            <td class="standings__rank-cell">${team.position ?? ""}</td>
-                                            <td class="standings__team-cell">${getWorldCupTeamName(team.teamName ?? "")}</td>
-                                            <td>${team.played ?? ""}</td>
-                                            <td>${team.wins ?? ""}</td>
-                                            <td>${team.draws ?? ""}</td>
-                                            <td>${team.losses ?? ""}</td>
-                                            <td>${team.goalsFor ?? ""}:${team.goalsAgainst ?? ""}</td>
-                                            <td>${typeof team.goalDifference === "number" && team.goalDifference > 0 ? `+${team.goalDifference}` : (team.goalDifference ?? "")}</td>
-                                            <td class="standings__points-cell">${team.points ?? ""}</td>
-                                        </tr>
-                                    `).join("")}
+                                    ${rows.map(team => {
+                    const rankClass = getWorldCupGroupRowClass(team);
+
+                    return `
+                                            <tr>
+                                                <td class="standings__rank-cell ${rankClass}">${team.position ?? ""}</td>
+                                                <td class="standings__team-cell">${getWorldCupTeamName(team.teamName ?? "")}</td>
+                                                <td>${team.played ?? ""}</td>
+                                                <td>${team.wins ?? ""}</td>
+                                                <td>${team.draws ?? ""}</td>
+                                                <td>${team.losses ?? ""}</td>
+                                                <td>${team.goalsFor ?? ""}:${team.goalsAgainst ?? ""}</td>
+                                                <td>${formatSignedNumber(team.goalDifference)}</td>
+                                                <td class="standings__points-cell">${team.points ?? ""}</td>
+                                            </tr>
+                                        `;
+                }).join("")}
                                 </tbody>
                             </table>
                         </div>
+                        ${renderWorldCupGroupLegend()}
+                    </section>
+                `;
+            }
+
+            function renderWorldCupThirdPlaceRankingSection(standingsByGroup, qualifiedThirdPlaceGroups) {
+                const rows = sortWorldCupThirdPlaceRows(getWorldCupThirdPlaceRows(standingsByGroup));
+
+                if (!rows.length) {
+                    return `
+                        <section class="standings">
+                            <h2 class="standings__title">Рейтинг команд, що посіли 3-є місце</h2>
+                            <div class="standings__note">Немає даних</div>
+                        </section>
+                    `;
+                }
+
+                return `
+                    <section class="standings">
+                        <h2 class="standings__title">Рейтинг команд, що посіли 3-є місце</h2>
+                        <div class="standings__table-wrap">
+                            <table class="standings__table">
+                                <colgroup>
+                                    <col class="standings__col standings__col--rank">
+                                    <col class="standings__col standings__col--team">
+                                    <col class="standings__col standings__col--points">
+                                    <col class="standings__col standings__col--difference">
+                                    <col class="standings__col standings__col--goals-for">
+                                    <col class="standings__col standings__col--status">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>№</th>
+                                        <th>Команда</th>
+                                        <th>О</th>
+                                        <th>Р</th>
+                                        <th>Г</th>
+                                        <th>Статус</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${rows.map((team, index) => {
+                    const isQualified = qualifiedThirdPlaceGroups?.has(team.groupLetter);
+                    const rankClass = isQualified
+                        ? "standings__rank-cell--third-qualified"
+                        : "standings__rank-cell--eliminated";
+                    const statusClass = isQualified
+                        ? "standings__status-cell--qualified"
+                        : "standings__status-cell--eliminated";
+
+                    return `
+                                            <tr>
+                                                <td class="standings__rank-cell ${rankClass}">${index + 1}</td>
+                                                <td class="standings__team-cell">${getWorldCupTeamName(team.teamName ?? "")}</td>
+                                                <td>${team.points ?? ""}</td>
+                                                <td>${formatSignedNumber(team.goalDifference)}</td>
+                                                <td>${team.goalsFor ?? ""}</td>
+                                                <td class="${statusClass}">${isQualified ? "Топ-8" : "Виліт"}</td>
+                                            </tr>
+                                        `;
+                }).join("")}
+                                </tbody>
+                            </table>
+                        </div>
+                        ${renderWorldCupThirdPlaceRankingLegend()}
                     </section>
                 `;
             }
@@ -923,35 +1177,36 @@
 
             async function renderWorldCup2026GroupsStandings(standingsByGroup) {
                 const standingsHost = document.getElementById("standings");
+                const letters = getWorldCupGroupLetters();
                 standingsHost.innerHTML = "";
 
-                const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"];
-
-                // Prefer local matches.json tables (works in same-origin app; no CORS).
                 if (standingsByGroup && typeof standingsByGroup === "object") {
-                    const sections = letters.map(letter =>
-                        renderWorldCupGroupStandingsSection(letter, standingsByGroup?.[letter] || [])
-                    );
+                    const thirdPlaceRows = getWorldCupThirdPlaceRows(standingsByGroup);
+                    const qualifiedThirdPlaceGroups = getWorldCupQualifiedThirdPlaceGroups(thirdPlaceRows);
+                    const sections = [
+                        ...letters.map(letter => renderWorldCupGroupStandingsSection(letter, standingsByGroup?.[letter] || [], qualifiedThirdPlaceGroups)),
+                        renderWorldCupThirdPlaceRankingSection(standingsByGroup, qualifiedThirdPlaceGroups)
+                    ];
                     standingsHost.innerHTML = sections.join("");
                     return;
                 }
 
-                // Fallback to worldcupstats (may be blocked by CORS when opened via file://).
-                const sections = [];
+                const fetchedStandingsByGroup = {};
 
                 for (const letter of letters) {
                     try {
-                        const rows = await fetchWorldCupGroupStandingsRows(letter);
-                        sections.push(renderWorldCupGroupStandingsSection(letter, rows));
+                        fetchedStandingsByGroup[letter] = await fetchWorldCupGroupStandingsRows(letter);
                     } catch (e) {
-                        sections.push(`
-                            <section class="standings">
-                                <h2 class="standings__title">${worldCupGroupTitle(letter)}</h2>
-                                <div class="standings__note">Помилка завантаження</div>
-                            </section>
-                        `);
+                        fetchedStandingsByGroup[letter] = [];
                     }
                 }
+
+                const thirdPlaceRows = getWorldCupThirdPlaceRows(fetchedStandingsByGroup);
+                const qualifiedThirdPlaceGroups = getWorldCupQualifiedThirdPlaceGroups(thirdPlaceRows);
+                const sections = [
+                    ...letters.map(letter => renderWorldCupGroupStandingsSection(letter, fetchedStandingsByGroup[letter] || [], qualifiedThirdPlaceGroups)),
+                    renderWorldCupThirdPlaceRankingSection(fetchedStandingsByGroup, qualifiedThirdPlaceGroups)
+                ];
 
                 standingsHost.innerHTML = sections.join("");
             }
