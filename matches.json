@@ -1494,11 +1494,11 @@
       "home": "Іспанія",
       "away": "Саудівська Аравія",
       "league": "Чемпіонат світу",
-      "time": "19:00",
-      "date": "неділя, 21 червня",
+      "time": "4 - 0",
+      "date": "Сьогодні, 21 червня",
       "dateIso": "2026-06-21",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "4 - 0",
       "originalTime": "19:00"
     },
     {
@@ -2982,6 +2982,18 @@
     "H": [
       {
         "position": 1,
+        "teamName": "Іспанія",
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 0,
+        "goalDifference": 4,
+        "points": 4
+      },
+      {
+        "position": 2,
         "teamName": "Уругвай",
         "played": 1,
         "wins": 0,
@@ -2993,20 +3005,8 @@
         "points": 1
       },
       {
-        "position": 2,
-        "teamName": "Саудівська Аравія",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 1,
-        "goalDifference": 0,
-        "points": 1
-      },
-      {
         "position": 3,
-        "teamName": "Іспанія",
+        "teamName": "Кабо-Верде",
         "played": 1,
         "wins": 0,
         "draws": 1,
@@ -3018,14 +3018,14 @@
       },
       {
         "position": 4,
-        "teamName": "Кабо-Верде",
-        "played": 1,
+        "teamName": "Саудівська Аравія",
+        "played": 2,
         "wins": 0,
         "draws": 1,
-        "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 1,
+        "goalsAgainst": 5,
+        "goalDifference": -4,
         "points": 1
       }
     ],
