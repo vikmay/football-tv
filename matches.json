@@ -1516,11 +1516,11 @@
       "home": "Уругвай",
       "away": "Кабо-Верде",
       "league": "Чемпіонат світу",
-      "time": "01:00",
-      "date": "понеділок, 22 червня",
+      "time": "2 - 2",
+      "date": "Сьогодні, 22 червня",
       "dateIso": "2026-06-22",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 2",
       "originalTime": "01:00"
     },
     {
@@ -2973,26 +2973,26 @@
       {
         "position": 2,
         "teamName": "Уругвай",
-        "played": 1,
+        "played": 2,
         "wins": 0,
-        "draws": 1,
+        "draws": 2,
         "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 1,
+        "goalsFor": 3,
+        "goalsAgainst": 3,
         "goalDifference": 0,
-        "points": 1
+        "points": 2
       },
       {
         "position": 3,
         "teamName": "Кабо-Верде",
-        "played": 1,
+        "played": 2,
         "wins": 0,
-        "draws": 1,
+        "draws": 2,
         "losses": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
+        "goalsFor": 2,
+        "goalsAgainst": 2,
         "goalDifference": 0,
-        "points": 1
+        "points": 2
       },
       {
         "position": 4,
