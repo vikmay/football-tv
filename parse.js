@@ -1393,7 +1393,10 @@ function filterMatchesWithinWindow(matches) {
     Object.entries(matches || {}).map(([sectionName, items]) => [
       sectionName,
       Array.isArray(items)
-        ? items.filter(item => !item?.dateIso || isDateWithinWindow(item.dateIso))
+        ? items.filter(item => {
+            if (sectionName === "Чемпіонат світу") return true;
+            return !item?.dateIso || isDateWithinWindow(item.dateIso);
+          })
         : []
     ])
   );
@@ -1896,6 +1899,135 @@ async function fetchWorldCup2026GroupStandings() {
     }
 
     result[letter.toUpperCase()] = parseWorldCupGroupStandingsFromHtml(html);
+  }
+
+  return result;
+}
+
+function computeWorldCupGroupStandings(wcMatches) {
+  const groupMap = {
+    "Мексика":"A","Південна Корея":"A","Чехія":"A","Південна Африка":"A",
+    "Канада":"B","Швейцарія":"B","Боснія і Герцеговина":"B","Катар":"B",
+    "Бразилія":"C","Марокко":"C","Шотландія":"C","Гаїті":"C",
+    "США":"D","Австралія":"D","Туреччина":"D","Парагвай":"D",
+    "Німеччина":"E","Кот-д'Івуар":"E","Кот-д’Івуар":"E","Еквадор":"E","Кюрасао":"E",
+    "Нідерланди":"F","Японія":"F","Швеція":"F","Туніс":"F",
+    "Іран":"G","Нова Зеландія":"G","Бельгія":"G","Єгипет":"G",
+    "Уругвай":"H","Саудівська Аравія":"H","Іспанія":"H","Кабо-Верде":"H",
+    "Норвегія":"I","Франція":"I","Сенегал":"I","Ірак":"I",
+    "Аргентина":"J","Австрія":"J","Йорданія":"J","Алжир":"J",
+    "Колумбія":"K","Португалія":"K","ДР Конго":"K","Узбекистан":"K",
+    "Англія":"L","Гана":"L","Панама":"L","Хорватія":"L"
+  };
+
+  const stats = {};
+  const allMatches = Array.isArray(wcMatches) ? wcMatches : [];
+
+  for (const m of allMatches) {
+    if (m.status !== "Match Finished" || !m.score) continue;
+    const parts = String(m.score).split(" - ");
+    if (parts.length !== 2) continue;
+    const hScore = parseInt(parts[0]), aScore = parseInt(parts[1]);
+    if (isNaN(hScore) || isNaN(aScore)) continue;
+
+    const gHome = groupMap[m.home], gAway = groupMap[m.away];
+    if (!gHome || !gAway || gHome !== gAway) continue;
+
+    const g = gHome;
+    if (!stats[g]) stats[g] = {};
+    for (const t of [m.home, m.away]) {
+      if (!stats[g][t]) stats[g][t] = { played:0, wins:0, draws:0, losses:0, gf:0, ga:0, points:0 };
+    }
+
+    stats[g][m.home].played++;
+    stats[g][m.home].gf += hScore;
+    stats[g][m.home].ga += aScore;
+    stats[g][m.away].played++;
+    stats[g][m.away].gf += aScore;
+    stats[g][m.away].ga += hScore;
+
+    if (hScore > aScore) {
+      stats[g][m.home].wins++;
+      stats[g][m.home].points += 3;
+      stats[g][m.away].losses++;
+    } else if (aScore > hScore) {
+      stats[g][m.away].wins++;
+      stats[g][m.away].points += 3;
+      stats[g][m.home].losses++;
+    } else {
+      stats[g][m.home].draws++;
+      stats[g][m.home].points++;
+      stats[g][m.away].draws++;
+      stats[g][m.away].points++;
+    }
+  }
+
+  const result = {};
+  const letters = ["A","B","C","D","E","F","G","H","I","J","K","L"];
+
+  for (const letter of letters) {
+    const teams = stats[letter];
+    if (!teams || Object.keys(teams).length === 0) {
+      result[letter] = [];
+      continue;
+    }
+
+    result[letter] = Object.entries(teams).map(([name, s]) => ({
+      position: 0,
+      teamName: name,
+      played: s.played,
+      wins: s.wins,
+      draws: s.draws,
+      losses: s.losses,
+      goalsFor: s.gf,
+      goalsAgainst: s.ga,
+      goalDifference: s.gf - s.ga,
+      points: s.points
+    })).sort((a, b) => {
+      if (b.points !== a.points) return b.points - a.points;
+      if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
+      if (b.goalsFor !== a.goalsFor) return b.goalsFor - a.goalsFor;
+
+      let aH2hPoints = 0, bH2hPoints = 0;
+      let aH2hGd = 0, bH2hGd = 0;
+      let aH2hGf = 0, bH2hGf = 0;
+
+      for (const m of allMatches) {
+        if (m.status !== "Match Finished" || !m.score) continue;
+        if ((m.home === a.teamName && m.away === b.teamName) || (m.home === b.teamName && m.away === a.teamName)) {
+           const parts = String(m.score).split(" - ");
+           if (parts.length !== 2) continue;
+           const hScore = parseInt(parts[0]), aScore = parseInt(parts[1]);
+           if (isNaN(hScore) || isNaN(aScore)) continue;
+
+           if (m.home === a.teamName) {
+             aH2hGf += hScore;
+             aH2hGd += (hScore - aScore);
+             bH2hGf += aScore;
+             bH2hGd += (aScore - hScore);
+             if (hScore > aScore) aH2hPoints += 3;
+             else if (aScore > hScore) bH2hPoints += 3;
+             else { aH2hPoints += 1; bH2hPoints += 1; }
+           } else {
+             bH2hGf += hScore;
+             bH2hGd += (hScore - aScore);
+             aH2hGf += aScore;
+             aH2hGd += (aScore - hScore);
+             if (hScore > aScore) bH2hPoints += 3;
+             else if (aScore > hScore) aH2hPoints += 3;
+             else { aH2hPoints += 1; bH2hPoints += 1; }
+           }
+        }
+      }
+
+      if (bH2hPoints !== aH2hPoints) return bH2hPoints - aH2hPoints;
+      if (bH2hGd !== aH2hGd) return bH2hGd - aH2hGd;
+      if (bH2hGf !== aH2hGf) return bH2hGf - aH2hGf;
+
+      return a.teamName.localeCompare(b.teamName, 'uk');
+    });
+
+    result[letter].forEach((row, i) => { row.position = i + 1; });
   }
 
   return result;
@@ -2604,13 +2736,12 @@ async function main() {
     return;
   }
 
-  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches, wcGroupStandings] = await Promise.all([
+  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches] = await Promise.all([
     fetchUplEvents(),
     fetchUplStandings(),
     fetchChampionsLeagueEvents(),
     fetchCupEvents(),
-    fetchExtraMatches(),
-    fetchWorldCup2026GroupStandings()
+    fetchExtraMatches()
   ]);
 
   if (uplEvents) {
@@ -2657,29 +2788,35 @@ async function main() {
     );
   }
 
-  // Reconcile World Cup finished match results with standings table to detect
-  // inverted home/away teams (a known Flashscore bug for some matches).
-  if (Array.isArray(matches["Чемпіонат світу"]) && matches["Таблиця ЧС 2026"]) {
-    matches["Чемпіонат світу"] = reconcileWorldCupMatchesWithStandings(
-      matches["Чемпіонат світу"],
-      matches["Таблиця ЧС 2026"]
-    );
-
-    // After reconciliation, dedupe WC matches by direction-agnostic pair
-    // to remove the old inverted match that may still exist alongside the corrected one.
-    // Use standings to prefer the version where home team matches its actual direction.
-    matches["Чемпіонат світу"] = dedupeWorldCupMatchesByPair(
-      matches["Чемпіонат світу"],
-      matches["Таблиця ЧС 2026"]
-    );
+  if (matches["Чемпіонат світу"]) {
+    matches["Чемпіонат світу"] = dedupeMatchesByPairKeepLatestDate(matches["Чемпіонат світу"]);
   }
 
-  // Оновлюємо таблицю, якщо отримали хоча б список команд
-  const wcStandings = isValidStandings(wcGroupStandings)
-    ? wcGroupStandings
-    : existingData["Таблиця ЧС 2026"];
+  const computedWcStandings = computeWorldCupGroupStandings(
+    matches["Чемпіонат світу"] || []
+  );
 
-  matches["Таблиця ЧС 2026"] = wcStandings || {};
+  matches["Таблиця ЧС 2026"] = computedWcStandings || {};
+
+  if (Array.isArray(matches["Чемпіонат світу"]) && computedWcStandings) {
+    // inverted home/away teams (a known Flashscore bug for some matches).
+    if (Array.isArray(matches["Чемпіонат світу"]) && matches["Таблиця ЧС 2026"]) {
+      matches["Чемпіонат світу"] = reconcileWorldCupMatchesWithStandings(
+        matches["Чемпіонат світу"],
+        matches["Таблиця ЧС 2026"]
+      );
+
+      // After reconciliation, dedupe WC matches by direction-agnostic pair
+      // to remove the old inverted match that may still exist alongside the corrected one.
+      // Use standings to prefer the version where home team matches its actual direction.
+      matches["Чемпіонат світу"] = dedupeWorldCupMatchesByPair(
+        matches["Чемпіонат світу"],
+        matches["Таблиця ЧС 2026"]
+      );
+    }
+  }
+
+  // removed duplicate finalMatches initialization
 
   // Фінальна заміна часу на результат для розкладу
   Object.keys(matches).forEach(section => {
@@ -2727,7 +2864,7 @@ async function main() {
 
   const dedupedMatches = dedupeScheduleSections(matches);
   const finalMatches = filterMatchesWithinWindow(dedupedMatches);
-  finalMatches["Таблиця ЧС 2026"] = wcStandings || {};
+  finalMatches["Таблиця ЧС 2026"] = matches["Таблиця ЧС 2026"] || {};
   fs.writeFileSync("matches.json", JSON.stringify(finalMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
