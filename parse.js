@@ -1985,8 +1985,6 @@ function computeWorldCupGroupStandings(wcMatches) {
       points: s.points
     })).sort((a, b) => {
       if (b.points !== a.points) return b.points - a.points;
-      if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
-      if (b.goalsFor !== a.goalsFor) return b.goalsFor - a.goalsFor;
 
       let aH2hPoints = 0, bH2hPoints = 0;
       let aH2hGd = 0, bH2hGd = 0;
@@ -2023,6 +2021,9 @@ function computeWorldCupGroupStandings(wcMatches) {
       if (bH2hPoints !== aH2hPoints) return bH2hPoints - aH2hPoints;
       if (bH2hGd !== aH2hGd) return bH2hGd - aH2hGd;
       if (bH2hGf !== aH2hGf) return bH2hGf - aH2hGf;
+
+      if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
+      if (b.goalsFor !== a.goalsFor) return b.goalsFor - a.goalsFor;
 
       return a.teamName.localeCompare(b.teamName, 'uk');
     });
