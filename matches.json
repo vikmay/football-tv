@@ -1527,11 +1527,11 @@
       "home": "Нова Зеландія",
       "away": "Єгипет",
       "league": "Чемпіонат світу",
-      "time": "04:00",
-      "date": "понеділок, 22 червня",
+      "time": "1 - 3",
+      "date": "Сьогодні, 22 червня",
       "dateIso": "2026-06-22",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 3",
       "originalTime": "04:00"
     },
     {
@@ -2910,6 +2910,18 @@
     "G": [
       {
         "position": 1,
+        "teamName": "Єгипет",
+        "played": 2,
+        "wins": 1,
+        "draws": 1,
+        "losses": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 2,
+        "goalDifference": 2,
+        "points": 4
+      },
+      {
+        "position": 2,
         "teamName": "Іран",
         "played": 2,
         "wins": 0,
@@ -2921,7 +2933,7 @@
         "points": 2
       },
       {
-        "position": 2,
+        "position": 3,
         "teamName": "Бельгія",
         "played": 2,
         "wins": 0,
@@ -2933,27 +2945,15 @@
         "points": 2
       },
       {
-        "position": 3,
-        "teamName": "Нова Зеландія",
-        "played": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 2,
-        "goalDifference": 0,
-        "points": 1
-      },
-      {
         "position": 4,
-        "teamName": "Єгипет",
-        "played": 1,
+        "teamName": "Нова Зеландія",
+        "played": 2,
         "wins": 0,
         "draws": 1,
-        "losses": 0,
-        "goalsFor": 1,
-        "goalsAgainst": 1,
-        "goalDifference": 0,
+        "losses": 1,
+        "goalsFor": 3,
+        "goalsAgainst": 5,
+        "goalDifference": -2,
         "points": 1
       }
     ],
