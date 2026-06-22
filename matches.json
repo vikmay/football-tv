@@ -1,39 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Олександрія",
-      "away": "Кривбас",
-      "league": "УПЛ",
-      "time": "1 - 1",
-      "date": "субота, 23 травня",
-      "dateIso": "2026-05-23",
-      "status": "Match Finished",
-      "score": "1 - 1",
-      "originalTime": "13:00"
-    },
-    {
-      "home": "Епіцентр",
-      "away": "СК Полтава",
-      "league": "УПЛ",
-      "time": "0 - 0",
-      "date": "субота, 23 травня",
-      "dateIso": "2026-05-23",
-      "status": "Match Finished",
-      "score": "0 - 0",
-      "originalTime": "15:30"
-    },
-    {
-      "home": "Карпати Львів",
-      "away": "Зоря Луганськ",
-      "league": "УПЛ",
-      "time": "1 - 2",
-      "date": "субота, 23 травня",
-      "dateIso": "2026-05-23",
-      "status": "Match Finished",
-      "score": "1 - 2",
-      "originalTime": "18:00"
-    },
-    {
       "home": "Динамо Київ",
       "away": "Кудрівка",
       "league": "УПЛ",
@@ -1502,17 +1469,6 @@
       "originalTime": "22:00"
     },
     {
-      "home": "Франція",
-      "away": "Ірак",
-      "league": "Чемпіонат світу",
-      "time": "00:00",
-      "date": "понеділок, 22 червня",
-      "dateIso": "2026-06-22",
-      "status": "Scheduled",
-      "score": "",
-      "originalTime": "00:00"
-    },
-    {
       "home": "Уругвай",
       "away": "Кабо-Верде",
       "league": "Чемпіонат світу",
@@ -2784,26 +2740,26 @@
       },
       {
         "position": 3,
-        "teamName": "Туреччина",
+        "teamName": "Парагвай",
         "played": 2,
         "wins": 1,
         "draws": 0,
         "losses": 1,
-        "goalsFor": 1,
-        "goalsAgainst": 2,
-        "goalDifference": -1,
+        "goalsFor": 2,
+        "goalsAgainst": 4,
+        "goalDifference": -2,
         "points": 3
       },
       {
         "position": 4,
-        "teamName": "Парагвай",
+        "teamName": "Туреччина",
         "played": 2,
         "wins": 0,
         "draws": 0,
         "losses": 2,
-        "goalsFor": 1,
-        "goalsAgainst": 5,
-        "goalDifference": -4,
+        "goalsFor": 0,
+        "goalsAgainst": 3,
+        "goalDifference": -3,
         "points": 0
       }
     ],
@@ -2822,7 +2778,7 @@
       },
       {
         "position": 2,
-        "teamName": "Кот-д'Івуар",
+        "teamName": "Кот-д’Івуар",
         "played": 2,
         "wins": 1,
         "draws": 0,
@@ -3122,7 +3078,7 @@
       },
       {
         "position": 2,
-        "teamName": "Португалія",
+        "teamName": "ДР Конго",
         "played": 1,
         "wins": 0,
         "draws": 1,
@@ -3134,7 +3090,7 @@
       },
       {
         "position": 3,
-        "teamName": "ДР Конго",
+        "teamName": "Португалія",
         "played": 1,
         "wins": 0,
         "draws": 1,
