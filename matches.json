@@ -1516,11 +1516,11 @@
       "home": "Норвегія",
       "away": "Сенегал",
       "league": "Чемпіонат світу",
-      "time": "03:00",
-      "date": "вівторок, 23 червня",
+      "time": "3 - 2",
+      "date": "Сьогодні, 23 червня",
       "dateIso": "2026-06-23",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 2",
       "originalTime": "03:00"
     },
     {
@@ -2979,25 +2979,25 @@
       {
         "position": 2,
         "teamName": "Норвегія",
-        "played": 1,
-        "wins": 1,
+        "played": 2,
+        "wins": 2,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 4,
-        "goalsAgainst": 1,
-        "goalDifference": 3,
-        "points": 3
+        "goalsFor": 7,
+        "goalsAgainst": 3,
+        "goalDifference": 4,
+        "points": 6
       },
       {
         "position": 3,
         "teamName": "Сенегал",
-        "played": 1,
+        "played": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
-        "goalsFor": 1,
-        "goalsAgainst": 3,
-        "goalDifference": -2,
+        "losses": 2,
+        "goalsFor": 3,
+        "goalsAgainst": 6,
+        "goalDifference": -3,
         "points": 0
       },
       {
