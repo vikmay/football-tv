@@ -1,59 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Динамо Київ",
-      "away": "Кудрівка",
-      "league": "УПЛ",
-      "time": "3 - 2",
-      "date": "неділя, 24 травня",
-      "dateIso": "2026-05-24",
-      "status": "Match Finished",
-      "score": "3 - 2"
-    },
-    {
-      "home": "Верес Рівне",
-      "away": "Металіст 1925 Харків",
-      "league": "УПЛ",
-      "time": "0 - 1",
-      "date": "неділя, 24 травня",
-      "dateIso": "2026-05-24",
-      "status": "Match Finished",
-      "score": "0 - 1",
-      "originalTime": "13:00"
-    },
-    {
-      "home": "Полісся Житомир",
-      "away": "Рух Львів",
-      "league": "УПЛ",
-      "time": "2 - 0",
-      "date": "неділя, 24 травня",
-      "dateIso": "2026-05-24",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
-      "home": "Оболонь Київ",
-      "away": "ЛНЗ Черкаси",
-      "league": "УПЛ",
-      "time": "0 - 1",
-      "date": "неділя, 24 травня",
-      "dateIso": "2026-05-24",
-      "status": "Match Finished",
-      "score": "0 - 1",
-      "originalTime": "13:00"
-    },
-    {
-      "home": "Верес Рівне",
-      "away": "ФК Харків",
-      "league": "УПЛ",
-      "time": "0 - 1",
-      "date": "неділя, 24 травня",
-      "dateIso": "2026-05-24",
-      "status": "Match Finished",
-      "score": "0 - 1",
-      "originalTime": "13:00"
-    },
-    {
       "home": "Олександрія",
       "away": "Лівий берег",
       "league": "УПЛ",
