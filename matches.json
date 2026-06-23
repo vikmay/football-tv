@@ -1782,11 +1782,11 @@
       "home": "Англія",
       "away": "Гана",
       "league": "Чемпіонат світу",
-      "time": "23:00",
+      "time": "0 - 0",
       "date": "вівторок, 23 червня",
       "dateIso": "2026-06-23",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 0",
       "originalTime": "23:00"
     },
     {
@@ -3361,26 +3361,26 @@
       {
         "position": 1,
         "teamName": "Англія",
-        "played": 1,
+        "played": 2,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
         "goalsFor": 4,
         "goalsAgainst": 2,
         "goalDifference": 2,
-        "points": 3
+        "points": 4
       },
       {
         "position": 2,
         "teamName": "Гана",
-        "played": 1,
+        "played": 2,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
         "goalsFor": 1,
         "goalsAgainst": 0,
         "goalDifference": 1,
-        "points": 3
+        "points": 4
       },
       {
         "position": 3,
