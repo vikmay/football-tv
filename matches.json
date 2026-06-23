@@ -1505,11 +1505,11 @@
       "home": "Франція",
       "away": "Ірак",
       "league": "Чемпіонат світу",
-      "time": "00:00",
-      "date": "вівторок, 23 червня",
+      "time": "3 - 0",
+      "date": "Сьогодні, 23 червня",
       "dateIso": "2026-06-23",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "00:00"
     },
     {
@@ -2966,6 +2966,18 @@
     "I": [
       {
         "position": 1,
+        "teamName": "Франція",
+        "played": 2,
+        "wins": 2,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 6,
+        "goalsAgainst": 1,
+        "goalDifference": 5,
+        "points": 6
+      },
+      {
+        "position": 2,
         "teamName": "Норвегія",
         "played": 1,
         "wins": 1,
@@ -2974,18 +2986,6 @@
         "goalsFor": 4,
         "goalsAgainst": 1,
         "goalDifference": 3,
-        "points": 3
-      },
-      {
-        "position": 2,
-        "teamName": "Франція",
-        "played": 1,
-        "wins": 1,
-        "draws": 0,
-        "losses": 0,
-        "goalsFor": 3,
-        "goalsAgainst": 1,
-        "goalDifference": 2,
         "points": 3
       },
       {
@@ -3003,13 +3003,13 @@
       {
         "position": 4,
         "teamName": "Ірак",
-        "played": 1,
+        "played": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
+        "losses": 2,
         "goalsFor": 1,
-        "goalsAgainst": 4,
-        "goalDifference": -3,
+        "goalsAgainst": 7,
+        "goalDifference": -6,
         "points": 0
       }
     ],
