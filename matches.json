@@ -1804,11 +1804,11 @@
       "home": "Колумбія",
       "away": "ДР Конго",
       "league": "Чемпіонат світу",
-      "time": "05:00",
-      "date": "середа, 24 червня",
+      "time": "1 - 0",
+      "date": "Сьогодні, 24 червня",
       "dateIso": "2026-06-24",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "05:00"
     },
     {
@@ -3310,6 +3310,18 @@
     "K": [
       {
         "position": 1,
+        "teamName": "Колумбія",
+        "played": 2,
+        "wins": 2,
+        "draws": 0,
+        "losses": 0,
+        "goalsFor": 4,
+        "goalsAgainst": 1,
+        "goalDifference": 3,
+        "points": 6
+      },
+      {
+        "position": 2,
         "teamName": "Португалія",
         "played": 2,
         "wins": 1,
@@ -3321,27 +3333,15 @@
         "points": 4
       },
       {
-        "position": 2,
-        "teamName": "Колумбія",
-        "played": 1,
-        "wins": 1,
-        "draws": 0,
-        "losses": 0,
-        "goalsFor": 3,
-        "goalsAgainst": 1,
-        "goalDifference": 2,
-        "points": 3
-      },
-      {
         "position": 3,
         "teamName": "ДР Конго",
-        "played": 1,
+        "played": 2,
         "wins": 0,
         "draws": 1,
-        "losses": 0,
+        "losses": 1,
         "goalsFor": 1,
-        "goalsAgainst": 1,
-        "goalDifference": 0,
+        "goalsAgainst": 2,
+        "goalDifference": -1,
         "points": 1
       },
       {
