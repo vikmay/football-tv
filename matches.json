@@ -785,6 +785,17 @@
       "home": "Qarabağ",
       "away": "Vestri",
       "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "четвер, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "NS",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
+      "home": "Qarabağ",
+      "away": "Vestri",
+      "league": "Ліга Європи",
       "time": "20:00",
       "date": "четвер, 9 липня",
       "dateIso": "2026-07-09",
@@ -2120,6 +2131,17 @@
       "status": "Match Finished",
       "score": "1 - 0",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Qarabağ",
+      "away": "Vestri",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "четвер, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "NS",
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Qarabağ",
