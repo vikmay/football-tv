@@ -1158,17 +1158,6 @@
   ],
   "Ліга конференцій": [
     {
-      "home": "Кристал Пелес",
-      "away": "Райо Вальєкано",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "1 - 0",
-      "date": "середа, 27 травня",
-      "dateIso": "2026-05-27",
-      "status": "Match Finished",
-      "score": "1 - 0",
-      "originalTime": "22:00"
-    },
-    {
       "home": "Вараждин (Cro)",
       "away": "Градец-Кралове (Cze)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -2222,22 +2211,22 @@
       "home": "Норвегія",
       "away": "Франція",
       "league": "Чемпіонат світу",
-      "time": "22:00",
+      "time": "1 - 4",
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 4",
       "originalTime": "22:00"
     },
     {
       "home": "Сенегал",
       "away": "Ірак",
       "league": "Чемпіонат світу",
-      "time": "22:00",
+      "time": "5 - 0",
       "date": "пʼятниця, 26 червня",
       "dateIso": "2026-06-26",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "5 - 0",
       "originalTime": "22:00"
     },
     {
@@ -2395,6 +2384,17 @@
       "originalTime": "04:00"
     },
     {
+      "home": "Кот-д’Івуар",
+      "away": "Норвегія",
+      "league": "Чемпіонат світу",
+      "time": "20:00",
+      "date": "вівторок, 30 червня",
+      "dateIso": "2026-06-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
       "home": "США",
       "away": "Боснія і Герцеговина",
       "league": "Чемпіонат світу",
@@ -2408,27 +2408,6 @@
   ],
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
-    {
-      "home": "Кристал Пелес",
-      "away": "Райо Вальєкано",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "1 - 0",
-      "date": "середа, 27 травня",
-      "dateIso": "2026-05-27",
-      "status": "Match Finished",
-      "score": "1 - 0"
-    },
-    {
-      "home": "Кристал Пелес",
-      "away": "Райо Вальєкано",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "1 - 0",
-      "date": "середа, 27 травня",
-      "dateIso": "2026-05-27",
-      "status": "Match Finished",
-      "score": "1 - 0",
-      "originalTime": "22:00"
-    },
     {
       "home": "Qarabağ",
       "away": "Vestri",
@@ -3541,49 +3520,49 @@
       {
         "position": 1,
         "teamName": "Франція",
-        "played": 2,
-        "wins": 2,
+        "played": 3,
+        "wins": 3,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 6,
-        "goalsAgainst": 1,
-        "goalDifference": 5,
-        "points": 6
+        "goalsFor": 10,
+        "goalsAgainst": 2,
+        "goalDifference": 8,
+        "points": 9
       },
       {
         "position": 2,
         "teamName": "Норвегія",
-        "played": 2,
+        "played": 3,
         "wins": 2,
         "draws": 0,
-        "losses": 0,
-        "goalsFor": 7,
-        "goalsAgainst": 3,
-        "goalDifference": 4,
+        "losses": 1,
+        "goalsFor": 8,
+        "goalsAgainst": 7,
+        "goalDifference": 1,
         "points": 6
       },
       {
         "position": 3,
         "teamName": "Сенегал",
-        "played": 2,
-        "wins": 0,
+        "played": 3,
+        "wins": 1,
         "draws": 0,
         "losses": 2,
-        "goalsFor": 3,
+        "goalsFor": 8,
         "goalsAgainst": 6,
-        "goalDifference": -3,
-        "points": 0
+        "goalDifference": 2,
+        "points": 3
       },
       {
         "position": 4,
         "teamName": "Ірак",
-        "played": 2,
+        "played": 3,
         "wins": 0,
         "draws": 0,
-        "losses": 2,
+        "losses": 3,
         "goalsFor": 1,
-        "goalsAgainst": 7,
-        "goalDifference": -6,
+        "goalsAgainst": 12,
+        "goalDifference": -11,
         "points": 0
       }
     ],
