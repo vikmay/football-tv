@@ -2244,22 +2244,22 @@
       "home": "Уругвай",
       "away": "Іспанія",
       "league": "Чемпіонат світу",
-      "time": "03:00",
-      "date": "субота, 27 червня",
+      "time": "0 - 1",
+      "date": "Сьогодні, 27 червня",
       "dateIso": "2026-06-27",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 1",
       "originalTime": "03:00"
     },
     {
       "home": "Кабо-Верде",
       "away": "Саудівська Аравія",
       "league": "Чемпіонат світу",
-      "time": "03:00",
-      "date": "субота, 27 червня",
+      "time": "0 - 0",
+      "date": "Сьогодні, 27 червня",
       "dateIso": "2026-06-27",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 0",
       "originalTime": "03:00"
     },
     {
@@ -2373,6 +2373,17 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Німеччина",
+      "away": "Парагвай",
+      "league": "Чемпіонат світу",
+      "time": "23:30",
+      "date": "понеділок, 29 червня",
+      "dateIso": "2026-06-29",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "23:30"
+    },
+    {
       "home": "Нідерланди",
       "away": "Марокко",
       "league": "Чемпіонат світу",
@@ -2395,6 +2406,17 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Франція",
+      "away": "Швеція",
+      "league": "Чемпіонат світу",
+      "time": "00:00",
+      "date": "середа, 1 липня",
+      "dateIso": "2026-07-01",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "00:00"
+    },
+    {
       "home": "США",
       "away": "Боснія і Герцеговина",
       "league": "Чемпіонат світу",
@@ -2404,6 +2426,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "03:00"
+    },
+    {
+      "home": "Аргентина",
+      "away": "Кабо-Верде",
+      "league": "Чемпіонат світу",
+      "time": "01:00",
+      "date": "субота, 4 липня",
+      "dateIso": "2026-07-04",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "01:00"
     }
   ],
   "Чемпіонат Європи": [],
@@ -3470,50 +3503,50 @@
       {
         "position": 1,
         "teamName": "Іспанія",
-        "played": 2,
-        "wins": 1,
+        "played": 3,
+        "wins": 2,
         "draws": 1,
         "losses": 0,
-        "goalsFor": 4,
+        "goalsFor": 5,
         "goalsAgainst": 0,
-        "goalDifference": 4,
-        "points": 4
+        "goalDifference": 5,
+        "points": 7
       },
       {
         "position": 2,
-        "teamName": "Уругвай",
-        "played": 2,
-        "wins": 0,
-        "draws": 2,
-        "losses": 0,
-        "goalsFor": 3,
-        "goalsAgainst": 3,
-        "goalDifference": 0,
-        "points": 2
-      },
-      {
-        "position": 3,
         "teamName": "Кабо-Верде",
-        "played": 2,
+        "played": 3,
         "wins": 0,
-        "draws": 2,
+        "draws": 3,
         "losses": 0,
         "goalsFor": 2,
         "goalsAgainst": 2,
         "goalDifference": 0,
+        "points": 3
+      },
+      {
+        "position": 3,
+        "teamName": "Уругвай",
+        "played": 3,
+        "wins": 0,
+        "draws": 2,
+        "losses": 1,
+        "goalsFor": 3,
+        "goalsAgainst": 4,
+        "goalDifference": -1,
         "points": 2
       },
       {
         "position": 4,
         "teamName": "Саудівська Аравія",
-        "played": 2,
+        "played": 3,
         "wins": 0,
-        "draws": 1,
+        "draws": 2,
         "losses": 1,
         "goalsFor": 1,
         "goalsAgainst": 5,
         "goalDifference": -4,
-        "points": 1
+        "points": 2
       }
     ],
     "I": [
