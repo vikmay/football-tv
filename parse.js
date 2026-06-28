@@ -455,6 +455,9 @@ function isFlashscoreBrokenTeamName(name) {
   const cleaned = String(name || "").trim();
   const minRealTeamNameLength = 3;
   if (cleaned.length < minRealTeamNameLength) return true;
+  if (/\s+[-–—]\s+/.test(cleaned)) return true;
+  if (cleaned.toLowerCase() === "кабо") return true;
+  if (cleaned.toLowerCase().startsWith("верде")) return true;
   // Name that starts with a hyphen-apostrophe combo (e.g. "д’Івуар - Еквадор")
   // means the away team was split from the home team at the same hyphen.
   if (/^[дл]'|^[дл][’']/.test(cleaned)) return true;
@@ -1196,6 +1199,7 @@ function parseFlashscoreCupFeedData(data) {
     // например "Кот-д’Івуар" превращается в home="Кот", away="д’Івуар - Еквадор"
     const awayLower = awayTeam.toLowerCase();
     if (
+      awayTeam.includes(" - ") ||
       awayLower.startsWith("д'") ||
       awayLower.startsWith("д’") ||
       awayLower.startsWith("де ") ||
@@ -1737,7 +1741,10 @@ function parseFlashscoreFixtureEvents(html) {
 
       const fragmentWithoutTime = fragment.replace(/\b\d{1,2}:\d{2}\b/g, "").trim();
 
-      const match = fragmentWithoutTime.match(/^(.+?)\s*-\s*(.+)$/);
+      let match = fragmentWithoutTime.match(/^(.+?)\s+[-–—]\s+(.+)$/);
+      if (!match) {
+        match = fragmentWithoutTime.match(/^(.+?)\s*[-–—]\s*(.+)$/);
+      }
       if (!match) {
         continue;
       }
@@ -2785,7 +2792,8 @@ async function main() {
   }
   if (Array.isArray(matches["Чемпіонат світу"])) {
     matches["Чемпіонат світу"] = matches["Чемпіонат світу"].filter(m =>
-      !nonSoccerTeams.has(m.home) && !nonSoccerTeams.has(m.away)
+      !nonSoccerTeams.has(m.home) && !nonSoccerTeams.has(m.away) &&
+      !isFlashscoreBrokenTeamName(m.home) && !isFlashscoreBrokenTeamName(m.away)
     );
   }
 
