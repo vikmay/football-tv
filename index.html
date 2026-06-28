@@ -1232,7 +1232,7 @@
                     const matches = Object.values(data)
                         .filter(value => Array.isArray(value))
                         .flat()
-                        .filter(m => m?.league === "Чемпіонат світу")
+                        .filter(m => (m?.league || "").startsWith("Чемпіонат світу"))
                         .sort((a, b) => {
                             const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
                             const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
