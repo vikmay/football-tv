@@ -2332,22 +2332,22 @@
       "home": "Алжир",
       "away": "Австрія",
       "league": "Чемпіонат світу",
-      "time": "05:00",
-      "date": "неділя, 28 червня",
+      "time": "3 - 3",
+      "date": "Сьогодні, 28 червня",
       "dateIso": "2026-06-28",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 3",
       "originalTime": "05:00"
     },
     {
       "home": "Йорданія",
       "away": "Аргентина",
       "league": "Чемпіонат світу",
-      "time": "05:00",
-      "date": "неділя, 28 червня",
+      "time": "1 - 3",
+      "date": "Сьогодні, 28 червня",
       "dateIso": "2026-06-28",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 3",
       "originalTime": "05:00"
     },
     {
@@ -2461,6 +2461,17 @@
       "originalTime": "03:00"
     },
     {
+      "home": "Іспанія",
+      "away": "Австрія",
+      "league": "Чемпіонат світу",
+      "time": "22:00",
+      "date": "четвер, 2 липня",
+      "dateIso": "2026-07-02",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
+    },
+    {
       "home": "Португалія",
       "away": "Хорватія",
       "league": "Чемпіонат світу",
@@ -2470,6 +2481,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "02:00"
+    },
+    {
+      "home": "Швейцарія",
+      "away": "Алжир",
+      "league": "Чемпіонат світу",
+      "time": "06:00",
+      "date": "пʼятниця, 3 липня",
+      "dateIso": "2026-07-03",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "06:00"
     },
     {
       "home": "Австралія",
@@ -3669,49 +3691,49 @@
       {
         "position": 1,
         "teamName": "Аргентина",
-        "played": 2,
-        "wins": 2,
+        "played": 3,
+        "wins": 3,
         "draws": 0,
         "losses": 0,
-        "goalsFor": 5,
-        "goalsAgainst": 0,
-        "goalDifference": 5,
-        "points": 6
+        "goalsFor": 8,
+        "goalsAgainst": 1,
+        "goalDifference": 7,
+        "points": 9
       },
       {
         "position": 2,
         "teamName": "Австрія",
-        "played": 2,
+        "played": 3,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
-        "goalsFor": 3,
-        "goalsAgainst": 3,
+        "goalsFor": 6,
+        "goalsAgainst": 6,
         "goalDifference": 0,
-        "points": 3
+        "points": 4
       },
       {
         "position": 3,
         "teamName": "Алжир",
-        "played": 2,
+        "played": 3,
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 4,
+        "goalsFor": 5,
+        "goalsAgainst": 7,
         "goalDifference": -2,
-        "points": 3
+        "points": 4
       },
       {
         "position": 4,
         "teamName": "Йорданія",
-        "played": 2,
+        "played": 3,
         "wins": 0,
         "draws": 0,
-        "losses": 2,
-        "goalsFor": 2,
-        "goalsAgainst": 5,
-        "goalDifference": -3,
+        "losses": 3,
+        "goalsFor": 3,
+        "goalsAgainst": 8,
+        "goalDifference": -5,
         "points": 0
       }
     ],
