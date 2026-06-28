@@ -704,6 +704,14 @@ function formatCompetitionStage(event) {
     return "";
   }
 
+  if (roundNumber === 106 || roundNumber === 32 || roundNumber === 160) {
+    return "1/16";
+  }
+
+  if (roundNumber === 112 || roundNumber === 16 || roundNumber === 80) {
+    return "1/8";
+  }
+
   if (roundNumber === 125) {
     return "Чвертьфінал";
   }
@@ -758,7 +766,7 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
   const getStableKey = match => {
     const home = normalizeClubLookupName(match?.home || "");
     const away = normalizeClubLookupName(match?.away || "");
-    const league = String(match?.league || "");
+    const league = String(match?.league || "").replace(/\s*\(.*\)$/, "");
     // Використовуємо оригінальний час для ключа, навіть якщо в .time вже записано результат
     const time = String(match?.originalTime || match?.time || "");
     return `${match?.dateIso || ""}|${time}|${league}|${home}|${away}`;
@@ -804,6 +812,12 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     if (!existing) {
       byIdentity.set(key, match);
       continue;
+    }
+
+    if (match.league && existing.league && match.league.length > existing.league.length && match.league.includes("(")) {
+      existing.league = match.league;
+    } else if (existing.league && match.league && existing.league.length > match.league.length && existing.league.includes("(")) {
+      match.league = existing.league;
     }
 
     const existingScoreText = String(existing?.score || "").trim();
@@ -859,7 +873,7 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
   };
 
   const getKey = match => {
-    const league = String(match?.league || "");
+    const league = String(match?.league || "").replace(/\s*\(.*\)$/, "");
     const home = getUplTeamName(String(match?.home || ""));
     const away = getUplTeamName(String(match?.away || ""));
     // Direction-aware: A (home) vs B (away) — важливо, щоб не “склеїти” реальні матчі в різні дні
@@ -873,6 +887,12 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
     if (!existing) {
       byPair.set(key, match);
       continue;
+    }
+
+    if (match.league && existing.league && match.league.length > existing.league.length && match.league.includes("(")) {
+      existing.league = match.league;
+    } else if (existing.league && match.league && existing.league.length > match.league.length && existing.league.includes("(")) {
+      match.league = existing.league;
     }
 
     const existingDt = toComparableDateTime(existing);
@@ -1048,10 +1068,14 @@ function dedupeScheduleSections(matches) {
 }
 
 function mapEventToMatch(event, leagueLabel, mapTeamName = name => name) {
+  const home = mapTeamName(event.strHomeTeam);
+  const away = mapTeamName(event.strAwayTeam);
+  const league = formatCompetitionLabel(leagueLabel, event);
+
   return normalizeMatchSnapshot({
-    home: mapTeamName(event.strHomeTeam),
-    away: mapTeamName(event.strAwayTeam),
-    league: formatCompetitionLabel(leagueLabel, event),
+    home,
+    away,
+    league,
     time: formatTime(event),
     date: formatDateUk(event.dateEvent),
     dateIso: event.dateEvent,
@@ -1114,7 +1138,14 @@ function dedupeEvents(events) {
       return String(b?.idEvent || "").length - String(a?.idEvent || "").length;
     });
 
-    result.push(sortedBucket[0]);
+    const winner = { ...sortedBucket[0] };
+    for (const ev of sortedBucket) {
+      if (!winner.intRound && ev.intRound) winner.intRound = ev.intRound;
+      if (!winner.strRound && ev.strRound) winner.strRound = ev.strRound;
+      if (!winner.strTime && ev.strTime) winner.strTime = ev.strTime;
+    }
+
+    result.push(winner);
   }
 
   return result;
@@ -1224,7 +1255,7 @@ function parseFlashscoreCupFeedData(data) {
     const isFinished = hasScore;
 
     const roundText = cleanExtractedText(roundMatch?.[1] || "");
-    const intRound = roundText.includes("Півфін") ? 150 : roundText.includes("Чвертьфін") ? 125 : roundText.includes("Фінал") ? 200 : undefined;
+    const intRound = roundText.includes("1/16") ? 106 : roundText.includes("1/8") ? 112 : roundText.includes("Півфін") ? 150 : roundText.includes("Чвертьфін") ? 125 : roundText.includes("Фінал") ? 200 : undefined;
 
     events.push({
       idEvent: `flashscore-cup-${dateEvent}-${homeTeam}-${awayTeam}`.replace(/\s+/g, "-"),
@@ -1712,7 +1743,15 @@ function parseFlashscoreFixtureEvents(html) {
     return lengthScore + wordScore + cyrillicScore;
   };
 
+  let currentRound = undefined;
+
   for (const chunk of chunks) {
+    if (chunk.includes("1/16")) currentRound = 106;
+    else if (chunk.includes("1/8")) currentRound = 112;
+    else if (chunk.includes("Чвертьфін")) currentRound = 125;
+    else if (chunk.includes("Півфін")) currentRound = 150;
+    else if (/(?:^|\s)Фінал(?:$|\s)/.test(chunk)) currentRound = 200;
+
     const dateMatch = chunk.match(/^(\d{2})\.(\d{2})\.\s*(.+)$/);
     if (!dateMatch) {
       continue;
@@ -1766,6 +1805,7 @@ function parseFlashscoreFixtureEvents(html) {
         intHomeScore: null,
         intAwayScore: null,
         isLocalTime: true,
+        intRound: currentRound,
         __quality: getQualityScore(homeTeam) + getQualityScore(awayTeam)
       });
     }
@@ -2550,14 +2590,19 @@ async function fetchExtraMatches() {
     const flashscoreRelevantEvents = [];
     const flashscoreUrls = Array.isArray(config.flashscoreUrls) ? config.flashscoreUrls : [];
     const shouldUseAllEvents = config.type === "club" && (config.name === "Ліга чемпіонів" || config.name === "Ліга Європи" || config.name === "Ліга конференцій" || config.name === "Суперкубок УЄФА");
-    const shouldShowAllTeamsFromQuarterfinal = event =>
-      shouldUseAllEvents &&
-      Number(event?.intRound) >= 125;
+    const shouldShowAllTeamsFromKnockoutStage = event => {
+      if (!shouldUseAllEvents) return false;
+      const round = Number(event?.intRound);
+      if (config.name === "Ліга чемпіонів" || config.name === "Чемпіонат світу") {
+        return round >= 106; // 1/16
+      }
+      return round >= 112; // 1/8
+    };
 
     for (const url of flashscoreUrls) {
       const flashscoreEvents = await fetchFlashscoreCompetitionEvents(url, config.name);
       const relevantEvents = flashscoreEvents.filter(event =>
-        shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+        shouldShowAllTeamsFromKnockoutStage(event) || isExtraCompetitionMatch(event, config.type)
       );
 
       if (relevantEvents.length) {
@@ -2567,7 +2612,7 @@ async function fetchExtraMatches() {
 
     const apiEvents = await fetchCompetitionEvents(config.id, config.name);
     const apiRelevantEvents = apiEvents.filter(event =>
-      shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+      shouldShowAllTeamsFromKnockoutStage(event) || isExtraCompetitionMatch(event, config.type)
     );
 
     const mergedRelevantEvents = [
