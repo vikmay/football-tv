@@ -3041,11 +3041,11 @@
       "home": "Франція",
       "away": "Швеція",
       "league": "Чемпіонат світу (1/16)",
-      "time": "00:00",
-      "date": "середа, 1 липня",
+      "time": "3 - 0",
+      "date": "Сьогодні, 1 липня",
       "dateIso": "2026-07-01",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "00:00"
     },
     {
@@ -3168,6 +3168,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "20:00"
+    },
+    {
+      "home": "Парагвай",
+      "away": "Франція",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "00:00",
+      "date": "неділя, 5 липня",
+      "dateIso": "2026-07-05",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "00:00"
     },
     {
       "home": "Бразилія",
