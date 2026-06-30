@@ -3019,11 +3019,11 @@
       "home": "Нідерланди",
       "away": "Марокко",
       "league": "Чемпіонат світу (1/16)",
-      "time": "04:00",
-      "date": "вівторок, 30 червня",
+      "time": "1 - 2",
+      "date": "Сьогодні, 30 червня",
       "dateIso": "2026-06-30",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 2",
       "originalTime": "04:00"
     },
     {
@@ -3157,6 +3157,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "04:30"
+    },
+    {
+      "home": "Канада",
+      "away": "Марокко",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "20:00",
+      "date": "субота, 4 липня",
+      "dateIso": "2026-07-04",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
     }
   ],
   "Чемпіонат Європи": [],
