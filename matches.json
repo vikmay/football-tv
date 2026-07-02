@@ -3107,11 +3107,11 @@
       "home": "США",
       "away": "Боснія і Герцеговина",
       "league": "Чемпіонат світу (1/16)",
-      "time": "03:00",
-      "date": "четвер, 2 липня",
+      "time": "2 - 0",
+      "date": "Сьогодні, 2 липня",
       "dateIso": "2026-07-02",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 0",
       "originalTime": "03:00"
     },
     {
@@ -3220,6 +3220,17 @@
       "time": "03:00",
       "date": "понеділок, 6 липня",
       "dateIso": "2026-07-06",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "03:00"
+    },
+    {
+      "home": "США",
+      "away": "Бельгія",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "03:00",
+      "date": "вівторок, 7 липня",
+      "dateIso": "2026-07-07",
       "status": "Scheduled",
       "score": "",
       "originalTime": "03:00"
