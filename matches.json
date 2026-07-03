@@ -3173,11 +3173,11 @@
       "home": "Португалія",
       "away": "Хорватія",
       "league": "Чемпіонат світу (1/16)",
-      "time": "02:00",
-      "date": "пʼятниця, 3 липня",
+      "time": "2 - 1",
+      "date": "Сьогодні, 3 липня",
       "dateIso": "2026-07-03",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 1",
       "originalTime": "02:00"
     },
     {
@@ -3267,6 +3267,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "03:00"
+    },
+    {
+      "home": "Португалія",
+      "away": "Іспанія",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "22:00",
+      "date": "понеділок, 6 липня",
+      "dateIso": "2026-07-06",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "США",
