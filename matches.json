@@ -3206,22 +3206,22 @@
       "home": "Аргентина",
       "away": "Кабо-Верде",
       "league": "Чемпіонат світу (1/16)",
-      "time": "01:00",
-      "date": "субота, 4 липня",
+      "time": "3 - 2",
+      "date": "Сьогодні, 4 липня",
       "dateIso": "2026-07-04",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 2",
       "originalTime": "01:00"
     },
     {
       "home": "Колумбія",
       "away": "Гана",
       "league": "Чемпіонат світу (1/16)",
-      "time": "04:30",
-      "date": "субота, 4 липня",
+      "time": "1 - 0",
+      "date": "Сьогодні, 4 липня",
       "dateIso": "2026-07-04",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "04:30"
     },
     {
@@ -3289,6 +3289,28 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "03:00"
+    },
+    {
+      "home": "Аргентина",
+      "away": "Єгипет",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "19:00",
+      "date": "вівторок, 7 липня",
+      "dateIso": "2026-07-07",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
+      "home": "Швейцарія",
+      "away": "Колумбія",
+      "league": "Чемпіонат світу (1/8)",
+      "time": "23:00",
+      "date": "вівторок, 7 липня",
+      "dateIso": "2026-07-07",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "23:00"
     }
   ],
   "Чемпіонат Європи": [],
