@@ -691,7 +691,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center; /* Center bracket on large screens */
-                gap: clamp(15px, 2vw, 80px); /* Highly responsive gap */
+                gap: clamp(20px, 3vw, 80px); /* Highly responsive gap */
                 min-width: max-content;
                 position: relative;
             }
@@ -700,7 +700,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-width: clamp(80px, 15vw, 160px); /* Highly responsive width */
+                min-width: clamp(100px, 15vw, 160px); /* Highly responsive width */
                 z-index: 1;
             }
 
@@ -750,7 +750,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-width: clamp(40px, 8vw, 100px);
+                max-width: clamp(60px, 10vw, 100px);
             }
 
             .bracket-team-score {
@@ -1241,7 +1241,6 @@
                     .filter(m => m?.league?.startsWith("Чемпіонат світу"));
 
                 const stages = [
-                    { key: "1/16", title: "1/16 фіналу", count: 16 },
                     { key: "1/8", title: "1/8 фіналу", count: 8 },
                     { key: "Чвертьфінал", title: "1/4 фіналу", count: 4 },
                     { key: "Півфінал", title: "Півфінал", count: 2 },
