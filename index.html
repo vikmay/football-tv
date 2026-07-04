@@ -691,7 +691,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center; /* Center bracket on large screens */
-                gap: 80px; /* Increased gap to make SVG lines sweep gently */
+                gap: clamp(30px, 4vw, 80px); /* Responsive gap */
                 min-width: max-content;
                 position: relative;
             }
@@ -700,7 +700,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                min-width: 160px;
+                min-width: clamp(130px, 12vw, 160px); /* Responsive width */
                 z-index: 1;
             }
 
