@@ -669,6 +669,154 @@
                     margin-top: 5px;
                 }
             }
+            
+            /* Bracket CSS */
+            .bracket-container {
+                overflow-x: auto;
+                padding: 20px;
+                margin: 20px auto;
+                max-width: 100%; /* Changed from 1200px to allow fitting on TV screens */
+                background: #161616;
+                border-radius: 12px;
+            }
+            
+            .bracket-title {
+                text-align: center;
+                font-size: 28px;
+                color: #ffcc00;
+                margin-bottom: 20px;
+            }
+
+            .bracket {
+                display: flex;
+                flex-direction: row;
+                justify-content: center; /* Center bracket on large screens */
+                gap: 40px;
+                min-width: max-content;
+            }
+
+            .bracket-column-wrapper {
+                display: flex;
+                flex-direction: column;
+                min-width: 240px;
+                gap: 15px;
+            }
+
+            .bracket-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex: 1;
+            }
+            
+            .bracket-pair {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex: 1;
+                position: relative;
+                min-height: 120px;
+            }
+
+            .bracket-column-wrapper:not(:last-child) .bracket-pair::after {
+                content: "";
+                position: absolute;
+                right: -20px;
+                top: 25%;
+                bottom: 25%;
+                width: 20px;
+                border-right: 2px solid #555;
+                border-top: 2px solid #555;
+                border-bottom: 2px solid #555;
+                border-radius: 0 4px 4px 0;
+            }
+
+            .bracket-column-wrapper:not(:last-child) .bracket-pair::before {
+                content: "";
+                position: absolute;
+                right: -40px;
+                top: 50%;
+                width: 20px;
+                border-top: 2px solid #555;
+            }
+            
+            .bracket-match-title {
+                text-align: center;
+                color: #7dd3fc;
+                font-weight: bold;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin-bottom: 6px;
+                padding-bottom: 6px;
+                border-bottom: 1px solid #2a2a2a;
+            }
+
+            .bracket-match {
+                background: #1e1e1e;
+                border-radius: 8px;
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                position: relative;
+                border: 1px solid #2a2a2a;
+                margin: 5px 0;
+            }
+
+            .bracket-team {
+                display: flex;
+                justify-content: space-between;
+                padding: 6px 4px;
+                border-bottom: 1px solid #2a2a2a;
+            }
+
+            .bracket-team:last-child {
+                border-bottom: none;
+            }
+
+            .bracket-team-name {
+                color: #fff;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 130px;
+            }
+
+            .bracket-team-score {
+                color: #ffcc00;
+                font-weight: bold;
+                min-width: 20px;
+                text-align: right;
+            }
+
+            .bracket-match-status {
+                font-size: 10px;
+                color: #888;
+                text-align: center;
+                margin-bottom: 6px;
+                text-transform: uppercase;
+            }
+            
+            @media (max-width: 600px) {
+                .bracket-container {
+                    padding: 10px;
+                    margin: 10px;
+                }
+                .bracket-column-wrapper {
+                    min-width: 200px;
+                    gap: 10px;
+                }
+                .bracket-team-name {
+                    max-width: 100px;
+                }
+            } /* Close @media (max-width: 600px) */
+
+            @media (min-width: 1400px) {
+                .bracket-container {
+                    overflow-x: hidden; /* Force disable scroll on very large screens */
+                }
+            }
         </style>
     </head>
 
@@ -1115,6 +1263,106 @@
                 `;
             }
 
+            async function renderWorldCup2026Bracket(data) {
+                const standingsHost = document.getElementById("standings");
+                const matches = Object.values(data)
+                    .filter(Array.isArray)
+                    .flat()
+                    .filter(m => m?.league?.startsWith("Чемпіонат світу"));
+
+                const stages = [
+                    { key: "1/16", title: "1/16 фіналу", count: 16 },
+                    { key: "1/8", title: "1/8 фіналу", count: 8 },
+                    { key: "Чвертьфінал", title: "1/4 фіналу", count: 4 },
+                    { key: "Півфінал", title: "Півфінал", count: 2 },
+                    { key: "Фінал", title: "Фінал", count: 1 }
+                ];
+                
+                const matchesByStage = {};
+                stages.forEach(stage => matchesByStage[stage.key] = []);
+
+                matches.forEach(m => {
+                    for (const stage of stages) {
+                        if (m.league.includes(stage.key)) {
+                            matchesByStage[stage.key].push(m);
+                            break;
+                        }
+                    }
+                });
+
+                // Deduplicate matches
+                stages.forEach(stage => {
+                    const unique = new Map();
+                    matchesByStage[stage.key].forEach(m => {
+                        const key = [m.dateIso, m.home, m.away].join("|");
+                        const existing = unique.get(key);
+                        if (!existing || (m.score && !existing.score)) {
+                            unique.set(key, m);
+                        }
+                    });
+                    
+                    matchesByStage[stage.key] = [...unique.values()].sort((a, b) => {
+                        const aDate = new Date(`${a.dateIso || "9999-12-31"}T${a.originalTime || a.time || "00:00"}`);
+                        const bDate = new Date(`${b.dateIso || "9999-12-31"}T${b.originalTime || b.time || "00:00"}`);
+                        return aDate - bDate;
+                    });
+                });
+
+                let html = '<div class="bracket-container"><h2 class="bracket-title">Плей-оф ЧС 2026</h2><div class="bracket">';
+
+                function renderMatch(m, stageTitle) {
+                    if (!m) {
+                        return `
+                            <div class="bracket-match" style="opacity: 0.5;">
+                                <div class="bracket-match-title">${stageTitle}</div>
+                                <div class="bracket-match-status">Очікується</div>
+                                <div class="bracket-team"><span class="bracket-team-name">?</span><span class="bracket-team-score">-</span></div>
+                                <div class="bracket-team"><span class="bracket-team-name">?</span><span class="bracket-team-score">-</span></div>
+                            </div>`;
+                    }
+                    let scores = ["-", "-"];
+                    if (m.score) {
+                        scores = m.score.split("-").map(s => s.trim());
+                    }
+                    let status = m.status === "Match Finished" ? "Завершено" : m.time;
+                    return `
+                    <div class="bracket-match">
+                        <div class="bracket-match-title">${stageTitle}</div>
+                        <div class="bracket-match-status">${status}</div>
+                        <div class="bracket-team">
+                            <span class="bracket-team-name">${getWorldCupTeamName(m.home)}</span>
+                            <span class="bracket-team-score">${scores[0]}</span>
+                        </div>
+                        <div class="bracket-team">
+                            <span class="bracket-team-name">${getWorldCupTeamName(m.away)}</span>
+                            <span class="bracket-team-score">${scores[1] || scores[0]}</span>
+                        </div>
+                    </div>`;
+                }
+
+                stages.forEach(stage => {
+                    const stageMatches = matchesByStage[stage.key];
+                    
+                    html += `<div class="bracket-column-wrapper">`;
+                    html += `<div class="bracket-column">`;
+                    
+                    if (stage.key === "Фінал") {
+                        html += renderMatch(stageMatches[0], stage.title);
+                    } else {
+                        for (let i = 0; i < stage.count; i += 2) {
+                            html += `<div class="bracket-pair">`;
+                            html += renderMatch(stageMatches[i], stage.title);
+                            html += renderMatch(stageMatches[i + 1], stage.title);
+                            html += `</div>`;
+                        }
+                    }
+                    html += `</div></div>`;
+                });
+
+                html += '</div></div>';
+                standingsHost.innerHTML = html;
+            }
+
             async function fetchWorldCupGroupStandingsRows(groupLetter) {
                 const url = `https://worldcupstats.football/groups/${groupLetter.toLowerCase()}/`;
                 const res = await fetch(url);
@@ -1225,7 +1473,10 @@
                     const data = await res.json();
                     console.log("DATA LOADED:", data);
 
-                    await renderWorldCup2026GroupsStandings(data["Таблиця ЧС 2026"] || {});
+                    // Commented out the group standings as requested
+                    // await renderWorldCup2026GroupsStandings(data["Таблиця ЧС 2026"] || {});
+                    
+                    await renderWorldCup2026Bracket(data);
 
                     let html = "";
 
