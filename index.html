@@ -691,83 +691,53 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center; /* Center bracket on large screens */
-                gap: 20px;
+                gap: 80px; /* Increased gap to make SVG lines sweep gently */
                 min-width: max-content;
+                position: relative;
             }
 
             .bracket-column-wrapper {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 min-width: 160px;
-                gap: 15px;
+                z-index: 1;
             }
 
             .bracket-column {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                flex: 1;
-            }
-            
-            .bracket-pair {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                flex: 1;
-                position: relative;
-                min-height: 120px;
-            }
-
-            .bracket-column-wrapper:not(:last-child) .bracket-pair::after {
-                content: "";
-                position: absolute;
-                right: -10px;
-                top: 25%;
-                bottom: 25%;
-                width: 10px;
-                border-right: 2px solid #555;
-                border-top: 2px solid #555;
-                border-bottom: 2px solid #555;
-                border-radius: 0 4px 4px 0;
-            }
-
-            .bracket-column-wrapper:not(:last-child) .bracket-pair::before {
-                content: "";
-                position: absolute;
-                right: -20px;
-                top: 50%;
-                width: 10px;
-                border-top: 2px solid #555;
+                gap: 10px;
             }
             
             .bracket-match-title {
                 text-align: center;
                 color: #7dd3fc;
                 font-weight: bold;
-                font-size: 11px;
+                font-size: 10px;
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
-                margin-bottom: 6px;
-                padding-bottom: 6px;
+                margin-bottom: 4px;
+                padding-bottom: 4px;
                 border-bottom: 1px solid #2a2a2a;
             }
 
             .bracket-match {
                 background: #1e1e1e;
-                border-radius: 8px;
-                padding: 8px;
+                border-radius: 6px;
+                padding: 6px;
                 display: flex;
                 flex-direction: column;
-                font-size: 14px;
+                font-size: 12px;
                 position: relative;
                 border: 1px solid #2a2a2a;
-                margin: 5px 0;
+                margin: 2px 0;
             }
 
             .bracket-team {
                 display: flex;
                 justify-content: space-between;
-                padding: 6px 4px;
+                padding: 4px 2px;
                 border-bottom: 1px solid #2a2a2a;
             }
 
@@ -791,10 +761,10 @@
             }
 
             .bracket-match-status {
-                font-size: 10px;
+                font-size: 9px;
                 color: #888;
                 text-align: center;
-                margin-bottom: 6px;
+                margin-bottom: 4px;
                 text-transform: uppercase;
             }
             
@@ -1301,19 +1271,54 @@
                         }
                     });
                     
-                    matchesByStage[stage.key] = [...unique.values()].sort((a, b) => {
-                        const aDate = new Date(`${a.dateIso || "9999-12-31"}T${a.originalTime || a.time || "00:00"}`);
-                        const bDate = new Date(`${b.dateIso || "9999-12-31"}T${b.originalTime || b.time || "00:00"}`);
-                        return aDate - bDate;
-                    });
+                    matchesByStage[stage.key] = [...unique.values()];
                 });
 
-                let html = '<div class="bracket-container"><h2 class="bracket-title">Плей-оф ЧС 2026</h2><div class="bracket">';
+                // Right-to-Left sorting to untangle SVG lines
+                for (let stageIdx = stages.length - 2; stageIdx >= 0; stageIdx--) {
+                    const currentStageKey = stages[stageIdx].key;
+                    const nextStageKey = stages[stageIdx + 1].key;
+                    
+                    const currentMatches = matchesByStage[currentStageKey];
+                    const nextMatches = matchesByStage[nextStageKey];
+                    
+                    const orderedCurrent = [];
+                    const used = new Set();
+                    
+                    for (let j = 0; j < nextMatches.length; j++) {
+                        const nextMatch = nextMatches[j];
+                        if (!nextMatch) continue;
+                        
+                        for (let i = 0; i < currentMatches.length; i++) {
+                            const m = currentMatches[i];
+                            if (used.has(i)) continue;
+                            
+                            if (m.home && m.away && nextMatch.home && nextMatch.away) {
+                                if (m.home === nextMatch.home || m.home === nextMatch.away || m.away === nextMatch.home || m.away === nextMatch.away) {
+                                    orderedCurrent.push(m);
+                                    used.add(i);
+                                }
+                            }
+                        }
+                    }
+                    
+                    for (let i = 0; i < currentMatches.length; i++) {
+                        if (!used.has(i)) {
+                            orderedCurrent.push(currentMatches[i]);
+                        }
+                    }
+                    
+                    matchesByStage[currentStageKey] = orderedCurrent;
+                }
 
-                function renderMatch(m, stageTitle) {
+                let html = '<div class="bracket-container"><h2 class="bracket-title">Плей-оф ЧС 2026</h2><div class="bracket" id="bracket-layout">';
+                html += '<svg id="bracket-lines" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></svg>';
+
+                function renderMatch(m, stageTitle, stageIndex, matchIndex) {
+                    const matchId = `match-${stageIndex}-${matchIndex}`;
                     if (!m) {
                         return `
-                            <div class="bracket-match" style="opacity: 0.5;">
+                            <div class="bracket-match" id="${matchId}" style="opacity: 0.5;">
                                 <div class="bracket-match-title">${stageTitle}</div>
                                 <div class="bracket-match-status">Очікується</div>
                                 <div class="bracket-team"><span class="bracket-team-name">?</span><span class="bracket-team-score">-</span></div>
@@ -1326,7 +1331,7 @@
                     }
                     let status = m.status === "Match Finished" ? "Завершено" : m.time;
                     return `
-                    <div class="bracket-match">
+                    <div class="bracket-match" id="${matchId}">
                         <div class="bracket-match-title">${stageTitle}</div>
                         <div class="bracket-match-status">${status}</div>
                         <div class="bracket-team">
@@ -1340,27 +1345,83 @@
                     </div>`;
                 }
 
-                stages.forEach(stage => {
+                stages.forEach((stage, stageIndex) => {
                     const stageMatches = matchesByStage[stage.key];
                     
                     html += `<div class="bracket-column-wrapper">`;
                     html += `<div class="bracket-column">`;
                     
-                    if (stage.key === "Фінал") {
-                        html += renderMatch(stageMatches[0], stage.title);
-                    } else {
-                        for (let i = 0; i < stage.count; i += 2) {
-                            html += `<div class="bracket-pair">`;
-                            html += renderMatch(stageMatches[i], stage.title);
-                            html += renderMatch(stageMatches[i + 1], stage.title);
-                            html += `</div>`;
-                        }
+                    for (let i = 0; i < stage.count; i++) {
+                        html += renderMatch(stageMatches[i], stage.title, stageIndex, i);
                     }
                     html += `</div></div>`;
                 });
 
                 html += '</div></div>';
                 standingsHost.innerHTML = html;
+                
+                window.drawBracketLines = function() {
+                    const svg = document.getElementById("bracket-lines");
+                    const bracketLayout = document.getElementById("bracket-layout");
+                    if (!svg || !bracketLayout) return;
+                    
+                    svg.innerHTML = '';
+                    const containerRect = bracketLayout.getBoundingClientRect();
+                    
+                    for (let stageIdx = 0; stageIdx < stages.length - 1; stageIdx++) {
+                        const stage = stages[stageIdx];
+                        for (let matchIdx = 0; matchIdx < stage.count; matchIdx++) {
+                            const el1 = document.getElementById(`match-${stageIdx}-${matchIdx}`);
+                            if (!el1) continue;
+                            
+                            let el2Id = `match-${stageIdx + 1}-${Math.floor(matchIdx / 2)}`;
+                            const match1 = matchesByStage[stage.key][matchIdx];
+                            
+                            // If match1 is a real match, try to find its winner in the next stage to draw a precise line
+                            if (match1 && match1.home && match1.away) {
+                                const nextStage = stages[stageIdx + 1];
+                                const nextMatches = matchesByStage[nextStage.key];
+                                let foundIdx = -1;
+                                for (let j = 0; j < nextMatches.length; j++) {
+                                    const m2 = nextMatches[j];
+                                    if (m2 && (m2.home === match1.home || m2.home === match1.away || m2.away === match1.home || m2.away === match1.away)) {
+                                        foundIdx = j;
+                                        break;
+                                    }
+                                }
+                                if (foundIdx !== -1) {
+                                    el2Id = `match-${stageIdx + 1}-${foundIdx}`;
+                                }
+                            }
+                            
+                            const el2 = document.getElementById(el2Id);
+                            
+                            if (el1 && el2) {
+                                const rect1 = el1.getBoundingClientRect();
+                                const rect2 = el2.getBoundingClientRect();
+                                
+                                const startX = rect1.right - containerRect.left;
+                                const startY = rect1.top + rect1.height / 2 - containerRect.top;
+                                
+                                const endX = rect2.left - containerRect.left;
+                                const endY = rect2.top + rect2.height / 2 - containerRect.top;
+                                
+                                const midX = (startX + endX) / 2;
+                                
+                                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                                path.setAttribute("d", `M ${startX} ${startY} C ${midX} ${startY}, ${midX} ${endY}, ${endX} ${endY}`);
+                                path.setAttribute("fill", "none");
+                                path.setAttribute("stroke", "#555");
+                                path.setAttribute("stroke-width", "2");
+                                svg.appendChild(path);
+                            }
+                        }
+                    }
+                };
+                
+                setTimeout(window.drawBracketLines, 50);
+                window.removeEventListener('resize', window.drawBracketLines);
+                window.addEventListener('resize', window.drawBracketLines);
             }
 
             async function fetchWorldCupGroupStandingsRows(groupLetter) {
