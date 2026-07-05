@@ -3239,11 +3239,11 @@
       "home": "Парагвай",
       "away": "Франція",
       "league": "Чемпіонат світу (1/8)",
-      "time": "00:00",
-      "date": "неділя, 5 липня",
+      "time": "0 - 1",
+      "date": "Сьогодні, 5 липня",
       "dateIso": "2026-07-05",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 1",
       "originalTime": "00:00"
     },
     {
@@ -3308,6 +3308,17 @@
       "time": "23:00",
       "date": "вівторок, 7 липня",
       "dateIso": "2026-07-07",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "23:00"
+    },
+    {
+      "home": "Франція",
+      "away": "Марокко",
+      "league": "Чемпіонат світу (Чвертьфінал)",
+      "time": "23:00",
+      "date": "четвер, 9 липня",
+      "dateIso": "2026-07-09",
       "status": "Scheduled",
       "score": "",
       "originalTime": "23:00"
