@@ -969,6 +969,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "20:00"
+    },
+    {
+      "home": "Гурнік Забже (Pol)",
+      "away": "Фенербахче (Tur)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "21:00",
+      "date": "середа, 29 липня",
+      "dateIso": "2026-07-29",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:00"
     }
   ],
   "Кубок України": [],
