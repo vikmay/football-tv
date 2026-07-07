@@ -3272,11 +3272,11 @@
       "home": "США",
       "away": "Бельгія",
       "league": "Чемпіонат світу (1/8)",
-      "time": "03:00",
-      "date": "вівторок, 7 липня",
+      "time": "1 - 4",
+      "date": "Сьогодні, 7 липня",
       "dateIso": "2026-07-07",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 4",
       "originalTime": "03:00"
     },
     {
@@ -3311,6 +3311,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "23:00"
+    },
+    {
+      "home": "Іспанія",
+      "away": "Бельгія",
+      "league": "Чемпіонат світу (Чвертьфінал)",
+      "time": "22:00",
+      "date": "пʼятниця, 10 липня",
+      "dateIso": "2026-07-10",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
     },
     {
       "home": "Норвегія",
