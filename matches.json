@@ -3294,11 +3294,11 @@
       "home": "Швейцарія",
       "away": "Колумбія",
       "league": "Чемпіонат світу (1/8)",
-      "time": "23:00",
+      "time": "1 - 0",
       "date": "вівторок, 7 липня",
       "dateIso": "2026-07-07",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "23:00"
     },
     {
@@ -3333,6 +3333,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "00:00"
+    },
+    {
+      "home": "Аргентина",
+      "away": "Швейцарія",
+      "league": "Чемпіонат світу (Чвертьфінал)",
+      "time": "04:00",
+      "date": "неділя, 12 липня",
+      "dateIso": "2026-07-12",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "04:00"
     }
   ],
   "Чемпіонат Європи": [],
