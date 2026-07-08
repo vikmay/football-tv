@@ -23,39 +23,6 @@
       "originalTime": "18:00"
     },
     {
-      "home": "Буковина Чернівці",
-      "away": "ЛНЗ Черкаси",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
-      "status": "Scheduled",
-      "score": "",
-      "originalTime": "18:00"
-    },
-    {
-      "home": "Динамо Київ",
-      "away": "Лівий берег",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
-      "status": "Scheduled",
-      "score": "",
-      "originalTime": "18:00"
-    },
-    {
-      "home": "Епіцентр",
-      "away": "Оболонь Київ",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
-      "status": "Scheduled",
-      "score": "",
-      "originalTime": "18:00"
-    },
-    {
       "home": "Зоря Луганськ",
       "away": "Колос",
       "league": "УПЛ",
@@ -69,17 +36,6 @@
     {
       "home": "Кривбас",
       "away": "Карпати Львів",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
-      "status": "Scheduled",
-      "score": "",
-      "originalTime": "18:00"
-    },
-    {
-      "home": "Кудрівка",
-      "away": "Шахтар Донецьк",
       "league": "УПЛ",
       "time": "18:00",
       "date": "субота, 1 серпня",
@@ -103,9 +59,53 @@
       "home": "Чорноморець",
       "away": "Полісся Житомир",
       "league": "УПЛ",
+      "time": "13:00",
+      "date": "неділя, 2 серпня",
+      "dateIso": "2026-08-02",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "13:00"
+    },
+    {
+      "home": "Епіцентр",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "неділя, 2 серпня",
+      "dateIso": "2026-08-02",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "15:30"
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Лівий берег",
+      "league": "УПЛ",
       "time": "18:00",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
+      "date": "неділя, 2 серпня",
+      "dateIso": "2026-08-02",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "18:00"
+    },
+    {
+      "home": "Буковина Чернівці",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "понеділок, 3 серпня",
+      "dateIso": "2026-08-03",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "15:30"
+    },
+    {
+      "home": "Кудрівка",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "понеділок, 3 серпня",
+      "dateIso": "2026-08-03",
       "status": "Scheduled",
       "score": "",
       "originalTime": "18:00"
