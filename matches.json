@@ -1000,10 +1000,10 @@
       "away": "Вестрі (Ice)",
       "league": "Ліга Європи (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "19:00"
     },
     {
@@ -1084,6 +1084,17 @@
       "originalTime": "21:00"
     },
     {
+      "home": "CSKA Sofia",
+      "away": "Derry City",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "HT",
+      "score": "",
+      "originalTime": "21:00"
+    },
+    {
       "home": "Деррі Сіті (Nir)",
       "away": "ЦСКА Софія (Bul)",
       "league": "Ліга Європи (1/8)",
@@ -1102,6 +1113,17 @@
       "date": "четвер, 16 липня",
       "dateIso": "2026-07-16",
       "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:30"
+    },
+    {
+      "home": "Derry City",
+      "away": "CSKA Sofia",
+      "league": "Ліга Європи",
+      "time": "20:30",
+      "date": "четвер, 16 липня",
+      "dateIso": "2026-07-16",
+      "status": "NS",
       "score": "",
       "originalTime": "20:30"
     },
@@ -1320,7 +1342,7 @@
       "home": "АК Ескальдес (And)",
       "away": "Морнар Бар (Mne)",
       "league": "Ліга конференцій (1/8)",
-      "time": "17:00",
+      "time": "2 - 1",
       "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
       "status": "Match Finished",
@@ -1332,10 +1354,10 @@
       "away": "Єлімай Семей (Kaz)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "19:00"
     },
     {
@@ -1343,10 +1365,10 @@
       "away": "Пайде (Est)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "19:00"
     },
     {
@@ -1354,10 +1376,10 @@
       "away": "Віртус (San)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 1",
       "originalTime": "19:00"
     },
     {
@@ -1365,10 +1387,10 @@
       "away": "Лінфілд (Nir)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "19:00"
     },
     {
@@ -1376,10 +1398,10 @@
       "away": "Дечич (Mne)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "19:00"
     },
     {
@@ -1420,10 +1442,10 @@
       "away": "Пюнік Єреван (Arm)",
       "league": "Ліга конференцій (1/8)",
       "time": "20:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 3",
       "originalTime": "20:00"
     },
     {
@@ -3418,7 +3440,7 @@
       "home": "АК Ескальдес (And)",
       "away": "Морнар Бар (Mne)",
       "league": "Ліга конференцій (1/8)",
-      "time": "17:00",
+      "time": "2 - 1",
       "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
       "status": "Match Finished",
@@ -3441,10 +3463,10 @@
       "away": "Вестрі (Ice)",
       "league": "Ліга Європи (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 0",
       "originalTime": "19:00"
     },
     {
@@ -3452,10 +3474,10 @@
       "away": "Єлімай Семей (Kaz)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "19:00"
     },
     {
@@ -3463,10 +3485,10 @@
       "away": "Пайде (Est)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "19:00"
     },
     {
@@ -3474,10 +3496,10 @@
       "away": "Віртус (San)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "3 - 1",
       "originalTime": "19:00"
     },
     {
@@ -3485,10 +3507,10 @@
       "away": "Лінфілд (Nir)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "19:00"
     },
     {
@@ -3496,10 +3518,10 @@
       "away": "Дечич (Mne)",
       "league": "Ліга конференцій (1/8)",
       "time": "19:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 0",
       "originalTime": "19:00"
     },
     {
@@ -3573,10 +3595,10 @@
       "away": "Пюнік Єреван (Arm)",
       "league": "Ліга конференцій (1/8)",
       "time": "20:00",
-      "date": "четвер, 9 липня",
+      "date": "Сьогодні, 9 липня",
       "dateIso": "2026-07-09",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 3",
       "originalTime": "20:00"
     },
     {
@@ -3675,6 +3697,17 @@
       "date": "четвер, 9 липня",
       "dateIso": "2026-07-09",
       "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:00"
+    },
+    {
+      "home": "CSKA Sofia",
+      "away": "Derry City",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 9 липня",
+      "dateIso": "2026-07-09",
+      "status": "HT",
       "score": "",
       "originalTime": "21:00"
     },
@@ -3994,6 +4027,17 @@
       "date": "четвер, 16 липня",
       "dateIso": "2026-07-16",
       "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:30"
+    },
+    {
+      "home": "Derry City",
+      "away": "CSKA Sofia",
+      "league": "Ліга Європи",
+      "time": "20:30",
+      "date": "четвер, 16 липня",
+      "dateIso": "2026-07-16",
+      "status": "NS",
       "score": "",
       "originalTime": "20:30"
     },
