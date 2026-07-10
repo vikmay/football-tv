@@ -3338,11 +3338,11 @@
       "home": "Іспанія",
       "away": "Бельгія",
       "league": "Чемпіонат світу (Чвертьфінал)",
-      "time": "22:00",
+      "time": "2 - 1",
       "date": "пʼятниця, 10 липня",
       "dateIso": "2026-07-10",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 1",
       "originalTime": "22:00"
     },
     {
@@ -3366,6 +3366,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "04:00"
+    },
+    {
+      "home": "Франція",
+      "away": "Іспанія",
+      "league": "Чемпіонат світу (Півфінал)",
+      "time": "22:00",
+      "date": "вівторок, 14 липня",
+      "dateIso": "2026-07-14",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
     }
   ],
   "Чемпіонат Європи": [],
