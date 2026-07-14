@@ -2065,6 +2065,17 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Вараждин (Cro)",
+      "away": "Яблонець (Cze)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:00"
+    },
+    {
       "home": "ЦСКА 1948 Софія (Bul)",
       "away": "Спартак Трнава (Svk)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -2074,6 +2085,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "20:30"
+    },
+    {
+      "home": "Яблонець (Cze)",
+      "away": "Вараждин (Cro)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "19:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Ауда (Lat)",
@@ -4449,6 +4471,17 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Вараждин (Cro)",
+      "away": "Яблонець (Cze)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:00"
+    },
+    {
       "home": "ЦСКА 1948 Софія (Bul)",
       "away": "Спартак Трнава (Svk)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -4458,6 +4491,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "20:30"
+    },
+    {
+      "home": "Яблонець (Cze)",
+      "away": "Вараждин (Cro)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "19:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Андерлехт (Bel)",
