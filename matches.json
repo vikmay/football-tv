@@ -567,33 +567,33 @@
       "home": "КуПС (Fin)",
       "away": "Вардар (Mkd)",
       "league": "Ліга чемпіонів (1/8)",
-      "time": "18:00",
-      "date": "вівторок, 14 липня",
+      "time": "2 - 3",
+      "date": "Сьогодні, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 3",
       "originalTime": "18:00"
     },
     {
       "home": "Іберія 1999 (Geo)",
       "away": "Флора (Est)",
       "league": "Ліга чемпіонів (1/8)",
-      "time": "19:00",
-      "date": "вівторок, 14 липня",
+      "time": "2 - 2",
+      "date": "Сьогодні, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 2",
       "originalTime": "19:00"
     },
     {
       "home": "Інтер Клуб Ескальдес (And)",
       "away": "Лінкольн Ред Імпс (Gib)",
       "league": "Ліга чемпіонів (1/8)",
-      "time": "19:00",
-      "date": "вівторок, 14 липня",
+      "time": "1 - 1",
+      "date": "Сьогодні, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "1 - 1",
       "originalTime": "19:00"
     },
     {
@@ -905,6 +905,28 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Іберія 1999 (Geo)",
+      "away": "Слован Братислава (Svk)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "М'єльбю (Swe)",
+      "away": "Лінкольн Ред Імпс (Gib)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
       "home": "Гурнік Забже (Pol)",
       "away": "Фенербахче (Tur)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
@@ -940,6 +962,28 @@
     {
       "home": "Хартс (Sco)",
       "away": "Штурм Грац (Aut)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Лінкольн Ред Імпс (Gib)",
+      "away": "М'єльбю (Swe)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Слован Братислава (Svk)",
+      "away": "Іберія 1999 (Geo)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "20:00",
       "date": "вівторок, 28 липня",
