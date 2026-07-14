@@ -798,22 +798,22 @@
       "home": "Ларн (Nir)",
       "away": "Тре Фіорі (San)",
       "league": "Ліга чемпіонів (1/8)",
-      "time": "22:00",
+      "time": "2 - 1",
       "date": "вівторок, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "2 - 1",
       "originalTime": "22:00"
     },
     {
       "home": "Шемрок Роверс (Irl)",
       "away": "Флоріана (Mlt)",
       "league": "Ліга чемпіонів (1/8)",
-      "time": "22:00",
+      "time": "5 - 1",
       "date": "вівторок, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "5 - 1",
       "originalTime": "22:00"
     },
     {
@@ -949,6 +949,28 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Арарат-Вірменія (Arm)",
+      "away": "Шемрок Роверс (Irl)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Ларн (Nir)",
+      "away": "Црвена Звезда (Srb)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 21 липня",
+      "dateIso": "2026-07-21",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
       "home": "Гурнік Забже (Pol)",
       "away": "Фенербахче (Tur)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
@@ -1028,6 +1050,28 @@
     {
       "home": "Хапоель Беер-Шева (Isr)",
       "away": "Вікінгур Рейк'явік (Ice)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Црвена Звезда (Srb)",
+      "away": "Ларн (Nir)",
+      "league": "Ліга чемпіонів (Чвертьфінал)",
+      "time": "20:00",
+      "date": "вівторок, 28 липня",
+      "dateIso": "2026-07-28",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Шемрок Роверс (Irl)",
+      "away": "Арарат-Вірменія (Arm)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "20:00",
       "date": "вівторок, 28 липня",
@@ -1664,8 +1708,8 @@
       "time": "22:00",
       "date": "вівторок, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 2",
       "originalTime": "22:00"
     },
     {
@@ -2175,6 +2219,28 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Партизан (Srb)",
+      "away": "УНА Штрассен (Lux)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Флоріана (Mlt)",
+      "away": "Дріта (Kos)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
       "home": "Вараждин (Cro)",
       "away": "Яблонець (Cze)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -2419,6 +2485,28 @@
     {
       "home": "ФК Рига (Lat)",
       "away": "Вардар (Mkd)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Дріта (Kos)",
+      "away": "Флоріана (Mlt)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "УНА Штрассен (Lux)",
+      "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
       "date": "четвер, 30 липня",
@@ -3547,11 +3635,11 @@
       "home": "Франція",
       "away": "Іспанія",
       "league": "Чемпіонат світу (Півфінал)",
-      "time": "22:00",
+      "time": "0 - 2",
       "date": "вівторок, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 2",
       "originalTime": "22:00"
     },
     {
@@ -3982,8 +4070,8 @@
       "time": "22:00",
       "date": "вівторок, 14 липня",
       "dateIso": "2026-07-14",
-      "status": "Scheduled",
-      "score": "",
+      "status": "Match Finished",
+      "score": "0 - 2",
       "originalTime": "22:00"
     },
     {
@@ -4625,6 +4713,28 @@
       "originalTime": "20:00"
     },
     {
+      "home": "Партизан (Srb)",
+      "away": "УНА Штрассен (Lux)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Флоріана (Mlt)",
+      "away": "Дріта (Kos)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
       "home": "Вараждин (Cro)",
       "away": "Яблонець (Cze)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -4924,6 +5034,28 @@
     {
       "home": "ФК Рига (Lat)",
       "away": "Вардар (Mkd)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "Дріта (Kos)",
+      "away": "Флоріана (Mlt)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:00"
+    },
+    {
+      "home": "УНА Штрассен (Lux)",
+      "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
       "date": "четвер, 30 липня",
