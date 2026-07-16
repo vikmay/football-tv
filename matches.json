@@ -2362,6 +2362,17 @@
       "originalTime": "21:30"
     },
     {
+      "home": "ГІК (Fin)",
+      "away": "Колрейн (Nir)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "19:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
       "home": "Вараждин (Cro)",
       "away": "Градец-Кралове (Cze)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -4931,6 +4942,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "21:30"
+    },
+    {
+      "home": "ГІК (Fin)",
+      "away": "Колрейн (Nir)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "19:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
     },
     {
       "home": "Бешикташ (Tur)",
