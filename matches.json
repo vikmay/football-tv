@@ -2747,6 +2747,17 @@
       "originalTime": "22:00"
     },
     {
+      "home": "Малішева (Kos)",
+      "away": "Хіберніан (Sco)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "17:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "17:30"
+    },
+    {
       "home": "Алашкерт (Arm)",
       "away": "ЧФР Клуж (Rou)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -6570,6 +6581,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Малішева (Kos)",
+      "away": "Хіберніан (Sco)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "17:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "17:30"
     },
     {
       "home": "Алашкерт (Arm)",
