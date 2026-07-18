@@ -1711,6 +1711,17 @@
       "originalTime": "19:00"
     },
     {
+      "home": "Qarabağ",
+      "away": "CSKA Sofia",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "NS",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
       "home": "Бешикташ (Tur)",
       "away": "Мідтьюлланн (Den)",
       "league": "Ліга Європи (Чвертьфінал)",
@@ -6656,6 +6667,17 @@
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
       "status": "Scheduled",
+      "score": "",
+      "originalTime": "19:00"
+    },
+    {
+      "home": "Qarabağ",
+      "away": "CSKA Sofia",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "NS",
       "score": "",
       "originalTime": "19:00"
     },
