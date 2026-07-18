@@ -3451,6 +3451,17 @@
       "originalTime": "20:30"
     },
     {
+      "home": "Хапоель Тель-Авів (Isr)",
+      "away": "Лудогорець (Bul)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:30"
+    },
+    {
       "home": "Стяуа Б. (Rou)",
       "away": "Ауда (Lat)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -3572,6 +3583,39 @@
       "originalTime": "21:45"
     },
     {
+      "home": "Мотервелл (Sco)",
+      "away": "ХБ Торсхавн (Fai)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
+      "home": "НК Браво (Slo)",
+      "away": "Шкендія (Mkd)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
+      "home": "Шелбурн (Irl)",
+      "away": "Нимме Калью (Est)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
       "home": "Партизан (Srb)",
       "away": "УНА Штрассен (Lux)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -3581,6 +3625,28 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Стьярнан (Ice)",
+      "away": "Ільвес (Fin)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
+    },
+    {
+      "home": "НСІ Рунавік (Fai)",
+      "away": "Копер (Slo)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:45"
     },
     {
       "home": "ФК Рига (Lat)",
@@ -7430,6 +7496,17 @@
       "originalTime": "20:30"
     },
     {
+      "home": "Хапоель Тель-Авів (Isr)",
+      "away": "Лудогорець (Bul)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "20:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "20:30"
+    },
+    {
       "home": "Стяуа Б. (Rou)",
       "away": "Ауда (Lat)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -7584,6 +7661,39 @@
       "originalTime": "21:45"
     },
     {
+      "home": "Мотервелл (Sco)",
+      "away": "ХБ Торсхавн (Fai)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
+      "home": "НК Браво (Slo)",
+      "away": "Шкендія (Mkd)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
+      "home": "Шелбурн (Irl)",
+      "away": "Нимме Калью (Est)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
       "home": "Хайдук Спліт (Cro)",
       "away": "Пафос (Cyp)",
       "league": "Ліга Європи (Чвертьфінал)",
@@ -7604,6 +7714,28 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Стьярнан (Ice)",
+      "away": "Ільвес (Fin)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:00"
+    },
+    {
+      "home": "НСІ Рунавік (Fai)",
+      "away": "Копер (Slo)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:45"
     },
     {
       "home": "ФК Рига (Lat)",
