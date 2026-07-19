@@ -3616,6 +3616,17 @@
       "originalTime": "21:45"
     },
     {
+      "home": "Рієка (Cro)",
+      "away": "Деррі Сіті (Nir)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
       "home": "Партизан (Srb)",
       "away": "УНА Штрассен (Lux)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -3636,6 +3647,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Валюр (Ice)",
+      "away": "Зріньскі (Bih)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:15",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:15"
     },
     {
       "home": "НСІ Рунавік (Fai)",
@@ -7694,6 +7716,17 @@
       "originalTime": "21:45"
     },
     {
+      "home": "Рієка (Cro)",
+      "away": "Деррі Сіті (Nir)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:45"
+    },
+    {
       "home": "Хайдук Спліт (Cro)",
       "away": "Пафос (Cyp)",
       "league": "Ліга Європи (Чвертьфінал)",
@@ -7725,6 +7758,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Валюр (Ice)",
+      "away": "Зріньскі (Bih)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:15",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "22:15"
     },
     {
       "home": "НСІ Рунавік (Fai)",
