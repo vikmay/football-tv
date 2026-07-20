@@ -3660,6 +3660,17 @@
       "originalTime": "21:30"
     },
     {
+      "home": "Хапоель Тель-Авів (Isr)",
+      "away": "Лудогорець (Bul)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:30"
+    },
+    {
       "home": "НСІ Рунавік (Fai)",
       "away": "Копер (Slo)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -4758,6 +4769,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Вестрі (Ice)",
+      "away": "РФС (Lat)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "23:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "23:00"
     }
   ],
   "Суперкубок УЄФА": [
@@ -7826,6 +7848,17 @@
       "originalTime": "21:30"
     },
     {
+      "home": "Хапоель Тель-Авів (Isr)",
+      "away": "Лудогорець (Bul)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "21:30"
+    },
+    {
       "home": "НСІ Рунавік (Fai)",
       "away": "Копер (Slo)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -9111,6 +9144,17 @@
       "status": "Scheduled",
       "score": "",
       "originalTime": "22:00"
+    },
+    {
+      "home": "Вестрі (Ice)",
+      "away": "РФС (Lat)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "23:00",
+      "date": "четвер, 30 липня",
+      "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": "",
+      "originalTime": "23:00"
     },
     {
       "home": "Ягеллонія (Pol)",
