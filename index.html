@@ -818,13 +818,42 @@
                     const maxDate = new Date(todayForWindow);
                     maxDate.setUTCDate(maxDate.getUTCDate() + dateWindowDays);
 
+                    const ukrainianTeams = [
+                        "динамо", "шахтар", "кривбас", "полісся", "дніпро-1", "зоря",
+                        "колос", "ворскла", "олександрія", "рух", "україна", "ukr", "укр"
+                    ];
+
                     const visibleMatches = [...byMatchIdentity.values()].filter(match => {
                         if (!match?.dateIso) {
                             return true;
                         }
 
                         const matchDate = new Date(`${match.dateIso}T12:00:00Z`);
-                        return matchDate >= minDate && matchDate <= maxDate;
+                        const inWindow = matchDate >= minDate && matchDate <= maxDate;
+                        if (!inWindow) return false;
+
+                        const leagueLower = String(match.league || "").toLowerCase();
+                        const isEuropean = leagueLower.includes("ліга чемпіонів") || 
+                                           leagueLower.includes("ліга європи") || 
+                                           leagueLower.includes("ліга конференцій");
+                        
+                        if (isEuropean) {
+                            const month = matchDate.getUTCMonth(); // 0-11
+                            // June, July, August are qualification months for European cups
+                            const isQualificationMonth = (month === 5 || month === 6 || month === 7); 
+                            const isExplicitQual = leagueLower.includes("квал") || leagueLower.includes("відбір") || leagueLower.includes("qual");
+
+                            if (isQualificationMonth || isExplicitQual) {
+                                const homeLower = String(match.home || "").toLowerCase();
+                                const awayLower = String(match.away || "").toLowerCase();
+                                const isUkr = ukrainianTeams.some(u => 
+                                    homeLower.includes(u) || awayLower.includes(u)
+                                );
+                                if (!isUkr) return false;
+                            }
+                        }
+
+                        return true;
                     });
 
                     const todayIso = getKyivTodayIso();
