@@ -146,50 +146,50 @@
       "away": "Шемрок Роверс (Irl)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "19:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Іберія 1999 (Geo)",
       "away": "Слован Братислава (Svk)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "19:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "М'єльбю (Swe)",
       "away": "Лінкольн Ред Імпс (Gib)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "19:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 0"
     },
     {
       "home": "Сабах Баку (Aze)",
       "away": "КуПС (Fin)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "19:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Орхус (Den)",
       "away": "Лех Познань (Pol)",
       "league": "Ліга чемпіонів (Чвертьфінал)",
       "time": "20:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 4"
     },
     {
       "home": "Тун (Sui)",
@@ -537,14 +537,14 @@
   ],
   "Ліга конференцій": [
     {
-      "home": "Біссен (Lux)",
-      "away": "Дьор (Hun)",
+      "home": "Гетеборг (Swe)",
+      "away": "Левадія (Est)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "21:15",
+      "time": "20:00",
       "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Нефтчі Баку (Aze)",
@@ -1097,10 +1097,10 @@
       "away": "Левадія (Est)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "вівторок, 21 липня",
+      "date": "Сьогодні, 21 липня",
       "dateIso": "2026-07-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Флоріана (Mlt)",
