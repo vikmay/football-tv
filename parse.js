@@ -1,5 +1,46 @@
 const fs = require("fs");
 
+// Налаштування списку боксерів
+const trackedBoxers = [
+  "Берінчик Д.",
+  "Богачук С.",
+  "Гвоздик О.",
+  "Дерев'янченко С.",
+  "Джошуа Ентоні",
+  "Камбосос Дж.",
+  "Кроуфорд Т.",
+  "Лапін Д.",
+  "Ломаченко В.",
+  "Усик О.",
+  "Ф'юрі Т."
+];
+
+// Якщо якийсь бій не з'являється у загальному розкладі (тому що він занадто далеко в майбутньому), 
+// ви можете вставити пряме посилання на сторінку матчу сюди.
+const manualBoxingMatchUrls = [
+  "https://www.flashscore.ua/match/boxing/fury-tyson-MDZyQvA1/wach-mariusz-xUUBfNMH/?mid=GzMVP5ET"
+];
+
+// Якщо ви не можете знайти посилання на Flashscore, ви можете просто вписати деталі бою сюди:
+const manualBoxingMatches = [
+  {
+    strHomeTeam: "Джошуа Ентоні",
+    strAwayTeam: "Крістіан Пренга",
+    dateEvent: "2026-07-25"
+  }
+];
+
+function isTrackedBoxerMatch(event) {
+  if (!event || !event.strHomeTeam || !event.strAwayTeam) return false;
+  const home = String(event.strHomeTeam).toLowerCase();
+  const away = String(event.strAwayTeam).toLowerCase();
+  
+  return trackedBoxers.some(boxer => {
+    const parts = boxer.toLowerCase().split(/\s+/).map(p => p.replace(/[^a-zа-яієїґ'’]/gi, ''));
+    return parts[0] && (home.includes(parts[0]) || away.includes(parts[0]));
+  });
+}
+
 /**
  * Fetch matches for both leagues.
  * Strategy:
@@ -801,6 +842,7 @@ function dedupeScheduleSections(matches) {
     "Чемпіонат Європи",
     "Українські клуби в Європі",
     "Збірна України",
+    "Бокс",
     "Таблиця УПЛ"
   ];
 
@@ -2191,6 +2233,84 @@ async function fetchExtraMatches() {
   return { clubMatches, nationalMatches, leagueMatches };
 }
 
+async function fetchBoxingEvents() {
+  const urls = [
+    "https://www.flashscore.ua/boxing/"
+  ];
+  
+  const allEvents = [];
+  
+  for (const url of urls) {
+    const html = await fetchText(url, "Бокс Flashscore fetch error");
+    if (!html) continue;
+    
+    const textEvents = parseFlashscoreFixtureEvents(html);
+    const drawPageEvents = parseFlashscoreDrawPageEvents(html);
+    
+    const feedDataMatches = [
+      ...(html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : []),
+      ...(html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ? [html.match(/cjs\.initialFeeds\['fixtures'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)[1]] : [])
+    ];
+    
+    const feedEvents = feedDataMatches.flatMap(data => parseFlashscoreCupFeedData(data));
+    allEvents.push(...textEvents, ...drawPageEvents, ...feedEvents);
+  }
+
+  // Обробка ручних посилань на конкретні матчі
+  for (const url of manualBoxingMatchUrls) {
+    if (!url) continue;
+    const html = await fetchText(url, "Бокс Manual Match fetch error");
+    if (!html) continue;
+    
+    const titleMatch = html.match(/<title>([^<]+)<\/title>/);
+    if (titleMatch) {
+      // Приклад: Тайсон Ф'юрі - Вах Маріуш Вах Маріуш LIVE 24/07/2026 | Бокс - Flashscore
+      const matchData = titleMatch[1].match(/^(.+?)\s+-\s+(.+?)\s+LIVE\s+(\d{2})\/(\d{2})\/(\d{4})/i);
+      if (matchData) {
+        allEvents.push({
+          idEvent: `manual-boxing-${matchData[5]}-${matchData[4]}-${matchData[3]}-${matchData[1]}`.replace(/\s+/g, '-'),
+          strHomeTeam: decodeHtmlText(matchData[1]).trim(),
+          strAwayTeam: decodeHtmlText(matchData[2]).trim().replace(/\s+LIVE$/i, ''),
+          dateEvent: `${matchData[5]}-${matchData[4]}-${matchData[3]}`,
+          strTime: "00:00:00",
+          strStatus: "Scheduled",
+          intHomeScore: null,
+          intAwayScore: null,
+          isLocalTime: true
+        });
+      }
+    }
+  }
+
+  // Обробка повністю ручних боїв, без посилань
+  for (const match of manualBoxingMatches) {
+    if (match.strHomeTeam && match.strAwayTeam && match.dateEvent) {
+      allEvents.push({
+        idEvent: `manual-boxing-${match.dateEvent}-${match.strHomeTeam}`.replace(/\s+/g, '-'),
+        strHomeTeam: match.strHomeTeam,
+        strAwayTeam: match.strAwayTeam,
+        dateEvent: match.dateEvent,
+        strTime: "00:00:00",
+        strStatus: "Scheduled",
+        intHomeScore: null,
+        intAwayScore: null,
+        isLocalTime: true
+      });
+    }
+  }
+  
+  const uniqueEvents = dedupeEvents(allEvents).sort(sortByDateTimeAsc);
+  const relevantEvents = uniqueEvents.filter(isTrackedBoxerMatch);
+  
+  if (relevantEvents.length > 0) {
+    console.log(`✅ Бокс fetched: ${relevantEvents.length} matches`);
+    return relevantEvents.map(event => mapEventToMatch(event, "Бокс"));
+  }
+  
+  console.log("⚠️ Бокс: no matches found or source empty, keeping existing");
+  return null;
+}
+
 async function main() {
   const matches = {
     "УПЛ": existingData["УПЛ"] || [],
@@ -2203,7 +2323,8 @@ async function main() {
     "Чемпіонат світу": existingData["Чемпіонат світу"] || [],
     "Чемпіонат Європи": existingData["Чемпіонат Європи"] || [],
     "Українські клуби в Європі": existingData["Українські клуби в Європі"] || [],
-    "Збірна України": existingData["Збірна України"] || []
+    "Збірна України": existingData["Збірна України"] || [],
+    "Бокс": existingData["Бокс"] || []
   };
 
   if (shouldReuseCachedMatches(existingData)) {
@@ -2214,12 +2335,13 @@ async function main() {
     return;
   }
 
-  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches] = await Promise.all([
+  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches, boxingEvents] = await Promise.all([
     fetchUplEvents(),
     fetchUplStandings(),
     fetchChampionsLeagueEvents(),
     fetchCupEvents(),
-    fetchExtraMatches()
+    fetchExtraMatches(),
+    fetchBoxingEvents()
   ]);
 
   if (uplEvents) {
@@ -2266,6 +2388,13 @@ async function main() {
     extraMatches.nationalMatches,
     existingData["Збірна України"] || []
   );
+
+  if (boxingEvents) {
+    matches["Бокс"] = mergeCurrentAndPreviousMatches(
+      boxingEvents,
+      existingData["Бокс"] || []
+    );
+  }
 
   const dedupedMatches = dedupeScheduleSections(matches);
   const finalMatches = filterMatchesWithinWindow(dedupedMatches);
