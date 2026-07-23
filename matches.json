@@ -9,49 +9,29 @@
       "dateIso": "2026-07-31",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Кривбас",
+      "away": "Карпати Львів",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 1 серпня",
+      "dateIso": "2026-08-01",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ФК Харків",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "субота, 1 серпня",
+      "dateIso": "2026-08-01",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [
-    {
-      "home": "Університатя Крайова (Rou)",
-      "away": "МЛ Вітебськ (Blr)",
-      "league": "Ліга чемпіонів",
-      "time": "20:30",
-      "date": "середа, 15 липня",
-      "dateIso": "2026-07-15",
-      "status": "Match Finished",
-      "score": "1 - 0"
-    },
-    {
-      "home": "Біссен (Lux)",
-      "away": "Клаксвік (Fai)",
-      "league": "Ліга чемпіонів",
-      "time": "21:15",
-      "date": "середа, 15 липня",
-      "dateIso": "2026-07-15",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
-    {
-      "home": "КФ Егнатія (Alb)",
-      "away": "Петрокуб (Mda)",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "середа, 15 липня",
-      "dateIso": "2026-07-15",
-      "status": "Match Finished",
-      "score": "6 - 1"
-    },
-    {
-      "home": "Сутьєска (Mne)",
-      "away": "Кайрат Алмати (Kaz)",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "середа, 15 липня",
-      "dateIso": "2026-07-15",
-      "status": "Match Finished",
-      "score": "0 - 2"
-    },
     {
       "home": "Арарат-Вірменія (Arm)",
       "away": "Шемрок Роверс (Irl)",
@@ -424,6 +404,16 @@
       "dateIso": "2026-07-23",
       "status": "1H",
       "score": ""
+    },
+    {
+      "home": "Хайдук Спліт (Cro)",
+      "away": "Пафос (Cyp)",
+      "league": "Ліга Європи (Чвертьфінал)",
+      "time": "22:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Maccabi Tel Aviv",
@@ -878,14 +868,144 @@
       "score": "3 - 3"
     },
     {
+      "home": "Алюміній (Slo)",
+      "away": "Динамо Тирана (Alb)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "1 - 1"
+    },
+    {
       "home": "ЛНЗ Черкаси (Ukr)",
       "away": "Гент (Bel)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Борац Баня-Лука (Bih)",
+      "away": "Петрокуб (Mda)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "3 - 0"
+    },
+    {
+      "home": "Жиліна (Svk)",
+      "away": "ГКС Катовіце (Pol)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "Лугано (Sui)",
+      "away": "Дукаджїні (Kos)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Хапоель Тель-Авів (Isr)",
+      "away": "Лудогорець (Bul)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:30",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
+      "home": "Мотервелл (Sco)",
+      "away": "ХБ Торсхавн (Fai)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "2 - 0"
+    },
+    {
+      "home": "НК Браво (Slo)",
+      "away": "Шкендія (Mkd)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "2 - 1"
+    },
+    {
+      "home": "НСІ Рунавік (Fai)",
+      "away": "Копер (Slo)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "0 - 2"
+    },
+    {
+      "home": "Рієка (Cro)",
+      "away": "Деррі Сіті (Nir)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Шелбурн (Irl)",
+      "away": "Нимме Калью (Est)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "21:45",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "5 - 2"
+    },
+    {
+      "home": "Партизан (Srb)",
+      "away": "УНА Штрассен (Lux)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "4 - 0"
+    },
+    {
+      "home": "Стьярнан (Ice)",
+      "away": "Ільвес (Fin)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:00",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Валюр (Ice)",
+      "away": "Зріньскі (Bih)",
+      "league": "Ліга конференцій (Чвертьфінал)",
+      "time": "22:15",
+      "date": "четвер, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Аполлон (Cyp)",
@@ -1820,8 +1940,8 @@
       "time": "21:00",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Вараждин (Cro)",
@@ -1880,8 +2000,8 @@
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 0"
     },
     {
       "home": "Жиліна (Svk)",
@@ -1890,8 +2010,8 @@
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "ЛНЗ Черкаси (Ukr)",
@@ -1900,8 +2020,8 @@
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Лугано (Sui)",
@@ -1910,8 +2030,8 @@
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Хапоель Тель-Авів (Isr)",
@@ -1920,8 +2040,8 @@
       "time": "21:30",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Мотервелл (Sco)",
@@ -1930,8 +2050,8 @@
       "time": "21:45",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "НК Браво (Slo)",
@@ -1940,8 +2060,8 @@
       "time": "21:45",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "НСІ Рунавік (Fai)",
@@ -1950,8 +2070,8 @@
       "time": "21:45",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Рієка (Cro)",
@@ -1960,8 +2080,8 @@
       "time": "21:45",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Шелбурн (Irl)",
@@ -1970,8 +2090,8 @@
       "time": "21:45",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 2"
     },
     {
       "home": "Хайдук Спліт (Cro)",
@@ -1980,8 +2100,8 @@
       "time": "22:00",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Партизан (Srb)",
@@ -1990,8 +2110,8 @@
       "time": "22:00",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "Стьярнан (Ice)",
@@ -2000,8 +2120,8 @@
       "time": "22:00",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Hajduk Split",
@@ -2020,8 +2140,8 @@
       "time": "22:15",
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Аполлон (Cyp)",
