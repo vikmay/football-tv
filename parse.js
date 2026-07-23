@@ -2265,11 +2265,20 @@ async function main() {
     );
   }
 
-  matches["Ліга Європи"] = (extraMatches.leagueMatches?.["Ліга Європи"] || []).slice();
+  matches["Ліга Європи"] = mergeCurrentAndPreviousMatches(
+    extraMatches.leagueMatches?.["Ліга Європи"] || [],
+    existingData["Ліга Європи"] || []
+  );
 
-  matches["Ліга конференцій"] = (extraMatches.leagueMatches?.["Ліга конференцій"] || []).slice();
+  matches["Ліга конференцій"] = mergeCurrentAndPreviousMatches(
+    extraMatches.leagueMatches?.["Ліга конференцій"] || [],
+    existingData["Ліга конференцій"] || []
+  );
 
-  matches["Суперкубок УЄФА"] = (extraMatches.leagueMatches?.["Суперкубок УЄФА"] || []).slice();
+  matches["Суперкубок УЄФА"] = mergeCurrentAndPreviousMatches(
+    extraMatches.leagueMatches?.["Суперкубок УЄФА"] || [],
+    existingData["Суперкубок УЄФА"] || []
+  );
 
   matches["Українські клуби в Європі"] = mergeCurrentAndPreviousMatches(
     extraMatches.clubMatches,
