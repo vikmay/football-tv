@@ -336,63 +336,23 @@
   "Кубок України": [],
   "Ліга Європи": [
     {
-      "home": "Qarabağ",
-      "away": "CSKA Sofia",
+      "home": "Tromsø",
+      "away": "Hradec Králové",
       "league": "Ліга Європи",
-      "time": "19:00",
+      "time": "20:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
       "status": "1H",
       "score": ""
     },
     {
-      "home": "Hammarby",
-      "away": "Anderlecht",
+      "home": "Beşiktaş",
+      "away": "FC Midtjylland",
       "league": "Ліга Європи",
-      "time": "20:00",
+      "time": "21:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
       "status": "NS",
-      "score": ""
-    },
-    {
-      "home": "Динамо К. (Ukr)",
-      "away": "ПАОК (Gre)",
-      "league": "Ліга Європи (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Тромсе (Nor)",
-      "away": "Градец-Кралове (Cze)",
-      "league": "Ліга Європи (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Хаммарбю (Swe)",
-      "away": "Андерлехт (Bel)",
-      "league": "Ліга Європи (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Шериф (Mda)",
-      "away": "Маккабі Тель-Авів (Isr)",
-      "league": "Ліга Європи (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
       "score": ""
     },
     {
@@ -628,84 +588,34 @@
       "score": "2 - 0"
     },
     {
-      "home": "БАТЕ (Blr)",
-      "away": "Сьон (Sui)",
+      "home": "Алашкерт (Arm)",
+      "away": "ЧФР Клуж (Rou)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
+      "time": "18:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
-      "home": "ГАІС (Swe)",
-      "away": "Норшелланн (Den)",
+      "home": "ФК Лієпая (Lat)",
+      "away": "Аустрія Відень (Aut)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
+      "time": "18:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
-      "home": "Динамо Тбілісі (Geo)",
-      "away": "Жальгіріс (Ltu)",
+      "home": "ФК Паневежис (Ltu)",
+      "away": "Тобол (Kaz)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
+      "time": "18:30",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Зімбру Кишинів (Mda)",
-      "away": "Ноах (Arm)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "МЛ Вітебськ (Blr)",
-      "away": "Сутьєска (Mne)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Санта Колома (And)",
-      "away": "СК Рапід (Aut)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Унів. Клуж (Rou)",
-      "away": "Бранн (Nor)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Вадуц (Lie)",
-      "away": "АК Ескальдес (And)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "20:30",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Стяуа Б. (Rou)",
@@ -1508,30 +1418,30 @@
       "away": "ЧФР Клуж (Rou)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "18:00",
-      "date": "четвер, 23 липня",
+      "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "ФК Лієпая (Lat)",
       "away": "Аустрія Відень (Aut)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "18:00",
-      "date": "четвер, 23 липня",
+      "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "ФК Паневежис (Ltu)",
       "away": "Тобол (Kaz)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "18:30",
-      "date": "четвер, 23 липня",
+      "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Qarabağ",
@@ -1764,6 +1674,16 @@
       "score": ""
     },
     {
+      "home": "Tromsø",
+      "away": "Hradec Králové",
+      "league": "Ліга Європи",
+      "time": "20:00",
+      "date": "Сьогодні, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "1H",
+      "score": ""
+    },
+    {
       "home": "Вадуц (Lie)",
       "away": "АК Ескальдес (And)",
       "league": "Ліга конференцій (Чвертьфінал)",
@@ -1861,6 +1781,16 @@
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Beşiktaş",
+      "away": "FC Midtjylland",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "NS",
       "score": ""
     },
     {
