@@ -16,5 +16,14 @@
     "dateIso": "2026-07-24",
     "time": "16:00",
     "status": "Scheduled"
+  },
+  {
+    "id": "manual-1784831821330",
+    "league": "Бокс",
+    "home": "test",
+    "away": "test2",
+    "dateIso": "2026-07-25",
+    "time": "12:00",
+    "status": "Scheduled"
   }
 ]
