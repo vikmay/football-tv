@@ -788,14 +788,14 @@
       "score": "2 - 2"
     },
     {
-      "home": "Валюр (Ice)",
-      "away": "Зріньскі (Bih)",
+      "home": "Вадуц (Lie)",
+      "away": "АК Ескальдес (And)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "22:15",
+      "time": "20:30",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "Аполлон (Cyp)",
@@ -1678,10 +1678,10 @@
       "away": "АК Ескальдес (And)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 23 липня",
+      "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "Стяуа Б. (Rou)",

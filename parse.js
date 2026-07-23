@@ -2051,7 +2051,8 @@ async function fetchLeagueEvents(leagueId, leagueName) {
 async function fetchChampionsLeagueEvents() {
   const urlsToTry = [
     "https://www.flashscore.ua/soccer/europe/champions-league/fixtures/",
-    "https://www.flashscore.ua/soccer/europe/champions-league/results/"
+    "https://www.flashscore.ua/soccer/europe/champions-league/results/",
+    "https://www.flashscore.ua/soccer/europe/champions-league/"
   ];
 
   let allEvents = [];
@@ -2099,8 +2100,10 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
 
   if (url.includes("/fixtures/")) {
     urlsToTry.push(url.replace("/fixtures/", "/results/"));
+    urlsToTry.push(url.replace("/fixtures/", "/"));
   } else if (url.includes("/results/")) {
     urlsToTry.push(url.replace("/results/", "/fixtures/"));
+    urlsToTry.push(url.replace("/results/", "/"));
   }
 
   let allEvents = [];
