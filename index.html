@@ -574,6 +574,31 @@
                     margin-top: 5px;
                 }
             }
+
+            .modal-overlay {
+                display: none;
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.85); justify-content: center; align-items: center; z-index: 1000;
+            }
+            .modal-overlay.active { display: flex; }
+            .modal {
+                background: #161616; padding: 25px; border-radius: 12px; width: 90%; max-width: 500px;
+                color: white; display: flex; flex-direction: column; gap: 15px; border: 1px solid #333;
+                max-height: 85vh; overflow-y: auto;
+            }
+            .modal h2 { margin: 0 0 10px; color: #00ff88; text-align: center; font-size: 24px; }
+            .modal-row { display: flex; flex-direction: column; gap: 5px; }
+            .modal-row label { font-size: 14px; color: #aaa; }
+            .modal input, .modal select, .modal button {
+                padding: 12px; font-size: 16px; background: #222; border: 1px solid #444; color: white; border-radius: 8px;
+            }
+            .modal button { cursor: pointer; background: #00ff88; color: #000; font-weight: bold; border: none; margin-top: 10px; }
+            .modal button.close-btn { background: #444; color: white; margin-top: 5px; }
+            .modal button.delete-btn { background: #ff3b30; color: white; margin-top: 0; padding: 8px 12px; font-size: 14px; }
+            .admin-list { margin-top: 20px; border-top: 1px solid #333; padding-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+            .admin-item { background: #222; padding: 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+            .admin-item-info { display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+            .admin-item-info .lg { color: #ffcc00; font-size: 12px; font-weight: bold; }
         </style>
     </head>
 
@@ -583,8 +608,238 @@
         <div id="content">Loading...</div>
         <div id="standings"></div>
 
+        <div class="modal-overlay" id="adminModal">
+            <div class="modal">
+                <h2>Додати подію</h2>
+                <div class="modal-row" style="margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 15px;">
+                    <label style="color:#ffcc00">GitHub Token (один раз на пристрій)</label>
+                    <input type="password" id="adminToken" placeholder="ghp_xxxxxxxxxxxx">
+                </div>
+                <div class="modal-row">
+                    <label>Категорія (Спорт)</label>
+                    <select id="adminLeague">
+                        <option value="Бокс">Бокс</option>
+                        <option value="Футбол (Свій турнір)">Футбол</option>
+                    </select>
+                </div>
+                <div class="modal-row">
+                    <label>Команда 1 / Боксер 1</label>
+                    <input type="text" id="adminHome" placeholder="Напр. Усик О.">
+                </div>
+                <div class="modal-row">
+                    <label>Команда 2 / Боксер 2</label>
+                    <input type="text" id="adminAway" placeholder="Напр. Ф'юрі Т.">
+                </div>
+                <div class="modal-row">
+                    <label>Дата (РРРР-ММ-ДД)</label>
+                    <input type="date" id="adminDate">
+                </div>
+                <div class="modal-row">
+                    <label>Час (ГГ:ХХ)</label>
+                    <input type="time" id="adminTime" value="00:00">
+                </div>
+                <input type="hidden" id="adminId">
+                <button onclick="saveAdminMatch()" id="adminSaveBtn">Зберегти подiю (GitHub)</button>
+                <button class="close-btn" onclick="closeAdminModal()">Закрити</button>
+
+                <div class="admin-list" id="adminList">Loading...</div>
+            </div>
+        </div>
+
         <script>
             let hasScrolledToToday = false;
+            let headerClickCount = 0;
+            let headerClickTimer = null;
+
+            document.querySelector('.header').addEventListener('click', () => {
+                headerClickCount++;
+                if (headerClickCount === 7) {
+                    openAdminModal();
+                    headerClickCount = 0;
+                }
+                clearTimeout(headerClickTimer);
+                headerClickTimer = setTimeout(() => { headerClickCount = 0; }, 2000);
+            });
+
+            let cachedManualMatches = [];
+            let currentFileSha = null;
+            const GITHUB_REPO = "vikmay/football-tv";
+            const GITHUB_FILE = "manual_matches.json";
+
+            async function getGitHubManualMatches(token) {
+                const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
+                    headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json' },
+                    cache: 'no-store'
+                });
+                if (res.status === 404) return { content: [], sha: null };
+                if (!res.ok) throw new Error('API Error ' + res.status);
+                const data = await res.json();
+                const jsonStr = decodeURIComponent(escape(atob(data.content)));
+                return { content: JSON.parse(jsonStr || '[]'), sha: data.sha };
+            }
+
+            async function updateGitHubManualMatches(token, newContent, sha) {
+                const contentEncoded = btoa(unescape(encodeURIComponent(JSON.stringify(newContent, null, 2))));
+                const body = {
+                    message: "Update manual matches from web UI",
+                    content: contentEncoded,
+                    branch: "main"
+                };
+                if (sha) body.sha = sha;
+
+                const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`, {
+                    method: 'PUT',
+                    headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                if (!res.ok) throw new Error('Update failed ' + res.status);
+                return await res.json();
+            }
+
+            async function openAdminModal() {
+                document.getElementById('adminModal').classList.add('active');
+                
+                const savedToken = localStorage.getItem('github_token') || "";
+                document.getElementById('adminToken').value = savedToken;
+
+                document.getElementById('adminId').value = "";
+                document.getElementById('adminHome').value = "";
+                document.getElementById('adminAway').value = "";
+                document.getElementById('adminTime').value = "00:00";
+                
+                const today = new Date();
+                document.getElementById('adminDate').value = today.toISOString().split('T')[0];
+                
+                document.getElementById('adminList').innerHTML = "Завантаження з GitHub...";
+                
+                if (savedToken) {
+                    try {
+                        const file = await getGitHubManualMatches(savedToken);
+                        cachedManualMatches = file.content;
+                        currentFileSha = file.sha;
+                        renderAdminList();
+                    } catch (err) {
+                        document.getElementById('adminList').innerHTML = `<p style="color:red">Помилка завантаження. Перевірте токен.</p>`;
+                    }
+                } else {
+                    document.getElementById('adminList').innerHTML = `<p style="color:#aaa">Введіть GitHub Token для завантаження подій</p>`;
+                }
+            }
+
+            function closeAdminModal() {
+                document.getElementById('adminModal').classList.remove('active');
+            }
+
+            async function saveAdminMatch() {
+                const token = document.getElementById('adminToken').value.trim();
+                if (!token) { alert('Потрібен GitHub Token!'); return; }
+                localStorage.setItem('github_token', token);
+
+                const league = document.getElementById('adminLeague').value;
+                const home = document.getElementById('adminHome').value.trim();
+                const away = document.getElementById('adminAway').value.trim();
+                const dateIso = document.getElementById('adminDate').value;
+                const time = document.getElementById('adminTime').value;
+                const editId = document.getElementById('adminId').value;
+
+                if (!home || !away || !dateIso) {
+                    alert('Заповніть команди та дату!');
+                    return;
+                }
+
+                const btn = document.getElementById('adminSaveBtn');
+                btn.innerText = "Збереження...";
+                btn.disabled = true;
+
+                try {
+                    // Always fetch latest before saving to avoid sha conflicts
+                    const file = await getGitHubManualMatches(token);
+                    const matches = file.content;
+                    currentFileSha = file.sha;
+
+                    const newMatch = {
+                        id: editId || 'manual-' + Date.now(),
+                        league, home, away, dateIso, time,
+                        status: "Scheduled"
+                    };
+
+                    if (editId) {
+                        const idx = matches.findIndex(m => m.id === editId);
+                        if (idx >= 0) matches[idx] = newMatch;
+                    } else {
+                        matches.push(newMatch);
+                    }
+
+                    await updateGitHubManualMatches(token, matches, currentFileSha);
+                    
+                    document.getElementById('adminId').value = "";
+                    document.getElementById('adminHome').value = "";
+                    document.getElementById('adminAway').value = "";
+                    
+                    cachedManualMatches = matches;
+                    renderAdminList();
+                    alert("Збережено! Оновіть сторінку через хвилину (доки GitHub Actions згенерує новий розклад).");
+                    load();
+                } catch(e) {
+                    alert("Помилка збереження: " + e.message);
+                } finally {
+                    btn.innerText = "Зберегти подiю (GitHub)";
+                    btn.disabled = false;
+                }
+            }
+
+            async function deleteAdminMatch(id) {
+                if(!confirm('Видалити?')) return;
+                const token = document.getElementById('adminToken').value.trim();
+                if (!token) return;
+                
+                try {
+                    const file = await getGitHubManualMatches(token);
+                    const matches = file.content.filter(m => m.id !== id);
+                    await updateGitHubManualMatches(token, matches, file.sha);
+                    cachedManualMatches = matches;
+                    renderAdminList();
+                    load();
+                } catch(e) {
+                    alert("Помилка видалення: " + e.message);
+                }
+            }
+
+            function editAdminMatch(id) {
+                const m = cachedManualMatches.find(x => x.id === id);
+                if(m) {
+                    document.getElementById('adminId').value = m.id;
+                    document.getElementById('adminLeague').value = m.league || "Бокс";
+                    document.getElementById('adminHome').value = m.home || "";
+                    document.getElementById('adminAway').value = m.away || "";
+                    document.getElementById('adminDate').value = m.dateIso || "";
+                    document.getElementById('adminTime').value = m.time || "00:00";
+                }
+            }
+
+            function renderAdminList() {
+                const list = document.getElementById('adminList');
+                list.innerHTML = '<h3>Ваші ручні події</h3>';
+                if(cachedManualMatches.length === 0) {
+                    list.innerHTML += '<p style="color:#aaa;font-size:14px;">Немає подій</p>';
+                    return;
+                }
+                cachedManualMatches.forEach(m => {
+                    list.innerHTML += `
+                        <div class="admin-item">
+                            <div class="admin-item-info">
+                                <span class="lg">${m.league}</span>
+                                <span>${m.home} - ${m.away}</span>
+                                <span style="color:#00ff88">${m.dateIso} ${m.time}</span>
+                            </div>
+                            <div style="display:flex;gap:5px;flex-direction:column;">
+                                <button class="delete-btn" style="background:#555" onclick="editAdminMatch('${m.id}')">Редаг.</button>
+                                <button class="delete-btn" onclick="deleteAdminMatch('${m.id}')">Видалити</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
 
             function renderLeagueLabel(label) {
                 return String(label || "").replace(/\s*\(([^)]+)\)/, ' <span class="match__league-stage">($1)</span>');
@@ -757,9 +1012,18 @@
                     const standings = data["Таблиця УПЛ"] || [];
                     let html = "";
 
+                    let publicManualMatches = [];
+                    try {
+                        const mRes = await fetch("./manual_matches.json?cache=" + Date.now());
+                        if (mRes.ok) {
+                            publicManualMatches = await mRes.json();
+                        }
+                    } catch(e) {}
+
                     const matches = Object.entries(data)
                         .filter(([key, value]) => key !== "Таблиця УПЛ" && key !== "Українські клуби в Європі" && Array.isArray(value))
                         .flatMap(([, value]) => value)
+                        .concat(publicManualMatches)
                         .sort((a, b) => {
                             const aDate = `${a.dateIso || "9999-12-31"}T${a.time || "00:00"}`;
                             const bDate = `${b.dateIso || "9999-12-31"}T${b.time || "00:00"}`;
