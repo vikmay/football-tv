@@ -336,33 +336,23 @@
   "Кубок України": [],
   "Ліга Європи": [
     {
-      "home": "Vestri",
-      "away": "Qarabağ",
-      "league": "Ліга Європи",
-      "time": "23:00",
-      "date": "четвер, 16 липня",
-      "dateIso": "2026-07-16",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Qarabağ",
       "away": "CSKA Sofia",
       "league": "Ліга Європи",
       "time": "19:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
-      "home": "Карабах (Aze)",
-      "away": "ЦСКА Софія (Bul)",
-      "league": "Ліга Європи (Чвертьфінал)",
-      "time": "19:00",
+      "home": "Hammarby",
+      "away": "Anderlecht",
+      "league": "Ліга Європи",
+      "time": "20:00",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
+      "status": "NS",
       "score": ""
     },
     {
@@ -628,104 +618,14 @@
       "score": "0 - 1"
     },
     {
-      "home": "ФК Паневежис (Ltu)",
-      "away": "Тобол (Kaz)",
+      "home": "Малішева (Kos)",
+      "away": "Хіберніан (Sco)",
       "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "18:30",
+      "time": "17:30",
       "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "ГІК (Fin)",
-      "away": "Колрейн (Nir)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Дебрецен (Hun)",
-      "away": "Пюнік Єреван (Arm)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Діла Горі (Geo)",
-      "away": "Аполлон (Cyp)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Пайде (Est)",
-      "away": "Зіра (Aze)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Флора (Est)",
-      "away": "Нью-Сейнтс (Wal)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "АЕК Ларнака (Cyp)",
-      "away": "Бейтар Єрусалим (Isr)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:30",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Дун. Стреда (Svk)",
-      "away": "Вележ Мостар (Bih)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:30",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ракув (Pol)",
-      "away": "Валлетта (Mlt)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:30",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "РФС (Lat)",
-      "away": "Вестрі (Ice)",
-      "league": "Ліга конференцій (Чвертьфінал)",
-      "time": "19:30",
-      "date": "Сьогодні, 23 липня",
-      "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "БАТЕ (Blr)",
@@ -1598,10 +1498,10 @@
       "away": "Хіберніан (Sco)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "17:30",
-      "date": "четвер, 23 липня",
+      "date": "Сьогодні, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Алашкерт (Arm)",
@@ -1851,6 +1751,16 @@
       "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Hammarby",
+      "away": "Anderlecht",
+      "league": "Ліга Європи",
+      "time": "20:00",
+      "date": "Сьогодні, 23 липня",
+      "dateIso": "2026-07-23",
+      "status": "NS",
       "score": ""
     },
     {
@@ -2685,40 +2595,6 @@
     }
   ],
   "Збірна України": [],
-  "Бокс": [
-    {
-      "home": "Тайсон Ф'юрі",
-      "away": "Вах Маріуш Вах Маріуш",
-      "league": "Бокс",
-      "time": "00:00",
-      "date": "пʼятниця, 24 липня",
-      "dateIso": "2026-07-24",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Джошуа Ентоні",
-      "away": "Крістіан Пренга",
-      "league": "Бокс",
-      "time": "00:00",
-      "date": "субота, 25 липня",
-      "dateIso": "2026-07-25",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "idEvent": "manual-joshua-prenga",
-      "strHomeTeam": "Джошуа Ентоні",
-      "strAwayTeam": "Крістіан Пренга",
-      "dateEvent": "2026-07-25",
-      "strTime": "00:00:00",
-      "strStatus": "Scheduled",
-      "intHomeScore": null,
-      "intAwayScore": null,
-      "isLocalTime": true,
-      "league": "Бокс"
-    }
-  ],
   "Таблиця УПЛ": [
     {
       "position": 1,
