@@ -2054,6 +2054,8 @@ async function fetchChampionsLeagueEvents() {
     "https://www.flashscore.ua/soccer/europe/champions-league/results/"
   ];
 
+  let allEvents = [];
+
   for (const url of urlsToTry) {
     const html = await fetchText(url, "Ліга чемпіонів Flashscore fetch error");
 
@@ -2068,13 +2070,17 @@ async function fetchChampionsLeagueEvents() {
 
     const events = dedupeEvents(feedDataMatches.flatMap(data => parseFlashscoreCupFeedData(data)))
       .filter(event => isDateWithinWindow(event.dateEvent))
-      .sort(sortByDateTimeAsc)
       .filter(event => event.strHomeTeam && event.strAwayTeam && !/Показати більше|Live результати|Flashscore\.ua/i.test(`${event.strHomeTeam} ${event.strAwayTeam}`));
 
     if (events.length > 0) {
-      console.log(`✅ Ліга чемпіонів fetched from Flashscore: ${events.length} matches in ±7 days window`);
-      return events;
+      allEvents.push(...events);
     }
+  }
+
+  if (allEvents.length > 0) {
+    const uniqueEvents = dedupeEvents(allEvents).sort(sortByDateTimeAsc);
+    console.log(`✅ Ліга чемпіонів fetched from Flashscore: ${uniqueEvents.length} matches in ±7 days window`);
+    return uniqueEvents;
   }
 
   console.log("⚠️ Ліга чемпіонів Flashscore source empty, falling back to TheSportsDB");
@@ -2097,6 +2103,8 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
     urlsToTry.push(url.replace("/results/", "/fixtures/"));
   }
 
+  let allEvents = [];
+
   for (const candidateUrl of urlsToTry) {
     const html = await fetchText(candidateUrl, `${label} Flashscore fetch error`);
 
@@ -2113,12 +2121,13 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
     const textEvents = parseFlashscoreFixtureEvents(html);
     const drawPageEvents = parseFlashscoreDrawPageEvents(html);
 
-    const events = dedupeEvents([...feedEvents, ...textEvents, ...drawPageEvents]).sort(sortByDateTimeAsc);
+    allEvents.push(...feedEvents, ...textEvents, ...drawPageEvents);
+  }
 
-    if (events.length > 0) {
-      console.log(`✅ ${label}: found ${events.length} matches from Flashscore`);
-      return events;
-    }
+  if (allEvents.length > 0) {
+    const uniqueEvents = dedupeEvents(allEvents).sort(sortByDateTimeAsc);
+    console.log(`✅ ${label}: found ${uniqueEvents.length} matches from Flashscore`);
+    return uniqueEvents;
   }
 
   return [];
