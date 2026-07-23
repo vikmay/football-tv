@@ -1,14 +1,5 @@
 [
   {
-    "id": "manual-1784831382833",
-    "league": "Бокс",
-    "home": "Фюрі",
-    "away": "Вах",
-    "dateIso": "2026-07-24",
-    "time": "16:00",
-    "status": "Scheduled"
-  },
-  {
     "id": "manual-1784831821330",
     "league": "Бокс",
     "home": "test",
