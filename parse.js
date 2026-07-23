@@ -1864,7 +1864,7 @@ function fetchUplStandingsFromOfficialPage(html) {
 }
 
 async function fetchUplStandings() {
-  const standingsUrl = "https://upl.ua/ua/tournaments/championship/428/table";
+  const standingsUrl = "https://upl.ua/ua/tournaments/championship/432/table";
   const standingsHtml = await fetchText(standingsUrl, "УПЛ standings fetch error");
 
   if (!standingsHtml) {
@@ -1884,7 +1884,7 @@ async function fetchUplStandings() {
 }
 
 async function fetchUplEvents() {
-  const officialUrl = "https://upl.ua/en/tournaments/championship/428/calendar";
+  const officialUrl = "https://upl.ua/en/tournaments/championship/432/calendar";
   const officialHtml = await fetchText(officialUrl, "РЈРџР› official upl.ua fetch error");
 
   const flashscoreFixturesUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/fixtures/";
