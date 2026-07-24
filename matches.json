@@ -29,16 +29,6 @@
       "dateIso": "2026-08-01",
       "status": "Scheduled",
       "score": ""
-    },
-    {
-      "home": "Kharkiv",
-      "away": "Верес Рівне",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "субота, 1 серпня",
-      "dateIso": "2026-08-01",
-      "status": "Scheduled",
-      "score": ""
     }
   ],
   "Ліга чемпіонів": [
@@ -406,13 +396,13 @@
       "score": "1 - 2"
     },
     {
-      "home": "Hajduk Split",
-      "away": "Pafos",
+      "home": "Hадждук Спліт",
+      "away": "Пафос",
       "league": "Ліга Європи",
       "time": "22:00",
-      "date": "Сьогодні, 23 липня",
+      "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "1H",
+      "status": "FT",
       "score": ""
     },
     {
@@ -2134,13 +2124,13 @@
       "score": "1 - 0"
     },
     {
-      "home": "Hajduk Split",
-      "away": "Pafos",
+      "home": "Hадждук Спліт",
+      "away": "Пафос",
       "league": "Ліга Європи",
       "time": "22:00",
-      "date": "Сьогодні, 23 липня",
+      "date": "четвер, 23 липня",
       "dateIso": "2026-07-23",
-      "status": "1H",
+      "status": "FT",
       "score": ""
     },
     {
