@@ -155,6 +155,8 @@ const uplTeamNames = {
   "Металіст 1925": "Металіст 1925 Харків",
   "Metalist 1925": "Металіст 1925 Харків",
   "Metalist 1925 (Х)": "Металіст 1925 Харків",
+  "FC Kharkiv": "ФК Харків",
+  "Kharkiv": "ФК Харків",
   "Minai": "Мінай",
   "Mynai": "Мінай",
   "Polissya Zhytomyr": "Полісся Житомир",
@@ -211,7 +213,25 @@ function getUplTeamName(englishName) {
     return uplTeamNames["Agrobiznes Volochysk"] || "Агробізнес Волочиськ";
   }
 
-  return uplTeamNames[raw] || uplTeamNames[englishName] || raw;
+  if (uplTeamNames[raw]) return uplTeamNames[raw];
+  if (uplTeamNames[englishName]) return uplTeamNames[englishName];
+
+  for (const [key, value] of Object.entries(uplTeamNames)) {
+    if (key.toLowerCase() === lower) {
+      return value;
+    }
+  }
+
+  if (/^[a-zA-Z\s\-]+$/.test(raw)) {
+    return raw.split(/([\s\-])/).map(word => {
+      if (word.match(/[\s\-]/)) return word;
+      const cyr = transliterateLatinToCyrillic(word);
+      if (!cyr) return word;
+      return cyr.charAt(0).toUpperCase() + cyr.slice(1);
+    }).join('');
+  }
+
+  return raw;
 }
 
 function normalizeCupTeamName(name) {
