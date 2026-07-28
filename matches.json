@@ -239,8 +239,8 @@
       "time": "21:00",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2"
     },
     {
       "home": "Цельє (Slo)",
@@ -249,8 +249,8 @@
       "time": "21:15",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2"
     },
     {
       "home": "Хартс (Sco)",
@@ -259,8 +259,8 @@
       "time": "21:45",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Шемрок Роверс (Irl)",
@@ -269,8 +269,8 @@
       "time": "22:00",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Кайрат Алмати (Kaz)",
@@ -375,6 +375,16 @@
     {
       "home": "Спарта Прага (Cze)",
       "away": "Ліон (Fra)",
+      "league": "Ліга чемпіонів (Півфінал)",
+      "time": "20:00",
+      "date": "вівторок, 4 серпня",
+      "dateIso": "2026-08-04",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Арарат-Вірменія (Arm)",
+      "away": "Цельє (Slo)",
       "league": "Ліга чемпіонів (Півфінал)",
       "time": "20:00",
       "date": "вівторок, 4 серпня",
@@ -592,6 +602,26 @@
       "time": "22:00",
       "date": "четвер, 30 липня",
       "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шемрок Роверс (Irl)",
+      "away": "КФ Егнатія (Alb)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Ягеллонія (Pol)",
+      "away": "Рейнджерс (Sco)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
       "status": "Scheduled",
       "score": ""
     }
@@ -1114,8 +1144,8 @@
       "time": "20:30",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Дріта (Kos)",
@@ -1124,8 +1154,8 @@
       "time": "21:00",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Дукаджїні (Kos)",
@@ -1574,6 +1604,16 @@
       "time": "22:00",
       "date": "четвер, 30 липня",
       "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Тре Фіорі (San)",
+      "away": "Дріта (Kos)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
       "status": "Scheduled",
       "score": ""
     }
@@ -2240,8 +2280,8 @@
       "time": "20:30",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Дріта (Kos)",
@@ -2250,8 +2290,8 @@
       "time": "21:00",
       "date": "вівторок, 28 липня",
       "dateIso": "2026-07-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Дукаджїні (Kos)",
@@ -2810,6 +2850,36 @@
       "time": "23:00",
       "date": "четвер, 30 липня",
       "dateIso": "2026-07-30",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шемрок Роверс (Irl)",
+      "away": "КФ Егнатія (Alb)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Тре Фіорі (San)",
+      "away": "Дріта (Kos)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Ягеллонія (Pol)",
+      "away": "Рейнджерс (Sco)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "22:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
       "status": "Scheduled",
       "score": ""
     }
