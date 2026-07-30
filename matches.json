@@ -580,30 +580,30 @@
       "away": "Тромсе (Nor)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Мідтьюлланн (Den)",
       "away": "Бешикташ (Tur)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Пафос (Cyp)",
       "away": "Хайдук Спліт (Cro)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "Фк Мідтджилланд",
@@ -620,10 +620,10 @@
       "away": "Динамо К. (Ukr)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:45",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "ЦСКА Софія (Bul)",
@@ -738,6 +738,26 @@
     {
       "home": "Тун (Sui)",
       "away": "Вікінгур Рейк'явік (Ice)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Градец-Кралове (Cze)",
+      "away": "Бешикташ (Tur)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Пафос (Cyp)",
+      "away": "Зальцбург (Aut)",
       "league": "Ліга Європи (Півфінал)",
       "time": "20:00",
       "date": "четвер, 6 серпня",
@@ -1332,10 +1352,10 @@
       "away": "Стьярнан (Ice)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "19:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Інтер Турку (Fin)",
@@ -1392,140 +1412,140 @@
       "away": "Гетеборг (Swe)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "19:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 3"
     },
     {
       "home": "Бранн (Nor)",
       "away": "Унів. Клуж (Rou)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Вележ Мостар (Bih)",
       "away": "Дун. Стреда (Svk)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3"
     },
     {
       "home": "Динамо М. (Blr)",
       "away": "Нефтчі Баку (Aze)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Дьор (Hun)",
       "away": "Біссен (Lux)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Жальгіріс (Ltu)",
       "away": "Динамо Тбілісі (Geo)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "7 - 2"
     },
     {
       "home": "Норшелланн (Den)",
       "away": "ГАІС (Swe)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "6 - 0"
     },
     {
       "home": "Петрокуб (Mda)",
       "away": "Борац Баня-Лука (Bih)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 3"
     },
     {
       "home": "ХБ Торсхавн (Fai)",
       "away": "Мотервелл (Sco)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3"
     },
     {
       "home": "Бейтар Єрусалим (Isr)",
       "away": "АЕК Ларнака (Cyp)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 3"
     },
     {
       "home": "Валлетта (Mlt)",
       "away": "Ракув (Pol)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 4"
     },
     {
       "home": "Деррі Сіті (Nir)",
       "away": "Рієка (Cro)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Нью-Сейнтс (Wal)",
       "away": "Флора (Est)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Аякс (Ned)",
       "away": "Войводіна (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Баллкані (Kos)",
@@ -1542,50 +1562,50 @@
       "away": "РФС (Lat)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Лудогорець (Bul)",
       "away": "Хапоель Тель-Авів (Isr)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "Шкендія (Mkd)",
       "away": "НК Браво (Slo)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Сьон (Sui)",
       "away": "БАТЕ (Blr)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:15",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "УНА Штрассен (Lux)",
       "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:15",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Аустрія Відень (Aut)",
@@ -1740,6 +1760,96 @@
     {
       "home": "Пайде (Est)",
       "away": "СК Рапід (Aut)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Аякс (Ned)",
+      "away": "Шелбурн (Irl)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бранн (Nor)",
+      "away": "Аполлон (Cyp)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Жальгіріс (Ltu)",
+      "away": "Хайдук Спліт (Cro)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Ноах (Arm)",
+      "away": "Сьон (Sui)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Партизан (Srb)",
+      "away": "Тобол (Kaz)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Рієка (Cro)",
+      "away": "Ільвес (Fin)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ФК Рига (Lat)",
+      "away": "Дьор (Hun)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Флора (Est)",
+      "away": "Інтер Клуб Ескальдес (And)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Яблонець (Cze)",
+      "away": "РФС (Lat)",
       "league": "Ліга конференцій (Півфінал)",
       "time": "20:00",
       "date": "четвер, 6 серпня",
@@ -2478,10 +2588,10 @@
       "away": "Стьярнан (Ice)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "19:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Інтер Турку (Fin)",
@@ -2548,120 +2658,120 @@
       "away": "Гетеборг (Swe)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "19:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 3"
     },
     {
       "home": "Градец-Кралове (Cze)",
       "away": "Тромсе (Nor)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Мідтьюлланн (Den)",
       "away": "Бешикташ (Tur)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Пафос (Cyp)",
       "away": "Хайдук Спліт (Cro)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "Бранн (Nor)",
       "away": "Унів. Клуж (Rou)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Вележ Мостар (Bih)",
       "away": "Дун. Стреда (Svk)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3"
     },
     {
       "home": "Динамо М. (Blr)",
       "away": "Нефтчі Баку (Aze)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Дьор (Hun)",
       "away": "Біссен (Lux)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Жальгіріс (Ltu)",
       "away": "Динамо Тбілісі (Geo)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "7 - 2"
     },
     {
       "home": "Норшелланн (Den)",
       "away": "ГАІС (Swe)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "6 - 0"
     },
     {
       "home": "Петрокуб (Mda)",
       "away": "Борац Баня-Лука (Bih)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 3"
     },
     {
       "home": "ХБ Торсхавн (Fai)",
       "away": "Мотервелл (Sco)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3"
     },
     {
       "home": "Фк Мідтджилланд",
@@ -2678,50 +2788,50 @@
       "away": "АЕК Ларнака (Cyp)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 3"
     },
     {
       "home": "Валлетта (Mlt)",
       "away": "Ракув (Pol)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 4"
     },
     {
       "home": "Деррі Сіті (Nir)",
       "away": "Рієка (Cro)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Нью-Сейнтс (Wal)",
       "away": "Флора (Est)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "20:30",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "ПАОК (Gre)",
       "away": "Динамо К. (Ukr)",
       "league": "Ліга Європи (Чвертьфінал)",
       "time": "20:45",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "ЦСКА Софія (Bul)",
@@ -2738,10 +2848,10 @@
       "away": "Войводіна (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Баллкані (Kos)",
@@ -2758,50 +2868,50 @@
       "away": "Хапоель Тель-Авів (Isr)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "Шкендія (Mkd)",
       "away": "НК Браво (Slo)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "Вестрі (Ice)",
       "away": "РФС (Lat)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:00",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Сьон (Sui)",
       "away": "БАТЕ (Blr)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:15",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 0"
     },
     {
       "home": "УНА Штрассен (Lux)",
       "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Чвертьфінал)",
       "time": "21:15",
-      "date": "четвер, 30 липня",
+      "date": "Сьогодні, 30 липня",
       "dateIso": "2026-07-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Андерлехт (Bel)",
@@ -3076,6 +3186,116 @@
     {
       "home": "Пайде (Est)",
       "away": "СК Рапід (Aut)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Градец-Кралове (Cze)",
+      "away": "Бешикташ (Tur)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Пафос (Cyp)",
+      "away": "Зальцбург (Aut)",
+      "league": "Ліга Європи (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Аякс (Ned)",
+      "away": "Шелбурн (Irl)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Бранн (Nor)",
+      "away": "Аполлон (Cyp)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Жальгіріс (Ltu)",
+      "away": "Хайдук Спліт (Cro)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Ноах (Arm)",
+      "away": "Сьон (Sui)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Партизан (Srb)",
+      "away": "Тобол (Kaz)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Рієка (Cro)",
+      "away": "Ільвес (Fin)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ФК Рига (Lat)",
+      "away": "Дьор (Hun)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Флора (Est)",
+      "away": "Інтер Клуб Ескальдес (And)",
+      "league": "Ліга конференцій (Півфінал)",
+      "time": "20:00",
+      "date": "четвер, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Яблонець (Cze)",
+      "away": "РФС (Lat)",
       "league": "Ліга конференцій (Півфінал)",
       "time": "20:00",
       "date": "четвер, 6 серпня",
