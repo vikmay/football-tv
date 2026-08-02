@@ -319,6 +319,7 @@ function getUplTeamName(englishName) {
     .trim();
 
   const lowerRaw = raw.toLowerCase();
+
   if (canonicalUkrainianTeamNames[lowerRaw]) {
     return canonicalUkrainianTeamNames[lowerRaw];
   }
@@ -329,20 +330,62 @@ function getUplTeamName(englishName) {
     return canonicalUkrainianTeamNames[lowerStripped];
   }
 
-  if (lowerRaw.includes("1925")) return "Металіст 1925 Харків";
-  if (lowerRaw.includes("динамо") || lowerRaw.includes("dynamo")) return "Динамо Київ";
-  if (lowerRaw.includes("шахтар") || lowerRaw.includes("shakhtar")) return "Шахтар Донецьк";
+  const hasForeignIndicator = /\((?:blr|cro|geo|rou|rus|kaz|cze|pol|lat|ltu|est|san|arm|aut|sui|den|nor|fin|sco|irl|eng|ger|fra|esp|ita|por|gre|cyp|srb|bih|mkd|kos|alb|mda|isl|ice|fai|gib|isr|aze|tur)\)/i.test(raw);
+
+  const isDynamo = lowerRaw.includes("динамо") || lowerRaw.includes("dynamo") || lowerRaw.includes("dinamo");
+  if (isDynamo) {
+    const isKyiv = lowerRaw.includes("київ") || lowerRaw.includes("kyiv") || lowerRaw.includes("kiev") || lowerRaw.includes("(ukr)") || lowerRaw.includes("(укр)");
+    const isForeignDynamo = hasForeignIndicator || lowerRaw.includes("мінськ") || lowerRaw.includes("minsk") || lowerRaw.includes("загреб") || lowerRaw.includes("zagreb") || lowerRaw.includes("тбілісі") || lowerRaw.includes("tbilisi") || lowerRaw.includes("батумі") || lowerRaw.includes("batumi") || lowerRaw.includes("брест") || lowerRaw.includes("brest") || lowerRaw.includes("москва") || lowerRaw.includes("moscow") || lowerRaw.includes("бухарест") || lowerRaw.includes("bucuresti") || /\b(м\.|б\.|з\.|тб\.)/i.test(raw);
+
+    if (isKyiv) {
+      return "Динамо Київ";
+    }
+    if (!isForeignDynamo && (lowerRaw === "динамо" || lowerRaw === "dynamo" || lowerRaw === "dinamo" || lowerStripped === "динамо" || lowerStripped === "dynamo" || lowerStripped === "dinamo")) {
+      return "Динамо Київ";
+    }
+    return raw;
+  }
+
+  const isShakhtar = lowerRaw.includes("шахтар") || lowerRaw.includes("shakhtar") || lowerRaw.includes("shakhter");
+  if (isShakhtar) {
+    const isDonetsk = lowerRaw.includes("донецьк") || lowerRaw.includes("donetsk") || lowerRaw.includes("(ukr)");
+    const isSoligorsk = hasForeignIndicator || lowerRaw.includes("солігорськ") || lowerRaw.includes("soligorsk") || lowerRaw.includes("salihorsk");
+    if (isDonetsk) {
+      return "Шахтар Донецьк";
+    }
+    if (!isSoligorsk && (lowerRaw === "шахтар" || lowerRaw === "shakhtar" || lowerStripped === "шахтар" || lowerStripped === "shakhtar")) {
+      return "Шахтар Донецьк";
+    }
+    return raw;
+  }
+
   if (lowerRaw.includes("карпати") || lowerRaw.includes("karpaty")) return "Карпати Львів";
   if (lowerRaw.includes("чорноморець") || lowerRaw.includes("chornomorets")) return "Чорноморець Одеса";
   if (lowerRaw.includes("верес") || lowerRaw.includes("veres")) return "Верес Рівне";
-  if (lowerRaw.includes("харків") || lowerRaw.includes("kharkiv")) return "ФК Харків";
+
+  if (lowerRaw.includes("1925")) return "Металіст 1925 Харків";
+  if (lowerRaw.includes("харків") || lowerRaw.includes("kharkiv")) {
+    if (lowerRaw.includes("металіст") || lowerRaw.includes("metalist")) {
+      return "Металіст Харків";
+    }
+    return "ФК Харків";
+  }
+
   if (lowerRaw.includes("кривбас") || lowerRaw.includes("kryvbas")) return "Кривбас";
   if (lowerRaw.includes("оболонь") || lowerRaw.includes("obolon")) return "Оболонь Київ";
   if (lowerRaw.includes("епіцентр") || lowerRaw.includes("epitsentr") || lowerRaw.includes("epicentr")) return "Епіцентр";
   if (lowerRaw.includes("полісся") || lowerRaw.includes("polissya")) return "Полісся Житомир";
   if (lowerRaw.includes("колос") || lowerRaw.includes("kolos")) return "Колос Ковалівка";
   if (lowerRaw.includes("ворскла") || lowerRaw.includes("vorskla")) return "Ворскла Полтава";
-  if (lowerRaw.includes("зоря") || lowerRaw.includes("zorya")) return "Зоря Луганськ";
+
+  const isZorya = lowerRaw.includes("зоря") || lowerRaw.includes("zorya") || lowerRaw.includes("zaria");
+  if (isZorya) {
+    if (!hasForeignIndicator && !lowerRaw.includes("бєльці") && !lowerRaw.includes("balti")) {
+      return "Зоря Луганськ";
+    }
+    return raw;
+  }
+
   if (lowerRaw.includes("рух") || lowerRaw.includes("ruh")) return "Рух Львів";
   if (lowerRaw.includes("лнз") || lowerRaw.includes("lnz")) return "ЛНЗ Черкаси";
   if (lowerRaw.includes("олександрія") || lowerRaw.includes("oleksandriya") || lowerRaw.includes("olexandriya")) return "Олександрія";
@@ -353,7 +396,15 @@ function getUplTeamName(englishName) {
   if (lowerRaw.includes("інгулець") || lowerRaw.includes("inhulets")) return "Інгулець";
   if (lowerRaw.includes("лівий берег") || lowerRaw.includes("livyi bereh")) return "Лівий Берег";
   if (lowerRaw.includes("минай") || lowerRaw.includes("мінай") || lowerRaw.includes("minai") || lowerRaw.includes("mynai")) return "Минай";
-  if (lowerRaw.includes("нива") || lowerRaw.includes("nyva")) return "Нива Тернопіль";
+
+  const isNyva = lowerRaw.includes("нива") || lowerRaw.includes("nyva");
+  if (isNyva) {
+    if (!lowerRaw.includes("вінниця") && !lowerRaw.includes("vinnytsia")) {
+      return "Нива Тернопіль";
+    }
+    return raw;
+  }
+
   if (lowerRaw.includes("агробізнес") || lowerRaw.includes("agrobiznes") || lowerRaw.includes("ahrobiznes")) return "Агробізнес Волочиськ";
 
   if (/^[a-zA-Z\s\-]+$/.test(raw)) {
