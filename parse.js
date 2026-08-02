@@ -98,129 +98,263 @@ function shouldReuseCachedMatches(matchesData) {
 }
 
 // Team name mapping for UPL and Ukrainian teams in other competitions
-const uplTeamNames = {
-  "Dynamo Kyiv": "Динамо Київ",
-  "Dynamo": "Динамо Київ",
-  "Shakhtar Donetsk": "Шахтар Донецьк",
-  "Shakhtar": "Шахтар Донецьк",
-  "Ukraine": "Україна",
-  "FC Metalist Kharkiv": "Металіст Харків",
-  "Metalist 1925 Kharkiv": "Металіст 1925 Харків",
-  "Metalist 1925": "Металіст 1925 Харків",
-  "Dnipro-1": "Дніпро-1",
-  "Kryvbas KR": "Кривбас",
-  "Kryvbas Kryvyi Rih": "Кривбас",
-  "Kryvbas": "Кривбас",
-  "Kolos Kovalivka": "Колос Ковалівка",
-  "Kolos": "Колос Ковалівка",
-  "Vorskla Poltava": "Ворскла Полтава",
-  "Vorskla": "Ворскла Полтава",
-  "Oleksandriya": "Олександрія",
-  "Olexandriya": "Олександрія",
-  "FC Oleksandriya": "Олександрія",
-  "Zorya Luhansk": "Зоря Луганськ",
-  "Zorya": "Зоря Луганськ",
-  "Chornomorets": "Чорноморець Одеса",
-  "Lviv": "Львів",
-  "Veres Rivne": "Верес Рівне",
-  "Veres": "Верес Рівне",
-  "Karpaty Lviv": "Карпати Львів",
-  "Karpaty": "Карпати Львів",
-  "Rukh Lviv": "Рух Львів",
-  "Ruh": "Рух Львів",
-  "Рух": "Рух Львів",
-  "Obolon-Brovar Kyiv": "Оболонь Київ",
-  "Obolon Kyiv": "Оболонь Київ",
-  "Obolon Kiev": "Оболонь Київ",
-  "Obolon-Brovar": "Оболонь Київ",
-  "Obolon": "Оболонь Київ",
-  "LNZ Cherkasy": "ЛНЗ Черкаси",
-  "LNZ": "ЛНЗ Черкаси",
-  "Epitsentr Kamianets-Podilsky": "Епіцентр Кам'янець-Подільський",
-  "Epitsentr Dunaivtsi": "Епіцентр Дунаївці",
-  "Epitsentr Dunayivtsi": "Епіцентр Дунаївці",
-  "FC Epitsentr": "Епіцентр",
-  "Epicentr": "Епіцентр",
-  "Bukovyna": "Буковина Чернівці",
-  "Bukovyna (Ч)": "Буковина Чернівці",
-  "Bukovina": "Буковина Чернівці",
-  "Bukovina (Ch)": "Буковина Чернівці",
-  "Буковина": "Буковина Чернівці",
-  "Chernihiv": "Чернігів",
-  "Chernihiv (Ч)": "Чернігів",
-  "Dynamo (К)": "Динамо Київ",
-  "Dynamo (K)": "Динамо Київ",
-  "Динамо К.": "Динамо Київ",
-  "Шахтар Д.": "Шахтар Донецьк",
-  "Металіст 1925": "Металіст 1925 Харків",
-  "Metalist 1925": "Металіст 1925 Харків",
-  "Metalist 1925 (Х)": "Металіст 1925 Харків",
-  "FC Kharkiv": "ФК Харків",
-  "Kharkiv": "ФК Харків",
-  "Minai": "Мінай",
-  "Mynai": "Мінай",
-  "Polissya Zhytomyr": "Полісся Житомир",
-  "Polissya": "Полісся Житомир",
-  "Inhulets": "Інгулець",
-  "Tytan Armyansk": "Титан Армянськ",
-  "Desna Chernihiv": "Десна Чернігів",
-  "Mariupol": "Маріуполь",
-  "Kremin Kremenchuk": "Кремінь Кременчук",
-  "Hirnyk-Sport Khorostkiv": "Гірник-Спорт Хоростків",
-  "Nyva Ternopil": "Нива Тернопіль",
-  "Bukovyna Chernivtsi": "Буковина Чернівці",
-  "Tavriya Simferopol": "Таврія Сімферополь",
-  "SC Dnipro-1": "СД Дніпро-1",
-  "Livyi Bereh": "Лівий Берег",
-  "Kudrivka": "Кудрівка",
-  "FC Kudrivka": "Кудрівка",
-  "Ahrobiznes Volochysk": "Агробізнес Волочиськ",
-  "Agrobiznes Volochysk": "Агробізнес Волочиськ",
+const canonicalUkrainianTeamNames = {
+  // Dynamo
+  "dynamo kyiv": "Динамо Київ",
+  "dynamo": "Динамо Київ",
+  "dynamo (k)": "Динамо Київ",
+  "dynamo (к)": "Динамо Київ",
+  "динамо к.": "Динамо Київ",
+  "динамо київ": "Динамо Київ",
+  "динамо": "Динамо Київ",
+  "фк динамо київ": "Динамо Київ",
 
-  // Flashscore results (UПЛ) often returns short Cyrillic variants
-  "Рух": "Рух Львів",
-  "Зоря": "Зоря Луганськ",
-  "Верес": "Верес Рівне",
-  "Оболонь": "Оболонь Київ",
-  "Полісся Ж.": "Полісся Житомир",
-  "Карпати Л.": "Карпати Львів",
-  "Металіст 1925": "Металіст 1925 Харків",
+  // Shakhtar
+  "shakhtar donetsk": "Шахтар Донецьк",
+  "shakhtar": "Шахтар Донецьк",
+  "шахтар д.": "Шахтар Донецьк",
+  "шахтар донецьк": "Шахтар Донецьк",
+  "шахтар": "Шахтар Донецьк",
+  "фк шахтар": "Шахтар Донецьк",
 
-  // keep existing canonical names for completeness
-  "Полісся Житомир": "Полісся Житомир",
-  "Карпати Львів": "Карпати Львів",
-  "Оболонь Київ": "Оболонь Київ",
+  // Karpaty
+  "karpaty lviv": "Карпати Львів",
+  "karpaty": "Карпати Львів",
+  "карпати л.": "Карпати Львів",
+  "карпати львів": "Карпати Львів",
+  "карпати": "Карпати Львів",
+  "фк карпати": "Карпати Львів",
 
-  "Poltava": "Полтава",
-  "SC Poltava": "СК Полтава",
-  "Aston Villa": "Астон Вілла",
-  "Nottingham Forest": "Ноттінгем Форест"
+  // Chornomorets
+  "chornomorets": "Чорноморець Одеса",
+  "chornomorets odesa": "Чорноморець Одеса",
+  "чорноморець одеса": "Чорноморець Одеса",
+  "чорноморець": "Чорноморець Одеса",
+  "фк чорноморець": "Чорноморець Одеса",
+
+  // Veres
+  "veres rivne": "Верес Рівне",
+  "veres": "Верес Рівне",
+  "верес рівне": "Верес Рівне",
+  "верес": "Верес Рівне",
+  "фк верес": "Верес Рівне",
+
+  // Kharkiv / FC Kharkiv
+  "fc kharkiv": "ФК Харків",
+  "kharkiv": "ФК Харків",
+  "харків": "ФК Харків",
+  "фк харків": "ФК Харків",
+
+  // Metalist
+  "fc metalist kharkiv": "Металіст Харків",
+  "metalist kharkiv": "Металіст Харків",
+  "metalist": "Металіст Харків",
+  "металіст харків": "Металіст Харків",
+  "металіст": "Металіст Харків",
+
+  // Metalist 1925
+  "metalist 1925 kharkiv": "Металіст 1925 Харків",
+  "metalist 1925": "Металіст 1925 Харків",
+  "metalist 1925 (х)": "Металіст 1925 Харків",
+  "металіст 1925 харків": "Металіст 1925 Харків",
+  "металіст 1925": "Металіст 1925 Харків",
+
+  // Kryvbas
+  "kryvbas kr": "Кривбас",
+  "kryvbas kryvyi rih": "Кривбас",
+  "kryvbas": "Кривбас",
+  "кривбас кр": "Кривбас",
+  "кривбас кривий ріг": "Кривбас",
+  "кривбас": "Кривбас",
+  "фк кривбас": "Кривбас",
+
+  // Kolos
+  "kolos kovalivka": "Колос Ковалівка",
+  "kolos": "Колос Ковалівка",
+  "колос ковалівка": "Колос Ковалівка",
+  "колос": "Колос Ковалівка",
+  "фк колос": "Колос Ковалівка",
+
+  // Vorskla
+  "vorskla poltava": "Ворскла Полтава",
+  "vorskla": "Ворскла Полтава",
+  "ворскла полтава": "Ворскла Полтава",
+  "ворскла": "Ворскла Полтава",
+  "фк ворскла": "Ворскла Полтава",
+
+  // Oleksandriya
+  "oleksandriya": "Олександрія",
+  "olexandriya": "Олександрія",
+  "fc oleksandriya": "Олександрія",
+  "олександрія": "Олександрія",
+  "фк олександрія": "Олександрія",
+
+  // Zorya
+  "zorya luhansk": "Зоря Луганськ",
+  "zorya": "Зоря Луганськ",
+  "зоря луганськ": "Зоря Луганськ",
+  "зоря": "Зоря Луганськ",
+  "фк зоря": "Зоря Луганськ",
+
+  // Rukh
+  "rukh lviv": "Рух Львів",
+  "ruh lviv": "Рух Львів",
+  "ruh": "Рух Львів",
+  "рух": "Рух Львів",
+  "рух львів": "Рух Львів",
+  "фк рух": "Рух Львів",
+
+  // Obolon
+  "obolon-brovar kyiv": "Оболонь Київ",
+  "obolon kyiv": "Оболонь Київ",
+  "obolon kiev": "Оболонь Київ",
+  "obolon-brovar": "Оболонь Київ",
+  "obolon": "Оболонь Київ",
+  "оболонь київ": "Оболонь Київ",
+  "оболонь": "Оболонь Київ",
+  "фк оболонь": "Оболонь Київ",
+
+  // LNZ
+  "lnz cherkaasy": "ЛНЗ Черкаси",
+  "lnz cherkasy": "ЛНЗ Черкаси",
+  "lnz": "ЛНЗ Черкаси",
+  "лнз черкаси": "ЛНЗ Черкаси",
+  "лнз": "ЛНЗ Черкаси",
+  "фк лнз": "ЛНЗ Черкаси",
+
+  // Epitsentr
+  "epitsentr kamianets-podilsky": "Епіцентр",
+  "epitsentr dunaivtsi": "Епіцентр",
+  "epitsentr dunayivtsi": "Епіцентр",
+  "fc epitsentr": "Епіцентр",
+  "epicentr": "Епіцентр",
+  "epitsentr": "Епіцентр",
+  "епіцентр кам'янець-подільський": "Епіцентр",
+  "епіцентр дунаївці": "Епіцентр",
+  "епіцентр": "Епіцентр",
+  "фк епіцентр": "Епіцентр",
+
+  // Bukovyna
+  "bukovyna chernevtsi": "Буковина Чернівці",
+  "bukovyna": "Буковина Чернівці",
+  "bukovyna (ч)": "Буковина Чернівці",
+  "bukovina": "Буковина Чернівці",
+  "bukovina (ch)": "Буковина Чернівці",
+  "буковина чернівці": "Буковина Чернівці",
+  "буковина": "Буковина Чернівці",
+  "буковина (ч)": "Буковина Чернівці",
+  "фк буковина": "Буковина Чернівці",
+
+  // Chernihiv
+  "chernihiv": "Чернігів",
+  "chernihiv (ч)": "Чернігів",
+  "чернігів": "Чернігів",
+  "чернігів (ч)": "Чернігів",
+  "фк чернігів": "Чернігів",
+
+  // Minai
+  "minai": "Минай",
+  "mynai": "Минай",
+  "минай": "Минай",
+  "мінай": "Минай",
+  "фк минай": "Минай",
+
+  // Polissya
+  "polissya zhytomyr": "Полісся Житомир",
+  "polissya": "Полісся Житомир",
+  "полісся житомир": "Полісся Житомир",
+  "полісся ж.": "Полісся Житомир",
+  "полісся": "Полісся Житомир",
+  "фк полісся": "Полісся Житомир",
+
+  // Inhulets
+  "inhulets": "Інгулець",
+  "інгулець петрове": "Інгулець",
+  "інгулець": "Інгулець",
+  "фк інгулець": "Інгулець",
+
+  // Kudrivka
+  "kudrivka": "Кудрівка",
+  "fc kudrivka": "Кудрівка",
+  "кудрівка": "Кудрівка",
+  "фк кудрівка": "Кудрівка",
+
+  // Poltava
+  "poltava": "СК Полтава",
+  "sc poltava": "СК Полтава",
+  "полтава": "СК Полтава",
+  "ск полтава": "СК Полтава",
+  "фк полтава": "СК Полтава",
+
+  // Livyi Bereh
+  "livyi bereh": "Лівий Берег",
+  "лівий берег": "Лівий Берег",
+  "фк лівий берег": "Лівий Берег",
+
+  // Agrobiznes
+  "agrobiznes volochysk": "Агробізнес Волочиськ",
+  "ahrobiznes volochysk": "Агробізнес Волочиськ",
+  "agrobiznes": "Агробізнес Волочиськ",
+  "ahrobiznes": "Агробізнес Волочиськ",
+  "агробізнес": "Агробізнес Волочиськ",
+  "ахробізнес": "Агробізнес Волочиськ",
+  "агробізнес волочиськ": "Агробізнес Волочиськ",
+
+  // Nyva
+  "nyva ternopil": "Нива Тернопіль",
+  "нива тернопіль": "Нива Тернопіль",
+  "нива т.": "Нива Тернопіль",
+  "нива": "Нива Тернопіль",
+
+  "ukraine": "Україна",
+  "україна": "Україна"
 };
 
+const uplTeamNames = canonicalUkrainianTeamNames;
+
 function getUplTeamName(englishName) {
-  // important: normalize encoding/entities before matching
-  const raw = cleanExtractedText(String(englishName || ""));
-  const lower = raw.toLowerCase();
+  if (!englishName) return "";
+  const raw = cleanExtractedText(String(englishName))
+    .replace(/^[\s«"]+|[\s»"]+$/g, "")
+    .trim();
 
-  // Flashscore інколи дає коротку форму: "Агробізнес" / "Agrobiznes"
-  // Без цього мапінгу у нас з'являвся дублікат.
-  if (
-    raw.includes("Агробізнес") ||
-    raw.includes("Ахробізнес") ||
-    lower.includes("agrobiznes") ||
-    lower.includes("ahrobiznes")
-  ) {
-    return uplTeamNames["Agrobiznes Volochysk"] || "Агробізнес Волочиськ";
+  const lowerRaw = raw.toLowerCase();
+  if (canonicalUkrainianTeamNames[lowerRaw]) {
+    return canonicalUkrainianTeamNames[lowerRaw];
   }
 
-  if (uplTeamNames[raw]) return uplTeamNames[raw];
-  if (uplTeamNames[englishName]) return uplTeamNames[englishName];
-
-  for (const [key, value] of Object.entries(uplTeamNames)) {
-    if (key.toLowerCase() === lower) {
-      return value;
-    }
+  const stripped = raw.replace(/^(фк|fc|sc|ск)\s+/i, "").trim();
+  const lowerStripped = stripped.toLowerCase();
+  if (canonicalUkrainianTeamNames[lowerStripped]) {
+    return canonicalUkrainianTeamNames[lowerStripped];
   }
+
+  if (lowerRaw.includes("1925")) return "Металіст 1925 Харків";
+  if (lowerRaw.includes("динамо") || lowerRaw.includes("dynamo")) return "Динамо Київ";
+  if (lowerRaw.includes("шахтар") || lowerRaw.includes("shakhtar")) return "Шахтар Донецьк";
+  if (lowerRaw.includes("карпати") || lowerRaw.includes("karpaty")) return "Карпати Львів";
+  if (lowerRaw.includes("чорноморець") || lowerRaw.includes("chornomorets")) return "Чорноморець Одеса";
+  if (lowerRaw.includes("верес") || lowerRaw.includes("veres")) return "Верес Рівне";
+  if (lowerRaw.includes("харків") || lowerRaw.includes("kharkiv")) return "ФК Харків";
+  if (lowerRaw.includes("кривбас") || lowerRaw.includes("kryvbas")) return "Кривбас";
+  if (lowerRaw.includes("оболонь") || lowerRaw.includes("obolon")) return "Оболонь Київ";
+  if (lowerRaw.includes("епіцентр") || lowerRaw.includes("epitsentr") || lowerRaw.includes("epicentr")) return "Епіцентр";
+  if (lowerRaw.includes("полісся") || lowerRaw.includes("polissya")) return "Полісся Житомир";
+  if (lowerRaw.includes("колос") || lowerRaw.includes("kolos")) return "Колос Ковалівка";
+  if (lowerRaw.includes("ворскла") || lowerRaw.includes("vorskla")) return "Ворскла Полтава";
+  if (lowerRaw.includes("зоря") || lowerRaw.includes("zorya")) return "Зоря Луганськ";
+  if (lowerRaw.includes("рух") || lowerRaw.includes("ruh")) return "Рух Львів";
+  if (lowerRaw.includes("лнз") || lowerRaw.includes("lnz")) return "ЛНЗ Черкаси";
+  if (lowerRaw.includes("олександрія") || lowerRaw.includes("oleksandriya") || lowerRaw.includes("olexandriya")) return "Олександрія";
+  if (lowerRaw.includes("буковина") || lowerRaw.includes("bukovyna") || lowerRaw.includes("bukovina")) return "Буковина Чернівці";
+  if (lowerRaw.includes("кудрівка") || lowerRaw.includes("kudrivka")) return "Кудрівка";
+  if (lowerRaw.includes("полтава") || lowerRaw.includes("poltava")) return "СК Полтава";
+  if (lowerRaw.includes("чернігів") || lowerRaw.includes("chernihiv")) return "Чернігів";
+  if (lowerRaw.includes("інгулець") || lowerRaw.includes("inhulets")) return "Інгулець";
+  if (lowerRaw.includes("лівий берег") || lowerRaw.includes("livyi bereh")) return "Лівий Берег";
+  if (lowerRaw.includes("минай") || lowerRaw.includes("мінай") || lowerRaw.includes("minai") || lowerRaw.includes("mynai")) return "Минай";
+  if (lowerRaw.includes("нива") || lowerRaw.includes("nyva")) return "Нива Тернопіль";
+  if (lowerRaw.includes("агробізнес") || lowerRaw.includes("agrobiznes") || lowerRaw.includes("ahrobiznes")) return "Агробізнес Волочиськ";
 
   if (/^[a-zA-Z\s\-]+$/.test(raw)) {
     return raw.split(/([\s\-])/).map(word => {
@@ -234,19 +368,16 @@ function getUplTeamName(englishName) {
   return raw;
 }
 
-function normalizeCupTeamName(name) {
-  const mappedName = getUplTeamName(name);
-  const cupAliases = {
-    "Буковина": "Буковина Чернівці",
-    "Буковина Чернівці": "Буковина Чернівці",
-    "Металіст 1925": "Металіст 1925 Харків",
-    "Металіст 1925 Харків": "Металіст 1925 Харків",
-    "Динамо К.": "Динамо Київ",
-    "Динамо Київ": "Динамо Київ",
-    "Чернігів": "Чернігів"
-  };
+function normalizeTeamForMatchKey(name) {
+  const canonical = getUplTeamName(name);
+  return canonical.toLowerCase()
+    .replace(/^(фк|fc|sc|ск)\s+/i, "")
+    .replace(/\s*\([^)]*\)/g, "")
+    .replace(/[^a-zа-яєїі0-9]/gi, "");
+}
 
-  return cupAliases[mappedName] || mappedName;
+function normalizeCupTeamName(name) {
+  return getUplTeamName(name);
 }
 
 const ukrainianClubAliases = new Set(
@@ -326,45 +457,17 @@ const flashscoreClubAliases = {
   "fiorentina": "фіорентина",
   "real betis": "реал бетіс",
   "athletic bilbao": "атлетик більбао",
-  "manchester united": "манчестер юнайтед",
-
-  // UPL: prevent duplicate match rows when one source uses short/variant team names
-  "рух": "рух львів",
-  "рух львів": "рух львів",
-
-  "оболонь": "оболонь київ",
-  "оболонь київ": "оболонь київ",
-
-  "зоря": "зоря луганськ",
-  "зоря луганськ": "зоря луганськ",
-
-  "колос": "колос ковалівка",
-  "колос ковалівка": "колос ковалівка",
-
-  "верес": "верес рівне",
-  "верес рівне": "верес рівне",
-
-  "полісся": "полісся житомир",
-  "полісся ж.": "полісся житомир",
-  "полісся житомир": "полісся житомир",
-
-  "карпати л.": "карпати львів",
-  "карпати львів": "карпати львів",
-
-  "полтава": "ск полтава",
-  "ск полтава": "ск полтава"
+  "manchester united": "манчестер юнайтед"
 };
 
 function normalizeClubLookupName(name) {
-  const cleaned = cleanExtractedText(String(name || ""))
-    .replace(/\s+/g, " ")
-    .replace(/^[«"]+|[»"]+$/g, "")
-    .trim();
+  const canonical = getUplTeamName(name);
+  const lowered = canonical.toLowerCase()
+    .replace(/^(фк|fc|sc|ск)\s+/i, "")
+    .replace(/\s*\([^)]*\)/g, "")
+    .replace(/[^a-zа-яєїі0-9]/gi, "");
 
-  const lowered = cleaned.toLowerCase();
-  const transliterated = transliterateLatinToCyrillic(cleaned);
-
-  return flashscoreClubAliases[lowered] || flashscoreClubAliases[transliterated] || transliterated;
+  return flashscoreClubAliases[lowered] || lowered;
 }
 
 const extraCompetitionConfigs = [
@@ -640,47 +743,21 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
   const byIdentity = new Map();
 
   const getStableKey = match => {
-    const home = normalizeClubLookupName(match?.home || "");
-    const away = normalizeClubLookupName(match?.away || "");
+    const home = normalizeTeamForMatchKey(match?.home || "");
+    const away = normalizeTeamForMatchKey(match?.away || "");
     const league = String(match?.league || "");
-    const time = String(match?.time || "");
-    return `${match?.dateIso || ""}|${time}|${league}|${home}|${away}`;
+    return `${match?.dateIso || ""}|${league}|${home}|${away}`;
   };
 
-  const getStatusRank = match => {
-    const status = String(match?.status || "");
-    const hasScore = String(match?.score || "").trim() !== "";
+  for (const rawMatch of [...previous, ...current]) {
+    if (!rawMatch || typeof rawMatch !== "object") continue;
 
-    if (status === "Match Finished" && hasScore) {
-      return 3000;
-    }
+    const match = {
+      ...rawMatch,
+      home: getUplTeamName(rawMatch.home),
+      away: getUplTeamName(rawMatch.away)
+    };
 
-    if (status === "Match Finished") {
-      return 2500;
-    }
-
-    if (status === "Live" || status === "In Progress" || status === "1st Half" || status === "2nd Half") {
-      return 2000;
-    }
-
-    if (hasScore) {
-      return 1500;
-    }
-
-    if (status === "Scheduled" || status === "Not Started") {
-      return 1000;
-    }
-
-    return 0;
-  };
-
-  const getScore = match => {
-    const nameScore = String(match?.home || "").length + String(match?.away || "").length;
-    const idScore = String(match?.idEvent || "").length / 1000;
-    return getStatusRank(match) + nameScore + idScore;
-  };
-
-  for (const match of [...previous, ...current]) {
     const key = getStableKey(match);
     const existing = byIdentity.get(key);
 
@@ -692,34 +769,45 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     const existingScoreText = String(existing?.score || "").trim();
     const incomingScoreText = String(match?.score || "").trim();
 
-    const existingIsFinished = String(existing?.status || "") === "Match Finished";
-    const incomingIsFinished = String(match?.status || "") === "Match Finished";
+    const existingIsFinished = String(existing?.status || "") === "Match Finished" && existingScoreText !== "";
+    const incomingIsFinished = String(match?.status || "") === "Match Finished" && incomingScoreText !== "";
 
-    // System fix:
-    // якщо обидва матчі finished і score відрізняється — беремо incoming (current),
-    // інакше "0 - 0" може лишатися з кешу.
-    if (
-      existingIsFinished &&
-      incomingIsFinished &&
-      existingScoreText &&
-      incomingScoreText &&
-      existingScoreText !== incomingScoreText
-    ) {
+    if (incomingIsFinished && !existingIsFinished) {
       byIdentity.set(key, match);
       continue;
     }
 
-    const existingScore = getScore(existing);
-    const incomingScore = getScore(match);
-
-    if (incomingScore > existingScore) {
-      byIdentity.set(key, match);
+    if (existingIsFinished && !incomingIsFinished) {
       continue;
     }
 
-    if (incomingScore === existingScore && String(match?.idEvent || "").length > String(existing?.idEvent || "").length) {
-      byIdentity.set(key, match);
+    const existingTime = String(existing?.time || "00:00");
+    const incomingTime = String(match?.time || "00:00");
+
+    const existingTimeIsZero = existingTime.startsWith("00:00");
+    const incomingTimeIsZero = incomingTime.startsWith("00:00");
+
+    let mergedTime = existingTime;
+    if (existingTimeIsZero && !incomingTimeIsZero) {
+      mergedTime = incomingTime;
+    } else if (!existingTimeIsZero && !incomingTimeIsZero) {
+      if (existingTime === "20:00" && incomingTime !== "20:00") {
+        mergedTime = incomingTime;
+      }
     }
+
+    const mergedStatus = incomingIsFinished || existingIsFinished ? "Match Finished" : (match.status || existing.status || "Scheduled");
+    const mergedScore = incomingIsFinished ? incomingScoreText : (existingIsFinished ? existingScoreText : (incomingScoreText || existingScoreText || ""));
+
+    byIdentity.set(key, {
+      ...existing,
+      ...match,
+      home: match.home,
+      away: match.away,
+      time: mergedTime,
+      status: mergedStatus,
+      score: mergedScore
+    });
   }
 
   return [...byIdentity.values()].sort((a, b) => {
@@ -741,13 +829,20 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
 
   const getKey = match => {
     const league = String(match?.league || "");
-    const home = getUplTeamName(String(match?.home || ""));
-    const away = getUplTeamName(String(match?.away || ""));
-    // Direction-aware: A (home) vs B (away) — важливо, щоб не “склеїти” реальні матчі в різні дні
+    const home = normalizeTeamForMatchKey(match?.home || "");
+    const away = normalizeTeamForMatchKey(match?.away || "");
     return `${league}|${home}|${away}`;
   };
 
-  for (const match of list) {
+  for (const rawMatch of list) {
+    if (!rawMatch || typeof rawMatch !== "object") continue;
+
+    const match = {
+      ...rawMatch,
+      home: getUplTeamName(rawMatch.home),
+      away: getUplTeamName(rawMatch.away)
+    };
+
     const key = getKey(match);
     const existing = byPair.get(key);
 
@@ -765,23 +860,21 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
     }
 
     if (incomingDt === existingDt) {
-      const existingIsFinished = String(existing?.status || "") === "Match Finished";
-      const incomingIsFinished = String(match?.status || "") === "Match Finished";
+      const existingIsFinished = String(existing?.status || "") === "Match Finished" && String(existing?.score || "").trim() !== "";
+      const incomingIsFinished = String(match?.status || "") === "Match Finished" && String(match?.score || "").trim() !== "";
 
-      const existingHasScore = String(existing?.score || "").trim() !== "";
-      const incomingHasScore = String(match?.score || "").trim() !== "";
-
-      // Prefer finished matches with a real score over scheduled/empty duplicates
-      if (incomingIsFinished && incomingHasScore && (!existingIsFinished || !existingHasScore)) {
+      if (incomingIsFinished && !existingIsFinished) {
         byPair.set(key, match);
         continue;
       }
 
-      if (
-        incomingIsFinished === existingIsFinished &&
-        incomingHasScore === existingHasScore &&
-        String(match?.idEvent || "").length > String(existing?.idEvent || "").length
-      ) {
+      if (existingIsFinished && !incomingIsFinished) {
+        continue;
+      }
+
+      const existingTime = String(existing?.time || "00:00");
+      const incomingTime = String(match?.time || "00:00");
+      if (existingTime.startsWith("00:00") && !incomingTime.startsWith("00:00")) {
         byPair.set(key, match);
         continue;
       }
@@ -794,18 +887,16 @@ function dedupeMatchesByPairKeepLatestDate(matches) {
 function dedupeMatchesByIdentity(matches, excludedMatches = []) {
   const excludeKeys = new Set(
     (Array.isArray(excludedMatches) ? excludedMatches : []).map(match => {
-      const home = normalizeClubLookupName(match?.home || "");
+      const home = normalizeTeamForMatchKey(match?.home || "");
       const league = String(match?.league || "");
-      const time = String(match?.time || "");
-      return `${match?.dateIso || ""}|${time}|${league}|${home}`;
+      return `${match?.dateIso || ""}|${league}|${home}`;
     })
   );
 
   return (Array.isArray(matches) ? matches : []).filter(match => {
-    const home = normalizeClubLookupName(match?.home || "");
+    const home = normalizeTeamForMatchKey(match?.home || "");
     const league = String(match?.league || "");
-    const time = String(match?.time || "");
-    return !excludeKeys.has(`${match?.dateIso || ""}|${time}|${league}|${home}`);
+    return !excludeKeys.has(`${match?.dateIso || ""}|${league}|${home}`);
   });
 }
 
@@ -824,9 +915,6 @@ function dedupeScheduleSections(matches) {
     "Збірна України",
     "Таблиця УПЛ"
   ];
-
-  const getTextScore = item =>
-    String(item?.home || "").length + String(item?.away || "").length;
 
   const result = {};
 
@@ -852,20 +940,21 @@ function dedupeScheduleSections(matches) {
 
     const bySlot = new Map();
 
-    for (const item of items) {
-      if (!item || typeof item !== "object") {
+    for (const rawItem of items) {
+      if (!rawItem || typeof rawItem !== "object") {
         continue;
       }
 
-      const slotKey =
-        sectionName === "УПЛ"
-          ? (() => {
-            const homeKey = getUplTeamName(String(item.home || ""));
-            const awayKey = getUplTeamName(String(item.away || ""));
-            const pairKey = [homeKey, awayKey].sort().join("|");
-            return `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${pairKey}`;
-          })()
-          : `${item.dateIso || ""}|${String(item.time || "")}|${String(item.league || "")}|${normalizeClubLookupName(item.home || "")}|${normalizeClubLookupName(item.away || "")}`;
+      const item = {
+        ...rawItem,
+        home: getUplTeamName(rawItem.home),
+        away: getUplTeamName(rawItem.away)
+      };
+
+      const homeKey = normalizeTeamForMatchKey(item.home);
+      const awayKey = normalizeTeamForMatchKey(item.away);
+      const slotKey = `${item.dateIso || ""}|${String(item.league || "")}|${homeKey}|${awayKey}`;
+
       const existing = bySlot.get(slotKey);
 
       if (!existing) {
@@ -873,17 +962,42 @@ function dedupeScheduleSections(matches) {
         continue;
       }
 
-      const existingScore = getTextScore(existing);
-      const incomingScore = getTextScore(item);
+      const existingFinished = String(existing?.status || "") === "Match Finished" && String(existing?.score || "").trim() !== "";
+      const incomingFinished = String(item?.status || "") === "Match Finished" && String(item?.score || "").trim() !== "";
 
-      if (incomingScore > existingScore) {
+      if (incomingFinished && !existingFinished) {
         bySlot.set(slotKey, item);
         continue;
       }
 
-      if (incomingScore === existingScore && String(item?.idEvent || "").length > String(existing?.idEvent || "").length) {
-        bySlot.set(slotKey, item);
+      if (existingFinished && !incomingFinished) {
+        continue;
       }
+
+      const existingTime = String(existing?.time || "00:00");
+      const incomingTime = String(item?.time || "00:00");
+      const existingIsZero = existingTime.startsWith("00:00");
+      const incomingIsZero = incomingTime.startsWith("00:00");
+
+      let mergedTime = existingTime;
+      if (existingIsZero && !incomingIsZero) {
+        mergedTime = incomingTime;
+      } else if (!existingIsZero && !incomingIsZero && existingTime === "20:00" && incomingTime !== "20:00") {
+        mergedTime = incomingTime;
+      }
+
+      const mergedScore = incomingFinished ? item.score : (existingFinished ? existing.score : (item.score || existing.score || ""));
+      const mergedStatus = incomingFinished || existingFinished ? "Match Finished" : (item.status || existing.status || "Scheduled");
+
+      bySlot.set(slotKey, {
+        ...existing,
+        ...item,
+        home: item.home,
+        away: item.away,
+        time: mergedTime,
+        status: mergedStatus,
+        score: mergedScore
+      });
     }
 
     const cleanedItems =
@@ -931,10 +1045,9 @@ function dedupeEvents(events) {
   const getSlotKey = event =>
     [
       event?.dateEvent || "",
-      String(event?.strTime || ""),
       String(event?.league || ""),
-      normalizeClubLookupName(event?.strHomeTeam || ""),
-      normalizeClubLookupName(event?.strAwayTeam || "")
+      normalizeTeamForMatchKey(event?.strHomeTeam || ""),
+      normalizeTeamForMatchKey(event?.strAwayTeam || "")
     ].join("|");
 
   const getTextScore = event =>
@@ -942,20 +1055,33 @@ function dedupeEvents(events) {
 
   const getFinishedScore = event =>
     event?.strStatus === "Match Finished" || (event?.intHomeScore !== null && event?.intHomeScore !== undefined && event?.intAwayScore !== null && event?.intAwayScore !== undefined)
-      ? 1000
+      ? 10000
       : 0;
+
+  const getTimeScore = event => {
+    const t = String(event?.strTime || "");
+    if (!t || t.startsWith("00:00")) return 0;
+    if (t.startsWith("20:00")) return 100;
+    return 1000;
+  };
 
   const getQualityScore = event =>
     getFinishedScore(event) +
+    getTimeScore(event) +
     getTextScore(event) +
     (String(event?.idEvent || "").length / 1000);
 
   const groups = new Map();
 
   for (const event of Array.isArray(events) ? events : []) {
+    if (!event) continue;
     const key = getSlotKey(event);
     const bucket = groups.get(key) || [];
-    bucket.push(event);
+    bucket.push({
+      ...event,
+      strHomeTeam: getUplTeamName(event.strHomeTeam),
+      strAwayTeam: getUplTeamName(event.strAwayTeam)
+    });
     groups.set(key, bucket);
   }
 
