@@ -101,20 +101,18 @@ function shouldReuseCachedMatches(matchesData) {
 const canonicalUkrainianTeamNames = {
   // Dynamo
   "dynamo kyiv": "Динамо Київ",
-  "dynamo": "Динамо Київ",
+  "dynamo kiev": "Динамо Київ",
   "dynamo (k)": "Динамо Київ",
   "dynamo (к)": "Динамо Київ",
   "динамо к.": "Динамо Київ",
   "динамо київ": "Динамо Київ",
-  "динамо": "Динамо Київ",
+  "динамо (київ)": "Динамо Київ",
   "фк динамо київ": "Динамо Київ",
 
   // Shakhtar
   "shakhtar donetsk": "Шахтар Донецьк",
-  "shakhtar": "Шахтар Донецьк",
   "шахтар д.": "Шахтар Донецьк",
   "шахтар донецьк": "Шахтар Донецьк",
-  "шахтар": "Шахтар Донецьк",
   "фк шахтар": "Шахтар Донецьк",
 
   // Karpaty
@@ -191,9 +189,7 @@ const canonicalUkrainianTeamNames = {
 
   // Zorya
   "zorya luhansk": "Зоря Луганськ",
-  "zorya": "Зоря Луганськ",
   "зоря луганськ": "Зоря Луганськ",
-  "зоря": "Зоря Луганськ",
   "фк зоря": "Зоря Луганськ",
 
   // Rukh
@@ -304,7 +300,6 @@ const canonicalUkrainianTeamNames = {
   "nyva ternopil": "Нива Тернопіль",
   "нива тернопіль": "Нива Тернопіль",
   "нива т.": "Нива Тернопіль",
-  "нива": "Нива Тернопіль",
 
   "ukraine": "Україна",
   "україна": "Україна"
@@ -573,6 +568,13 @@ const extraCompetitionConfigs = [
 ];
 
 function isUkrainianClubName(name) {
+  if (!name || typeof name !== "string") return false;
+
+  // Systemic Guard: Instantly reject any team annotated with a foreign country tag (e.g. Blr, Cro, Geo, Lat, Ltu, Rou, etc.)
+  if (/\((?:blr|cro|geo|rou|rus|kaz|cze|pol|lat|ltu|est|san|arm|aut|sui|den|nor|fin|sco|irl|eng|ger|fra|esp|ita|por|gre|cyp|srb|bih|mkd|kos|alb|mda|isl|ice|fai|gib|isr|aze|tur)\)/i.test(name)) {
+    return false;
+  }
+
   const normalizedName = normalizeClubLookupName(name);
   const mappedName = getUplTeamName(normalizedName);
 
@@ -800,7 +802,31 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     return `${match?.dateIso || ""}|${league}|${home}|${away}`;
   };
 
-  for (const rawMatch of [...previous, ...current]) {
+  const currentKeys = new Set(current.map(getStableKey));
+
+  for (const rawMatch of previous) {
+    if (!rawMatch || typeof rawMatch !== "object") continue;
+
+    const match = {
+      ...rawMatch,
+      home: getUplTeamName(rawMatch.home),
+      away: getUplTeamName(rawMatch.away)
+    };
+
+    const key = getStableKey(match);
+
+    // Discard previous match if fresh current data was fetched for this section,
+    // the match is within the active date window, but is not in current data.
+    if (current.length > 0 && match.dateIso && isDateWithinWindow(match.dateIso)) {
+      if (!currentKeys.has(key)) {
+        continue;
+      }
+    }
+
+    byIdentity.set(key, match);
+  }
+
+  for (const rawMatch of current) {
     if (!rawMatch || typeof rawMatch !== "object") continue;
 
     const match = {

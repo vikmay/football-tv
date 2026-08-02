@@ -1108,11 +1108,17 @@
                             const isExplicitQual = leagueLower.includes("квал") || leagueLower.includes("відбір") || leagueLower.includes("qual");
 
                             if (isQualificationMonth || isExplicitQual) {
+                                const foreignTagRegex = /\((?:blr|cro|geo|rou|rus|kaz|cze|pol|lat|ltu|est|san|arm|aut|sui|den|nor|fin|sco|irl|eng|ger|fra|esp|ita|por|gre|cyp|srb|bih|mkd|kos|alb|mda|isl|ice|fai|gib|isr|aze|tur)\)/i;
+
                                 const homeLower = String(match.home || "").toLowerCase();
                                 const awayLower = String(match.away || "").toLowerCase();
-                                const isUkr = ukrainianTeams.some(u => 
-                                    homeLower.includes(u) || awayLower.includes(u)
-                                );
+
+                                const isUkr = ukrainianTeams.some(u => {
+                                    const matchHome = homeLower.includes(u) && !foreignTagRegex.test(match.home);
+                                    const matchAway = awayLower.includes(u) && !foreignTagRegex.test(match.away);
+                                    return matchHome || matchAway;
+                                });
+
                                 if (!isUkr) return false;
                             }
                         }
