@@ -299,8 +299,8 @@
       "time": "19:00",
       "date": "Сьогодні, 4 серпня",
       "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "М'єльбю (Swe)",
@@ -309,28 +309,8 @@
       "time": "19:00",
       "date": "Сьогодні, 4 серпня",
       "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Левскі (Bul)",
-      "away": "Кайрат Алмати (Kaz)",
-      "league": "Ліга чемпіонів (Півфінал)",
-      "time": "20:30",
-      "date": "Сьогодні, 4 серпня",
-      "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Хапоель Беер-Шева (Isr)",
-      "away": "Црвена Звезда (Srb)",
-      "league": "Ліга чемпіонів (Півфінал)",
-      "time": "20:30",
-      "date": "Сьогодні, 4 серпня",
-      "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Олімпіакос Пірей (Gre)",
@@ -1236,16 +1216,6 @@
       "dateIso": "2026-07-30",
       "status": "Match Finished",
       "score": "3 - 0"
-    },
-    {
-      "home": "Ауда (Lat)",
-      "away": "Динамо Сіті (Alb)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 4 серпня",
-      "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "Бранн (Nor)",
@@ -2193,16 +2163,6 @@
       "dateIso": "2026-07-30",
       "status": "Match Finished",
       "score": "3 - 0"
-    },
-    {
-      "home": "Ауда (Lat)",
-      "away": "Динамо Сіті (Alb)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 4 серпня",
-      "dateIso": "2026-08-04",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "Ларн (Nir)",
