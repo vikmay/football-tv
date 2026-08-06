@@ -556,16 +556,6 @@
       "score": "3 - 1"
     },
     {
-      "home": "Ferencváros",
-      "away": "Górnik Zabrze",
-      "league": "Ліга Європи",
-      "time": "21:15",
-      "date": "середа, 5 серпня",
-      "dateIso": "2026-08-05",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Ференцварош (Hun)",
       "away": "Гурнік Забже (Pol)",
       "league": "Ліга Європи (Півфінал)",
@@ -576,23 +566,13 @@
       "score": "1 - 0"
     },
     {
-      "home": "КуПС (Fin)",
-      "away": "Університатя Крайова (Rou)",
-      "league": "Ліга Європи (Півфінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 6 серпня",
-      "dateIso": "2026-08-06",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Купс",
       "away": "Універсітатеа Краіова",
       "league": "Ліга Європи",
       "time": "18:00",
       "date": "Сьогодні, 6 серпня",
       "dateIso": "2026-08-06",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
@@ -623,6 +603,16 @@
       "date": "Сьогодні, 6 серпня",
       "dateIso": "2026-08-06",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Jagiellonia Białystok",
+      "away": "Рангерс",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "Сьогодні, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "NS",
       "score": ""
     },
     {
@@ -1296,16 +1286,6 @@
       "dateIso": "2026-08-05",
       "status": "Match Finished",
       "score": "1 - 1"
-    },
-    {
-      "home": "Інтер Турку (Fin)",
-      "away": "Вадуц (Lie)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 6 серпня",
-      "dateIso": "2026-08-06",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "ГІК (Fin)",
@@ -2465,16 +2445,6 @@
       "score": "0 - 1"
     },
     {
-      "home": "Ferencváros",
-      "away": "Górnik Zabrze",
-      "league": "Ліга Європи",
-      "time": "21:15",
-      "date": "середа, 5 серпня",
-      "dateIso": "2026-08-05",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Ференцварош (Hun)",
       "away": "Гурнік Забже (Pol)",
       "league": "Ліга Європи (Півфінал)",
@@ -2495,33 +2465,13 @@
       "score": "1 - 1"
     },
     {
-      "home": "КуПС (Fin)",
-      "away": "Університатя Крайова (Rou)",
-      "league": "Ліга Європи (Півфінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 6 серпня",
-      "dateIso": "2026-08-06",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Інтер Турку (Fin)",
-      "away": "Вадуц (Lie)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 6 серпня",
-      "dateIso": "2026-08-06",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Купс",
       "away": "Універсітатеа Краіова",
       "league": "Ліга Європи",
       "time": "18:00",
       "date": "Сьогодні, 6 серпня",
       "dateIso": "2026-08-06",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
@@ -2592,6 +2542,16 @@
       "date": "Сьогодні, 6 серпня",
       "dateIso": "2026-08-06",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Jagiellonia Białystok",
+      "away": "Рангерс",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "Сьогодні, 6 серпня",
+      "dateIso": "2026-08-06",
+      "status": "NS",
       "score": ""
     },
     {
