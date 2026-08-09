@@ -91,6 +91,16 @@
       "score": "1 - 3"
     },
     {
+      "home": "Епіцентр",
+      "away": "Шахтар Донецьк",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "Сьогодні, 9 серпня",
+      "dateIso": "2026-08-09",
+      "status": "Match Finished",
+      "score": "0 - 2"
+    },
+    {
       "home": "Верес Рівне",
       "away": "Динамо Київ",
       "league": "УПЛ",
@@ -2202,29 +2212,16 @@
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
       "played": 2,
-      "wins": 1,
-      "draws": 1,
+      "wins": 2,
+      "draws": 0,
       "losses": 0,
-      "goalsFor": 5,
+      "goalsFor": 7,
       "goalsAgainst": 1,
-      "goalDifference": 4,
-      "points": 4
+      "goalDifference": 6,
+      "points": 6
     },
     {
       "position": 2,
-      "team": "Епіцентр",
-      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 2,
-      "wins": 1,
-      "draws": 1,
-      "losses": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "goalDifference": 3,
-      "points": 4
-    },
-    {
-      "position": 3,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 1,
@@ -2237,7 +2234,7 @@
       "points": 3
     },
     {
-      "position": 4,
+      "position": 3,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 2,
@@ -2247,6 +2244,19 @@
       "goalsFor": 4,
       "goalsAgainst": 5,
       "goalDifference": -1,
+      "points": 3
+    },
+    {
+      "position": 4,
+      "team": "Епіцентр",
+      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
+      "played": 2,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
       "points": 3
     },
     {
