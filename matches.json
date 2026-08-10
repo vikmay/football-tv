@@ -91,16 +91,6 @@
       "score": "1 - 2"
     },
     {
-      "home": "Полісся Житомир",
-      "away": "ФК Харків",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "Сьогодні, 10 серпня",
-      "dateIso": "2026-08-10",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Карпати Львів",
       "away": "ЛНЗ Черкаси",
       "league": "УПЛ",
@@ -2202,6 +2192,19 @@
     },
     {
       "position": 2,
+      "team": "Полісся Житомир",
+      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
+      "played": 2,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "goalDifference": 2,
+      "points": 6
+    },
+    {
+      "position": 3,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 1,
@@ -2214,7 +2217,7 @@
       "points": 3
     },
     {
-      "position": 3,
+      "position": 4,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 2,
@@ -2227,7 +2230,7 @@
       "points": 3
     },
     {
-      "position": 4,
+      "position": 5,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 2,
@@ -2240,22 +2243,9 @@
       "points": 3
     },
     {
-      "position": 5,
+      "position": 6,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 1,
-      "wins": 1,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDifference": 1,
-      "points": 3
-    },
-    {
-      "position": 6,
-      "team": "Полісся Житомир",
-      "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 1,
       "wins": 1,
       "draws": 0,
@@ -2269,13 +2259,13 @@
       "position": 7,
       "team": "ФК Харків",
       "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 1,
+      "played": 2,
       "wins": 1,
       "draws": 0,
-      "losses": 0,
+      "losses": 1,
       "goalsFor": 1,
-      "goalsAgainst": 0,
-      "goalDifference": 1,
+      "goalsAgainst": 1,
+      "goalDifference": 0,
       "points": 3
     },
     {
