@@ -101,6 +101,16 @@
       "score": "3 - 1"
     },
     {
+      "home": "Карпати Львів",
+      "away": "ЛНЗ Черкаси",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "Сьогодні, 10 серпня",
+      "dateIso": "2026-08-10",
+      "status": "Match Finished",
+      "score": "3 - 0"
+    },
+    {
       "home": "Епіцентр",
       "away": "Верес Рівне",
       "league": "УПЛ",
@@ -2179,6 +2189,19 @@
   "Таблиця УПЛ": [
     {
       "position": 1,
+      "team": "Карпати Львів",
+      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
+      "played": 2,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 1,
+      "goalDifference": 6,
+      "points": 6
+    },
+    {
+      "position": 2,
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
       "played": 2,
@@ -2191,7 +2214,7 @@
       "points": 6
     },
     {
-      "position": 2,
+      "position": 3,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 2,
@@ -2202,19 +2225,6 @@
       "goalsAgainst": 2,
       "goalDifference": 3,
       "points": 6
-    },
-    {
-      "position": 3,
-      "team": "Карпати Львів",
-      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 2,
-      "wins": 1,
-      "draws": 1,
-      "losses": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 1,
-      "goalDifference": 3,
-      "points": 4
     },
     {
       "position": 4,
@@ -2296,19 +2306,6 @@
     },
     {
       "position": 10,
-      "team": "ЛНЗ Черкаси",
-      "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 2,
-      "wins": 0,
-      "draws": 2,
-      "losses": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDifference": 0,
-      "points": 2
-    },
-    {
-      "position": 11,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 1,
@@ -2321,7 +2318,7 @@
       "points": 1
     },
     {
-      "position": 12,
+      "position": 11,
       "team": "Кудрівка",
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
       "played": 2,
@@ -2331,6 +2328,19 @@
       "goalsFor": 1,
       "goalsAgainst": 5,
       "goalDifference": -4,
+      "points": 1
+    },
+    {
+      "position": 12,
+      "team": "ЛНЗ Черкаси",
+      "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
+      "played": 2,
+      "wins": 0,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "goalDifference": -3,
       "points": 1
     },
     {
