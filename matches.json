@@ -1336,8 +1336,8 @@
       "time": "22:00",
       "date": "Сьогодні, 12 серпня",
       "dateIso": "2026-08-12",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     }
   ],
   "Ліга націй УЄФА": [],
@@ -1843,6 +1843,16 @@
       "dateIso": "2026-08-12",
       "status": "Match Finished",
       "score": "2 - 0"
+    },
+    {
+      "home": "ПСЖ",
+      "away": "Астон Вілла",
+      "league": "Суперкубок УЄФА (Фінал)",
+      "time": "22:00",
+      "date": "Сьогодні, 12 серпня",
+      "dateIso": "2026-08-12",
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Тобол (Kaz)",
