@@ -456,16 +456,6 @@
       "score": "6 - 1"
     },
     {
-      "home": "Iberia 1999",
-      "away": "Ларне",
-      "league": "Ліга Європи",
-      "time": "19:00",
-      "date": "вівторок, 11 серпня",
-      "dateIso": "2026-08-11",
-      "status": "AET",
-      "score": ""
-    },
-    {
       "home": "Іберія 1999 (Geo)",
       "away": "Ларн (Nir)",
       "league": "Ліга Європи (Півфінал)",
@@ -482,8 +472,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Гурнік Забже (Pol)",
@@ -492,8 +482,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Омонія (Cyp)",
@@ -512,8 +502,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Університатя Крайова (Rou)",
@@ -522,18 +512,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Універсітатеа Краіова",
-      "away": "Купс",
-      "league": "Ліга Європи",
-      "time": "20:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "NS",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Вікінгур Рейк'явік (Ice)",
@@ -553,6 +533,16 @@
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Víkingur Reykjavík",
+      "away": "Тhун",
+      "league": "Ліга Європи",
+      "time": "20:30",
+      "date": "Сьогодні, 13 серпня",
+      "dateIso": "2026-08-13",
+      "status": "NS",
       "score": ""
     },
     {
@@ -965,53 +955,13 @@
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "1 - 2"
     },
     {
       "home": "Дун. Стреда (Svk)",
       "away": "Твенте (Ned)",
       "league": "Ліга конференцій (Півфінал)",
       "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ільвес (Fin)",
-      "away": "Рієка (Cro)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Карабах (Aze)",
-      "away": "Динамо Київ",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Флора (Est)",
-      "away": "Інтер Клуб Ескальдес (And)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "РФС (Lat)",
-      "away": "Яблонець (Cze)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:30",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
       "status": "Scheduled",
@@ -1034,8 +984,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "МЛ Вітебськ (Blr)",
@@ -1044,8 +994,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Норшелланн (Den)",
@@ -1054,8 +1004,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Тромсе (Nor)",
@@ -1064,8 +1014,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Хаммарбю (Swe)",
@@ -1074,8 +1024,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Вадуц (Lie)",
@@ -1210,6 +1160,16 @@
     {
       "home": "Аталанта (Ita)",
       "away": "Хапоель Тель-Авів (Isr)",
+      "league": "Ліга конференцій (Фінал)",
+      "time": "20:00",
+      "date": "четвер, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Хетафе (Esp)",
+      "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Фінал)",
       "time": "20:00",
       "date": "четвер, 20 серпня",
@@ -1635,16 +1595,6 @@
       "score": "2 - 1"
     },
     {
-      "home": "Iberia 1999",
-      "away": "Ларне",
-      "league": "Ліга Європи",
-      "time": "19:00",
-      "date": "вівторок, 11 серпня",
-      "dateIso": "2026-08-11",
-      "status": "AET",
-      "score": ""
-    },
-    {
       "home": "Іберія 1999 (Geo)",
       "away": "Ларн (Nir)",
       "league": "Ліга Європи (Півфінал)",
@@ -1722,7 +1672,7 @@
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
       "status": "Match Finished",
-      "score": "0 - 0"
+      "score": "1 - 2"
     },
     {
       "home": "Дун. Стреда (Svk)",
@@ -1735,54 +1685,14 @@
       "score": ""
     },
     {
-      "home": "Ільвес (Fin)",
-      "away": "Рієка (Cro)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Карабах (Aze)",
-      "away": "Динамо Київ",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Флора (Est)",
-      "away": "Інтер Клуб Ескальдес (And)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "РФС (Lat)",
-      "away": "Яблонець (Cze)",
-      "league": "Ліга конференцій (Півфінал)",
-      "time": "19:30",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Бешикташ (Tur)",
       "away": "Градец-Кралове (Cze)",
       "league": "Ліга Європи (Півфінал)",
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Гурнік Забже (Pol)",
@@ -1791,8 +1701,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Омонія (Cyp)",
@@ -1811,8 +1721,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Університатя Крайова (Rou)",
@@ -1821,8 +1731,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Динамо М. (Blr)",
@@ -1841,8 +1751,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "МЛ Вітебськ (Blr)",
@@ -1851,8 +1761,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Норшелланн (Den)",
@@ -1861,8 +1771,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Тромсе (Nor)",
@@ -1871,8 +1781,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Хаммарбю (Swe)",
@@ -1881,18 +1791,8 @@
       "time": "20:00",
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Універсітатеа Краіова",
-      "away": "Купс",
-      "league": "Ліга Європи",
-      "time": "20:00",
-      "date": "Сьогодні, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "NS",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Вікінгур Рейк'явік (Ice)",
@@ -1932,6 +1832,16 @@
       "date": "Сьогодні, 13 серпня",
       "dateIso": "2026-08-13",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Víkingur Reykjavík",
+      "away": "Тhун",
+      "league": "Ліга Європи",
+      "time": "20:30",
+      "date": "Сьогодні, 13 серпня",
+      "dateIso": "2026-08-13",
+      "status": "NS",
       "score": ""
     },
     {
@@ -2107,6 +2017,16 @@
     {
       "home": "Аталанта (Ita)",
       "away": "Хапоель Тель-Авів (Isr)",
+      "league": "Ліга конференцій (Фінал)",
+      "time": "20:00",
+      "date": "четвер, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Хетафе (Esp)",
+      "away": "Партизан (Srb)",
       "league": "Ліга конференцій (Фінал)",
       "time": "20:00",
       "date": "четвер, 20 серпня",
