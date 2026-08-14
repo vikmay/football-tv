@@ -827,24 +827,14 @@
       "score": "5 - 1"
     },
     {
-      "home": "Егнатіа",
-      "away": "Шамрокк Роверс",
-      "league": "Ліга Європи",
-      "time": "22:00",
-      "date": "четвер, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Клаксвік (Fai)",
       "away": "Лех Познань (Pol)",
       "league": "Ліга Європи (Півфінал)",
       "time": "21:00",
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "KÍ Klaksvík",
@@ -853,7 +843,7 @@
       "time": "21:00",
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
@@ -2586,24 +2576,14 @@
       "score": "4 - 0"
     },
     {
-      "home": "Егнатіа",
-      "away": "Шамрокк Роверс",
-      "league": "Ліга Європи",
-      "time": "22:00",
-      "date": "четвер, 13 серпня",
-      "dateIso": "2026-08-13",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Клаксвік (Fai)",
       "away": "Лех Познань (Pol)",
       "league": "Ліга Європи (Півфінал)",
       "time": "21:00",
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "KÍ Klaksvík",
@@ -2612,7 +2592,7 @@
       "time": "21:00",
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
