@@ -71,6 +71,16 @@
       "score": "3 - 0"
     },
     {
+      "home": "Епіцентр",
+      "away": "Верес Рівне",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "Сьогодні, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "Match Finished",
+      "score": "0 - 0"
+    },
+    {
       "home": "Кривбас",
       "away": "Лівий Берег",
       "league": "УПЛ",
@@ -817,13 +827,13 @@
       "score": "5 - 1"
     },
     {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
+      "home": "Егнатіа",
+      "away": "Шамрокк Роверс",
       "league": "Ліга Європи",
-      "time": "22:45",
+      "time": "22:00",
       "date": "четвер, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "PST",
+      "status": "FT",
       "score": ""
     },
     {
@@ -834,6 +844,16 @@
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "NS",
       "score": ""
     },
     {
@@ -2566,13 +2586,13 @@
       "score": "4 - 0"
     },
     {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
+      "home": "Егнатіа",
+      "away": "Шамрокк Роверс",
       "league": "Ліга Європи",
-      "time": "22:45",
+      "time": "22:00",
       "date": "четвер, 13 серпня",
       "dateIso": "2026-08-13",
-      "status": "PST",
+      "status": "FT",
       "score": ""
     },
     {
@@ -2583,6 +2603,16 @@
       "date": "Сьогодні, 14 серпня",
       "dateIso": "2026-08-14",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "NS",
       "score": ""
     },
     {
