@@ -737,6 +737,16 @@
       "score": "0 - 5"
     },
     {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "пʼятниця, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "FT",
+      "score": ""
+    },
+    {
       "home": "Кайрат Алмати (Kaz)",
       "away": "Андерлехт (Bel)",
       "league": "Ліга Європи (Фінал)",
@@ -1854,6 +1864,16 @@
       "dateIso": "2026-08-14",
       "status": "Match Finished",
       "score": "0 - 5"
+    },
+    {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "пʼятниця, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "FT",
+      "score": ""
     },
     {
       "home": "Кайрат Алмати (Kaz)",
