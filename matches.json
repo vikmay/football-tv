@@ -101,6 +101,16 @@
       "score": "0 - 0"
     },
     {
+      "home": "Карпати Львів",
+      "away": "Буковина Чернівці",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "Сьогодні, 15 серпня",
+      "dateIso": "2026-08-15",
+      "status": "Match Finished",
+      "score": "3 - 0"
+    },
+    {
       "home": "ЛНЗ Черкаси",
       "away": "Чорноморець Одеса",
       "league": "УПЛ",
@@ -715,16 +725,6 @@
       "dateIso": "2026-08-13",
       "status": "Match Finished",
       "score": "5 - 1"
-    },
-    {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
-      "league": "Ліга Європи",
-      "time": "21:00",
-      "date": "пʼятниця, 14 серпня",
-      "dateIso": "2026-08-14",
-      "status": "FT",
-      "score": ""
     },
     {
       "home": "Клаксвік (Fai)",
@@ -1844,16 +1844,6 @@
       "dateIso": "2026-08-13",
       "status": "Match Finished",
       "score": "4 - 0"
-    },
-    {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
-      "league": "Ліга Європи",
-      "time": "21:00",
-      "date": "пʼятниця, 14 серпня",
-      "dateIso": "2026-08-14",
-      "status": "FT",
-      "score": ""
     },
     {
       "home": "Клаксвік (Fai)",
