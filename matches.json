@@ -81,16 +81,6 @@
       "score": "0 - 0"
     },
     {
-      "home": "Кривбас",
-      "away": "Лівий Берег",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "Сьогодні, 15 серпня",
-      "dateIso": "2026-08-15",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Кудрівка",
       "away": "Оболонь Київ",
       "league": "УПЛ",
@@ -2279,6 +2269,19 @@
     },
     {
       "position": 4,
+      "team": "Кривбас",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 3,
+      "wins": 2,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
+      "goalDifference": 0,
+      "points": 6
+    },
+    {
+      "position": 5,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 3,
@@ -2289,19 +2292,6 @@
       "goalsAgainst": 2,
       "goalDifference": 1,
       "points": 4
-    },
-    {
-      "position": 5,
-      "team": "Кривбас",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 2,
-      "wins": 1,
-      "draws": 0,
-      "losses": 1,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
-      "goalDifference": -1,
-      "points": 3
     },
     {
       "position": 6,
@@ -2318,19 +2308,6 @@
     },
     {
       "position": 7,
-      "team": "ФК Харків",
-      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 2,
-      "wins": 1,
-      "draws": 0,
-      "losses": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDifference": -1,
-      "points": 3
-    },
-    {
-      "position": 8,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
       "played": 2,
@@ -2340,6 +2317,19 @@
       "goalsFor": 3,
       "goalsAgainst": 3,
       "goalDifference": 0,
+      "points": 3
+    },
+    {
+      "position": 8,
+      "team": "ФК Харків",
+      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
+      "played": 2,
+      "wins": 1,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 3,
+      "goalDifference": -1,
       "points": 3
     },
     {
@@ -2359,13 +2349,13 @@
       "position": 10,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
-      "played": 1,
+      "played": 2,
       "wins": 0,
       "draws": 1,
-      "losses": 0,
+      "losses": 1,
       "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDifference": 0,
+      "goalsAgainst": 1,
+      "goalDifference": -1,
       "points": 1
     },
     {
