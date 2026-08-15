@@ -101,16 +101,6 @@
       "score": "0 - 0"
     },
     {
-      "home": "Карпати Львів",
-      "away": "Буковина Чернівці",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "Сьогодні, 15 серпня",
-      "dateIso": "2026-08-15",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "ЛНЗ Черкаси",
       "away": "Чорноморець Одеса",
       "league": "УПЛ",
@@ -2242,14 +2232,14 @@
       "position": 1,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 2,
-      "wins": 2,
+      "played": 3,
+      "wins": 3,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 7,
+      "goalsFor": 9,
       "goalsAgainst": 1,
-      "goalDifference": 6,
-      "points": 6
+      "goalDifference": 8,
+      "points": 9
     },
     {
       "position": 2,
@@ -2385,13 +2375,13 @@
       "position": 12,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
-      "played": 2,
+      "played": 3,
       "wins": 0,
       "draws": 2,
-      "losses": 0,
+      "losses": 1,
       "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDifference": 0,
+      "goalsAgainst": 2,
+      "goalDifference": -2,
       "points": 2
     },
     {
