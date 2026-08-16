@@ -111,14 +111,14 @@
       "score": "3 - 0"
     },
     {
-      "home": "ФК Харків",
-      "away": "Шахтар Донецьк",
+      "home": "ЛНЗ Черкаси",
+      "away": "Чорноморець Одеса",
       "league": "УПЛ",
-      "time": "15:30",
+      "time": "13:00",
       "date": "Сьогодні, 16 серпня",
       "dateIso": "2026-08-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Динамо Київ",
@@ -2245,14 +2245,14 @@
       "position": 2,
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 2,
-      "wins": 2,
+      "played": 3,
+      "wins": 3,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 7,
+      "goalsFor": 8,
       "goalsAgainst": 1,
-      "goalDifference": 6,
-      "points": 6
+      "goalDifference": 7,
+      "points": 9
     },
     {
       "position": 3,
@@ -2336,13 +2336,13 @@
       "position": 9,
       "team": "ФК Харків",
       "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 2,
+      "played": 3,
       "wins": 1,
       "draws": 0,
-      "losses": 1,
+      "losses": 2,
       "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDifference": -1,
+      "goalsAgainst": 4,
+      "goalDifference": -2,
       "points": 3
     },
     {
