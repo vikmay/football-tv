@@ -2272,13 +2272,13 @@
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
       "played": 2,
-      "wins": 1,
-      "draws": 1,
+      "wins": 2,
+      "draws": 0,
       "losses": 0,
-      "goalsFor": 3,
+      "goalsFor": 4,
       "goalsAgainst": 2,
-      "goalDifference": 1,
-      "points": 4
+      "goalDifference": 2,
+      "points": 6
     },
     {
       "position": 5,
@@ -2416,12 +2416,12 @@
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
       "played": 2,
       "wins": 0,
-      "draws": 1,
-      "losses": 1,
+      "draws": 0,
+      "losses": 2,
       "goalsFor": 1,
-      "goalsAgainst": 3,
-      "goalDifference": -2,
-      "points": 1
+      "goalsAgainst": 4,
+      "goalDifference": -3,
+      "points": 0
     },
     {
       "position": 16,
