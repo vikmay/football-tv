@@ -1,26 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Лівий Берег",
-      "away": "Кудрівка",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "субота, 8 серпня",
-      "dateIso": "2026-08-08",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
-      "home": "Буковина Чернівці",
-      "away": "Оболонь Київ",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 8 серпня",
-      "dateIso": "2026-08-08",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
       "home": "Зоря Луганськ",
       "away": "Кривбас",
       "league": "УПЛ",
@@ -115,7 +95,7 @@
       "away": "Чорноморець Одеса",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "Сьогодні, 16 серпня",
+      "date": "неділя, 16 серпня",
       "dateIso": "2026-08-16",
       "status": "Match Finished",
       "score": "2 - 0"
@@ -125,7 +105,7 @@
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
       "time": "15:30",
-      "date": "Сьогодні, 16 серпня",
+      "date": "неділя, 16 серпня",
       "dateIso": "2026-08-16",
       "status": "Match Finished",
       "score": "0 - 1"
@@ -135,7 +115,7 @@
       "away": "Колос Ковалівка",
       "league": "УПЛ",
       "time": "18:00",
-      "date": "Сьогодні, 16 серпня",
+      "date": "неділя, 16 серпня",
       "dateIso": "2026-08-16",
       "status": "Match Finished",
       "score": "2 - 1"
@@ -145,7 +125,7 @@
       "away": "Зоря Луганськ",
       "league": "УПЛ",
       "time": "18:00",
-      "date": "понеділок, 17 серпня",
+      "date": "Сьогодні, 17 серпня",
       "dateIso": "2026-08-17",
       "status": "Scheduled",
       "score": ""
@@ -319,6 +299,36 @@
       "time": "22:00",
       "date": "середа, 19 серпня",
       "dateIso": "2026-08-19",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Сабах Баку (Aze)",
+      "away": "Хапоель Беер-Шева (Isr)",
+      "league": "Ліга чемпіонів (Фінал)",
+      "time": "19:45",
+      "date": "вівторок, 25 серпня",
+      "dateIso": "2026-08-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Буде/Глімт (Nor)",
+      "away": "Неймеген (Ned)",
+      "league": "Ліга чемпіонів (Фінал)",
+      "time": "22:00",
+      "date": "вівторок, 25 серпня",
+      "dateIso": "2026-08-25",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "ЛАСК (Aut)",
+      "away": "Селтік (Sco)",
+      "league": "Ліга чемпіонів (Фінал)",
+      "time": "22:00",
+      "date": "вівторок, 25 серпня",
+      "dateIso": "2026-08-25",
       "status": "Scheduled",
       "score": ""
     }
@@ -735,6 +745,16 @@
       "dateIso": "2026-08-14",
       "status": "Match Finished",
       "score": "0 - 5"
+    },
+    {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "пʼятниця, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "FT",
+      "score": ""
     },
     {
       "home": "Кайрат Алмати (Kaz)",
@@ -1854,6 +1874,16 @@
       "dateIso": "2026-08-14",
       "status": "Match Finished",
       "score": "0 - 5"
+    },
+    {
+      "home": "KÍ Klaksvík",
+      "away": "Lech Poznań",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "пʼятниця, 14 серпня",
+      "dateIso": "2026-08-14",
+      "status": "FT",
+      "score": ""
     },
     {
       "home": "Кайрат Алмати (Kaz)",
