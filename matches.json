@@ -131,16 +131,6 @@
       "score": "0 - 1"
     },
     {
-      "home": "Динамо Київ",
-      "away": "Колос Ковалівка",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "Сьогодні, 16 серпня",
-      "dateIso": "2026-08-16",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Полісся Житомир",
       "away": "Зоря Луганськ",
       "league": "УПЛ",
@@ -2279,6 +2269,19 @@
     },
     {
       "position": 4,
+      "team": "Динамо Київ",
+      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
+      "played": 2,
+      "wins": 1,
+      "draws": 1,
+      "losses": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 2,
+      "goalDifference": 1,
+      "points": 4
+    },
+    {
+      "position": 5,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 3,
@@ -2291,7 +2294,7 @@
       "points": 4
     },
     {
-      "position": 5,
+      "position": 6,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 3,
@@ -2304,7 +2307,7 @@
       "points": 4
     },
     {
-      "position": 6,
+      "position": 7,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
       "played": 3,
@@ -2315,19 +2318,6 @@
       "goalsAgainst": 3,
       "goalDifference": -1,
       "points": 4
-    },
-    {
-      "position": 7,
-      "team": "Динамо Київ",
-      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 1,
-      "wins": 1,
-      "draws": 0,
-      "losses": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDifference": 1,
-      "points": 3
     },
     {
       "position": 8,
@@ -2424,14 +2414,14 @@
       "position": 15,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 1,
+      "played": 2,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 3,
       "goalDifference": -2,
-      "points": 0
+      "points": 1
     },
     {
       "position": 16,
