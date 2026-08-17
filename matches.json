@@ -119,16 +119,6 @@
       "dateIso": "2026-08-16",
       "status": "Match Finished",
       "score": "2 - 1"
-    },
-    {
-      "home": "Полісся Житомир",
-      "away": "Зоря Луганськ",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "Сьогодні, 17 серпня",
-      "dateIso": "2026-08-17",
-      "status": "Scheduled",
-      "score": ""
     }
   ],
   "Ліга чемпіонів": [
@@ -2278,14 +2268,14 @@
       "position": 3,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
-      "played": 2,
-      "wins": 2,
+      "played": 3,
+      "wins": 3,
       "draws": 0,
       "losses": 0,
-      "goalsFor": 5,
+      "goalsFor": 6,
       "goalsAgainst": 2,
-      "goalDifference": 3,
-      "points": 6
+      "goalDifference": 4,
+      "points": 9
     },
     {
       "position": 4,
@@ -2343,13 +2333,13 @@
       "position": 8,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 2,
+      "played": 3,
       "wins": 1,
       "draws": 0,
-      "losses": 1,
+      "losses": 2,
       "goalsFor": 3,
-      "goalsAgainst": 3,
-      "goalDifference": 0,
+      "goalsAgainst": 4,
+      "goalDifference": -1,
       "points": 3
     },
     {
