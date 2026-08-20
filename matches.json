@@ -637,33 +637,13 @@
       "score": "0 - 5"
     },
     {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
-      "league": "Ліга Європи",
-      "time": "21:00",
-      "date": "пʼятниця, 14 серпня",
-      "dateIso": "2026-08-14",
-      "status": "FT",
-      "score": ""
-    },
-    {
-      "home": "Кайрат Алмати (Kaz)",
-      "away": "Андерлехт (Bel)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Каірат Алмати",
       "away": "Андерлечт",
       "league": "Ліга Європи",
       "time": "18:00",
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
@@ -684,6 +664,16 @@
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Jagiellonia Białystok",
+      "away": "Iberia 1999",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "NS",
       "score": ""
     },
     {
@@ -2086,33 +2076,13 @@
       "score": "0 - 5"
     },
     {
-      "home": "KÍ Klaksvík",
-      "away": "Lech Poznań",
-      "league": "Ліга Європи",
-      "time": "21:00",
-      "date": "пʼятниця, 14 серпня",
-      "dateIso": "2026-08-14",
-      "status": "FT",
-      "score": ""
-    },
-    {
-      "home": "Кайрат Алмати (Kaz)",
-      "away": "Андерлехт (Bel)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "18:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Каірат Алмати",
       "away": "Андерлечт",
       "league": "Ліга Європи",
       "time": "18:00",
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
-      "status": "NS",
+      "status": "1H",
       "score": ""
     },
     {
@@ -2153,6 +2123,16 @@
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Jagiellonia Białystok",
+      "away": "Iberia 1999",
+      "league": "Ліга Європи",
+      "time": "19:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "NS",
       "score": ""
     },
     {
