@@ -637,73 +637,23 @@
       "score": "0 - 5"
     },
     {
-      "home": "Mjällby",
-      "away": "Ред Булл Салзбург",
+      "home": "Кайрат Алмати (Kaz)",
+      "away": "Андерлехт (Bel)",
+      "league": "Ліга Європи (Фінал)",
+      "time": "18:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "Match Finished",
+      "score": "0 - 3"
+    },
+    {
+      "home": "Lech Poznań",
+      "away": "Тhун",
       "league": "Ліга Європи",
-      "time": "19:00",
+      "time": "20:00",
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "1H",
-      "score": ""
-    },
-    {
-      "home": "Бешикташ (Tur)",
-      "away": "Жальгіріс Каунас (Ltu)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Трабзонспор (Tur)",
-      "away": "Ференцварош (Hun)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Університатя Крайова (Rou)",
-      "away": "Арарат-Вірменія (Arm)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "КФ Егнатія (Alb)",
-      "away": "Ліллестрем (Nor)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Лех Познань (Pol)",
-      "away": "Тун (Sui)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Beşiktaş",
-      "away": "Kauno Žalgiris",
-      "league": "Ліга Європи",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "NS",
       "score": ""
     },
     {
@@ -734,6 +684,16 @@
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Крвена Звезда",
+      "away": "Viktoria Plzeň",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "NS",
       "score": ""
     },
     {
@@ -1147,46 +1107,6 @@
       "dateIso": "2026-08-13",
       "status": "Match Finished",
       "score": "4 - 0"
-    },
-    {
-      "home": "Мідтьюлланн (Den)",
-      "away": "Рієка (Cro)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Тромсе (Nor)",
-      "away": "Брайтон (Eng)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Норшелланн (Den)",
-      "away": "Санкт-Галлен (Sui)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Клаксвік (Fai)",
-      "away": "ФК Рига (Lat)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:30",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
     },
     {
       "home": "ПАОК (Gre)",
@@ -2036,113 +1956,23 @@
       "score": "0 - 5"
     },
     {
-      "home": "Mjällby",
-      "away": "Ред Булл Салзбург",
+      "home": "Кайрат Алмати (Kaz)",
+      "away": "Андерлехт (Bel)",
+      "league": "Ліга Європи (Фінал)",
+      "time": "18:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "Match Finished",
+      "score": "0 - 3"
+    },
+    {
+      "home": "Lech Poznań",
+      "away": "Тhун",
       "league": "Ліга Європи",
-      "time": "19:00",
+      "time": "20:00",
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "1H",
-      "score": ""
-    },
-    {
-      "home": "Бешикташ (Tur)",
-      "away": "Жальгіріс Каунас (Ltu)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Трабзонспор (Tur)",
-      "away": "Ференцварош (Hun)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Університатя Крайова (Rou)",
-      "away": "Арарат-Вірменія (Arm)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Мідтьюлланн (Den)",
-      "away": "Рієка (Cro)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Тромсе (Nor)",
-      "away": "Брайтон (Eng)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Норшелланн (Den)",
-      "away": "Санкт-Галлен (Sui)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "КФ Егнатія (Alb)",
-      "away": "Ліллестрем (Nor)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Лех Познань (Pol)",
-      "away": "Тун (Sui)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Beşiktaş",
-      "away": "Kauno Žalgiris",
-      "league": "Ліга Європи",
-      "time": "20:00",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "NS",
-      "score": ""
-    },
-    {
-      "home": "Клаксвік (Fai)",
-      "away": "ФК Рига (Lat)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "20:30",
-      "date": "Сьогодні, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "Scheduled",
       "score": ""
     },
     {
@@ -2223,6 +2053,16 @@
       "date": "Сьогодні, 20 серпня",
       "dateIso": "2026-08-20",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Крвена Звезда",
+      "away": "Viktoria Plzeň",
+      "league": "Ліга Європи",
+      "time": "21:00",
+      "date": "Сьогодні, 20 серпня",
+      "dateIso": "2026-08-20",
+      "status": "NS",
       "score": ""
     },
     {
