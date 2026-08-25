@@ -163,24 +163,14 @@
       "score": "2 - 1"
     },
     {
-      "home": "Буде/Глімт (Nor)",
-      "away": "Неймеген (Ned)",
+      "home": "Сабах Баку (Aze)",
+      "away": "Хапоель Беер-Шева (Isr)",
       "league": "Ліга чемпіонів (Фінал)",
-      "time": "22:00",
+      "time": "19:45",
       "date": "Сьогодні, 25 серпня",
       "dateIso": "2026-08-25",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "ЛАСК (Aut)",
-      "away": "Селтік (Sco)",
-      "league": "Ліга чемпіонів (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 25 серпня",
-      "dateIso": "2026-08-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 2"
     },
     {
       "home": "AEK (Gre)",
