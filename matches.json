@@ -607,16 +607,6 @@
       "score": "3 - 0"
     },
     {
-      "home": "Бенфіка",
-      "away": "Агф Аарhус",
-      "league": "Ліга Європи",
-      "time": "22:00",
-      "date": "четвер, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Бенфіка (Por)",
       "away": "Орхус (Den)",
       "league": "Ліга Європи (Фінал)",
@@ -633,8 +623,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Іберія 1999 (Geo)",
@@ -643,18 +633,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Iberia 1999",
-      "away": "Jagiellonia Białystok",
-      "league": "Ліга Європи",
-      "time": "19:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "NS",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Вікторія Пльзень (Cze)",
@@ -663,8 +643,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 1"
     },
     {
       "home": "Жальгіріс Каунас (Ltu)",
@@ -673,8 +653,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Зальцбург (Aut)",
@@ -683,8 +663,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 0"
     },
     {
       "home": "Ліллестрем (Nor)",
@@ -693,8 +673,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Омонія (Cyp)",
@@ -703,8 +683,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 2"
     },
     {
       "home": "Орхус (Den)",
@@ -713,8 +693,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 3"
     },
     {
       "home": "Тун (Sui)",
@@ -723,8 +703,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "ЦСКА Софія (Bul)",
@@ -733,27 +713,17 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
-      "home": "Андерлехт (Bel)",
-      "away": "Кайрат Алмати (Kaz)",
-      "league": "Ліга Європи (Фінал)",
+      "home": "Ferencváros",
+      "away": "Трабзонспор",
+      "league": "Ліга Європи",
       "time": "21:30",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ференцварош (Hun)",
-      "away": "Трабзонспор (Tur)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
+      "status": "2H",
       "score": ""
     }
   ],
@@ -1015,8 +985,8 @@
       "time": "18:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Карабах (Aze)",
@@ -1025,8 +995,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 4"
     },
     {
       "home": "Маккабі Тель-Авів (Isr)",
@@ -1035,8 +1005,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Яблонець (Cze)",
@@ -1045,8 +1015,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Монако (Fra)",
@@ -1055,8 +1025,8 @@
       "time": "19:45",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Фрайбург (Ger)",
@@ -1065,8 +1035,8 @@
       "time": "19:45",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Бранн (Nor)",
@@ -1075,8 +1045,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2"
     },
     {
       "home": "Градец-Кралове (Cze)",
@@ -1085,8 +1055,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Інтер Клуб Ескальдес (And)",
@@ -1095,8 +1065,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Копенгаген (Den)",
@@ -1105,8 +1075,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Пафос (Cyp)",
@@ -1115,8 +1085,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 2"
     },
     {
       "home": "Ракув (Pol)",
@@ -1125,8 +1095,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3"
     },
     {
       "home": "ФК Рига (Lat)",
@@ -1135,8 +1105,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Аякс (Ned)",
@@ -1145,8 +1115,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 3"
     },
     {
       "home": "Санкт-Галлен (Sui)",
@@ -1155,8 +1125,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3"
     },
     {
       "home": "Хапоель Тель-Авів (Isr)",
@@ -1165,78 +1135,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Аустрія Відень (Aut)",
-      "away": "Брага (Por)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Борац Баня-Лука (Bih)",
-      "away": "Вікінгур Рейк'явік (Ice)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Брайтон (Eng)",
-      "away": "Тромсе (Nor)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Рієка (Cro)",
-      "away": "Мідтьюлланн (Den)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:45",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ларн (Nir)",
-      "away": "Лінкольн Ред Імпс (Gib)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Партизан (Srb)",
-      "away": "Хетафе (Esp)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Хіберніан (Sco)",
-      "away": "Гент (Bel)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     }
   ],
   "Суперкубок УЄФА": [],
@@ -1545,16 +1445,6 @@
       "score": "2 - 2"
     },
     {
-      "home": "Бенфіка",
-      "away": "Агф Аарhус",
-      "league": "Ліга Європи",
-      "time": "22:00",
-      "date": "четвер, 20 серпня",
-      "dateIso": "2026-08-20",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Бенфіка (Por)",
       "away": "Орхус (Den)",
       "league": "Ліга Європи (Фінал)",
@@ -1631,8 +1521,8 @@
       "time": "18:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Арарат-Вірменія (Arm)",
@@ -1641,8 +1531,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Іберія 1999 (Geo)",
@@ -1651,8 +1541,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Карабах (Aze)",
@@ -1661,8 +1551,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 4"
     },
     {
       "home": "Маккабі Тель-Авів (Isr)",
@@ -1671,8 +1561,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Яблонець (Cze)",
@@ -1681,18 +1571,8 @@
       "time": "19:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Iberia 1999",
-      "away": "Jagiellonia Białystok",
-      "league": "Ліга Європи",
-      "time": "19:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "NS",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Монако (Fra)",
@@ -1701,8 +1581,8 @@
       "time": "19:45",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Фрайбург (Ger)",
@@ -1711,8 +1591,8 @@
       "time": "19:45",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Вікторія Пльзень (Cze)",
@@ -1721,8 +1601,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 1"
     },
     {
       "home": "Жальгіріс Каунас (Ltu)",
@@ -1731,8 +1611,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Зальцбург (Aut)",
@@ -1741,8 +1621,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 0"
     },
     {
       "home": "Ліллестрем (Nor)",
@@ -1751,8 +1631,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Омонія (Cyp)",
@@ -1761,8 +1641,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 2"
     },
     {
       "home": "Бранн (Nor)",
@@ -1771,8 +1651,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2"
     },
     {
       "home": "Градец-Кралове (Cze)",
@@ -1781,8 +1661,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2"
     },
     {
       "home": "Інтер Клуб Ескальдес (And)",
@@ -1791,8 +1671,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Копенгаген (Den)",
@@ -1801,8 +1681,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1"
     },
     {
       "home": "Пафос (Cyp)",
@@ -1811,8 +1691,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 2"
     },
     {
       "home": "Ракув (Pol)",
@@ -1821,8 +1701,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3"
     },
     {
       "home": "ФК Рига (Lat)",
@@ -1831,8 +1711,8 @@
       "time": "20:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1"
     },
     {
       "home": "Орхус (Den)",
@@ -1841,8 +1721,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 3"
     },
     {
       "home": "Тун (Sui)",
@@ -1851,8 +1731,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2"
     },
     {
       "home": "ЦСКА Софія (Bul)",
@@ -1861,8 +1741,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Аякс (Ned)",
@@ -1871,8 +1751,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 3"
     },
     {
       "home": "Санкт-Галлен (Sui)",
@@ -1881,8 +1761,8 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3"
     },
     {
       "home": "Хапоель Тель-Авів (Isr)",
@@ -1891,97 +1771,17 @@
       "time": "21:00",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
-      "home": "Андерлехт (Bel)",
-      "away": "Кайрат Алмати (Kaz)",
-      "league": "Ліга Європи (Фінал)",
+      "home": "Ferencváros",
+      "away": "Трабзонспор",
+      "league": "Ліга Європи",
       "time": "21:30",
       "date": "Сьогодні, 27 серпня",
       "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ференцварош (Hun)",
-      "away": "Трабзонспор (Tur)",
-      "league": "Ліга Європи (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Аустрія Відень (Aut)",
-      "away": "Брага (Por)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Борац Баня-Лука (Bih)",
-      "away": "Вікінгур Рейк'явік (Ice)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Брайтон (Eng)",
-      "away": "Тромсе (Nor)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:30",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Рієка (Cro)",
-      "away": "Мідтьюлланн (Den)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "21:45",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ларн (Nir)",
-      "away": "Лінкольн Ред Імпс (Gib)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Партизан (Srb)",
-      "away": "Хетафе (Esp)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Хіберніан (Sco)",
-      "away": "Гент (Bel)",
-      "league": "Ліга конференцій (Фінал)",
-      "time": "22:00",
-      "date": "Сьогодні, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "Scheduled",
+      "status": "2H",
       "score": ""
     }
   ],
