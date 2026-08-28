@@ -7,8 +7,8 @@
       "time": "15:30",
       "date": "Сьогодні, 28 серпня",
       "dateIso": "2026-08-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0"
     },
     {
       "home": "Кудрівка",
@@ -705,16 +705,6 @@
       "dateIso": "2026-08-27",
       "status": "Match Finished",
       "score": "0 - 2"
-    },
-    {
-      "home": "Ferencváros",
-      "away": "Трабзонспор",
-      "league": "Ліга Європи",
-      "time": "21:30",
-      "date": "четвер, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "FT",
-      "score": ""
     },
     {
       "home": "Андерлехт (Bel)",
@@ -1855,16 +1845,6 @@
       "score": "0 - 1"
     },
     {
-      "home": "Ferencváros",
-      "away": "Трабзонспор",
-      "league": "Ліга Європи",
-      "time": "21:30",
-      "date": "четвер, 27 серпня",
-      "dateIso": "2026-08-27",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Андерлехт (Bel)",
       "away": "Кайрат Алмати (Kaz)",
       "league": "Ліга Європи (Фінал)",
@@ -2078,30 +2058,17 @@
       "position": 10,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 3,
+      "played": 4,
       "wins": 0,
-      "draws": 2,
+      "draws": 3,
       "losses": 1,
       "goalsFor": 0,
       "goalsAgainst": 3,
       "goalDifference": -3,
-      "points": 2
+      "points": 3
     },
     {
       "position": 11,
-      "team": "Кудрівка",
-      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 3,
-      "wins": 0,
-      "draws": 2,
-      "losses": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 5,
-      "goalDifference": -4,
-      "points": 2
-    },
-    {
-      "position": 12,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 2,
@@ -2111,6 +2078,19 @@
       "goalsFor": 1,
       "goalsAgainst": 1,
       "goalDifference": 0,
+      "points": 2
+    },
+    {
+      "position": 12,
+      "team": "Кудрівка",
+      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
+      "played": 3,
+      "wins": 0,
+      "draws": 2,
+      "losses": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "goalDifference": -4,
       "points": 2
     },
     {
@@ -2143,14 +2123,14 @@
       "position": 15,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 2,
+      "played": 3,
       "wins": 0,
-      "draws": 0,
+      "draws": 1,
       "losses": 2,
       "goalsFor": 1,
       "goalsAgainst": 4,
       "goalDifference": -3,
-      "points": 0
+      "points": 1
     },
     {
       "position": 16,
