@@ -47,18 +47,8 @@
       "time": "13:00",
       "date": "Сьогодні, 30 серпня",
       "dateIso": "2026-08-30",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "ЛНЗ Черкаси",
-      "away": "Верес Рівне",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "Сьогодні, 30 серпня",
-      "dateIso": "2026-08-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0"
     },
     {
       "home": "Зоря Луганськ",
@@ -1267,28 +1257,28 @@
     },
     {
       "position": 7,
-      "team": "Кривбас",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 3,
-      "wins": 1,
-      "draws": 1,
-      "losses": 1,
-      "goalsFor": 5,
-      "goalsAgainst": 6,
-      "goalDifference": -1,
-      "points": 4
-    },
-    {
-      "position": 8,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 3,
+      "played": 4,
       "wins": 1,
-      "draws": 1,
+      "draws": 2,
       "losses": 1,
       "goalsFor": 2,
       "goalsAgainst": 3,
       "goalDifference": -1,
+      "points": 5
+    },
+    {
+      "position": 8,
+      "team": "Кривбас",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 4,
+      "wins": 1,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 5,
+      "goalsAgainst": 7,
+      "goalDifference": -2,
       "points": 4
     },
     {
@@ -1319,6 +1309,19 @@
     },
     {
       "position": 11,
+      "team": "Чорноморець Одеса",
+      "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
+      "played": 3,
+      "wins": 1,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "goalDifference": -2,
+      "points": 3
+    },
+    {
+      "position": 12,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
       "played": 4,
@@ -1331,7 +1334,20 @@
       "points": 3
     },
     {
-      "position": 12,
+      "position": 13,
+      "team": "Верес Рівне",
+      "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
+      "played": 4,
+      "wins": 0,
+      "draws": 2,
+      "losses": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 3,
+      "goalDifference": -2,
+      "points": 2
+    },
+    {
+      "position": 14,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
       "played": 3,
@@ -1344,7 +1360,7 @@
       "points": 2
     },
     {
-      "position": 13,
+      "position": 15,
       "team": "Кудрівка",
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
       "played": 4,
@@ -1357,20 +1373,7 @@
       "points": 2
     },
     {
-      "position": 14,
-      "team": "Верес Рівне",
-      "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
-      "played": 3,
-      "wins": 0,
-      "draws": 1,
-      "losses": 2,
-      "goalsFor": 1,
-      "goalsAgainst": 3,
-      "goalDifference": -2,
-      "points": 1
-    },
-    {
-      "position": 15,
+      "position": 16,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
       "played": 3,
@@ -1381,19 +1384,6 @@
       "goalsAgainst": 4,
       "goalDifference": -3,
       "points": 1
-    },
-    {
-      "position": 16,
-      "team": "Чорноморець Одеса",
-      "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 2,
-      "wins": 0,
-      "draws": 0,
-      "losses": 2,
-      "goalsFor": 1,
-      "goalsAgainst": 4,
-      "goalDifference": -3,
-      "points": 0
     }
   ]
 }
