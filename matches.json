@@ -61,6 +61,16 @@
       "score": "0 - 1"
     },
     {
+      "home": "Зоря Луганськ",
+      "away": "ФК Харків",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 31 серпня",
+      "dateIso": "2026-08-31",
+      "status": "Match Finished",
+      "score": "0 - 3"
+    },
+    {
       "home": "Буковина Чернівці",
       "away": "Динамо Київ",
       "league": "УПЛ",
@@ -1157,9 +1167,9 @@
       "wins": 2,
       "draws": 0,
       "losses": 2,
-      "goalsFor": 3,
+      "goalsFor": 5,
       "goalsAgainst": 4,
-      "goalDifference": -1,
+      "goalDifference": 1,
       "points": 6
     },
     {
@@ -1184,8 +1194,8 @@
       "draws": 0,
       "losses": 2,
       "goalsFor": 5,
-      "goalsAgainst": 5,
-      "goalDifference": 0,
+      "goalsAgainst": 7,
+      "goalDifference": -2,
       "points": 6
     },
     {
