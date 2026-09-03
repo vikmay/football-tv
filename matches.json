@@ -605,6 +605,16 @@
       "dateIso": "2026-08-27",
       "status": "Match Finished",
       "score": "4 - 0"
+    },
+    {
+      "home": "Ferencváros",
+      "away": "Трабзонспор",
+      "league": "Ліга Європи",
+      "time": "21:30",
+      "date": "четвер, 27 серпня",
+      "dateIso": "2026-08-27",
+      "status": "FT",
+      "score": ""
     }
   ],
   "Ліга конференцій": [
@@ -1173,6 +1183,16 @@
       "dateIso": "2026-08-27",
       "status": "Match Finished",
       "score": "4 - 0"
+    },
+    {
+      "home": "Ferencváros",
+      "away": "Трабзонспор",
+      "league": "Ліга Європи",
+      "time": "21:30",
+      "date": "четвер, 27 серпня",
+      "dateIso": "2026-08-27",
+      "status": "FT",
+      "score": ""
     },
     {
       "home": "Рієка (Cro)",
