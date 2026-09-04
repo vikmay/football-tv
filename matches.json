@@ -91,6 +91,16 @@
       "score": "0 - 0"
     },
     {
+      "home": "Полісся Житомир",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "Сьогодні, 4 вересня",
+      "dateIso": "2026-09-04",
+      "status": "Match Finished",
+      "score": "5 - 1"
+    },
+    {
       "home": "Кривбас",
       "away": "Колос Ковалівка",
       "league": "УПЛ",
@@ -1195,9 +1205,9 @@
       "wins": 4,
       "draws": 0,
       "losses": 1,
-      "goalsFor": 10,
+      "goalsFor": 13,
       "goalsAgainst": 5,
-      "goalDifference": 5,
+      "goalDifference": 8,
       "points": 12
     },
     {
@@ -1378,8 +1388,8 @@
       "draws": 2,
       "losses": 3,
       "goalsFor": 2,
-      "goalsAgainst": 10,
-      "goalDifference": -8,
+      "goalsAgainst": 13,
+      "goalDifference": -11,
       "points": 2
     },
     {
