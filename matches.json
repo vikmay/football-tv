@@ -101,6 +101,16 @@
       "score": "5 - 1"
     },
     {
+      "home": "Кривбас",
+      "away": "Колос Ковалівка",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 5 вересня",
+      "dateIso": "2026-09-05",
+      "status": "Match Finished",
+      "score": "2 - 2"
+    },
+    {
       "home": "Карпати Львів",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
@@ -541,9 +551,9 @@
       "wins": 3,
       "draws": 0,
       "losses": 2,
-      "goalsFor": 9,
+      "goalsFor": 10,
       "goalsAgainst": 4,
-      "goalDifference": 5,
+      "goalDifference": 6,
       "points": 9
     },
     {
@@ -606,8 +616,8 @@
       "wins": 1,
       "draws": 2,
       "losses": 2,
-      "goalsFor": 5,
-      "goalsAgainst": 7,
+      "goalsFor": 7,
+      "goalsAgainst": 9,
       "goalDifference": -2,
       "points": 5
     },
@@ -672,8 +682,8 @@
       "draws": 3,
       "losses": 2,
       "goalsFor": 0,
-      "goalsAgainst": 7,
-      "goalDifference": -7,
+      "goalsAgainst": 8,
+      "goalDifference": -8,
       "points": 3
     },
     {
@@ -684,8 +694,8 @@
       "wins": 0,
       "draws": 2,
       "losses": 2,
-      "goalsFor": 1,
-      "goalsAgainst": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 6,
       "goalDifference": -3,
       "points": 2
     },
