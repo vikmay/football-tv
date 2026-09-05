@@ -111,14 +111,14 @@
       "score": "2 - 2"
     },
     {
-      "home": "Карпати Львів",
-      "away": "Шахтар Донецьк",
+      "home": "ФК Харків",
+      "away": "Оболонь Київ",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "13:00",
       "date": "Сьогодні, 5 вересня",
       "dateIso": "2026-09-05",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 0"
     },
     {
       "home": "Епіцентр",
@@ -519,29 +519,29 @@
     },
     {
       "position": 2,
-      "team": "Карпати Львів",
-      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 4,
-      "wins": 3,
-      "draws": 1,
-      "losses": 0,
-      "goalsFor": 11,
-      "goalsAgainst": 2,
-      "goalDifference": 9,
-      "points": 10
+      "team": "Шахтар Донецьк",
+      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
+      "played": 5,
+      "wins": 4,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 10,
+      "goalsAgainst": 4,
+      "goalDifference": 6,
+      "points": 12
     },
     {
       "position": 3,
-      "team": "Шахтар Донецьк",
-      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 4,
+      "team": "Карпати Львів",
+      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
+      "played": 5,
       "wins": 3,
-      "draws": 0,
+      "draws": 1,
       "losses": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 3,
-      "goalDifference": 5,
-      "points": 9
+      "goalsFor": 12,
+      "goalsAgainst": 4,
+      "goalDifference": 8,
+      "points": 10
     },
     {
       "position": 4,
