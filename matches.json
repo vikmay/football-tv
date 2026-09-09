@@ -229,8 +229,8 @@
       "time": "19:45",
       "date": "Сьогодні, 9 вересня",
       "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "5 - 1"
     },
     {
       "home": "Штутгарт",
@@ -239,48 +239,8 @@
       "time": "19:45",
       "date": "Сьогодні, 9 вересня",
       "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Ліверпуль",
-      "away": "Атлетіко",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 9 вересня",
-      "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Наполі",
-      "away": "Арсенал",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 9 вересня",
-      "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "ПСЖ",
-      "away": "Слован Братислава",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 9 вересня",
-      "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Спортінг",
-      "away": "Галатасарай",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 9 вересня",
-      "dateIso": "2026-09-09",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1"
     },
     {
       "home": "ПСВ",
