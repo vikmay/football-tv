@@ -309,8 +309,8 @@
       "time": "19:45",
       "date": "Сьогодні, 10 вересня",
       "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     },
     {
       "home": "Фенербахче",
@@ -319,48 +319,8 @@
       "time": "19:45",
       "date": "Сьогодні, 10 вересня",
       "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Баварія Мюнхен",
-      "away": "Буде/Глімт",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 10 вересня",
-      "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Комо",
-      "away": "РБ Лейпциг",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 10 вересня",
-      "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Манчестер Юнайтед",
-      "away": "Сабах Баку",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 10 вересня",
-      "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Славія Прага",
-      "away": "Ланс",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "Сьогодні, 10 вересня",
-      "dateIso": "2026-09-10",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1"
     }
   ],
   "Кубок України": [
