@@ -81,16 +81,6 @@
       "score": "0 - 0"
     },
     {
-      "home": "Колос Ковалівка",
-      "away": "Карпати Львів",
-      "league": "УПЛ",
-      "time": "15:30",
-      "date": "Сьогодні, 11 вересня",
-      "dateIso": "2026-09-11",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
       "home": "Кривбас",
       "away": "ФК Харків",
       "league": "УПЛ",
@@ -566,6 +556,19 @@
   "Таблиця УПЛ": [
     {
       "position": 1,
+      "team": "Карпати Львів",
+      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
+      "played": 6,
+      "wins": 4,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 14,
+      "goalsAgainst": 4,
+      "goalDifference": 10,
+      "points": 13
+    },
+    {
+      "position": 2,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 5,
@@ -578,7 +581,7 @@
       "points": 12
     },
     {
-      "position": 2,
+      "position": 3,
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
       "played": 5,
@@ -589,19 +592,6 @@
       "goalsAgainst": 4,
       "goalDifference": 6,
       "points": 12
-    },
-    {
-      "position": 3,
-      "team": "Карпати Львів",
-      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 5,
-      "wins": 3,
-      "draws": 1,
-      "losses": 1,
-      "goalsFor": 12,
-      "goalsAgainst": 4,
-      "goalDifference": 8,
-      "points": 10
     },
     {
       "position": 4,
@@ -750,13 +740,13 @@
       "position": 15,
       "team": "Колос Ковалівка",
       "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 4,
+      "played": 5,
       "wins": 0,
       "draws": 2,
-      "losses": 2,
+      "losses": 3,
       "goalsFor": 3,
-      "goalsAgainst": 6,
-      "goalDifference": -3,
+      "goalsAgainst": 8,
+      "goalDifference": -5,
       "points": 2
     },
     {
