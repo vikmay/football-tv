@@ -101,6 +101,16 @@
       "score": ""
     },
     {
+      "home": "ЛНЗ Черкаси",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 12 вересня",
+      "dateIso": "2026-09-12",
+      "status": "Match Finished",
+      "score": "3 - 1"
+    },
+    {
       "home": "Верес Рівне",
       "away": "Кудрівка",
       "league": "УПЛ",
@@ -657,8 +667,8 @@
       "wins": 2,
       "draws": 2,
       "losses": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
       "goalDifference": 0,
       "points": 8
     },
@@ -761,8 +771,8 @@
       "wins": 0,
       "draws": 3,
       "losses": 3,
-      "goalsFor": 0,
-      "goalsAgainst": 10,
+      "goalsFor": 1,
+      "goalsAgainst": 11,
       "goalDifference": -10,
       "points": 3
     },
