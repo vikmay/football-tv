@@ -71,14 +71,24 @@
       "score": "1 - 1"
     },
     {
+      "home": "Динамо Київ",
+      "away": "Епіцентр",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "Сьогодні, 14 вересня",
+      "dateIso": "2026-09-14",
+      "status": "Match Finished",
+      "score": "3 - 0"
+    },
+    {
       "home": "Шахтар Донецьк",
       "away": "Чорноморець Одеса",
       "league": "УПЛ",
       "time": "18:00",
       "date": "Сьогодні, 14 вересня",
       "dateIso": "2026-09-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Чорноморець Одеса",
@@ -529,6 +539,19 @@
     },
     {
       "position": 2,
+      "team": "Шахтар Донецьк",
+      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
+      "played": 6,
+      "wins": 5,
+      "draws": 0,
+      "losses": 1,
+      "goalsFor": 12,
+      "goalsAgainst": 4,
+      "goalDifference": 8,
+      "points": 15
+    },
+    {
+      "position": 3,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 6,
@@ -541,19 +564,6 @@
       "points": 13
     },
     {
-      "position": 3,
-      "team": "Шахтар Донецьк",
-      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 5,
-      "wins": 4,
-      "draws": 0,
-      "losses": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 4,
-      "goalDifference": 6,
-      "points": 12
-    },
-    {
       "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
@@ -561,9 +571,9 @@
       "wins": 3,
       "draws": 1,
       "losses": 1,
-      "goalsFor": 6,
+      "goalsFor": 7,
       "goalsAgainst": 5,
-      "goalDifference": 1,
+      "goalDifference": 2,
       "points": 10
     },
     {
@@ -588,8 +598,8 @@
       "draws": 2,
       "losses": 2,
       "goalsFor": 6,
-      "goalsAgainst": 4,
-      "goalDifference": 2,
+      "goalsAgainst": 5,
+      "goalDifference": 1,
       "points": 8
     },
     {
@@ -674,13 +684,13 @@
       "position": 13,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 4,
+      "played": 5,
       "wins": 1,
       "draws": 1,
-      "losses": 2,
+      "losses": 3,
       "goalsFor": 2,
-      "goalsAgainst": 4,
-      "goalDifference": -2,
+      "goalsAgainst": 6,
+      "goalDifference": -4,
       "points": 4
     },
     {
