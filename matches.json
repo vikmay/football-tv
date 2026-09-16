@@ -431,8 +431,8 @@
       "time": "12:00",
       "date": "Сьогодні, 16 вересня",
       "dateIso": "2026-09-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3"
     },
     {
       "home": "Прикарпаття",
@@ -441,28 +441,8 @@
       "time": "14:00",
       "date": "Сьогодні, 16 вересня",
       "dateIso": "2026-09-16",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Куликів-Білка",
-      "away": "Верес Рівне",
-      "league": "Кубок України",
-      "time": "15:00",
-      "date": "Сьогодні, 16 вересня",
-      "dateIso": "2026-09-16",
-      "status": "Scheduled",
-      "score": ""
-    },
-    {
-      "home": "Буковина Чернівці",
-      "away": "ЛНЗ Черкаси",
-      "league": "Кубок України",
-      "time": "16:00",
-      "date": "Сьогодні, 16 вересня",
-      "dateIso": "2026-09-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2"
     },
     {
       "home": "Тростянець",
