@@ -1034,6 +1034,11 @@ function dedupeScheduleSections(matches) {
         away: getUplTeamName(rawItem.away)
       };
 
+      // Reject polluted cached entries as well as newly parsed page descriptions.
+      if (isFlashscoreNoiseText(item.home) || isFlashscoreNoiseText(item.away)) {
+        continue;
+      }
+
       const homeKey = normalizeTeamForMatchKey(item.home);
       const awayKey = normalizeTeamForMatchKey(item.away);
       const slotKey = `${item.dateIso || ""}|${String(item.league || "")}|${homeKey}|${awayKey}`;
@@ -1728,6 +1733,10 @@ function parseFlashscoreUplFixturesFromHtml(html) {
   return dedupeEvents(events).sort(sortByDateTimeAsc);
 }
 
+function isFlashscoreNoiseText(value) {
+  return /Flashscore\.ua|Live результати|результати\s+live|До\s+Вашої\s+уваги|УПЛ 2026|Ліга націй|Ліга чемпіонів|Ліга Європи|Ліга конференцій|більше спорту|Правила користування|Політика конфіденційності|Copyright|Gambling Therapy|Встановити конфіденційність|18\+|Показати більше/i.test(String(value || ""));
+}
+
 function parseFlashscoreFixtureEvents(html) {
   const text = htmlToPlainText(html)
     .replace(/\u00a0/g, " ")
@@ -1738,8 +1747,7 @@ function parseFlashscoreFixtureEvents(html) {
   const events = [];
   const chunks = text.split(/(?=\b\d{2}\.\d{2}\.)/g).map(chunk => chunk.trim()).filter(Boolean);
 
-  const isNoiseText = value =>
-    /Flashscore\.ua|Live результати|УПЛ 2026|Ліга чемпіонів|Ліга Європи|Ліга конференцій|більше спорту|Правила користування|Політика конфіденційності|Copyright|Gambling Therapy|Встановити конфіденційність|18\+|Показати більше/i.test(value);
+  const isNoiseText = isFlashscoreNoiseText;
 
   const getQualityScore = value => {
     const normalized = cleanExtractedText(value);
@@ -1817,8 +1825,7 @@ function parseFlashscoreDrawPageEvents(html) {
   const events = [];
   const matches = [...text.matchAll(/(\d{2})\.(\d{2})\.\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\),\s+\[([^\]]+)\]\(\/match\/soccer\/[^)]+\)/g)];
 
-  const isNoiseText = value =>
-    /Flashscore\.ua|Live результати|УПЛ 2026|Ліга чемпіонів|Ліга Європи|Ліга конференцій|більше спорту|Правила користування|Політика конфіденційності|Copyright|Gambling Therapy|Встановити конфіденційність|18\+|Показати більше/i.test(value);
+  const isNoiseText = isFlashscoreNoiseText;
 
   for (const match of matches) {
     const [, day, month, homeRaw, awayRaw] = match;

@@ -6,6 +6,21 @@ const source = fs.readFileSync('parse.js', 'utf8').replace(/main\(\)\.catch\([\s
 const context = vm.createContext({ require, console, process, fetch });
 vm.runInContext(source, context);
 const today = context.getKyivTodayIso();
+const [, month, day] = today.split('-');
+const badAway = 'Косово . До Вашої уваги Ліга націй УЄФА 2026/2027 результати live';
+const pollutedHtml = `<p>${day}.${month}. Австрія - ${badAway}</p>`;
+assert.equal(context.parseFlashscoreFixtureEvents(pollutedHtml).length, 0);
+const validHtml = `<p>${day}.${month}. 19:00 Австрія - Косово</p>`;
+const validEvents = context.parseFlashscoreFixtureEvents(validHtml);
+assert.equal(validEvents.length, 1);
+assert.equal(validEvents[0].strAwayTeam, 'Косово');
+assert.equal(validEvents[0].strTime, '19:00:00');
+const cleanMatch = { home: 'Австрія', away: 'Косово', dateIso: today, time: '19:00', league: 'Ліга націй УЄФА' };
+const cached = context.dedupeScheduleSections({ 'Ліга націй УЄФА': [
+  { ...cleanMatch, away: badAway, time: '00:00' }, cleanMatch
+] });
+assert.equal(cached['Ліга націй УЄФА'].length, 1);
+assert.equal(cached['Ліга націй УЄФА'][0].time, '19:00');
 const match = { home: 'England', away: 'Spain', league: 'Ліга націй УЄФА', dateIso: today, time: '21:45', status: 'Live', score: '0 - 0' };
 for (const status of ['Live', '1st Half', 'HT', 'Half Time', '2H', 'Extra Time', 'Penalties']) {
   assert.ok(isLiveStatus(status), status);
