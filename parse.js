@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { isLiveStatus } = require("./match-status.js");
 
 
 /**
@@ -545,6 +546,7 @@ const extraCompetitionConfigs = [
     id: 4399,
     name: "Ліга націй УЄФА",
     type: "national",
+    includeAllTeams: true,
     flashscoreUrls: [
       "https://www.flashscore.ua/soccer/europe/uefa-nations-league/fixtures/"
     ]
@@ -778,7 +780,7 @@ function normalizeMatchSnapshot(match) {
   return {
     ...match,
     status: isFinished && hasValidScore ? "Match Finished" : (match.status || "Scheduled"),
-    score: isFinished && hasValidScore ? match.score : ""
+    score: (isFinished || isLiveStatus(match.status)) && hasValidScore ? match.score : ""
   };
 }
 
@@ -787,7 +789,7 @@ function isActiveOrFinishedMatch(match) {
     return false;
   }
 
-  return match.status === "Match Finished" || match.status === "Live" || match.status === "In Progress" || match.status === "1st Half" || match.status === "2nd Half";
+  return match.status === "Match Finished" || isLiveStatus(match.status);
 }
 
 function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
@@ -815,10 +817,10 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
 
     const key = getStableKey(match);
 
-    // Discard previous match if fresh current data was fetched for this section,
-    // the match is within the active date window, but is not in current data.
+    // A fixture can disappear from the upcoming feed at kickoff. Keep today's
+    // fixtures and known active/results snapshots until the date window expires.
     if (current.length > 0 && match.dateIso && isDateWithinWindow(match.dateIso)) {
-      if (!currentKeys.has(key)) {
+      if (!currentKeys.has(key) && !isActiveOrFinishedMatch(match) && match.dateIso !== getKyivTodayIso()) {
         continue;
       }
     }
@@ -855,6 +857,10 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
     }
 
     if (existingIsFinished && !incomingIsFinished) {
+      continue;
+    }
+
+    if (isLiveStatus(existing.status) && match.status === "Scheduled") {
       continue;
     }
 
@@ -1131,9 +1137,7 @@ function dedupeEvents(events) {
     String(event?.strHomeTeam || "").length + String(event?.strAwayTeam || "").length;
 
   const getFinishedScore = event =>
-    event?.strStatus === "Match Finished" || (event?.intHomeScore !== null && event?.intHomeScore !== undefined && event?.intAwayScore !== null && event?.intAwayScore !== undefined)
-      ? 10000
-      : 0;
+    event?.strStatus === "Match Finished" ? 20000 : isLiveStatus(event?.strStatus) ? 10000 : 0;
 
   const getTimeScore = event => {
     const t = String(event?.strTime || "");
@@ -1255,9 +1259,9 @@ function parseFlashscoreCupFeedData(data) {
     const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
     const hasScore = Boolean(scoreHomeMatch && scoreAwayMatch);
 
-    // Flashscore statusCode can differ between fixtures/results pages and even across leagues.
-    // For UI we only need the presence of a score to mark the match as finished.
-    const isFinished = hasScore;
+    // AB is the event state: a running score does not mean full time.
+    const status = ({ "1": "Scheduled", "2": "Live", "3": "Match Finished",
+      "4": "Postponed", "5": "Cancelled", "9": "Walkover" })[statusCode] || "Scheduled";
 
     const roundText = cleanExtractedText(roundMatch?.[1] || "");
     const intRound = roundText.includes("Півфін") ? 150 : roundText.includes("Чвертьфін") ? 125 : roundText.includes("Фінал") ? 200 : undefined;
@@ -1271,7 +1275,7 @@ function parseFlashscoreCupFeedData(data) {
         minute: "2-digit",
         hour12: false
       }),
-      strStatus: isFinished ? "Match Finished" : "Scheduled",
+      strStatus: status,
       strHomeTeam: homeTeam,
       strAwayTeam: awayTeam,
       intHomeScore: hasScore ? Number(scoreHomeMatch[1]) : null,
@@ -2375,7 +2379,7 @@ async function fetchExtraMatches() {
     for (const url of flashscoreUrls) {
       const flashscoreEvents = await fetchFlashscoreCompetitionEvents(url, config.name);
       const relevantEvents = flashscoreEvents.filter(event =>
-        shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+        config.includeAllTeams || shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
       );
 
       if (relevantEvents.length) {
@@ -2385,7 +2389,7 @@ async function fetchExtraMatches() {
 
     const apiEvents = await fetchCompetitionEvents(config.id, config.name);
     const apiRelevantEvents = apiEvents.filter(event =>
-      shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
+      config.includeAllTeams || shouldShowAllTeamsFromQuarterfinal(event) || isExtraCompetitionMatch(event, config.type)
     );
 
     const mergedRelevantEvents = [
@@ -2420,7 +2424,9 @@ async function fetchExtraMatches() {
     if (config.type === "club") {
       clubMatches.push(...mappedMatches);
     } else if (config.type === "national") {
-      nationalMatches.push(...mappedMatches);
+      nationalMatches.push(...mappedMatches.filter(match =>
+        isUkraineNationalTeamName(match.home) || isUkraineNationalTeamName(match.away)
+      ));
     }
   }
 
@@ -2502,6 +2508,12 @@ async function main() {
     extraMatches.leagueMatches?.["Суперкубок УЄФА"] || [],
     existingData["Суперкубок УЄФА"] || []
   );
+
+  for (const name of ["Ліга націй УЄФА", "Чемпіонат світу", "Чемпіонат Європи"]) {
+    matches[name] = mergeCurrentAndPreviousMatches(
+      extraMatches.leagueMatches?.[name] || [], existingData[name] || []
+    );
+  }
 
   matches["Українські клуби в Європі"] = mergeCurrentAndPreviousMatches(
     extraMatches.clubMatches,

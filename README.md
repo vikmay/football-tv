@@ -58,7 +58,7 @@ Workflow запускається:
       "time": "HH:MM",
       "date": "день, DD місяця",
       "dateIso": "YYYY-MM-DD",
-      "status": "Match Finished" | "Scheduled",
+      "status": "Match Finished" | "Scheduled" | "Live",
       "score": "X - Y" | ""
     }
   ]

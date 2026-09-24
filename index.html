@@ -90,6 +90,15 @@
                 font-weight: bold;
             }
 
+            .match__live {
+                display: block;
+                margin-top: 5px;
+                color: #ff3b30;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+            }
+
             #error {
                 text-align: center;
                 color: red;
@@ -646,6 +655,7 @@
             </div>
         </div>
 
+        <script src="./match-status.js"></script>
         <script>
             let hasScrolledToToday = false;
             let headerClickCount = 0;
@@ -1168,7 +1178,7 @@
                         <div class="match__teams">
                             <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
                         </div>
-                        <div class="time">${scoreOrTime}</div>
+                        <div class="time">${scoreOrTime}${isLiveStatus(m.status) ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
                     </div>
                 </div>`;
                             });
@@ -1190,6 +1200,7 @@
             }
 
             load();
+            setInterval(load, 60000);
         </script>
 
     </body>
