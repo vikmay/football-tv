@@ -92,10 +92,11 @@
 
             .match__live {
                 display: block;
-                margin-top: 5px;
+                margin-top: 3px;
                 color: #ff3b30;
-                font-size: 14px;
+                font-size: 11px;
                 font-weight: bold;
+                letter-spacing: 0.08em;
                 text-align: center;
             }
 
@@ -103,10 +104,30 @@
                 text-align: center;
             }
 
+            .time--live:has(.match__kickoff) {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 14px;
+                align-items: baseline;
+            }
+
             .match__kickoff {
-                display: block;
-                margin-bottom: 5px;
-                font-size: 16px;
+                grid-column: 1;
+                grid-row: 1;
+                color: #999;
+                font-size: 14px;
+                font-weight: normal;
+                font-variant-numeric: tabular-nums;
+            }
+
+            .time--live:has(.match__kickoff) .score {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .time--live:has(.match__kickoff) .match__live {
+                grid-column: 2;
+                grid-row: 2;
             }
 
             #error {
