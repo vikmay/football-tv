@@ -622,9 +622,9 @@ async function fetchJson(url, label) {
   }
 }
 
-async function fetchText(url, label) {
+async function fetchText(url, label, options = {}) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: AbortSignal.timeout(25000), ...options });
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
@@ -2373,6 +2373,42 @@ async function fetchFlashscoreCompetitionEvents(url, label) {
   return [];
 }
 
+async function fetchCurrentScoreEvents() {
+  // Tournament HTML omits in-play matches. The daily feed contains their live
+  // state and scores, along with results needed after the final whistle.
+  const zone = new Intl.DateTimeFormat("en", {
+    timeZone: "Europe/Kyiv", timeZoneName: "shortOffset"
+  }).formatToParts(new Date()).find(part => part.type === "timeZoneName")?.value;
+  const offset = Number(zone?.replace("GMT", "")) || 0;
+  const feeds = await Promise.all([0, -1].map(day => fetchText(
+    `https://www.flashscore.ua/x/feed/f_1_${day}_${offset}_ua_1`,
+    `Flashscore current scores (day ${day})`,
+    { headers: { "x-fsign": "SW9D1eZo" } }
+  )));
+  return dedupeEvents(feeds.filter(Boolean).flatMap(parseFlashscoreCupFeedData));
+}
+
+function applyCurrentScores(matches, events) {
+  const keyOf = (date, home, away) => [date,
+    normalizeTeamForMatchKey(home), normalizeTeamForMatchKey(away)
+  ].join("|");
+  const updates = new Map(events
+    .filter(event => isLiveStatus(event.strStatus) || event.strStatus === "Match Finished")
+    .map(event => [keyOf(event.dateEvent, event.strHomeTeam, event.strAwayTeam), event]));
+
+  return Object.fromEntries(Object.entries(matches).map(([section, rows]) => [section,
+    section === "Таблиця УПЛ" || !Array.isArray(rows) ? rows : rows.map(match => {
+      const event = updates.get(keyOf(match.dateIso, match.home, match.away));
+      if (!event) return match;
+      // This fresh feed is authoritative, even if an older HTML parser marked
+      // an in-play score as finished. Never invent a score when none is supplied.
+      return { ...match, status: event.strStatus,
+        score: formatScore(event) || match.score || "",
+        time: formatTime(event) || match.time };
+    })
+  ]));
+}
+
 async function fetchExtraMatches() {
   const clubMatches = [];
   const nationalMatches = [];
@@ -2467,12 +2503,13 @@ async function main() {
     return;
   }
 
-  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches] = await Promise.all([
+  const [uplEvents, uplStandings, clEvents, cupEvents, extraMatches, currentScoreEvents] = await Promise.all([
     fetchUplEvents(),
     fetchUplStandings(),
     fetchChampionsLeagueEvents(),
     fetchCupEvents(),
-    fetchExtraMatches()
+    fetchExtraMatches(),
+    fetchCurrentScoreEvents()
   ]);
 
   if (uplEvents) {
@@ -2536,7 +2573,7 @@ async function main() {
   );
 
   const dedupedMatches = dedupeScheduleSections(matches);
-  const finalMatches = filterMatchesWithinWindow(dedupedMatches);
+  const finalMatches = applyCurrentScores(filterMatchesWithinWindow(dedupedMatches), currentScoreEvents);
   fs.writeFileSync("matches.json", JSON.stringify(finalMatches, null, 2));
   writeRefreshMeta({
     lastUpdated: new Date().toISOString(),
