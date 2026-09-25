@@ -98,6 +98,18 @@
                 font-weight: bold;
                 letter-spacing: 0.08em;
                 text-align: center;
+                animation: live-pulse 1.6s ease-in-out infinite;
+            }
+
+            @keyframes live-pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.4; }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .match__live {
+                    animation: none;
+                }
             }
 
             .time--live {
