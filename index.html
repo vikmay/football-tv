@@ -123,6 +123,15 @@
                 text-align: center;
             }
 
+            .match__stale {
+                display: block;
+                margin-top: 4px;
+                color: #999;
+                font-size: 11px;
+                font-weight: normal;
+                text-align: center;
+            }
+
             .time--live-with-score {
                 display: grid;
                 grid-template-columns: auto auto;
@@ -705,7 +714,7 @@
             </div>
         </div>
 
-        <script src="./match-status.js"></script>
+        <script src="./match-status.js?v=live-freshness-1"></script>
         <script>
             let hasScrolledToToday = false;
             let headerClickCount = 0;
@@ -1217,7 +1226,8 @@
                             }
 
                             matchesByDate[dateIso].forEach(m => {
-                                const isLive = isLiveStatus(m.status);
+                                const isLive = isLiveMatch(m);
+                                const staleLive = isLiveStatus(m.status) && !isLive;
                                 const kickoff = isLive && m.score
                                     ? `<span class="match__kickoff" title="Час початку матчу">${getKickoffLabel(m.time)}</span>`
                                     : "";
@@ -1232,7 +1242,7 @@
                         <div class="match__teams">
                             <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
                         </div>
-                        <div class="time${isLive ? ' time--live' : ''}${kickoff ? ' time--live-with-score' : ''}">${kickoff}${scoreOrTime}${isLive ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
+                        <div class="time${isLive ? ' time--live' : ''}${kickoff ? ' time--live-with-score' : ''}">${kickoff}${scoreOrTime}${isLive ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}${staleLive ? '<span class="match__stale" title="Показано останній відомий рахунок; фінальний результат ще не підтверджено">Дані застаріли</span>' : ''}</div>
                     </div>
                 </div>`;
                             });
