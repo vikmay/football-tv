@@ -1169,7 +1169,7 @@
                             matchesByDate[dateIso].forEach(m => {
                                 const scoreOrTime = m.score
                                     ? `<span class="score">${m.score}</span>`
-                                    : m.time;
+                                    : getKickoffLabel(m.time);
 
                                 html += `
                 <div class="match">

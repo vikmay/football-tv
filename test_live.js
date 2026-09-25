@@ -1,12 +1,27 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const { isLiveStatus } = require('./match-status.js');
+const { isLiveStatus, getKickoffLabel } = require('./match-status.js');
 const source = fs.readFileSync('parse.js', 'utf8').replace(/main\(\)\.catch\([\s\S]*$/, '');
 const context = vm.createContext({ require, console, process, fetch });
 vm.runInContext(source, context);
 const today = context.getKyivTodayIso();
 const [, month, day] = today.split('-');
+for (const time of ['', null, '00:00', '00:00:00', '25:70']) {
+  assert.equal(getKickoffLabel(time), 'Час уточнюється');
+}
+assert.equal(getKickoffLabel('19:00:00'), '19:00');
+assert.equal(context.formatTime({}), '');
+for (const separator of ['-', '–', '—']) {
+  const events = context.parseFlashscoreFixtureEvents(`<p>${day}.${month}. Сан-Марино ${separator} Фінляндія</p>`);
+  assert.equal(events.length, 1);
+  assert.equal(events[0].strHomeTeam, 'Сан-Марино');
+  assert.equal(events[0].strAwayTeam, 'Фінляндія');
+  assert.equal(context.formatTime(events[0]), '');
+}
+assert.equal(context.dedupeScheduleSections({ 'Ліга націй УЄФА': [
+  { home: 'Сан', away: 'Марино - Фінляндія', dateIso: today, time: '00:00' }
+] })['Ліга націй УЄФА'].length, 0);
 const badAway = 'Косово . До Вашої уваги Ліга націй УЄФА 2026/2027 результати live';
 const pollutedHtml = `<p>${day}.${month}. Австрія - ${badAway}</p>`;
 assert.equal(context.parseFlashscoreFixtureEvents(pollutedHtml).length, 0);

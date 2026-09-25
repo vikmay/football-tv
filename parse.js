@@ -704,7 +704,7 @@ function formatTime(event) {
   const sourceTime = event.strTimeLocal || event.strTime;
 
   if (!sourceTime) {
-    return "00:00";
+    return "";
   }
 
   if (event.isLocalTime) {
@@ -1035,7 +1035,8 @@ function dedupeScheduleSections(matches) {
       };
 
       // Reject polluted cached entries as well as newly parsed page descriptions.
-      if (isFlashscoreNoiseText(item.home) || isFlashscoreNoiseText(item.away)) {
+      if (isFlashscoreNoiseText(item.home) || isFlashscoreNoiseText(item.away) ||
+          /\s+[-–—]\s+/.test(item.home) || /\s+[-–—]\s+/.test(item.away)) {
         continue;
       }
 
@@ -1782,11 +1783,12 @@ function parseFlashscoreFixtureEvents(html) {
 
       const timeMatch = fragment.match(/\b(\d{1,2}:\d{2})\b/);
       const timePart = timeMatch?.[1];
-      const timeForEvent = timePart ? `${timePart}:00` : "00:00:00";
+      const timeForEvent = timePart ? `${timePart}:00` : "";
 
       const fragmentWithoutTime = fragment.replace(/\b\d{1,2}:\d{2}\b/g, "").trim();
 
-      const match = fragmentWithoutTime.match(/^(.+?)\s*-\s*(.+)$/);
+      // Require spaces around the separator: Сан-Марино is one team.
+      const match = fragmentWithoutTime.match(/^(.+?)\s+[-–—]\s+(.+)$/);
       if (!match) {
         continue;
       }
@@ -1794,7 +1796,8 @@ function parseFlashscoreFixtureEvents(html) {
       const homeTeam = cleanExtractedText(match[1]);
       const awayTeam = cleanExtractedText(match[2]);
 
-      if (!homeTeam || !awayTeam || isNoiseText(homeTeam) || isNoiseText(awayTeam)) {
+      if (!homeTeam || !awayTeam || isNoiseText(homeTeam) || isNoiseText(awayTeam) ||
+          /\s+[-–—]\s+/.test(awayTeam)) {
         continue;
       }
 
