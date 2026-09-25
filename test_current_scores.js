@@ -47,6 +47,7 @@ async function test() {
   await browser.load();
   assert.match(content.innerHTML, /Угорщина – Україна/);
   assert.match(content.innerHTML, /<span class="score">0 - 1<\/span><span class="match__live"/);
+  assert.ok(content.innerHTML.includes(`<span class="match__kickoff" title="Час початку матчу">${live['Ліга націй УЄФА'][0].time}</span><span class="score">0 - 1</span>`));
   assert.equal((content.innerHTML.match(/Угорщина – Україна/g) || []).length, 1);
 
   const finishedEvents = parser.parseFlashscoreCupFeedData(raw.replace('AB÷2', 'AB÷3'));
@@ -54,6 +55,7 @@ async function test() {
   await browser.load();
   assert.match(content.innerHTML, /<span class="score">0 - 1<\/span>/);
   assert.ok(!content.innerHTML.includes('class="match__live"'));
+  assert.ok(!content.innerHTML.includes('class="match__kickoff"'));
   console.log('Daily feed → schedule → rendered LIVE/score → final result: passed.');
 }
 test().catch(error => { console.error(error); process.exitCode = 1; });

@@ -99,6 +99,16 @@
                 text-align: center;
             }
 
+            .time--live {
+                text-align: center;
+            }
+
+            .match__kickoff {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+
             #error {
                 text-align: center;
                 color: red;
@@ -1167,6 +1177,10 @@
                             }
 
                             matchesByDate[dateIso].forEach(m => {
+                                const isLive = isLiveStatus(m.status);
+                                const kickoff = isLive && m.score
+                                    ? `<span class="match__kickoff" title="Час початку матчу">${getKickoffLabel(m.time)}</span>`
+                                    : "";
                                 const scoreOrTime = m.score
                                     ? `<span class="score">${m.score}</span>`
                                     : getKickoffLabel(m.time);
@@ -1178,7 +1192,7 @@
                         <div class="match__teams">
                             <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
                         </div>
-                        <div class="time">${scoreOrTime}${isLiveStatus(m.status) ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
+                        <div class="time${isLive ? ' time--live' : ''}">${kickoff}${scoreOrTime}${isLive ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
                     </div>
                 </div>`;
                             });
