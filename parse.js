@@ -2389,6 +2389,7 @@ async function fetchCurrentScoreEvents() {
 }
 
 function applyCurrentScores(matches, events) {
+  const scoreUpdatedAt = new Date().toISOString();
   const keyOf = (date, home, away) => [date,
     normalizeTeamForMatchKey(home), normalizeTeamForMatchKey(away)
   ].join("|");
@@ -2402,7 +2403,7 @@ function applyCurrentScores(matches, events) {
       if (!event) return match;
       // This fresh feed is authoritative, even if an older HTML parser marked
       // an in-play score as finished. Never invent a score when none is supplied.
-      return { ...match, status: event.strStatus,
+      return { ...match, status: event.strStatus, scoreUpdatedAt,
         score: formatScore(event) || match.score || "",
         time: formatTime(event) || match.time };
     })

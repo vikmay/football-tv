@@ -10,6 +10,13 @@
       ? value.slice(0, 5) : "Час уточнюється";
   }
 
-  if (typeof module !== "undefined" && module.exports) module.exports = { isLiveStatus, getKickoffLabel };
-  else Object.assign(root, { isLiveStatus, getKickoffLabel });
+  function isLiveMatch(match, now = Date.now()) {
+    if (!isLiveStatus(match?.status)) return false;
+    const updated = Date.parse(match.scoreUpdatedAt || "");
+    const age = now - updated;
+    return Number.isFinite(age) && age >= -60000 && age <= 15 * 60000;
+  }
+
+  if (typeof module !== "undefined" && module.exports) module.exports = { isLiveStatus, isLiveMatch, getKickoffLabel };
+  else Object.assign(root, { isLiveStatus, isLiveMatch, getKickoffLabel });
 })(globalThis);

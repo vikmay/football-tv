@@ -50,6 +50,18 @@ async function test() {
   assert.ok(content.innerHTML.includes(`<span class="match__kickoff" title="Час початку матчу">${live['Ліга націй УЄФА'][0].time}</span><span class="score">0 - 1</span>`));
   assert.equal((content.innerHTML.match(/Угорщина – Україна/g) || []).length, 1);
 
+  const stale = { ...live['Ліга націй УЄФА'][0], scoreUpdatedAt: new Date(Date.now() - 16 * 60000).toISOString() };
+  assert.equal(status.isLiveMatch(stale), false);
+  assert.equal(status.isLiveMatch({ ...stale, scoreUpdatedAt: undefined }), false);
+  // A failed source refresh must not make cached scores look fresh again.
+  const unchanged = parser.applyCurrentScores({ test: [stale] }, []);
+  assert.equal(unchanged.test[0].scoreUpdatedAt, stale.scoreUpdatedAt);
+  data = { 'Ліга націй УЄФА': [stale] };
+  await browser.load();
+  assert.ok(!content.innerHTML.includes('class="match__live"'));
+  assert.match(content.innerHTML, /Дані застаріли/);
+  assert.match(content.innerHTML, /0 - 1/);
+
   const finishedEvents = parser.parseFlashscoreCupFeedData(raw.replace('AB÷2', 'AB÷3'));
   data = parser.applyCurrentScores(live, finishedEvents);
   await browser.load();
