@@ -98,7 +98,13 @@
                 font-weight: bold;
                 letter-spacing: 0.08em;
                 text-align: center;
+                -webkit-animation: live-pulse 1.6s ease-in-out infinite;
                 animation: live-pulse 1.6s ease-in-out infinite;
+            }
+
+            @-webkit-keyframes live-pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.4; }
             }
 
             @keyframes live-pulse {
@@ -108,6 +114,7 @@
 
             @media (prefers-reduced-motion: reduce) {
                 .match__live {
+                    -webkit-animation: none;
                     animation: none;
                 }
             }
@@ -116,7 +123,7 @@
                 text-align: center;
             }
 
-            .time--live:has(.match__kickoff) {
+            .time--live-with-score {
                 display: grid;
                 grid-template-columns: auto auto;
                 column-gap: 14px;
@@ -132,12 +139,12 @@
                 font-variant-numeric: tabular-nums;
             }
 
-            .time--live:has(.match__kickoff) .score {
+            .time--live-with-score .score {
                 grid-column: 2;
                 grid-row: 1;
             }
 
-            .time--live:has(.match__kickoff) .match__live {
+            .time--live-with-score .match__live {
                 grid-column: 2;
                 grid-row: 2;
             }
@@ -1225,7 +1232,7 @@
                         <div class="match__teams">
                             <span class="match__teams-main">${m?.home || "?"} – ${m?.away || "?"}</span>
                         </div>
-                        <div class="time${isLive ? ' time--live' : ''}">${kickoff}${scoreOrTime}${isLive ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
+                        <div class="time${isLive ? ' time--live' : ''}${kickoff ? ' time--live-with-score' : ''}">${kickoff}${scoreOrTime}${isLive ? '<span class="match__live" aria-label="Матч триває">LIVE</span>' : ''}</div>
                     </div>
                 </div>`;
                             });
