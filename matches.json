@@ -205,8 +205,8 @@
       "time": "19:00",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0"
     },
     {
       "home": "Грузія",
@@ -215,8 +215,8 @@
       "time": "19:00",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1"
     },
     {
       "home": "Італія",
@@ -225,8 +225,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 1"
     },
     {
       "home": "Польща",
@@ -235,8 +235,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0"
     },
     {
       "home": "Туреччина",
@@ -245,8 +245,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0"
     },
     {
       "home": "Угорщина",
@@ -255,8 +255,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 1"
     },
     {
       "home": "Чорногорія",
@@ -265,8 +265,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0"
     },
     {
       "home": "Швеція",
@@ -275,8 +275,8 @@
       "time": "21:45",
       "date": "Сьогодні, 25 вересня",
       "dateIso": "2026-09-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "2 - 1"
     },
     {
       "home": "Словенія",
