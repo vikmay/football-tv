@@ -34,7 +34,9 @@ async function test() {
 
   const content = { innerHTML: '' };
   let data = live;
-  const browser = vm.createContext({ ...status, console: { log() {} },
+  // Do not inject helpers: the page must render even when an external script
+  // is missing or cached at an older version (the real kiosk failure).
+  const browser = vm.createContext({ console: { log() {} },
     document: {
       getElementById: id => id === 'content' ? content : { innerHTML: '' },
       querySelector: selector => selector === '.header' ? { addEventListener() {} } : null
@@ -44,6 +46,13 @@ async function test() {
   const script = fs.readFileSync('index.html', 'utf8').match(/<script>([\s\S]*?)<\/script>/)[1]
     .replace(/\s+load\(\);\s+setInterval\(load, 60000\);/, '');
   vm.runInContext(script, browser);
+  const now = Date.now();
+  for (const state of ['Live', 'HT', 'Scheduled', 'Match Finished']) {
+    for (const age of [0, 15 * 60000, 16 * 60000]) {
+      const sample = { status: state, scoreUpdatedAt: new Date(now - age).toISOString() };
+      assert.equal(browser.isLiveMatch(sample, now), status.isLiveMatch(sample, now));
+    }
+  }
   await browser.load();
   assert.match(content.innerHTML, /Угорщина – Україна/);
   assert.match(content.innerHTML, /<span class="score">0 - 1<\/span><span class="match__live"/);
