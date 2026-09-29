@@ -403,7 +403,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "2 - 3",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Грузія",
@@ -414,7 +414,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Латвія",
@@ -425,7 +425,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Бельгія",
@@ -436,7 +436,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Північна Ірландія",
@@ -447,7 +447,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Румунія",
@@ -458,7 +458,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "2 - 4",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Туреччина",
@@ -469,7 +469,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "1 - 4",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Швеція",
@@ -480,7 +480,7 @@
       "dateIso": "2026-09-28",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-09-29T15:29:59.967Z"
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Молдова",
@@ -489,8 +489,9 @@
       "time": "19:00",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Фінляндія",
@@ -499,8 +500,9 @@
       "time": "19:00",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Болгарія",
@@ -509,8 +511,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Іспанія",
@@ -519,8 +522,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Люксембург",
@@ -529,8 +533,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Сан-Марино",
@@ -539,8 +544,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Словаччина",
@@ -549,8 +555,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Словенія",
@@ -559,8 +566,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Чехія",
@@ -569,8 +577,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Шотландія",
@@ -579,8 +588,9 @@
       "time": "21:45",
       "date": "Сьогодні, 29 вересня",
       "dateIso": "2026-09-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-09-29T20:08:01.782Z"
     },
     {
       "home": "Азербайджан",
