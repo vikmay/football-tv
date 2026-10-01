@@ -609,8 +609,9 @@
       "time": "19:00",
       "date": "Сьогодні, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-01T16:20:26.384Z"
     },
     {
       "home": "Греція",
