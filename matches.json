@@ -19,6 +19,36 @@
       "dateIso": "2026-10-09",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Чорноморець Одеса",
+      "away": "ФК Харків",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 10 жовтня",
+      "dateIso": "2026-10-10",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Колос Ковалівка",
+      "away": "Епіцентр",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "субота, 10 жовтня",
+      "dateIso": "2026-10-10",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Оболонь Київ",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "субота, 10 жовтня",
+      "dateIso": "2026-10-10",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [],
@@ -607,88 +637,95 @@
       "away": "Ліхтенштейн",
       "league": "Ліга націй УЄФА",
       "time": "19:00",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Live",
+      "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-01T16:20:26.384Z"
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Греція",
       "away": "Нідерланди",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Данія",
       "away": "Португалія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 4",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Ізраїль",
       "away": "Косово",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Ірландія",
       "away": "Австрія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Мальта",
       "away": "Гібралтар",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Німеччина",
       "away": "Сербія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Уельс",
       "away": "Норвегія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "Сьогодні, 1 жовтня",
+      "date": "четвер, 1 жовтня",
       "dateIso": "2026-10-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-10-01T21:05:24.934Z"
     },
     {
       "home": "Казахстан",
       "away": "Молдова",
       "league": "Ліга націй УЄФА",
       "time": "17:00",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -698,7 +735,7 @@
       "away": "Вірменія",
       "league": "Ліга націй УЄФА",
       "time": "19:00",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -708,7 +745,7 @@
       "away": "Чорногорія",
       "league": "Ліга націй УЄФА",
       "time": "19:00",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -718,7 +755,7 @@
       "away": "Туреччина",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -728,7 +765,7 @@
       "away": "Швеція",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -738,7 +775,7 @@
       "away": "Румунія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -748,7 +785,7 @@
       "away": "Грузія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -758,7 +795,7 @@
       "away": "Північна Ірландія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -768,7 +805,7 @@
       "away": "Словаччина",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -778,7 +815,7 @@
       "away": "Італія",
       "league": "Ліга націй УЄФА",
       "time": "21:45",
-      "date": "пʼятниця, 2 жовтня",
+      "date": "Сьогодні, 2 жовтня",
       "dateIso": "2026-10-02",
       "status": "Scheduled",
       "score": ""
@@ -1121,6 +1158,16 @@
       "date": "вівторок, 6 жовтня",
       "dateIso": "2026-10-06",
       "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Hертhа",
+      "away": "Greuther Fürth",
+      "league": "Ліга націй УЄФА",
+      "time": "14:30",
+      "date": "субота, 10 жовтня",
+      "dateIso": "2026-10-10",
+      "status": "NS",
       "score": ""
     }
   ],
