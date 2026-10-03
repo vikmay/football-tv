@@ -2,6 +2,17 @@
   "УПЛ": [
     {
       "home": "Верес Рівне",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "Сьогодні, 3 жовтня",
+      "dateIso": "2026-10-03",
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
+    },
+    {
+      "home": "Верес Рівне",
       "away": "Шахтар Донецьк",
       "league": "УПЛ",
       "time": "15:30",
@@ -669,7 +680,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Кіпр",
@@ -680,7 +691,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Латвія",
@@ -691,7 +702,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Бельгія",
@@ -702,7 +713,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Боснія і Герцеговина",
@@ -713,7 +724,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Польща",
@@ -724,7 +735,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "6 - 0",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Угорщина",
@@ -735,7 +746,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Україна",
@@ -746,7 +757,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "0 - 3",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Фарерські острови",
@@ -757,7 +768,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Франція",
@@ -768,7 +779,7 @@
       "dateIso": "2026-10-02",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-10-03T10:38:16.267Z"
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Фінляндія",
@@ -777,8 +788,9 @@
       "time": "16:00",
       "date": "Сьогодні, 3 жовтня",
       "dateIso": "2026-10-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-10-03T14:52:38.525Z"
     },
     {
       "home": "Білорусь",
@@ -1193,6 +1205,19 @@
     },
     {
       "position": 6,
+      "team": "Верес Рівне",
+      "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
+      "played": 7,
+      "wins": 2,
+      "draws": 3,
+      "losses": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 6,
+      "goalDifference": 0,
+      "points": 9
+    },
+    {
+      "position": 7,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 7,
@@ -1205,7 +1230,7 @@
       "points": 8
     },
     {
-      "position": 7,
+      "position": 8,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
       "played": 7,
@@ -1218,7 +1243,7 @@
       "points": 8
     },
     {
-      "position": 8,
+      "position": 9,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
       "played": 7,
@@ -1231,7 +1256,7 @@
       "points": 8
     },
     {
-      "position": 9,
+      "position": 10,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 6,
@@ -1244,7 +1269,7 @@
       "points": 7
     },
     {
-      "position": 10,
+      "position": 11,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
       "played": 7,
@@ -1257,33 +1282,7 @@
       "points": 7
     },
     {
-      "position": 11,
-      "team": "Верес Рівне",
-      "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
-      "played": 7,
-      "wins": 1,
-      "draws": 3,
-      "losses": 3,
-      "goalsFor": 4,
-      "goalsAgainst": 6,
-      "goalDifference": -2,
-      "points": 6
-    },
-    {
       "position": 12,
-      "team": "Колос Ковалівка",
-      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 6,
-      "wins": 1,
-      "draws": 2,
-      "losses": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 10,
-      "goalDifference": -4,
-      "points": 5
-    },
-    {
-      "position": 13,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
       "played": 6,
@@ -1292,6 +1291,19 @@
       "losses": 3,
       "goalsFor": 3,
       "goalsAgainst": 7,
+      "goalDifference": -4,
+      "points": 5
+    },
+    {
+      "position": 13,
+      "team": "Колос Ковалівка",
+      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
+      "played": 6,
+      "wins": 1,
+      "draws": 2,
+      "losses": 3,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
       "goalDifference": -4,
       "points": 5
     },
@@ -1310,19 +1322,6 @@
     },
     {
       "position": 15,
-      "team": "Кудрівка",
-      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 7,
-      "wins": 1,
-      "draws": 2,
-      "losses": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 16,
-      "goalDifference": -11,
-      "points": 5
-    },
-    {
-      "position": 16,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
       "played": 7,
@@ -1333,6 +1332,19 @@
       "goalsAgainst": 12,
       "goalDifference": -10,
       "points": 4
+    },
+    {
+      "position": 16,
+      "team": "Кудрівка",
+      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
+      "played": 7,
+      "wins": 0,
+      "draws": 2,
+      "losses": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 18,
+      "goalDifference": -13,
+      "points": 2
     }
   ]
 }
