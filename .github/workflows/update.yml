@@ -29,6 +29,12 @@ jobs:
                   node-version: 24
                   check-latest: true
 
+            - name: Check parser
+              run: |
+                  node test_schedule_times.js
+                  node test_current_scores.js
+                  node test_live.js
+
             - name: Generate matches
               run: FORCE_REFRESH=1 node parse.js
 

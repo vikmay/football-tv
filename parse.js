@@ -5,7 +5,7 @@ const { isLiveStatus } = require("./match-status.js");
 /**
  * Fetch matches for both leagues.
  * Strategy:
- * - UPL: official upl.ua calendar page
+ * - UPL: Flashscore.ua fixtures + results; official calendar as backup
  * - Champions League: TheSportsDB recent past + upcoming events, with fallback for missing matches
  * - Extra competitions: Ukrainian clubs in European cups + Ukraine national team in international competitions
  * - Backup source: Flashscore fixtures pages when primary sources miss matches
@@ -645,7 +645,7 @@ function formatDateToIsoInTimeZone(date, timeZone) {
     day: "2-digit"
   }).formatToParts(date);
 
-  const currentYear = new Date().getUTCFullYear();
+  const currentYear = parts.find(part => part.type === "year")?.value;
   const month = parts.find(part => part.type === "month")?.value;
   const day = parts.find(part => part.type === "day")?.value;
 
@@ -864,20 +864,10 @@ function mergeCurrentAndPreviousMatches(currentMatches, previousMatches) {
       continue;
     }
 
-    const existingTime = String(existing?.time || "00:00");
-    const incomingTime = String(match?.time || "00:00");
-
-    const existingTimeIsZero = existingTime.startsWith("00:00");
-    const incomingTimeIsZero = incomingTime.startsWith("00:00");
-
-    let mergedTime = existingTime;
-    if (existingTimeIsZero && !incomingTimeIsZero) {
-      mergedTime = incomingTime;
-    } else if (!existingTimeIsZero && !incomingTimeIsZero) {
-      if (existingTime === "20:00" && incomingTime !== "20:00") {
-        mergedTime = incomingTime;
-      }
-    }
+    // Fresh source data must replace cached kickoff times after schedule changes.
+    const incomingTime = String(match?.time || "");
+    const mergedTime = incomingTime && !incomingTime.startsWith("00:00")
+      ? incomingTime : (existing.time || match.time || "");
 
     const mergedStatus = incomingIsFinished || existingIsFinished ? "Match Finished" : (match.status || existing.status || "Scheduled");
     const mergedScore = incomingIsFinished ? incomingScoreText : (existingIsFinished ? existingScoreText : (incomingScoreText || existingScoreText || ""));
@@ -1622,116 +1612,21 @@ function parseOfficialUplEvents(html) {
 }
 
 function parseFlashscoreUplSummaryResults(summaryData) {
-  const summary = String(summaryData || "");
-  const events = [];
+  return parseFlashscoreCupFeedData(String(summaryData || ""));
+}
 
-  // summary-results format: AD÷<unix> ... CX÷<home> ... AF÷<away>
-  const matchRe = /AD÷(\d{10})[\s\S]*?CX÷([^¬]+)[\s\S]*?AF÷([^¬]+)/g;
-
-  let m;
-  while ((m = matchRe.exec(summary)) !== null) {
-    const unix = m[1];
-    const homeRaw = m[2];
-    const awayRaw = m[3];
-
-    const kickoff = new Date(Number(unix) * 1000);
-    if (Number.isNaN(kickoff.getTime())) {
-      continue;
-    }
-
-    const dateEvent = formatDateToIsoInTimeZone(kickoff, "Europe/Kyiv");
-    if (!isDateWithinWindow(dateEvent)) {
-      continue;
-    }
-
-    const homeTeam = getUplTeamName(cleanExtractedText(homeRaw));
-    const awayTeam = getUplTeamName(cleanExtractedText(awayRaw));
-
-    if (!homeTeam || !awayTeam) {
-      continue;
-    }
-
-    const strTime = kickoff.toLocaleTimeString("uk-UA", {
-      timeZone: "Europe/Kyiv",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false
-    });
-
-    events.push({
-      idEvent: `flashscore-upl-summary-${dateEvent}-${homeTeam}-${awayTeam}-${unix}`.replace(/\s+/g, "-"),
-      dateEvent,
-      strTime,
-      strStatus: "Scheduled",
-      strHomeTeam: homeTeam,
-      strAwayTeam: awayTeam,
-      intHomeScore: null,
-      intAwayScore: null,
-      isLocalTime: true
-    });
-  }
-
-  return dedupeEvents(events).sort(sortByDateTimeAsc);
+function parseFlashscoreInitialFeed(html, feedName) {
+  // Parse raw embedded data: stripping HTML removes scripts containing feeds.
+  // Flashscore uses both single and double quotes for initialFeeds keys.
+  const feeds = [...String(html || "").matchAll(
+    /cjs\.initialFeeds\[(['"])([^'"]+)\1\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/g
+  )];
+  return feeds.filter(match => match[2] === feedName)
+    .flatMap(match => parseFlashscoreCupFeedData(match[3]));
 }
 
 function parseFlashscoreUplFixturesFromHtml(html) {
-  // Flashscore fixtures page for UPL encodes kickoff in initialFeeds blocks:
-  // ~AAГ· ... AOГ·<unix> ... CXГ·<home> ... AFГ·<away>
-  const text = htmlToPlainText(html)
-    .replace(/\u00a0/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  const events = [];
-  const blocks = text.split("~AAГ·").slice(1);
-
-  for (const block of blocks) {
-    const aoMatch = block.match(/(?:^|В¬)AOГ·(\d{10})/);
-    const homeMatch = block.match(/(?:^|В¬)CXГ·([^В¬]+)/);
-    const awayMatch = block.match(/(?:^|В¬)AFГ·([^В¬]+)/);
-
-    if (!aoMatch || !homeMatch || !awayMatch) {
-      continue;
-    }
-
-    const kickoff = new Date(Number(aoMatch[1]) * 1000);
-    if (Number.isNaN(kickoff.getTime())) {
-      continue;
-    }
-
-    const dateEvent = formatDateToIsoInTimeZone(kickoff, "Europe/Kyiv");
-    if (!isDateWithinWindow(dateEvent)) {
-      continue;
-    }
-
-    const homeTeam = getUplTeamName(cleanExtractedText(homeMatch[1]));
-    const awayTeam = getUplTeamName(cleanExtractedText(awayMatch[1]));
-
-    if (!homeTeam || !awayTeam) {
-      continue;
-    }
-
-    const strTime = kickoff.toLocaleTimeString("uk-UA", {
-      timeZone: "Europe/Kyiv",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false
-    });
-
-    events.push({
-      idEvent: `flashscore-upl-fixture-${dateEvent}-${homeTeam}-${awayTeam}-${aoMatch[1]}`.replace(/\s+/g, "-"),
-      dateEvent,
-      strTime,
-      strStatus: "Scheduled",
-      strHomeTeam: homeTeam,
-      strAwayTeam: awayTeam,
-      intHomeScore: null,
-      intAwayScore: null,
-      isLocalTime: true
-    });
-  }
-
-  return dedupeEvents(events).sort(sortByDateTimeAsc);
+  return parseFlashscoreInitialFeed(html, "fixtures");
 }
 
 function isFlashscoreNoiseText(value) {
@@ -2121,139 +2016,35 @@ async function fetchUplStandings() {
 }
 
 async function fetchUplEvents() {
-  const officialUrl = "https://upl.ua/en/tournaments/championship/432/calendar";
-  const officialHtml = await fetchText(officialUrl, "РЈРџР› official upl.ua fetch error");
-
-  const flashscoreFixturesUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/fixtures/";
-  const flashscoreResultsUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/results/";
-
-  const tntUrl = "https://www.tntsports.co.uk/football/ukrainian-premier-league/2025-2026/calendar-results.shtml";
-
-  const [flashscoreFixturesHtml, flashscoreResultsHtml, tntHtml] = await Promise.all([
-    fetchText(flashscoreFixturesUrl, "РЈРџР› Flashscore fixtures fetch error"),
-    fetchText(flashscoreResultsUrl, "РЈРџР› Flashscore results fetch error"),
-    fetchText(tntUrl, "РЈРџР› TNT Sports fetch error")
+  const baseUrl = "https://www.flashscore.ua/soccer/ukraine/premier-league/";
+  const pages = await Promise.all([
+    fetchText(baseUrl + "fixtures/", "УПЛ Flashscore fixtures fetch error"),
+    fetchText(baseUrl + "results/", "УПЛ Flashscore results fetch error")
   ]);
 
+  // Collect both upcoming matches and results. Returning results alone used to
+  // omit upcoming fixtures, and the official calendar hid Flashscore changes.
+  const summaryEvents = pages.flatMap(html => [
+    ...parseFlashscoreInitialFeed(html, "summary-fixtures"),
+    ...parseFlashscoreInitialFeed(html, "summary-results")
+  ]);
+  const fullEvents = pages.flatMap(html => [
+    ...parseFlashscoreUplFixturesFromHtml(html),
+    ...parseFlashscoreInitialFeed(html, "results")
+  ]);
+  const flashscoreEvents = mergeCupEvents(summaryEvents, fullEvents);
+  if (flashscoreEvents.length > 0) {
+    console.log(`✅ УПЛ fetched from Flashscore: ${flashscoreEvents.length} matches in ±7 days window`);
+    return flashscoreEvents;
+  }
+
+  const officialHtml = await fetchText("https://upl.ua/en/tournaments/championship/432/calendar", "УПЛ official fetch error");
   const officialEvents = officialHtml ? parseOfficialUplEvents(officialHtml) : [];
-
-  // Flashscore fixtures page: visible HTML може не містити kickoff часу,
-  // але всередині initialFeeds["summary-results"] час є (AD÷<unix>).
-  let flashscoreSummaryEvents = [];
-  let flashscoreSummaryFixturesEvents = [];
-
-  if (flashscoreFixturesHtml) {
-    const summaryData =
-      flashscoreFixturesHtml.match(/cjs\.initialFeeds\["summary-results"\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ||
-      "";
-    if (summaryData) {
-      flashscoreSummaryEvents = parseFlashscoreUplSummaryResults(summaryData);
-    }
-  }
-
-  // Correct kickoff time for upcoming UPL matches is usually in results page under summary-fixtures.
-  if (flashscoreResultsHtml) {
-    const summaryFixturesData =
-      flashscoreResultsHtml.match(/cjs\.initialFeeds\["summary-fixtures"\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] ||
-      "";
-    if (summaryFixturesData) {
-      flashscoreSummaryFixturesEvents = parseFlashscoreUplSummaryResults(summaryFixturesData);
-    }
-  }
-
-  const flashscoreFixturesEvents = flashscoreFixturesHtml ? parseFlashscoreUplFixturesFromHtml(flashscoreFixturesHtml) : [];
-
-  // Flashscore results are parsed via the generic feed parser (same as cups/champions league feeds).
-  let flashscoreResultsEvents = [];
-  if (flashscoreResultsHtml) {
-    const resultsData =
-      flashscoreResultsHtml.match(/cjs\.initialFeeds\['results'\]\s*=\s*\{\s*data:\s*`([\s\S]*?)`/i)?.[1] || "";
-
-    if (resultsData) {
-      flashscoreResultsEvents = parseFlashscoreCupFeedData(resultsData);
-    }
-  }
-
+  if (officialEvents.length > 0) return officialEvents;
+  const tntHtml = await fetchText("https://www.tntsports.co.uk/football/ukrainian-premier-league/2025-2026/calendar-results.shtml", "УПЛ TNT fetch error");
   const tntEvents = tntHtml ? parseTntUplEvents(tntHtml) : [];
-
-  // Prefer official calendar, but overlay finished scores from Flashscore results.
-  if (officialEvents.length > 0) {
-    if (flashscoreResultsEvents.length > 0) {
-      console.log(`✅ РЈРџР› official + Flashscore results merged: ${officialEvents.length} matches in В±7 days window`);
-      return mergeCupEvents(officialEvents, flashscoreResultsEvents);
-    }
-
-    console.log(`вњ… РЈРџР› fetched from official upl.ua: ${officialEvents.length} matches in В±7 days window`);
-    return officialEvents;
-  }
-
-  // If no official, prefer Flashscore results (they include scores), otherwise fixtures, otherwise TNT.
-  if (flashscoreResultsEvents.length > 0) {
-    console.log(`✅ РЈРџР› fetched from Flashscore results: ${flashscoreResultsEvents.length} matches in В±7 days window`);
-    return flashscoreResultsEvents;
-  }
-
-  // If no official, prefer Flashscore “summary-results” (usually has kickoff time),
-  // otherwise fallback to legacy fixtures parser (may produce 00:00:00).
-  // Prefer Flashscore вЂњsummary-fixturesвЂќ (usually has correct kickoff),
-  // then fallback to вЂњsummary-resultsвЂќ.
-  if (flashscoreSummaryFixturesEvents.length > 0) {
-    console.log(`вњ… РЈРџР› summary-fixtures parsed: ${flashscoreSummaryFixturesEvents.length} matches in В±7 days window`);
-    return flashscoreSummaryFixturesEvents;
-  }
-
-  if (flashscoreSummaryEvents.length > 0) {
-    console.log(`вњ… РЈРџР› summary-results parsed: ${flashscoreSummaryEvents.length} matches in В±7 days window`);
-    return flashscoreSummaryEvents;
-  }
-
-  if (flashscoreFixturesEvents.length > 0) {
-    console.log(`Р Р†РЎв„ўР’В Р С—РЎвЂР РЏ Р В Р в‚¬Р В РЎСџР В РІР‚С” official source empty, fallback to Flashscore fixtures: ${flashscoreFixturesEvents.length} matches in Р вЂ™Р’В±7 days window`);
-
-    // Flashscore fixtures HTML often lacks kickoff time -> parser keeps "00:00:00".
-    // Overlay kickoff time from TheSportsDB for those matches.
-    const needsOverlay = flashscoreFixturesEvents.some(e => String(e?.strTime || "").startsWith("00:00"));
-    if (needsOverlay) {
-      const sportsDbEvents = await fetchLeagueEvents(4354, "Р Р€Р СџР вЂє");
-      if (Array.isArray(sportsDbEvents) && sportsDbEvents.length > 0) {
-        const getHomeNorm = e => getUplTeamName(String(e?.strHomeTeam || ""));
-        const getAwayNorm = e => getUplTeamName(String(e?.strAwayTeam || ""));
-        const keyOf = e =>
-          `${String(e?.dateEvent || "")}|${getHomeNorm(e)}|${getAwayNorm(e)}`;
-
-        const byKey = new Map();
-        sportsDbEvents.forEach(se => {
-          if (!se?.dateEvent || !se?.strHomeTeam || !se?.strAwayTeam) return;
-          byKey.set(keyOf(se), se);
-        });
-
-        for (const fe of flashscoreFixturesEvents) {
-          if (!String(fe?.strTime || "").startsWith("00:00")) continue;
-
-          const repl = byKey.get(
-            `${String(fe?.dateEvent || "")}|${getUplTeamName(String(fe?.strHomeTeam || ""))}|${getUplTeamName(String(fe?.strAwayTeam || ""))}`
-          );
-
-          if (!repl?.strTime) continue;
-
-          // formatTime() uses isLocalTime -> strTimeLocal/strTime substring(0,5)
-          fe.strTime = repl.strTime;
-          fe.strTimeLocal = repl.strTime;
-          fe.isLocalTime = true;
-        }
-      }
-    }
-
-    return flashscoreFixturesEvents;
-  }
-
-  if (tntEvents.length > 0) {
-    console.log(`вљ пёЏ РЈРџР› official source empty, fallback to TNT Sports: ${tntEvents.length} matches in В±7 days window`);
-    return tntEvents;
-  }
-
-  console.log("вљ пёЏ UPL web sources returned no matches, falling back to TheSportsDB");
-  return fetchLeagueEvents(4354, "РЈРџР›");
+  if (tntEvents.length > 0) return tntEvents;
+  return fetchLeagueEvents(4354, "УПЛ");
 }
 
 async function fetchCompetitionEvents(leagueId, leagueName) {
