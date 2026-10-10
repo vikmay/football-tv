@@ -19,7 +19,7 @@
       "dateIso": "2026-10-09",
       "status": "Match Finished",
       "score": "0 - 3",
-      "scoreUpdatedAt": "2026-10-10T17:55:46.341Z"
+      "scoreUpdatedAt": "2026-10-10T20:48:15.448Z"
     },
     {
       "home": "Колос Ковалівка",
@@ -30,7 +30,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-10T17:55:46.341Z"
+      "scoreUpdatedAt": "2026-10-10T20:48:15.448Z"
     },
     {
       "home": "Оболонь Київ",
@@ -41,7 +41,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-10T17:55:46.341Z"
+      "scoreUpdatedAt": "2026-10-10T20:48:15.448Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -52,7 +52,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-10T17:55:46.341Z"
+      "scoreUpdatedAt": "2026-10-10T20:48:15.448Z"
     },
     {
       "home": "Динамо Київ",
@@ -830,6 +830,16 @@
       "time": "21:30",
       "date": "Сьогодні, 10 жовтня",
       "dateIso": "2026-10-10",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Hертhа",
+      "away": "Greuther Fürth",
+      "league": "Ліга націй УЄФА",
+      "time": "14:30",
+      "date": "неділя, 11 жовтня",
+      "dateIso": "2026-10-11",
       "status": "NS",
       "score": ""
     }
