@@ -30,7 +30,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-11T02:17:19.149Z"
+      "scoreUpdatedAt": "2026-10-11T08:56:57.173Z"
     },
     {
       "home": "Оболонь Київ",
@@ -41,7 +41,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-11T02:17:19.149Z"
+      "scoreUpdatedAt": "2026-10-11T08:56:57.173Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -52,7 +52,7 @@
       "dateIso": "2026-10-10",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-11T02:17:19.149Z"
+      "scoreUpdatedAt": "2026-10-11T08:56:57.173Z"
     },
     {
       "home": "Динамо Київ",
@@ -871,32 +871,6 @@
     },
     {
       "position": 11,
-      "team": "Буковина Чернівці",
-      "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
-      "played": 7,
-      "wins": 1,
-      "draws": 4,
-      "losses": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 6,
-      "goalDifference": -2,
-      "points": 7
-    },
-    {
-      "position": 12,
-      "team": "Оболонь Київ",
-      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 8,
-      "wins": 1,
-      "draws": 4,
-      "losses": 3,
-      "goalsFor": 3,
-      "goalsAgainst": 12,
-      "goalDifference": -9,
-      "points": 7
-    },
-    {
-      "position": 13,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 6,
@@ -909,7 +883,20 @@
       "points": 7
     },
     {
-      "position": 14,
+      "position": 12,
+      "team": "Буковина Чернівці",
+      "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
+      "played": 7,
+      "wins": 1,
+      "draws": 4,
+      "losses": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 6,
+      "goalDifference": -2,
+      "points": 7
+    },
+    {
+      "position": 13,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
       "played": 7,
@@ -922,17 +909,30 @@
       "points": 5
     },
     {
-      "position": 15,
+      "position": 14,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 7,
+      "played": 6,
       "wins": 1,
       "draws": 2,
-      "losses": 4,
+      "losses": 3,
       "goalsFor": 7,
-      "goalsAgainst": 11,
-      "goalDifference": -4,
+      "goalsAgainst": 10,
+      "goalDifference": -3,
       "points": 5
+    },
+    {
+      "position": 15,
+      "team": "Оболонь Київ",
+      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
+      "played": 7,
+      "wins": 0,
+      "draws": 4,
+      "losses": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 12,
+      "goalDifference": -10,
+      "points": 4
     },
     {
       "position": 16,
