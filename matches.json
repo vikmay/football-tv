@@ -167,6 +167,36 @@
       "dateIso": "2026-10-19",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Динамо Київ",
+      "away": "Кудрівка",
+      "league": "УПЛ",
+      "time": "13:00",
+      "date": "пʼятниця, 23 жовтня",
+      "dateIso": "2026-10-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Верес Рівне",
+      "away": "Колос Ковалівка",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "пʼятниця, 23 жовтня",
+      "dateIso": "2026-10-23",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Полісся Житомир",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "15:30",
+      "date": "пʼятниця, 23 жовтня",
+      "dateIso": "2026-10-23",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [
@@ -274,92 +304,99 @@
       "away": "Ліверпуль",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Live",
-      "score": "0 - 4",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
+      "status": "Match Finished",
+      "score": "3 - 6",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Феєнорд",
       "away": "Комо",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Live",
-      "score": "1 - 1",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
+      "status": "Match Finished",
+      "score": "3 - 2",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Астон Вілла",
       "away": "Фенербахче",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "6 - 0",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Бетіс",
       "away": "Порту",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 2",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Буде/Глімт",
       "away": "Боруссія Д.",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Манчестер Сіті",
       "away": "ПСЖ",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 4",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Рома",
       "away": "Реал Мадрид",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 4",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Слован Братислава",
       "away": "Штутгарт",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Шахтар Донецьк",
       "away": "Аек",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 14 жовтня",
+      "date": "середа, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "scoreUpdatedAt": "2026-10-14T21:05:50.450Z"
     },
     {
       "home": "Сабах Баку",
@@ -542,122 +579,11 @@
       "score": ""
     }
   ],
-  "Кубок України": [
-    {
-      "home": "Тростянець",
-      "away": "Чернігів",
-      "league": "Кубок України",
-      "time": "11:00",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "2 - 4"
-    }
-  ],
+  "Кубок України": [],
   "Ліга Європи": [],
   "Ліга конференцій": [],
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [
-    {
-      "home": "Казахстан",
-      "away": "Фарерські острови",
-      "league": "Ліга націй УЄФА",
-      "time": "17:00",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "2 - 2"
-    },
-    {
-      "home": "Албанія",
-      "away": "Сан-Марино",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "2 - 1"
-    },
-    {
-      "home": "Англія",
-      "away": "Чехія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "3 - 0"
-    },
-    {
-      "home": "Білорусь",
-      "away": "Фінляндія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "1 - 0"
-    },
-    {
-      "home": "Естонія",
-      "away": "Ісландія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "0 - 0"
-    },
-    {
-      "home": "Люксембург",
-      "away": "Болгарія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "0 - 2"
-    },
-    {
-      "home": "Молдова",
-      "away": "Словаччина",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "0 - 4"
-    },
-    {
-      "home": "Хорватія",
-      "away": "Іспанія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
-    {
-      "home": "Швейцарія",
-      "away": "Північна Македонія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "3 - 0"
-    },
-    {
-      "home": "Шотландія",
-      "away": "Словенія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 6 жовтня",
-      "dateIso": "2026-10-06",
-      "status": "Match Finished",
-      "score": "1 - 2"
-    },
     {
       "home": "Ст Паулі",
       "away": "Рух Львів",
