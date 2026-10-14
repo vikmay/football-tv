@@ -179,7 +179,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Сабах Баку",
@@ -190,7 +190,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Арсенал",
@@ -201,7 +201,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Атлетіко",
@@ -212,7 +212,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Вікінг",
@@ -223,7 +223,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "3 - 3",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Вільярреал",
@@ -234,7 +234,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Галатасарай",
@@ -245,7 +245,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "1 - 4",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Інтер",
@@ -256,7 +256,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "3 - 4",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "РБ Лейпциг",
@@ -267,7 +267,7 @@
       "dateIso": "2026-10-13",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-14T13:03:12.108Z"
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "ЛАСК",
@@ -276,8 +276,9 @@
       "time": "19:45",
       "date": "Сьогодні, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 4",
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Феєнорд",
@@ -286,8 +287,9 @@
       "time": "19:45",
       "date": "Сьогодні, 14 жовтня",
       "dateIso": "2026-10-14",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
     },
     {
       "home": "Астон Вілла",
