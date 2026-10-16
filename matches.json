@@ -125,8 +125,9 @@
       "time": "13:00",
       "date": "Сьогодні, 16 жовтня",
       "dateIso": "2026-10-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-10-16T14:15:03.490Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -954,13 +955,13 @@
       "position": 8,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
-      "played": 8,
+      "played": 9,
       "wins": 2,
       "draws": 3,
-      "losses": 3,
+      "losses": 4,
       "goalsFor": 6,
-      "goalsAgainst": 9,
-      "goalDifference": -3,
+      "goalsAgainst": 11,
+      "goalDifference": -5,
       "points": 9
     },
     {
@@ -1017,6 +1018,19 @@
     },
     {
       "position": 13,
+      "team": "Оболонь Київ",
+      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
+      "played": 8,
+      "wins": 1,
+      "draws": 4,
+      "losses": 3,
+      "goalsFor": 4,
+      "goalsAgainst": 12,
+      "goalDifference": -8,
+      "points": 7
+    },
+    {
+      "position": 14,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
       "played": 7,
@@ -1029,7 +1043,7 @@
       "points": 5
     },
     {
-      "position": 14,
+      "position": 15,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 6,
@@ -1040,19 +1054,6 @@
       "goalsAgainst": 10,
       "goalDifference": -3,
       "points": 5
-    },
-    {
-      "position": 15,
-      "team": "Оболонь Київ",
-      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 7,
-      "wins": 0,
-      "draws": 4,
-      "losses": 3,
-      "goalsFor": 2,
-      "goalsAgainst": 12,
-      "goalDifference": -10,
-      "points": 4
     },
     {
       "position": 16,
