@@ -127,7 +127,7 @@
       "dateIso": "2026-10-16",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-17T09:38:33.208Z"
+      "scoreUpdatedAt": "2026-10-17T13:10:00.151Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -136,8 +136,9 @@
       "time": "13:00",
       "date": "Сьогодні, 17 жовтня",
       "dateIso": "2026-10-17",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-10-17T13:10:00.151Z"
     },
     {
       "home": "Кудрівка",
@@ -146,8 +147,9 @@
       "time": "15:30",
       "date": "Сьогодні, 17 жовтня",
       "dateIso": "2026-10-17",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-10-17T13:10:00.151Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -855,20 +857,30 @@
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [
     {
-      "home": "Енергє Коттбус",
-      "away": "Nürnberg",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 16 жовтня",
-      "dateIso": "2026-10-16",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Волфсбург",
       "away": "Hеіденhеім",
       "league": "Ліга націй УЄФА",
       "time": "14:00",
+      "date": "Сьогодні, 17 жовтня",
+      "dateIso": "2026-10-17",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Каісерслаутерн",
+      "away": "Бочум",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "Сьогодні, 17 жовтня",
+      "dateIso": "2026-10-17",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Hannover 96",
+      "away": "Ст Паулі",
+      "league": "Ліга націй УЄФА",
+      "time": "21:30",
       "date": "Сьогодні, 17 жовтня",
       "dateIso": "2026-10-17",
       "status": "NS",
@@ -949,14 +961,14 @@
       "position": 6,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 8,
-      "wins": 3,
+      "played": 9,
+      "wins": 4,
       "draws": 2,
       "losses": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 12,
-      "goalDifference": -2,
-      "points": 11
+      "goalsFor": 12,
+      "goalsAgainst": 13,
+      "goalDifference": -1,
+      "points": 14
     },
     {
       "position": 7,
@@ -1001,13 +1013,13 @@
       "position": 10,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
-      "played": 8,
+      "played": 9,
       "wins": 1,
       "draws": 5,
-      "losses": 2,
+      "losses": 3,
       "goalsFor": 6,
-      "goalsAgainst": 8,
-      "goalDifference": -2,
+      "goalsAgainst": 10,
+      "goalDifference": -4,
       "points": 8
     },
     {
@@ -1053,17 +1065,30 @@
       "position": 14,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 7,
+      "played": 8,
       "wins": 1,
       "draws": 2,
-      "losses": 4,
-      "goalsFor": 4,
-      "goalsAgainst": 9,
-      "goalDifference": -5,
+      "losses": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDifference": -6,
       "points": 5
     },
     {
       "position": 15,
+      "team": "Кудрівка",
+      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
+      "played": 9,
+      "wins": 1,
+      "draws": 2,
+      "losses": 6,
+      "goalsFor": 8,
+      "goalsAgainst": 20,
+      "goalDifference": -12,
+      "points": 5
+    },
+    {
+      "position": 16,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
       "played": 6,
@@ -1074,19 +1099,6 @@
       "goalsAgainst": 10,
       "goalDifference": -3,
       "points": 5
-    },
-    {
-      "position": 16,
-      "team": "Кудрівка",
-      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 8,
-      "wins": 0,
-      "draws": 2,
-      "losses": 6,
-      "goalsFor": 6,
-      "goalsAgainst": 20,
-      "goalDifference": -14,
-      "points": 2
     }
   ]
 }
