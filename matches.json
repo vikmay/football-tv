@@ -127,7 +127,7 @@
       "dateIso": "2026-10-17",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-10-18T09:06:25.982Z"
+      "scoreUpdatedAt": "2026-10-18T13:11:30.156Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -149,7 +149,7 @@
       "dateIso": "2026-10-17",
       "status": "Match Finished",
       "score": "4 - 1",
-      "scoreUpdatedAt": "2026-10-18T09:06:25.982Z"
+      "scoreUpdatedAt": "2026-10-18T13:11:30.156Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -160,7 +160,7 @@
       "dateIso": "2026-10-17",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-10-18T09:06:25.982Z"
+      "scoreUpdatedAt": "2026-10-18T13:11:30.156Z"
     },
     {
       "home": "Кривбас",
@@ -169,8 +169,9 @@
       "time": "13:00",
       "date": "Сьогодні, 18 жовтня",
       "dateIso": "2026-10-18",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-10-18T13:11:30.156Z"
     },
     {
       "home": "Полісся Житомир",
@@ -179,8 +180,9 @@
       "time": "13:00",
       "date": "Сьогодні, 18 жовтня",
       "dateIso": "2026-10-18",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "scoreUpdatedAt": "2026-10-18T13:11:30.156Z"
     },
     {
       "home": "Карпати Львів",
@@ -880,22 +882,32 @@
       "scoreUpdatedAt": "2026-10-17T16:21:54.679Z"
     },
     {
-      "home": "Hannover 96",
-      "away": "Ст Паулі",
-      "league": "Ліга націй УЄФА",
-      "time": "21:30",
-      "date": "субота, 17 жовтня",
-      "dateIso": "2026-10-17",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Dynamo Dresden",
       "away": "Магдебург",
       "league": "Ліга націй УЄФА",
       "time": "14:30",
       "date": "Сьогодні, 18 жовтня",
       "dateIso": "2026-10-18",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Рух Львів",
+      "away": "Дармстадт",
+      "league": "Ліга націй УЄФА",
+      "time": "14:30",
+      "date": "Сьогодні, 18 жовтня",
+      "dateIso": "2026-10-18",
+      "status": "2H",
+      "score": "4 - 0"
+    },
+    {
+      "home": "Бочум",
+      "away": "Волфсбург",
+      "league": "Ліга націй УЄФА",
+      "time": "19:30",
+      "date": "пʼятниця, 23 жовтня",
+      "dateIso": "2026-10-23",
       "status": "NS",
       "score": ""
     }
@@ -922,26 +934,26 @@
       "position": 2,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
-      "played": 8,
-      "wins": 6,
+      "played": 9,
+      "wins": 7,
       "draws": 1,
       "losses": 1,
-      "goalsFor": 17,
-      "goalsAgainst": 7,
-      "goalDifference": 10,
-      "points": 19
+      "goalsFor": 20,
+      "goalsAgainst": 8,
+      "goalDifference": 12,
+      "points": 22
     },
     {
       "position": 3,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 7,
+      "played": 8,
       "wins": 5,
       "draws": 1,
-      "losses": 1,
-      "goalsFor": 10,
-      "goalsAgainst": 5,
-      "goalDifference": 5,
+      "losses": 2,
+      "goalsFor": 11,
+      "goalsAgainst": 8,
+      "goalDifference": 3,
       "points": 16
     },
     {
@@ -987,14 +999,14 @@
       "position": 7,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 8,
-      "wins": 3,
+      "played": 9,
+      "wins": 4,
       "draws": 2,
       "losses": 3,
-      "goalsFor": 7,
+      "goalsFor": 9,
       "goalsAgainst": 9,
-      "goalDifference": -2,
-      "points": 11
+      "goalDifference": 0,
+      "points": 14
     },
     {
       "position": 8,
@@ -1104,13 +1116,13 @@
       "position": 16,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 6,
+      "played": 7,
       "wins": 1,
       "draws": 2,
-      "losses": 3,
+      "losses": 4,
       "goalsFor": 7,
-      "goalsAgainst": 10,
-      "goalDifference": -3,
+      "goalsAgainst": 12,
+      "goalDifference": -5,
       "points": 5
     }
   ]
