@@ -118,7 +118,7 @@
       "dateIso": "2026-10-19",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-10-20T14:42:52.606Z"
+      "scoreUpdatedAt": "2026-10-20T18:44:27.242Z"
     },
     {
       "home": "Динамо Київ",
@@ -596,8 +596,9 @@
       "time": "19:45",
       "date": "Сьогодні, 20 жовтня",
       "dateIso": "2026-10-20",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2",
+      "scoreUpdatedAt": "2026-10-20T18:44:27.242Z"
     },
     {
       "home": "Фенербахче",
@@ -606,8 +607,9 @@
       "time": "19:45",
       "date": "Сьогодні, 20 жовтня",
       "dateIso": "2026-10-20",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-10-20T18:44:27.242Z"
     },
     {
       "home": "Ліверпуль",
