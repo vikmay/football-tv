@@ -598,7 +598,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "2 - 2",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Сабах",
@@ -609,7 +609,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Ліверпуль",
@@ -620,7 +620,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "4 - 3",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Манчестер Сіті",
@@ -631,7 +631,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "5 - 1",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Наполі",
@@ -642,7 +642,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "4 - 3",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Порту",
@@ -653,7 +653,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "ПСЖ",
@@ -664,7 +664,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "4 - 2",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Рома",
@@ -675,7 +675,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "4 - 0",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Штутгарт",
@@ -686,7 +686,7 @@
       "dateIso": "2026-10-20",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-10-21T14:38:01.574Z"
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Комо",
@@ -695,8 +695,9 @@
       "time": "19:45",
       "date": "Сьогодні, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1",
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Лілль",
@@ -705,8 +706,9 @@
       "time": "19:45",
       "date": "Сьогодні, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 4",
+      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
     },
     {
       "home": "Астон Вілла",
