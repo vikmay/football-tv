@@ -178,208 +178,19 @@
       "dateIso": "2026-10-25",
       "status": "Scheduled",
       "score": ""
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Оболонь Київ",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "пʼятниця, 30 жовтня",
+      "dateIso": "2026-10-30",
+      "status": "Scheduled",
+      "score": ""
     }
   ],
   "Ліга чемпіонів": [
-    {
-      "home": "Ланс",
-      "away": "Спортінг",
-      "league": "Ліга чемпіонів",
-      "time": "19:45",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "0 - 2",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Сабах Баку",
-      "away": "Славія Прага",
-      "league": "Ліга чемпіонів",
-      "time": "19:45",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Ленс",
-      "away": "Спортінг Кп",
-      "league": "Ліга чемпіонів",
-      "time": "19:45",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "0 - 2"
-    },
-    {
-      "home": "Сабаh Баку",
-      "away": "Славіа Прагуе",
-      "league": "Ліга чемпіонів",
-      "time": "19:45",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
-      "home": "Сабах",
-      "away": "Славія Прага",
-      "league": "Ліга чемпіонів",
-      "time": "19:45",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
-      "home": "Арсенал",
-      "away": "Лілль",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Атлетіко",
-      "away": "Манчестер Юнайтед",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Вікінг",
-      "away": "Баварія Мюнхен",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 3",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Вільярреал",
-      "away": "Наполі",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Галатасарай",
-      "away": "Барселона",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "1 - 4",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Інтер",
-      "away": "Брюгге",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 4",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "РБ Лейпциг",
-      "away": "ПСВ",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-14T17:56:24.498Z"
-    },
-    {
-      "home": "Арсенал",
-      "away": "Лілле",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 0"
-    },
-    {
-      "home": "Atl. Madrid",
-      "away": "Манчестер Утд",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "2 - 0"
-    },
-    {
-      "home": "Галатасараи",
-      "away": "Баркелона",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "1 - 4"
-    },
-    {
-      "home": "Інтер",
-      "away": "Клуб Бругге Кв",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 4"
-    },
-    {
-      "home": "Рб Леіпзіг",
-      "away": "Псв",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "1 - 0"
-    },
-    {
-      "home": "Вікінг",
-      "away": "Баиерн Муніч",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 3"
-    },
-    {
-      "home": "Вілларреал",
-      "away": "Наполі",
-      "league": "Ліга чемпіонів",
-      "time": "22:00",
-      "date": "вівторок, 13 жовтня",
-      "dateIso": "2026-10-13",
-      "status": "Match Finished",
-      "score": "3 - 1"
-    },
     {
       "home": "ЛАСК",
       "away": "Ліверпуль",
@@ -693,92 +504,99 @@
       "away": "Манчестер Юнайтед",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
       "status": "Match Finished",
       "score": "4 - 1",
-      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Лілль",
       "away": "Галатасарай",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
       "status": "Match Finished",
       "score": "2 - 4",
-      "scoreUpdatedAt": "2026-10-21T18:53:17.414Z"
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Астон Вілла",
       "away": "Вікінг",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Інтер",
       "away": "Шахтар Донецьк",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Баварія Мюнхен",
       "away": "Арсенал",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Бетіс",
       "away": "Феєнорд",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Брюгге",
       "away": "Ланс",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "3 - 0",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Реал Мадрид",
       "away": "РБ Лейпциг",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "4 - 1",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     },
     {
       "home": "Спортінг",
       "away": "ЛАСК",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 21 жовтня",
+      "date": "середа, 21 жовтня",
       "dateIso": "2026-10-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 3",
+      "scoreUpdatedAt": "2026-10-21T22:01:19.038Z"
     }
   ],
   "Кубок України": [
