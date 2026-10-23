@@ -106,9 +106,9 @@
       "time": "13:00",
       "date": "Сьогодні, 23 жовтня",
       "dateIso": "2026-10-23",
-      "status": "Live",
-      "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-23T10:13:22.236Z"
+      "status": "Match Finished",
+      "score": "3 - 1",
+      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
     },
     {
       "home": "Верес Рівне",
@@ -117,8 +117,9 @@
       "time": "13:00",
       "date": "Сьогодні, 23 жовтня",
       "dateIso": "2026-10-23",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
     },
     {
       "home": "Полісся Житомир",
@@ -127,9 +128,9 @@
       "time": "13:00",
       "date": "Сьогодні, 23 жовтня",
       "dateIso": "2026-10-23",
-      "status": "Live",
-      "score": "1 - 0",
-      "scoreUpdatedAt": "2026-10-23T10:13:22.236Z"
+      "status": "Match Finished",
+      "score": "3 - 0",
+      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
     },
     {
       "home": "Лівий Берег",
@@ -587,9 +588,9 @@
       "wins": 8,
       "draws": 1,
       "losses": 1,
-      "goalsFor": 21,
+      "goalsFor": 23,
       "goalsAgainst": 8,
-      "goalDifference": 13,
+      "goalDifference": 15,
       "points": 25
     },
     {
@@ -607,6 +608,19 @@
     },
     {
       "position": 3,
+      "team": "Динамо Київ",
+      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
+      "played": 9,
+      "wins": 6,
+      "draws": 1,
+      "losses": 2,
+      "goalsFor": 14,
+      "goalsAgainst": 9,
+      "goalDifference": 5,
+      "points": 19
+    },
+    {
+      "position": 4,
       "team": "ФК Харків",
       "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
       "played": 8,
@@ -617,19 +631,6 @@
       "goalsAgainst": 6,
       "goalDifference": 10,
       "points": 18
-    },
-    {
-      "position": 4,
-      "team": "Динамо Київ",
-      "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 9,
-      "wins": 5,
-      "draws": 2,
-      "losses": 2,
-      "goalsFor": 11,
-      "goalsAgainst": 8,
-      "goalDifference": 3,
-      "points": 17
     },
     {
       "position": 5,
@@ -672,6 +673,19 @@
     },
     {
       "position": 8,
+      "team": "Колос Ковалівка",
+      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
+      "played": 9,
+      "wins": 3,
+      "draws": 2,
+      "losses": 4,
+      "goalsFor": 12,
+      "goalsAgainst": 13,
+      "goalDifference": -1,
+      "points": 11
+    },
+    {
+      "position": 9,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
       "played": 9,
@@ -684,30 +698,17 @@
       "points": 9
     },
     {
-      "position": 9,
+      "position": 10,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
-      "played": 9,
+      "played": 10,
       "wins": 2,
       "draws": 3,
-      "losses": 4,
+      "losses": 5,
       "goalsFor": 6,
-      "goalsAgainst": 11,
-      "goalDifference": -5,
-      "points": 9
-    },
-    {
-      "position": 10,
-      "team": "Колос Ковалівка",
-      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 8,
-      "wins": 2,
-      "draws": 2,
-      "losses": 4,
-      "goalsFor": 10,
       "goalsAgainst": 13,
-      "goalDifference": -3,
-      "points": 8
+      "goalDifference": -7,
+      "points": 9
     },
     {
       "position": 11,
@@ -744,25 +745,12 @@
       "draws": 4,
       "losses": 4,
       "goalsFor": 4,
-      "goalsAgainst": 13,
-      "goalDifference": -9,
+      "goalsAgainst": 15,
+      "goalDifference": -11,
       "points": 7
     },
     {
       "position": 14,
-      "team": "Кудрівка",
-      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 10,
-      "wins": 1,
-      "draws": 3,
-      "losses": 6,
-      "goalsFor": 10,
-      "goalsAgainst": 21,
-      "goalDifference": -11,
-      "points": 6
-    },
-    {
-      "position": 15,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
       "played": 8,
@@ -772,6 +760,19 @@
       "goalsFor": 5,
       "goalsAgainst": 11,
       "goalDifference": -6,
+      "points": 5
+    },
+    {
+      "position": 15,
+      "team": "Кудрівка",
+      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
+      "played": 10,
+      "wins": 1,
+      "draws": 2,
+      "losses": 7,
+      "goalsFor": 11,
+      "goalsAgainst": 24,
+      "goalDifference": -13,
       "points": 5
     },
     {
