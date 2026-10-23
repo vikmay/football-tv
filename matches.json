@@ -108,7 +108,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
+      "scoreUpdatedAt": "2026-10-23T19:03:42.531Z"
     },
     {
       "home": "Верес Рівне",
@@ -119,7 +119,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
+      "scoreUpdatedAt": "2026-10-23T19:03:42.531Z"
     },
     {
       "home": "Полісся Житомир",
@@ -130,7 +130,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-23T15:03:10.614Z"
+      "scoreUpdatedAt": "2026-10-23T19:03:42.531Z"
     },
     {
       "home": "Лівий Берег",
@@ -544,22 +544,32 @@
       "scoreUpdatedAt": "2026-10-17T16:21:54.679Z"
     },
     {
-      "home": "Рух Львів",
-      "away": "Дармстадт",
-      "league": "Ліга націй УЄФА",
-      "time": "14:30",
-      "date": "неділя, 18 жовтня",
-      "dateIso": "2026-10-18",
-      "status": "FT",
-      "score": "4 - 0"
-    },
-    {
       "home": "Бочум",
       "away": "Волфсбург",
       "league": "Ліга націй УЄФА",
       "time": "19:30",
       "date": "Сьогодні, 23 жовтня",
       "dateIso": "2026-10-23",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Дармстадт",
+      "away": "Ст Паулі",
+      "league": "Ліга націй УЄФА",
+      "time": "19:30",
+      "date": "Сьогодні, 23 жовтня",
+      "dateIso": "2026-10-23",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Hертhа",
+      "away": "Армініа Бєлефелд",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "субота, 24 жовтня",
+      "dateIso": "2026-10-24",
       "status": "NS",
       "score": ""
     }
