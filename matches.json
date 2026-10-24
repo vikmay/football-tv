@@ -108,7 +108,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-24T09:04:33.986Z"
+      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
     },
     {
       "home": "Верес Рівне",
@@ -119,7 +119,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-10-24T09:04:33.986Z"
+      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
     },
     {
       "home": "Полісся Житомир",
@@ -130,7 +130,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-24T09:04:33.986Z"
+      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
     },
     {
       "home": "Лівий Берег",
@@ -139,8 +139,9 @@
       "time": "13:00",
       "date": "Сьогодні, 24 жовтня",
       "dateIso": "2026-10-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
     },
     {
       "home": "Епіцентр",
@@ -149,8 +150,9 @@
       "time": "13:00",
       "date": "Сьогодні, 24 жовтня",
       "dateIso": "2026-10-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2",
+      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -564,20 +566,30 @@
       "scoreUpdatedAt": "2026-10-17T16:21:54.679Z"
     },
     {
-      "home": "Дармстадт",
-      "away": "Ст Паулі",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 23 жовтня",
-      "dateIso": "2026-10-23",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Hертhа",
       "away": "Армініа Бєлефелд",
       "league": "Ліга націй УЄФА",
       "time": "14:00",
+      "date": "Сьогодні, 24 жовтня",
+      "dateIso": "2026-10-24",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Hеіденhеім",
+      "away": "Енергє Коттбус",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "Сьогодні, 24 жовтня",
+      "dateIso": "2026-10-24",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Nürnberg",
+      "away": "Каісерслаутерн",
+      "league": "Ліга націй УЄФА",
+      "time": "21:30",
       "date": "Сьогодні, 24 жовтня",
       "dateIso": "2026-10-24",
       "status": "NS",
@@ -628,6 +640,19 @@
     },
     {
       "position": 3,
+      "team": "ФК Харків",
+      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
+      "played": 9,
+      "wins": 7,
+      "draws": 0,
+      "losses": 2,
+      "goalsFor": 18,
+      "goalsAgainst": 7,
+      "goalDifference": 11,
+      "points": 21
+    },
+    {
+      "position": 4,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
       "played": 9,
@@ -638,19 +663,6 @@
       "goalsAgainst": 9,
       "goalDifference": 5,
       "points": 19
-    },
-    {
-      "position": 4,
-      "team": "ФК Харків",
-      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 8,
-      "wins": 6,
-      "draws": 0,
-      "losses": 2,
-      "goalsFor": 16,
-      "goalsAgainst": 6,
-      "goalDifference": 10,
-      "points": 18
     },
     {
       "position": 5,
@@ -669,14 +681,14 @@
       "position": 6,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
-      "played": 9,
+      "played": 10,
       "wins": 4,
-      "draws": 2,
+      "draws": 3,
       "losses": 3,
       "goalsFor": 10,
       "goalsAgainst": 9,
       "goalDifference": 1,
-      "points": 14
+      "points": 15
     },
     {
       "position": 7,
@@ -708,13 +720,13 @@
       "position": 9,
       "team": "Епіцентр",
       "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 9,
+      "played": 10,
       "wins": 2,
       "draws": 3,
-      "losses": 4,
-      "goalsFor": 9,
-      "goalsAgainst": 12,
-      "goalDifference": -3,
+      "losses": 5,
+      "goalsFor": 10,
+      "goalsAgainst": 14,
+      "goalDifference": -4,
       "points": 9
     },
     {
@@ -732,6 +744,19 @@
     },
     {
       "position": 11,
+      "team": "Лівий Берег",
+      "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
+      "played": 9,
+      "wins": 1,
+      "draws": 5,
+      "losses": 3,
+      "goalsFor": 6,
+      "goalsAgainst": 8,
+      "goalDifference": -2,
+      "points": 8
+    },
+    {
+      "position": 12,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
       "played": 9,
@@ -742,19 +767,6 @@
       "goalsAgainst": 12,
       "goalDifference": -5,
       "points": 8
-    },
-    {
-      "position": 12,
-      "team": "Лівий Берег",
-      "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
-      "played": 8,
-      "wins": 1,
-      "draws": 4,
-      "losses": 3,
-      "goalsFor": 6,
-      "goalsAgainst": 8,
-      "goalDifference": -2,
-      "points": 7
     },
     {
       "position": 13,
