@@ -108,7 +108,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Верес Рівне",
@@ -119,7 +119,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Полісся Житомир",
@@ -130,7 +130,7 @@
       "dateIso": "2026-10-23",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Лівий Берег",
@@ -141,7 +141,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Епіцентр",
@@ -152,7 +152,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-24T13:15:03.839Z"
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -161,8 +161,9 @@
       "time": "18:00",
       "date": "Сьогодні, 24 жовтня",
       "dateIso": "2026-10-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-24T16:35:26.188Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -629,14 +630,14 @@
       "position": 2,
       "team": "Шахтар Донецьк",
       "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 9,
+      "played": 10,
       "wins": 8,
-      "draws": 0,
+      "draws": 1,
       "losses": 1,
       "goalsFor": 20,
       "goalsAgainst": 5,
       "goalDifference": 15,
-      "points": 24
+      "points": 25
     },
     {
       "position": 3,
@@ -679,6 +680,19 @@
     },
     {
       "position": 6,
+      "team": "Зоря Луганськ",
+      "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
+      "played": 10,
+      "wins": 4,
+      "draws": 3,
+      "losses": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 13,
+      "goalDifference": -1,
+      "points": 15
+    },
+    {
+      "position": 7,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
       "played": 10,
@@ -689,19 +703,6 @@
       "goalsAgainst": 9,
       "goalDifference": 1,
       "points": 15
-    },
-    {
-      "position": 7,
-      "team": "Зоря Луганськ",
-      "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 9,
-      "wins": 4,
-      "draws": 2,
-      "losses": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 13,
-      "goalDifference": -1,
-      "points": 14
     },
     {
       "position": 8,
