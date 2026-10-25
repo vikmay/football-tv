@@ -130,7 +130,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
+      "scoreUpdatedAt": "2026-10-25T14:59:11.057Z"
     },
     {
       "home": "Епіцентр",
@@ -141,7 +141,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
+      "scoreUpdatedAt": "2026-10-25T14:59:11.057Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -152,7 +152,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
+      "scoreUpdatedAt": "2026-10-25T14:59:11.057Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -161,9 +161,9 @@
       "time": "13:00",
       "date": "Сьогодні, 25 жовтня",
       "dateIso": "2026-10-25",
-      "status": "Live",
+      "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
+      "scoreUpdatedAt": "2026-10-25T14:59:11.057Z"
     },
     {
       "home": "Буковина Чернівці",
@@ -172,9 +172,9 @@
       "time": "13:00",
       "date": "Сьогодні, 25 жовтня",
       "dateIso": "2026-10-25",
-      "status": "Live",
+      "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
+      "scoreUpdatedAt": "2026-10-25T14:59:11.057Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -588,22 +588,32 @@
       "scoreUpdatedAt": "2026-10-17T16:21:54.679Z"
     },
     {
-      "home": "Nürnberg",
-      "away": "Каісерслаутерн",
-      "league": "Ліга націй УЄФА",
-      "time": "21:30",
-      "date": "субота, 24 жовтня",
-      "dateIso": "2026-10-24",
-      "status": "FT",
-      "score": "0 - 0"
-    },
-    {
       "home": "Hолстеін Кєл",
       "away": "Dynamo Dresden",
       "league": "Ліга націй УЄФА",
       "time": "14:30",
       "date": "Сьогодні, 25 жовтня",
       "dateIso": "2026-10-25",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Osnabrück",
+      "away": "Greuther Fürth",
+      "league": "Ліга націй УЄФА",
+      "time": "14:30",
+      "date": "Сьогодні, 25 жовтня",
+      "dateIso": "2026-10-25",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Армініа Бєлефелд",
+      "away": "Еінтрачт Браунщвеіг",
+      "league": "Ліга націй УЄФА",
+      "time": "19:30",
+      "date": "пʼятниця, 30 жовтня",
+      "dateIso": "2026-10-30",
       "status": "NS",
       "score": ""
     }
