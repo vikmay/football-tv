@@ -130,7 +130,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T06:13:32.828Z"
+      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
     },
     {
       "home": "Епіцентр",
@@ -141,7 +141,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-25T06:13:32.828Z"
+      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -152,7 +152,7 @@
       "dateIso": "2026-10-24",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T06:13:32.828Z"
+      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -161,8 +161,9 @@
       "time": "13:00",
       "date": "Сьогодні, 25 жовтня",
       "dateIso": "2026-10-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
     },
     {
       "home": "Буковина Чернівці",
@@ -171,8 +172,9 @@
       "time": "13:00",
       "date": "Сьогодні, 25 жовтня",
       "dateIso": "2026-10-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-10-25T11:23:47.336Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -678,30 +680,17 @@
       "position": 5,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 9,
+      "played": 10,
       "wins": 4,
-      "draws": 3,
+      "draws": 4,
       "losses": 2,
       "goalsFor": 17,
       "goalsAgainst": 8,
       "goalDifference": 9,
-      "points": 15
+      "points": 16
     },
     {
       "position": 6,
-      "team": "Зоря Луганськ",
-      "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 10,
-      "wins": 4,
-      "draws": 3,
-      "losses": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 13,
-      "goalDifference": -1,
-      "points": 15
-    },
-    {
-      "position": 7,
       "team": "ЛНЗ Черкаси",
       "emblem": "https://upl.ua/glide/uploads/2306/nRhjQV77UW6NOGfGDv97PKgjn-Y-idb_.png?w=40&amp;h=40&amp;fit=contain&amp;s=9fad9cfc1c45881659fd7a385adc1789",
       "played": 10,
@@ -711,6 +700,19 @@
       "goalsFor": 10,
       "goalsAgainst": 9,
       "goalDifference": 1,
+      "points": 15
+    },
+    {
+      "position": 7,
+      "team": "Зоря Луганськ",
+      "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
+      "played": 10,
+      "wins": 4,
+      "draws": 3,
+      "losses": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 13,
+      "goalDifference": -1,
       "points": 15
     },
     {
@@ -741,6 +743,19 @@
     },
     {
       "position": 10,
+      "team": "Буковина Чернівці",
+      "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
+      "played": 10,
+      "wins": 1,
+      "draws": 6,
+      "losses": 3,
+      "goalsFor": 7,
+      "goalsAgainst": 12,
+      "goalDifference": -5,
+      "points": 9
+    },
+    {
+      "position": 11,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
       "played": 10,
@@ -753,7 +768,7 @@
       "points": 9
     },
     {
-      "position": 11,
+      "position": 12,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 9,
@@ -763,19 +778,6 @@
       "goalsFor": 6,
       "goalsAgainst": 8,
       "goalDifference": -2,
-      "points": 8
-    },
-    {
-      "position": 12,
-      "team": "Буковина Чернівці",
-      "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
-      "played": 9,
-      "wins": 1,
-      "draws": 5,
-      "losses": 3,
-      "goalsFor": 7,
-      "goalsAgainst": 12,
-      "goalDifference": -5,
       "points": 8
     },
     {
@@ -795,17 +797,30 @@
       "position": 14,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 8,
+      "played": 9,
       "wins": 1,
-      "draws": 2,
+      "draws": 3,
       "losses": 5,
       "goalsFor": 5,
       "goalsAgainst": 11,
       "goalDifference": -6,
-      "points": 5
+      "points": 6
     },
     {
       "position": 15,
+      "team": "Кривбас",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 8,
+      "wins": 1,
+      "draws": 3,
+      "losses": 4,
+      "goalsFor": 7,
+      "goalsAgainst": 13,
+      "goalDifference": -6,
+      "points": 6
+    },
+    {
+      "position": 16,
       "team": "Кудрівка",
       "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
       "played": 10,
@@ -815,19 +830,6 @@
       "goalsFor": 11,
       "goalsAgainst": 24,
       "goalDifference": -13,
-      "points": 5
-    },
-    {
-      "position": 16,
-      "team": "Кривбас",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 7,
-      "wins": 1,
-      "draws": 2,
-      "losses": 4,
-      "goalsFor": 7,
-      "goalsAgainst": 13,
-      "goalDifference": -6,
       "points": 5
     }
   ]
