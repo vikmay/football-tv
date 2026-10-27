@@ -591,7 +591,7 @@
       "dateIso": "2026-10-27",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-27T16:08:18.893Z"
+      "scoreUpdatedAt": "2026-10-27T20:38:32.495Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -600,9 +600,9 @@
       "time": "18:00",
       "date": "Сьогодні, 27 жовтня",
       "dateIso": "2026-10-27",
-      "status": "Live",
-      "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-27T16:08:18.893Z"
+      "status": "Match Finished",
+      "score": "3 - 0",
+      "scoreUpdatedAt": "2026-10-27T20:38:32.495Z"
     },
     {
       "home": "Маяк Сарни",
@@ -676,6 +676,26 @@
       "dateIso": "2026-10-27",
       "status": "NS",
       "score": ""
+    },
+    {
+      "home": "Sporting de Alcázar",
+      "away": "Málaga",
+      "league": "Ліга конференцій",
+      "time": "22:00",
+      "date": "Сьогодні, 27 жовтня",
+      "dateIso": "2026-10-27",
+      "status": "1H",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Побленсе",
+      "away": "Кеута",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "середа, 28 жовтня",
+      "dateIso": "2026-10-28",
+      "status": "NS",
+      "score": ""
     }
   ],
   "Суперкубок УЄФА": [],
@@ -711,6 +731,26 @@
       "time": "19:30",
       "date": "Сьогодні, 27 жовтня",
       "dateIso": "2026-10-27",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Sporting de Alcázar",
+      "away": "Málaga",
+      "league": "Ліга конференцій",
+      "time": "22:00",
+      "date": "Сьогодні, 27 жовтня",
+      "dateIso": "2026-10-27",
+      "status": "1H",
+      "score": "0 - 0"
+    },
+    {
+      "home": "Побленсе",
+      "away": "Кеута",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "середа, 28 жовтня",
+      "dateIso": "2026-10-28",
       "status": "NS",
       "score": ""
     }
