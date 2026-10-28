@@ -570,7 +570,7 @@
       "dateIso": "2026-10-27",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-28T10:01:39.536Z"
+      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -581,7 +581,7 @@
       "dateIso": "2026-10-27",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-28T10:01:39.536Z"
+      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
     },
     {
       "home": "Маяк Сарни",
@@ -590,9 +590,9 @@
       "time": "11:00",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
-      "status": "Live",
-      "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-28T10:01:39.536Z"
+      "status": "Match Finished",
+      "score": "1 - 2",
+      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -601,8 +601,9 @@
       "time": "13:00",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
     },
     {
       "home": "Полісся Житомир",
@@ -611,14 +612,15 @@
       "time": "13:00",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
     },
     {
       "home": "Чернігів",
       "away": "Епіцентр",
       "league": "Кубок України",
-      "time": "15:00",
+      "time": "14:45",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
       "status": "Scheduled",
