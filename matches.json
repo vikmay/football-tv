@@ -570,7 +570,7 @@
       "dateIso": "2026-10-27",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
+      "scoreUpdatedAt": "2026-10-28T21:14:17.668Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -581,7 +581,7 @@
       "dateIso": "2026-10-27",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
+      "scoreUpdatedAt": "2026-10-28T21:14:17.668Z"
     },
     {
       "home": "Маяк Сарни",
@@ -592,7 +592,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
+      "scoreUpdatedAt": "2026-10-28T21:14:17.668Z"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -603,7 +603,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
+      "scoreUpdatedAt": "2026-10-28T21:14:17.668Z"
     },
     {
       "home": "Полісся Житомир",
@@ -614,7 +614,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-28T16:30:30.490Z"
+      "scoreUpdatedAt": "2026-10-28T21:14:17.668Z"
     },
     {
       "home": "Чернігів",
@@ -623,6 +623,16 @@
       "time": "14:45",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Чернігів",
+      "away": "Епіцентр",
+      "league": "Кубок України",
+      "time": "12:00",
+      "date": "четвер, 29 жовтня",
+      "dateIso": "2026-10-29",
       "status": "Scheduled",
       "score": ""
     },
@@ -650,22 +660,32 @@
   "Ліга Європи": [],
   "Ліга конференцій": [
     {
-      "home": "Sporting de Alcázar",
-      "away": "Málaga",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "вівторок, 27 жовтня",
-      "dateIso": "2026-10-27",
-      "status": "FT",
-      "score": "0 - 0"
-    },
-    {
       "home": "Побленсе",
       "away": "Кеута",
       "league": "Ліга конференцій",
       "time": "20:00",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Тавернес Де Ла Валлдігна",
+      "away": "Валенкіа",
+      "league": "Ліга конференцій",
+      "time": "22:00",
+      "date": "Сьогодні, 28 жовтня",
+      "dateIso": "2026-10-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Atlético Baleares",
+      "away": "Елденсе",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "четвер, 29 жовтня",
+      "dateIso": "2026-10-29",
       "status": "NS",
       "score": ""
     }
@@ -697,22 +717,32 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "Sporting de Alcázar",
-      "away": "Málaga",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "вівторок, 27 жовтня",
-      "dateIso": "2026-10-27",
-      "status": "FT",
-      "score": "0 - 0"
-    },
-    {
       "home": "Побленсе",
       "away": "Кеута",
       "league": "Ліга конференцій",
       "time": "20:00",
       "date": "Сьогодні, 28 жовтня",
       "dateIso": "2026-10-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Тавернес Де Ла Валлдігна",
+      "away": "Валенкіа",
+      "league": "Ліга конференцій",
+      "time": "22:00",
+      "date": "Сьогодні, 28 жовтня",
+      "dateIso": "2026-10-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Atlético Baleares",
+      "away": "Елденсе",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "четвер, 29 жовтня",
+      "dateIso": "2026-10-29",
       "status": "NS",
       "score": ""
     }
