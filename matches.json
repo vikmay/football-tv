@@ -502,7 +502,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-29T13:37:25.148Z"
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -513,7 +513,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-10-29T13:37:25.148Z"
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     },
     {
       "home": "Полісся Житомир",
@@ -524,7 +524,7 @@
       "dateIso": "2026-10-28",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-10-29T13:37:25.148Z"
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     },
     {
       "home": "Чернігів",
@@ -535,7 +535,7 @@
       "dateIso": "2026-10-29",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-29T13:37:25.148Z"
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -546,7 +546,7 @@
       "dateIso": "2026-10-29",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-29T13:37:25.148Z"
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     },
     {
       "home": "Карпати Львів",
@@ -555,22 +555,13 @@
       "time": "18:00",
       "date": "Сьогодні, 29 жовтня",
       "dateIso": "2026-10-29",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-10-29T19:11:18.265Z"
     }
   ],
   "Ліга Європи": [],
   "Ліга конференцій": [
-    {
-      "home": "Навалкарнеро",
-      "away": "Реал Бетіс",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "середа, 28 жовтня",
-      "dateIso": "2026-10-28",
-      "status": "NS",
-      "score": ""
-    },
     {
       "home": "Нуманкіа",
       "away": "Реал Овєдо",
@@ -586,6 +577,26 @@
       "away": "Елденсе",
       "league": "Ліга конференцій",
       "time": "20:00",
+      "date": "Сьогодні, 29 жовтня",
+      "dateIso": "2026-10-29",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Міджас-Лас Лагунас",
+      "away": "Real Jaén",
+      "league": "Ліга конференцій",
+      "time": "21:00",
+      "date": "Сьогодні, 29 жовтня",
+      "dateIso": "2026-10-29",
+      "status": "PST",
+      "score": ""
+    },
+    {
+      "home": "Gimnástica de Torrelavega",
+      "away": "Уд Оуренсе",
+      "league": "Ліга конференцій",
+      "time": "21:30",
       "date": "Сьогодні, 29 жовтня",
       "dateIso": "2026-10-29",
       "status": "NS",
@@ -619,16 +630,6 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "Навалкарнеро",
-      "away": "Реал Бетіс",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "середа, 28 жовтня",
-      "dateIso": "2026-10-28",
-      "status": "NS",
-      "score": ""
-    },
-    {
       "home": "Нуманкіа",
       "away": "Реал Овєдо",
       "league": "Ліга конференцій",
@@ -643,6 +644,26 @@
       "away": "Елденсе",
       "league": "Ліга конференцій",
       "time": "20:00",
+      "date": "Сьогодні, 29 жовтня",
+      "dateIso": "2026-10-29",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Міджас-Лас Лагунас",
+      "away": "Real Jaén",
+      "league": "Ліга конференцій",
+      "time": "21:00",
+      "date": "Сьогодні, 29 жовтня",
+      "dateIso": "2026-10-29",
+      "status": "PST",
+      "score": ""
+    },
+    {
+      "home": "Gimnástica de Torrelavega",
+      "away": "Уд Оуренсе",
+      "league": "Ліга конференцій",
+      "time": "21:30",
       "date": "Сьогодні, 29 жовтня",
       "dateIso": "2026-10-29",
       "status": "NS",
