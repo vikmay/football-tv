@@ -95,8 +95,9 @@
       "time": "18:00",
       "date": "Сьогодні, 30 жовтня",
       "dateIso": "2026-10-30",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-10-30T19:58:11.686Z"
     },
     {
       "home": "Лівий Берег",
@@ -466,7 +467,7 @@
       "dateIso": "2026-10-29",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-30T15:26:13.526Z"
+      "scoreUpdatedAt": "2026-10-30T19:58:11.686Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -477,7 +478,7 @@
       "dateIso": "2026-10-29",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-30T15:26:13.526Z"
+      "scoreUpdatedAt": "2026-10-30T19:58:11.686Z"
     },
     {
       "home": "Карпати Львів",
@@ -488,7 +489,7 @@
       "dateIso": "2026-10-29",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-10-30T15:26:13.526Z"
+      "scoreUpdatedAt": "2026-10-30T19:58:11.686Z"
     }
   ],
   "Ліга Європи": [],
@@ -517,22 +518,32 @@
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [
     {
-      "home": "Osnabrück",
-      "away": "Greuther Fürth",
-      "league": "Ліга націй УЄФА",
-      "time": "14:30",
-      "date": "неділя, 25 жовтня",
-      "dateIso": "2026-10-25",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Армініа Бєлефелд",
       "away": "Еінтрачт Браунщвеіг",
       "league": "Ліга націй УЄФА",
       "time": "19:30",
       "date": "Сьогодні, 30 жовтня",
       "dateIso": "2026-10-30",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Енергє Коттбус",
+      "away": "Бочум",
+      "league": "Ліга націй УЄФА",
+      "time": "19:30",
+      "date": "Сьогодні, 30 жовтня",
+      "dateIso": "2026-10-30",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Волфсбург",
+      "away": "Osnabrück",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "субота, 31 жовтня",
+      "dateIso": "2026-10-31",
       "status": "NS",
       "score": ""
     }
@@ -565,6 +576,19 @@
   "Таблиця УПЛ": [
     {
       "position": 1,
+      "team": "Шахтар Донецьк",
+      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
+      "played": 11,
+      "wins": 9,
+      "draws": 1,
+      "losses": 1,
+      "goalsFor": 22,
+      "goalsAgainst": 5,
+      "goalDifference": 17,
+      "points": 28
+    },
+    {
+      "position": 2,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 10,
@@ -573,19 +597,6 @@
       "losses": 1,
       "goalsFor": 23,
       "goalsAgainst": 8,
-      "goalDifference": 15,
-      "points": 25
-    },
-    {
-      "position": 2,
-      "team": "Шахтар Донецьк",
-      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 10,
-      "wins": 8,
-      "draws": 1,
-      "losses": 1,
-      "goalsFor": 20,
-      "goalsAgainst": 5,
       "goalDifference": 15,
       "points": 25
     },
@@ -723,13 +734,13 @@
       "position": 13,
       "team": "Оболонь Київ",
       "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 9,
+      "played": 10,
       "wins": 1,
       "draws": 4,
-      "losses": 4,
+      "losses": 5,
       "goalsFor": 4,
-      "goalsAgainst": 15,
-      "goalDifference": -11,
+      "goalsAgainst": 17,
+      "goalDifference": -13,
       "points": 7
     },
     {
