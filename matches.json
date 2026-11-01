@@ -67,17 +67,6 @@
       "scoreUpdatedAt": "2026-10-31T21:54:38.283Z"
     },
     {
-      "home": "Лівий Берег",
-      "away": "Буковина Чернівці",
-      "league": "УПЛ",
-      "time": "12:00",
-      "date": "Сьогодні, 1 листопада",
-      "dateIso": "2026-11-01",
-      "status": "Match Finished",
-      "score": "0 - 1",
-      "scoreUpdatedAt": "2026-11-01T13:44:53.524Z"
-    },
-    {
       "home": "Верес Рівне",
       "away": "Чорноморець Одеса",
       "league": "УПЛ",
@@ -86,7 +75,18 @@
       "dateIso": "2026-10-31",
       "status": "Match Finished",
       "score": "1 - 3",
-      "scoreUpdatedAt": "2026-11-01T13:44:53.524Z"
+      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
+    },
+    {
+      "home": "Лівий Берег",
+      "away": "Буковина Чернівці",
+      "league": "УПЛ",
+      "time": "12:00",
+      "date": "Сьогодні, 1 листопада",
+      "dateIso": "2026-11-01",
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
     },
     {
       "home": "Колос Ковалівка",
@@ -95,8 +95,9 @@
       "time": "13:00",
       "date": "Сьогодні, 1 листопада",
       "dateIso": "2026-11-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "",
+      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -105,8 +106,9 @@
       "time": "13:00",
       "date": "Сьогодні, 1 листопада",
       "dateIso": "2026-11-01",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "",
+      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -533,7 +535,7 @@
       "time": "14:30",
       "date": "Сьогодні, 1 листопада",
       "dateIso": "2026-11-01",
-      "status": "2H",
+      "status": "FT",
       "score": "0 - 1"
     },
     {
