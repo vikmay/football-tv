@@ -1,39 +1,6 @@
 {
   "УПЛ": [
     {
-      "home": "Лівий Берег",
-      "away": "ЛНЗ Черкаси",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "субота, 24 жовтня",
-      "dateIso": "2026-10-24",
-      "status": "Match Finished",
-      "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T20:44:38.960Z"
-    },
-    {
-      "home": "Епіцентр",
-      "away": "ФК Харків",
-      "league": "УПЛ",
-      "time": "13:00",
-      "date": "субота, 24 жовтня",
-      "dateIso": "2026-10-24",
-      "status": "Match Finished",
-      "score": "1 - 2",
-      "scoreUpdatedAt": "2026-10-25T20:44:38.960Z"
-    },
-    {
-      "home": "Шахтар Донецьк",
-      "away": "Зоря Луганськ",
-      "league": "УПЛ",
-      "time": "18:00",
-      "date": "субота, 24 жовтня",
-      "dateIso": "2026-10-24",
-      "status": "Match Finished",
-      "score": "0 - 0",
-      "scoreUpdatedAt": "2026-10-25T20:44:38.960Z"
-    },
-    {
       "home": "Чорноморець Одеса",
       "away": "Карпати Львів",
       "league": "УПЛ",
@@ -82,11 +49,11 @@
       "away": "Буковина Чернівці",
       "league": "УПЛ",
       "time": "12:00",
-      "date": "Сьогодні, 1 листопада",
+      "date": "неділя, 1 листопада",
       "dateIso": "2026-11-01",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
+      "scoreUpdatedAt": "2026-11-01T22:19:11.804Z"
     },
     {
       "home": "Колос Ковалівка",
@@ -97,7 +64,7 @@
       "dateIso": "2026-11-01",
       "status": "Match Finished",
       "score": "",
-      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
+      "scoreUpdatedAt": "2026-11-01T22:19:11.804Z"
     },
     {
       "home": "ЛНЗ Черкаси",
@@ -108,14 +75,14 @@
       "dateIso": "2026-11-01",
       "status": "Match Finished",
       "score": "",
-      "scoreUpdatedAt": "2026-11-01T18:35:48.695Z"
+      "scoreUpdatedAt": "2026-11-01T22:19:11.804Z"
     },
     {
       "home": "Зоря Луганськ",
       "away": "Епіцентр",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "понеділок, 2 листопада",
+      "date": "Сьогодні, 2 листопада",
       "dateIso": "2026-11-02",
       "status": "Scheduled",
       "score": ""
@@ -125,7 +92,7 @@
       "away": "Динамо Київ",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "понеділок, 2 листопада",
+      "date": "Сьогодні, 2 листопада",
       "dateIso": "2026-11-02",
       "status": "Scheduled",
       "score": ""
@@ -135,7 +102,7 @@
       "away": "Кудрівка",
       "league": "УПЛ",
       "time": "18:00",
-      "date": "понеділок, 2 листопада",
+      "date": "Сьогодні, 2 листопада",
       "dateIso": "2026-11-02",
       "status": "Scheduled",
       "score": ""
@@ -519,21 +486,11 @@
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [
     {
-      "home": "Hannover 96",
-      "away": "Dynamo Dresden",
-      "league": "Ліга націй УЄФА",
-      "time": "14:30",
-      "date": "Сьогодні, 1 листопада",
-      "dateIso": "2026-11-01",
-      "status": "NS",
-      "score": ""
-    },
-    {
       "home": "Ст Паулі",
       "away": "Nürnberg",
       "league": "Ліга націй УЄФА",
       "time": "14:30",
-      "date": "Сьогодні, 1 листопада",
+      "date": "неділя, 1 листопада",
       "dateIso": "2026-11-01",
       "status": "FT",
       "score": "0 - 1"
