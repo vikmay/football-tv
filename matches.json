@@ -64,7 +64,7 @@
       "dateIso": "2026-11-02",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-03T15:28:13.940Z"
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Кривбас",
@@ -75,7 +75,7 @@
       "dateIso": "2026-11-02",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-11-03T15:28:13.940Z"
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Карпати Львів",
@@ -86,7 +86,7 @@
       "dateIso": "2026-11-02",
       "status": "Match Finished",
       "score": "5 - 0",
-      "scoreUpdatedAt": "2026-11-03T15:28:13.940Z"
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Оболонь Київ",
@@ -177,8 +177,9 @@
       "time": "19:45",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -187,8 +188,9 @@
       "time": "19:45",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Атлетіко",
@@ -197,8 +199,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Барселона",
@@ -207,8 +210,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Буде/Глімт",
@@ -217,8 +221,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Вільярреал",
@@ -227,8 +232,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 4",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "ЛАСК",
@@ -237,8 +243,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "4 - 0",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Манчестер Юнайтед",
@@ -247,8 +254,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Феєнорд",
@@ -257,8 +265,9 @@
       "time": "22:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-11-03T21:09:28.098Z"
     },
     {
       "home": "Аек",
@@ -444,22 +453,32 @@
   "Ліга Європи": [],
   "Ліга конференцій": [
     {
-      "home": "Спортінг Де Hорталеза",
-      "away": "Севілла",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "четвер, 29 жовтня",
-      "dateIso": "2026-10-29",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Памплона",
       "away": "Еібар",
       "league": "Ліга конференцій",
       "time": "20:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Анаітасуна",
+      "away": "Deportivo Alavés",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "Сьогодні, 3 листопада",
+      "dateIso": "2026-11-03",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Португалете",
+      "away": "Real Unión",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "середа, 4 листопада",
+      "dateIso": "2026-11-04",
       "status": "NS",
       "score": ""
     }
@@ -491,22 +510,32 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "Спортінг Де Hорталеза",
-      "away": "Севілла",
-      "league": "Ліга конференцій",
-      "time": "22:00",
-      "date": "четвер, 29 жовтня",
-      "dateIso": "2026-10-29",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Памплона",
       "away": "Еібар",
       "league": "Ліга конференцій",
       "time": "20:00",
       "date": "Сьогодні, 3 листопада",
       "dateIso": "2026-11-03",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Анаітасуна",
+      "away": "Deportivo Alavés",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "Сьогодні, 3 листопада",
+      "dateIso": "2026-11-03",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Португалете",
+      "away": "Real Unión",
+      "league": "Ліга конференцій",
+      "time": "20:00",
+      "date": "середа, 4 листопада",
+      "dateIso": "2026-11-04",
       "status": "NS",
       "score": ""
     }
