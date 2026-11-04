@@ -179,7 +179,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -190,7 +190,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Атлетіко",
@@ -201,7 +201,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Барселона",
@@ -212,7 +212,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "3 - 0",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Буде/Глімт",
@@ -223,7 +223,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Вільярреал",
@@ -234,7 +234,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "0 - 6",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "ЛАСК",
@@ -245,7 +245,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "4 - 0",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Манчестер Юнайтед",
@@ -256,7 +256,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "3 - 2",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Феєнорд",
@@ -267,7 +267,7 @@
       "dateIso": "2026-11-03",
       "status": "Match Finished",
       "score": "0 - 3",
-      "scoreUpdatedAt": "2026-11-04T07:31:28.739Z"
+      "scoreUpdatedAt": "2026-11-04T15:41:38.024Z"
     },
     {
       "home": "Аек",
@@ -459,7 +459,7 @@
       "time": "20:00",
       "date": "вівторок, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "NS",
+      "status": "PST",
       "score": ""
     },
     {
@@ -469,7 +469,7 @@
       "time": "20:00",
       "date": "Сьогодні, 4 листопада",
       "dateIso": "2026-11-04",
-      "status": "NS",
+      "status": "PST",
       "score": ""
     }
   ],
@@ -484,16 +484,6 @@
       "dateIso": "2026-11-01",
       "status": "FT",
       "score": "0 - 1"
-    },
-    {
-      "home": "Dynamo Dresden",
-      "away": "Greuther Fürth",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 6 листопада",
-      "dateIso": "2026-11-06",
-      "status": "NS",
-      "score": ""
     },
     {
       "home": "Вірменія",
@@ -586,7 +576,7 @@
       "time": "20:00",
       "date": "вівторок, 3 листопада",
       "dateIso": "2026-11-03",
-      "status": "NS",
+      "status": "PST",
       "score": ""
     },
     {
@@ -596,7 +586,7 @@
       "time": "20:00",
       "date": "Сьогодні, 4 листопада",
       "dateIso": "2026-11-04",
-      "status": "NS",
+      "status": "PST",
       "score": ""
     }
   ],
