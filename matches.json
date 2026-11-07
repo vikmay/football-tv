@@ -97,7 +97,7 @@
       "dateIso": "2026-11-06",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-07T07:13:57.869Z"
+      "scoreUpdatedAt": "2026-11-07T14:00:12.054Z"
     },
     {
       "home": "Полісся Житомир",
@@ -108,7 +108,7 @@
       "dateIso": "2026-11-06",
       "status": "Match Finished",
       "score": "2 - 0",
-      "scoreUpdatedAt": "2026-11-07T07:13:57.869Z"
+      "scoreUpdatedAt": "2026-11-07T14:00:12.054Z"
     },
     {
       "home": "Кудрівка",
@@ -117,8 +117,9 @@
       "time": "13:00",
       "date": "Сьогодні, 7 листопада",
       "dateIso": "2026-11-07",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-07T14:00:12.054Z"
     },
     {
       "home": "ФК Харків",
@@ -127,8 +128,9 @@
       "time": "13:00",
       "date": "Сьогодні, 7 листопада",
       "dateIso": "2026-11-07",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 2",
+      "scoreUpdatedAt": "2026-11-07T14:00:12.054Z"
     },
     {
       "home": "Епіцентр",
@@ -137,8 +139,9 @@
       "time": "13:00",
       "date": "Сьогодні, 7 листопада",
       "dateIso": "2026-11-07",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-11-07T14:00:12.054Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -388,20 +391,30 @@
   "Суперкубок УЄФА": [],
   "Ліга націй УЄФА": [
     {
-      "home": "Еінтрачт Браунщвеіг",
-      "away": "Енергє Коттбус",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 6 листопада",
-      "dateIso": "2026-11-06",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Nürnberg",
       "away": "Дармстадт",
       "league": "Ліга націй УЄФА",
       "time": "14:00",
+      "date": "Сьогодні, 7 листопада",
+      "dateIso": "2026-11-07",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Osnabrück",
+      "away": "Каісерслаутерн",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "Сьогодні, 7 листопада",
+      "dateIso": "2026-11-07",
+      "status": "FT",
+      "score": ""
+    },
+    {
+      "home": "Hертhа",
+      "away": "Волфсбург",
+      "league": "Ліга націй УЄФА",
+      "time": "21:30",
       "date": "Сьогодні, 7 листопада",
       "dateIso": "2026-11-07",
       "status": "NS",
@@ -805,29 +818,29 @@
     },
     {
       "position": 4,
-      "team": "ФК Харків",
-      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 9,
-      "wins": 7,
-      "draws": 0,
+      "team": "Карпати Львів",
+      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
+      "played": 12,
+      "wins": 6,
+      "draws": 4,
       "losses": 2,
-      "goalsFor": 18,
-      "goalsAgainst": 7,
-      "goalDifference": 11,
-      "points": 21
+      "goalsFor": 24,
+      "goalsAgainst": 9,
+      "goalDifference": 15,
+      "points": 22
     },
     {
       "position": 5,
-      "team": "Карпати Львів",
-      "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
-      "played": 11,
-      "wins": 5,
-      "draws": 4,
-      "losses": 2,
-      "goalsFor": 22,
-      "goalsAgainst": 8,
-      "goalDifference": 14,
-      "points": 19
+      "team": "ФК Харків",
+      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
+      "played": 10,
+      "wins": 7,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 19,
+      "goalsAgainst": 9,
+      "goalDifference": 10,
+      "points": 21
     },
     {
       "position": 6,
@@ -870,19 +883,32 @@
     },
     {
       "position": 9,
-      "team": "Чорноморець Одеса",
-      "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 10,
+      "team": "Епіцентр",
+      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
+      "played": 12,
       "wins": 2,
-      "draws": 3,
-      "losses": 5,
-      "goalsFor": 8,
-      "goalsAgainst": 12,
-      "goalDifference": -4,
-      "points": 9
+      "draws": 4,
+      "losses": 6,
+      "goalsFor": 11,
+      "goalsAgainst": 16,
+      "goalDifference": -5,
+      "points": 10
     },
     {
       "position": 10,
+      "team": "Чорноморець Одеса",
+      "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
+      "played": 11,
+      "wins": 2,
+      "draws": 3,
+      "losses": 6,
+      "goalsFor": 8,
+      "goalsAgainst": 13,
+      "goalDifference": -5,
+      "points": 9
+    },
+    {
+      "position": 11,
       "team": "Лівий Берег",
       "emblem": "https://upl.ua/glide/uploads/2408/vvNsJkwoYH9dLIY1-dLRD0Dqpd3X4EmM.png?w=40&amp;h=40&amp;fit=contain&amp;s=a45154e2ede08d9dbdbd1b56bceb480c",
       "played": 10,
@@ -892,19 +918,6 @@
       "goalsFor": 7,
       "goalsAgainst": 9,
       "goalDifference": -2,
-      "points": 9
-    },
-    {
-      "position": 11,
-      "team": "Епіцентр",
-      "emblem": "https://upl.ua/glide/uploads/2507/eKUMtne7woyuc_U_fYw1qVltNLApToLJ.png?w=40&amp;h=40&amp;fit=contain&amp;s=4782e523bf3b45b8da40ef093adc9823",
-      "played": 11,
-      "wins": 2,
-      "draws": 3,
-      "losses": 6,
-      "goalsFor": 10,
-      "goalsAgainst": 15,
-      "goalDifference": -5,
       "points": 9
     },
     {
@@ -948,29 +961,29 @@
     },
     {
       "position": 15,
-      "team": "Кривбас",
-      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 9,
-      "wins": 1,
-      "draws": 3,
-      "losses": 5,
-      "goalsFor": 7,
-      "goalsAgainst": 15,
-      "goalDifference": -8,
-      "points": 6
+      "team": "Кудрівка",
+      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
+      "played": 12,
+      "wins": 2,
+      "draws": 2,
+      "losses": 8,
+      "goalsFor": 12,
+      "goalsAgainst": 29,
+      "goalDifference": -17,
+      "points": 8
     },
     {
       "position": 16,
-      "team": "Кудрівка",
-      "emblem": "https://upl.ua/glide/uploads/2408/HO2IGCV6RDfofsmVnoUxVl6pJUQtw_Sa.png?w=40&amp;h=40&amp;fit=contain&amp;s=a01bc87f19c3875343bc591420774364",
-      "played": 11,
+      "team": "Кривбас",
+      "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
+      "played": 10,
       "wins": 1,
-      "draws": 2,
-      "losses": 8,
-      "goalsFor": 11,
-      "goalsAgainst": 29,
-      "goalDifference": -18,
-      "points": 5
+      "draws": 4,
+      "losses": 5,
+      "goalsFor": 8,
+      "goalsAgainst": 16,
+      "goalDifference": -8,
+      "points": 7
     }
   ]
 }
