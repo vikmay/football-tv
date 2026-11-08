@@ -108,7 +108,7 @@
       "dateIso": "2026-11-07",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-08T14:27:51.230Z"
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     },
     {
       "home": "ФК Харків",
@@ -119,7 +119,7 @@
       "dateIso": "2026-11-07",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-11-08T14:27:51.230Z"
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     },
     {
       "home": "Епіцентр",
@@ -130,7 +130,7 @@
       "dateIso": "2026-11-07",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-08T14:27:51.230Z"
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     },
     {
       "home": "Зоря Луганськ",
@@ -141,7 +141,7 @@
       "dateIso": "2026-11-08",
       "status": "Match Finished",
       "score": "1 - 2",
-      "scoreUpdatedAt": "2026-11-08T14:27:51.230Z"
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     },
     {
       "home": "Буковина Чернівці",
@@ -152,7 +152,7 @@
       "dateIso": "2026-11-08",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-08T14:27:51.230Z"
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     },
     {
       "home": "Шахтар Донецьк",
@@ -161,8 +161,9 @@
       "time": "18:00",
       "date": "Сьогодні, 8 листопада",
       "dateIso": "2026-11-08",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-11-08T18:55:53.315Z"
     }
   ],
   "Ліга чемпіонів": [
@@ -398,7 +399,7 @@
       "time": "14:30",
       "date": "Сьогодні, 8 листопада",
       "dateIso": "2026-11-08",
-      "status": "2H",
+      "status": "FT",
       "score": "2 - 2"
     },
     {
@@ -860,6 +861,19 @@
   "Таблиця УПЛ": [
     {
       "position": 1,
+      "team": "Шахтар Донецьк",
+      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
+      "played": 12,
+      "wins": 9,
+      "draws": 2,
+      "losses": 1,
+      "goalsFor": 22,
+      "goalsAgainst": 5,
+      "goalDifference": 17,
+      "points": 29
+    },
+    {
+      "position": 2,
       "team": "Полісся Житомир",
       "emblem": "https://upl.ua/glide/uploads/2407/JHwLLcfZdR8tIV1IreDQR9ZFbHgkkLqk.png?w=40&amp;h=40&amp;fit=contain&amp;s=e0157ffe5219748faa36c819725f22dd",
       "played": 11,
@@ -872,30 +886,17 @@
       "points": 28
     },
     {
-      "position": 2,
-      "team": "Шахтар Донецьк",
-      "emblem": "https://upl.ua/glide/uploads/1611/fMDO1b8zb6sMeeGDfV1bAKdJ2aQOgU1C.png?w=40&amp;h=40&amp;fit=contain&amp;s=aaa0644084e6fde89f37e3e7009994f1",
-      "played": 11,
-      "wins": 9,
-      "draws": 1,
-      "losses": 1,
-      "goalsFor": 22,
-      "goalsAgainst": 5,
-      "goalDifference": 17,
-      "points": 28
-    },
-    {
       "position": 3,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 10,
+      "played": 11,
       "wins": 7,
-      "draws": 1,
+      "draws": 2,
       "losses": 2,
       "goalsFor": 16,
       "goalsAgainst": 9,
       "goalDifference": 7,
-      "points": 22
+      "points": 23
     },
     {
       "position": 4,
