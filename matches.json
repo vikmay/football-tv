@@ -568,7 +568,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "1 - 4",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Латвія",
@@ -579,7 +579,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "0 - 0",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Білорусь",
@@ -590,7 +590,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Фінляндія",
@@ -601,7 +601,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "7 - 2",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Бельгія",
@@ -612,7 +612,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "4 - 1",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Іспанія",
@@ -623,7 +623,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "2 - 3",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Франція",
@@ -634,7 +634,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Хорватія",
@@ -645,7 +645,7 @@
       "dateIso": "2026-11-15",
       "status": "Match Finished",
       "score": "2 - 1",
-      "scoreUpdatedAt": "2026-11-16T07:41:46.950Z"
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Казахстан",
@@ -654,8 +654,9 @@
       "time": "17:00",
       "date": "Сьогодні, 16 листопада",
       "dateIso": "2026-11-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Фарерські острови",
@@ -664,8 +665,9 @@
       "time": "17:00",
       "date": "Сьогодні, 16 листопада",
       "dateIso": "2026-11-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Естонія",
@@ -674,8 +676,9 @@
       "time": "19:00",
       "date": "Сьогодні, 16 листопада",
       "dateIso": "2026-11-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Ісландія",
@@ -684,8 +687,9 @@
       "time": "19:00",
       "date": "Сьогодні, 16 листопада",
       "dateIso": "2026-11-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Литва",
@@ -694,8 +698,9 @@
       "time": "19:00",
       "date": "Сьогодні, 16 листопада",
       "dateIso": "2026-11-16",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-16T17:26:10.381Z"
     },
     {
       "home": "Гібралтар",
