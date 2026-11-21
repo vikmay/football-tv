@@ -20,7 +20,7 @@
       "dateIso": "2026-11-20",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-21T04:04:14.396Z"
+      "scoreUpdatedAt": "2026-11-21T12:27:48.454Z"
     },
     {
       "home": "Колос Ковалівка",
@@ -29,8 +29,9 @@
       "time": "13:00",
       "date": "Сьогодні, 21 листопада",
       "dateIso": "2026-11-21",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-11-21T12:27:48.454Z"
     },
     {
       "home": "Кривбас",
@@ -857,20 +858,30 @@
       "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
     },
     {
-      "home": "Армініа Бєлефелд",
-      "away": "Магдебург",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 20 листопада",
-      "dateIso": "2026-11-20",
-      "status": "FT",
-      "score": "0 - 1"
-    },
-    {
       "home": "Волфсбург",
       "away": "Hолстеін Кєл",
       "league": "Ліга націй УЄФА",
       "time": "14:00",
+      "date": "Сьогодні, 21 листопада",
+      "dateIso": "2026-11-21",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Nürnberg",
+      "away": "Еінтрачт Браунщвеіг",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "Сьогодні, 21 листопада",
+      "dateIso": "2026-11-21",
+      "status": "1H",
+      "score": "1 - 0"
+    },
+    {
+      "home": "Ст Паулі",
+      "away": "Бочум",
+      "league": "Ліга націй УЄФА",
+      "time": "21:30",
       "date": "Сьогодні, 21 листопада",
       "dateIso": "2026-11-21",
       "status": "NS",
@@ -946,14 +957,14 @@
       "position": 4,
       "team": "ФК Харків",
       "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 9,
+      "played": 10,
       "wins": 7,
-      "draws": 0,
+      "draws": 1,
       "losses": 2,
-      "goalsFor": 18,
-      "goalsAgainst": 7,
+      "goalsFor": 19,
+      "goalsAgainst": 8,
       "goalDifference": 11,
-      "points": 21
+      "points": 22
     },
     {
       "position": 5,
@@ -996,6 +1007,19 @@
     },
     {
       "position": 8,
+      "team": "Колос Ковалівка",
+      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
+      "played": 11,
+      "wins": 3,
+      "draws": 4,
+      "losses": 4,
+      "goalsFor": 14,
+      "goalsAgainst": 15,
+      "goalDifference": -1,
+      "points": 13
+    },
+    {
+      "position": 9,
       "team": "Буковина Чернівці",
       "emblem": "https://upl.ua/glide/uploads/2506/CqDpD5arb5w2OZTmf9yASyEZbqGDtEhe.png?w=40&amp;h=40&amp;fit=contain&amp;s=4f68ea0994f5a828485470095f5052e0",
       "played": 12,
@@ -1006,19 +1030,6 @@
       "goalsAgainst": 13,
       "goalDifference": -2,
       "points": 13
-    },
-    {
-      "position": 9,
-      "team": "Колос Ковалівка",
-      "emblem": "https://upl.ua/glide/uploads/2008/PYYClJ2ba6Rwe4YAQ3d767GNeZBj1fHu.png?w=40&amp;h=40&amp;fit=contain&amp;s=31815bd69c3cf4246a409f857a0805d1",
-      "played": 10,
-      "wins": 3,
-      "draws": 3,
-      "losses": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 14,
-      "goalDifference": -1,
-      "points": 12
     },
     {
       "position": 10,
