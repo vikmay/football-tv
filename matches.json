@@ -75,7 +75,7 @@
       "dateIso": "2026-11-23",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-24T11:38:02.381Z"
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Чорноморець Одеса",
@@ -86,7 +86,7 @@
       "dateIso": "2026-11-23",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-11-24T11:38:02.381Z"
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Кривбас",
@@ -182,7 +182,7 @@
       "home": "Динамо Київ",
       "away": "Лівий Берег",
       "league": "УПЛ",
-      "time": "18:00",
+      "time": "13:00",
       "date": "середа, 2 грудня",
       "dateIso": "2026-12-02",
       "status": "Scheduled",
@@ -197,8 +197,9 @@
       "time": "19:45",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Галатасарай",
@@ -207,8 +208,9 @@
       "time": "19:45",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Арсенал",
@@ -217,8 +219,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Комо",
@@ -227,8 +230,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 0",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Манчестер Сіті",
@@ -237,8 +241,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "1 - 1",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "РБ Лейпциг",
@@ -247,8 +252,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Реал Мадрид",
@@ -257,8 +263,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "3 - 1",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Слован Братислава",
@@ -267,8 +274,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Феєнорд",
@@ -277,8 +285,9 @@
       "time": "22:00",
       "date": "Сьогодні, 24 листопада",
       "dateIso": "2026-11-24",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Live",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-11-24T21:29:18.002Z"
     },
     {
       "home": "Сабах",
