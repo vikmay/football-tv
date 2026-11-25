@@ -95,8 +95,9 @@
       "time": "13:00",
       "date": "Сьогодні, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Лівий Берег",
@@ -199,7 +200,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Галатасарай",
@@ -210,7 +211,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Арсенал",
@@ -221,7 +222,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Комо",
@@ -232,7 +233,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Манчестер Сіті",
@@ -243,7 +244,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "2 - 2",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "РБ Лейпциг",
@@ -254,7 +255,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "3 - 1",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Реал Мадрид",
@@ -265,7 +266,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "5 - 1",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Слован Братислава",
@@ -276,7 +277,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Феєнорд",
@@ -287,7 +288,7 @@
       "dateIso": "2026-11-24",
       "status": "Match Finished",
       "score": "0 - 1",
-      "scoreUpdatedAt": "2026-11-25T04:27:56.548Z"
+      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
     },
     {
       "home": "Сабах",
@@ -593,6 +594,19 @@
     },
     {
       "position": 4,
+      "team": "ФК Харків",
+      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
+      "played": 11,
+      "wins": 8,
+      "draws": 0,
+      "losses": 3,
+      "goalsFor": 21,
+      "goalsAgainst": 9,
+      "goalDifference": 12,
+      "points": 24
+    },
+    {
+      "position": 5,
       "team": "Карпати Львів",
       "emblem": "https://upl.ua/glide/uploads/2306/mpbOyupJlai6xwtN3kYTCNLwWs9-D1aV.png?w=40&amp;h=40&amp;fit=contain&amp;s=b74d9c8e08e08030c6139ccd4a270f24",
       "played": 12,
@@ -603,19 +617,6 @@
       "goalsAgainst": 8,
       "goalDifference": 15,
       "points": 22
-    },
-    {
-      "position": 5,
-      "team": "ФК Харків",
-      "emblem": "https://upl.ua/glide/uploads/2606/meGPAp1fX8JS2W9XM_T66tNoZ1JvvIpO.png?w=40&amp;h=40&amp;fit=contain&amp;s=79fde3060b3023729345b166526724bc",
-      "played": 10,
-      "wins": 7,
-      "draws": 0,
-      "losses": 3,
-      "goalsFor": 19,
-      "goalsAgainst": 9,
-      "goalDifference": 10,
-      "points": 21
     },
     {
       "position": 6,
@@ -751,13 +752,13 @@
       "position": 16,
       "team": "Кривбас",
       "emblem": "https://upl.ua/glide/uploads/2207/6mgkU1zsv7XhBZVByQiuThlgR_N9robF.png?w=40&amp;h=40&amp;fit=contain&amp;s=9a113e0bf96d5f97237d2f8705cc5b7c",
-      "played": 10,
+      "played": 11,
       "wins": 1,
       "draws": 4,
-      "losses": 5,
+      "losses": 6,
       "goalsFor": 8,
-      "goalsAgainst": 16,
-      "goalDifference": -8,
+      "goalsAgainst": 18,
+      "goalDifference": -10,
       "points": 7
     }
   ]
