@@ -93,11 +93,11 @@
       "away": "ФК Харків",
       "league": "УПЛ",
       "time": "13:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
       "status": "Match Finished",
       "score": "0 - 2",
-      "scoreUpdatedAt": "2026-11-25T14:45:37.971Z"
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Лівий Берег",
@@ -186,6 +186,16 @@
       "time": "13:00",
       "date": "середа, 2 грудня",
       "dateIso": "2026-12-02",
+      "status": "Scheduled",
+      "score": ""
+    },
+    {
+      "home": "Шахтар Донецьк",
+      "away": "Кривбас",
+      "league": "УПЛ",
+      "time": "18:00",
+      "date": "пʼятниця, 4 грудня",
+      "dateIso": "2026-12-04",
       "status": "Scheduled",
       "score": ""
     }
@@ -295,90 +305,99 @@
       "away": "Барселона",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "1 - 4",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Славія Прага",
       "away": "Вільярреал",
       "league": "Ліга чемпіонів",
       "time": "19:45",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Атлетіко",
       "away": "Вікінг",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Брюгге",
       "away": "Ліверпуль",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 3",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Інтер",
       "away": "Штутгарт",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 0",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Лілль",
       "away": "Баварія Мюнхен",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 1",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "ПСЖ",
       "away": "Рома",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Спортінг",
       "away": "Манчестер Юнайтед",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "2 - 2",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     },
     {
       "home": "Шахтар Донецьк",
       "away": "Фенербахче",
       "league": "Ліга чемпіонів",
       "time": "22:00",
-      "date": "Сьогодні, 25 листопада",
+      "date": "середа, 25 листопада",
       "dateIso": "2026-11-25",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 1",
+      "scoreUpdatedAt": "2026-11-25T23:20:21.907Z"
     }
   ],
   "Кубок України": [],
@@ -408,94 +427,6 @@
     }
   ],
   "Ліга націй УЄФА": [
-    {
-      "home": "Боснія і Герцеговина",
-      "away": "Румунія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "2 - 1",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Данія",
-      "away": "Норвегія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "2 - 3",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Ізраїль",
-      "away": "Австрія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Ірландія",
-      "away": "Косово",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "3 - 0",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Польща",
-      "away": "Швеція",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Угорщина",
-      "away": "Північна Ірландія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "1 - 1",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Уельс",
-      "away": "Португалія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "2 - 3",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
-    {
-      "home": "Україна",
-      "away": "Грузія",
-      "league": "Ліга націй УЄФА",
-      "time": "21:45",
-      "date": "вівторок, 17 листопада",
-      "dateIso": "2026-11-17",
-      "status": "Match Finished",
-      "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-18T15:35:53.543Z"
-    },
     {
       "home": "Nürnberg",
       "away": "Еінтрачт Браунщвеіг",
