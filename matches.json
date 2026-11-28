@@ -108,7 +108,7 @@
       "dateIso": "2026-11-27",
       "status": "Match Finished",
       "score": "1 - 0",
-      "scoreUpdatedAt": "2026-11-28T04:52:44.737Z"
+      "scoreUpdatedAt": "2026-11-28T13:42:47.347Z"
     },
     {
       "home": "Динамо Київ",
@@ -117,8 +117,9 @@
       "time": "13:00",
       "date": "Сьогодні, 28 листопада",
       "dateIso": "2026-11-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 2",
+      "scoreUpdatedAt": "2026-11-28T13:42:47.347Z"
     },
     {
       "home": "Оболонь Київ",
@@ -127,8 +128,9 @@
       "time": "13:00",
       "date": "Сьогодні, 28 листопада",
       "dateIso": "2026-11-28",
-      "status": "Scheduled",
-      "score": ""
+      "status": "Match Finished",
+      "score": "0 - 0",
+      "scoreUpdatedAt": "2026-11-28T13:42:47.347Z"
     },
     {
       "home": "Епіцентр",
@@ -456,20 +458,30 @@
   "Ліга конференцій": [],
   "Суперкубок УЄФА": [
     {
-      "home": "Ле Паис Ду Валоіс",
-      "away": "Валенкєннес",
-      "league": "Суперкубок УЄФА",
-      "time": "21:00",
-      "date": "пʼятниця, 27 листопада",
-      "dateIso": "2026-11-27",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Олимпікуе Чарлевілле Прікс Ам",
       "away": "Стаде Де Реімс",
       "league": "Суперкубок УЄФА",
       "time": "14:30",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Тремблаи",
+      "away": "Ред Стар",
+      "league": "Суперкубок УЄФА",
+      "time": "15:00",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "1H",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Épinal",
+      "away": "Амєнс",
+      "league": "Суперкубок УЄФА",
+      "time": "16:00",
       "date": "Сьогодні, 28 листопада",
       "dateIso": "2026-11-28",
       "status": "NS",
@@ -488,20 +500,30 @@
       "score": "1 - 0"
     },
     {
-      "home": "Hеіденhеім",
-      "away": "Nürnberg",
-      "league": "Ліга націй УЄФА",
-      "time": "19:30",
-      "date": "пʼятниця, 27 листопада",
-      "dateIso": "2026-11-27",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Hертhа",
       "away": "Рух Львів",
       "league": "Ліга націй УЄФА",
       "time": "14:00",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Hолстеін Кєл",
+      "away": "Каісерслаутерн",
+      "league": "Ліга націй УЄФА",
+      "time": "14:00",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "2H",
+      "score": "3 - 0"
+    },
+    {
+      "home": "Osnabrück",
+      "away": "Hannover 96",
+      "league": "Ліга націй УЄФА",
+      "time": "21:30",
       "date": "Сьогодні, 28 листопада",
       "dateIso": "2026-11-28",
       "status": "NS",
@@ -512,20 +534,30 @@
   "Чемпіонат Європи": [],
   "Українські клуби в Європі": [
     {
-      "home": "Ле Паис Ду Валоіс",
-      "away": "Валенкєннес",
-      "league": "Суперкубок УЄФА",
-      "time": "21:00",
-      "date": "пʼятниця, 27 листопада",
-      "dateIso": "2026-11-27",
-      "status": "FT",
-      "score": ""
-    },
-    {
       "home": "Олимпікуе Чарлевілле Прікс Ам",
       "away": "Стаде Де Реімс",
       "league": "Суперкубок УЄФА",
       "time": "14:30",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "NS",
+      "score": ""
+    },
+    {
+      "home": "Тремблаи",
+      "away": "Ред Стар",
+      "league": "Суперкубок УЄФА",
+      "time": "15:00",
+      "date": "Сьогодні, 28 листопада",
+      "dateIso": "2026-11-28",
+      "status": "1H",
+      "score": "0 - 1"
+    },
+    {
+      "home": "Épinal",
+      "away": "Амєнс",
+      "league": "Суперкубок УЄФА",
+      "time": "16:00",
       "date": "Сьогодні, 28 листопада",
       "dateIso": "2026-11-28",
       "status": "NS",
@@ -564,13 +596,13 @@
       "position": 3,
       "team": "Динамо Київ",
       "emblem": "https://upl.ua/glide/uploads/2507/M2UkQxtEVWCT7XYedPmC7Gay7EJo7dG5.png?w=40&amp;h=40&amp;fit=contain&amp;s=ca2864a973760b2f6d176529c362f616",
-      "played": 12,
+      "played": 13,
       "wins": 8,
       "draws": 2,
-      "losses": 2,
+      "losses": 3,
       "goalsFor": 20,
-      "goalsAgainst": 11,
-      "goalDifference": 9,
+      "goalsAgainst": 13,
+      "goalDifference": 7,
       "points": 26
     },
     {
@@ -616,14 +648,14 @@
       "position": 7,
       "team": "Зоря Луганськ",
       "emblem": "https://upl.ua/glide/uploads/2302/33o6ntOLp_iVUKYHr2DigOuTjeXp34iH.png?w=40&amp;h=40&amp;fit=contain&amp;s=9b3e84a7fa8d96959c0a8928005724c0",
-      "played": 13,
+      "played": 14,
       "wins": 5,
-      "draws": 3,
+      "draws": 4,
       "losses": 5,
       "goalsFor": 14,
       "goalsAgainst": 16,
       "goalDifference": -2,
-      "points": 18
+      "points": 19
     },
     {
       "position": 8,
@@ -681,17 +713,30 @@
       "position": 12,
       "team": "Чорноморець Одеса",
       "emblem": "https://upl.ua/glide/uploads/1611/2gohsLQhqNZedAdq9hAcU6mPV2uqmQ9K.png?w=40&amp;h=40&amp;fit=contain&amp;s=614dc44a936fa84f2deab3378612e5cc",
-      "played": 12,
-      "wins": 2,
+      "played": 13,
+      "wins": 3,
       "draws": 3,
       "losses": 7,
-      "goalsFor": 8,
+      "goalsFor": 10,
       "goalsAgainst": 14,
-      "goalDifference": -6,
-      "points": 9
+      "goalDifference": -4,
+      "points": 12
     },
     {
       "position": 13,
+      "team": "Оболонь Київ",
+      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
+      "played": 13,
+      "wins": 1,
+      "draws": 6,
+      "losses": 6,
+      "goalsFor": 7,
+      "goalsAgainst": 22,
+      "goalDifference": -15,
+      "points": 9
+    },
+    {
+      "position": 14,
       "team": "Верес Рівне",
       "emblem": "https://upl.ua/glide/uploads/2107/wS_GV4vHwv67iQkOyxYyJ38zs2OYsioL.png?w=40&amp;h=40&amp;fit=contain&amp;s=1654c698d27e1ed8f63da862650c5307",
       "played": 13,
@@ -702,19 +747,6 @@
       "goalsAgainst": 21,
       "goalDifference": -13,
       "points": 9
-    },
-    {
-      "position": 14,
-      "team": "Оболонь Київ",
-      "emblem": "https://upl.ua/glide/uploads/2307/jp9YtQumoBmnBr-CyS9qG84Z2T0uJDBM.png?w=40&amp;h=40&amp;fit=contain&amp;s=d2f73805c8d91ce42b091d5d7f796657",
-      "played": 12,
-      "wins": 1,
-      "draws": 5,
-      "losses": 6,
-      "goalsFor": 7,
-      "goalsAgainst": 22,
-      "goalDifference": -15,
-      "points": 8
     },
     {
       "position": 15,
